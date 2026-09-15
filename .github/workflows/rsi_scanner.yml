@@ -38,4 +38,5 @@ jobs:
           RSI_PERIOD: "14"
           MARKET: "spot"
           ALERT_MODE: "changes"
-        run: python bot.py
+        run: |
+  python -u bot.py
