@@ -22,12 +22,12 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup-python@v7
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.13"
+          python-version: "3.12"
           cache: "pip"
 
       - name: Install dependencies
@@ -35,27 +35,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Check files
-        run: |
-          echo "===== BOT FILE ====="
-          ls -lh bot_fixed.py
-
-          echo "===== REQUIREMENTS ====="
-          cat requirements.txt
-
-          echo "===== PYTHON ====="
-          python --version
-
       - name: Run RSI scanner
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TOP_N: "100"
           RSI_PERIOD: "14"
-          MARKET: "spot"
+        run: |
+          python -u bot_fixed.py
 
-        run: python -u ./bot_fixed.py
-
-      - name: Save state
+      - name: Save users state
         run: |
 
           if git diff --quiet -- users.json; then
