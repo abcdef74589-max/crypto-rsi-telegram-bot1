@@ -2,26 +2,47 @@ name: RSI Telegram Scanner
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "1,16,31,46 * * * *"
 
 permissions:
   contents: read
 
+concurrency:
+  group: rsi-scanner
+  cancel-in-progress: true
+
 jobs:
-  test:
+  scan:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Basic diagnostic
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check bot file
         run: |
-          echo "===== TEST START ====="
-          pwd
-          echo "===== FILES ====="
-          ls -la
+          echo "===== BOT FILE ====="
+          ls -lh bot.py
           echo "===== PYTHON ====="
           python --version
-          echo "===== PYTHON TEST ====="
-          python -c "print('PYTHON OK')"
-          echo "===== TEST END ====="
+
+      - name: Run RSI scanner
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TOP_N: "100"
+          RSI_PERIOD: "14"
+          MARKET: "spot"
+          ALERT_MODE: "changes"
+        run: python -u ./bot.py
