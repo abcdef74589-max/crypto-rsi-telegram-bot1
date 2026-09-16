@@ -1,6 +1,39 @@
 {
   "users": [],
   "offset": 0,
-  "signals": {},
-  "last_scan_slot": null
+  "signals": {
+    "ZECUSDT|4H": {
+      "candle": 1789588800000,
+      "zone": "overbought"
+    },
+    "XMRUSDT|15m": {
+      "candle": 1708397100000,
+      "zone": "overbought"
+    },
+    "XLMUSDT|15m": {
+      "candle": 1789591500000,
+      "zone": "overbought"
+    },
+    "NEARUSDT|1H": {
+      "candle": 1789588800000,
+      "zone": "overbought"
+    },
+    "SHIBUSDT|15m": {
+      "candle": 1789591500000,
+      "zone": "overbought"
+    },
+    "SKYUSDT|1H": {
+      "candle": 1789588800000,
+      "zone": "oversold"
+    },
+    "SKYUSDT|4H": {
+      "candle": 1789588800000,
+      "zone": "oversold"
+    },
+    "CAKEUSDT|15m": {
+      "candle": 1789591500000,
+      "zone": "overbought"
+    }
+  },
+  "last_scan_slot": "2026-09-16-20-50"
 }
