@@ -1,4 +1,4 @@
-import os
+ort os
 import asyncio
 import json
 import logging
@@ -759,6 +759,4 @@ if __name__ == "__main__":
 
     except Exception:
         logging.exception(
-            "FATAL ERROR"
-        )
-        raise
+            "FATAL
