@@ -2,10 +2,35 @@
   "users": [
     "5952888026",
     "1413646760",
-    5952888026,
-    1749287043
+    "5952888026",
+    "1749287043"
   ],
   "offset": 988370750,
-  "signals": {},
-  "last_scan_slot": "2026-09-16-20-35"
+  "signals": {
+    "ZECUSDT|4H": {
+      "candle": 1789588800000,
+      "zone": "overbought"
+    },
+    "XMRUSDT|15m": {
+      "candle": 1708397100000,
+      "zone": "overbought"
+    },
+    "XLMUSDT|15m": {
+      "candle": 1789591500000,
+      "zone": "overbought"
+    },
+    "NEARUSDT|1H": {
+      "candle": 1789588800000,
+      "zone": "overbought"
+    },
+    "SKYUSDT|1H": {
+      "candle": 1789588800000,
+      "zone": "oversold"
+    },
+    "SKYUSDT|4H": {
+      "candle": 1789588800000,
+      "zone": "oversold"
+    }
+  },
+  "last_scan_slot": "2026-09-16-20-50"
 }
