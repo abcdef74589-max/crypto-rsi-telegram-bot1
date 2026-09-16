@@ -2,59 +2,141 @@ name: RSI Telegram Scanner
 
 on:
   workflow_dispatch:
+
   schedule:
     - cron: "0,15,30,45 * * * *"
+
 
 permissions:
   contents: write
 
+
+# اجرای جدید، اجرای قبلی را لغو نمی‌کند.
+# اگر اجرای قبلی هنوز تمام نشده باشد،
+# اجرای بعدی در صف می‌ماند.
 concurrency:
   group: rsi-scanner
-  cancel-in-progress: true
+  cancel-in-progress: false
+
 
 jobs:
+
   scan:
+
     runs-on: ubuntu-latest
+
     timeout-minutes: 10
 
+
     steps:
+
+      # -----------------------------------------------
+      # Checkout
+      # -----------------------------------------------
+
       - name: Checkout
-        uses: actions/checkout@v4
+
+        uses: actions/checkout@v7
+
+
+      # -----------------------------------------------
+      # Python
+      # -----------------------------------------------
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+
+        uses: actions/setup-python@v7
+
         with:
-          python-version: "3.11"
+          python-version: "3.13"
           cache: "pip"
 
-      - name: Install dependencies
-        run: pip install -r requirements.txt
 
-      - name: Check bot file
+      # -----------------------------------------------
+      # Dependencies
+      # -----------------------------------------------
+
+      - name: Install dependencies
+
         run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+
+      # -----------------------------------------------
+      # Check files
+      # -----------------------------------------------
+
+      - name: Check bot files
+
+        run: |
+
           echo "===== BOT FILE ====="
+
           ls -lh bot_fixed.py
+
+          echo ""
+
+          echo "===== REQUIREMENTS ====="
+
+          cat requirements.txt
+
+          echo ""
+
           echo "===== PYTHON ====="
+
           python --version
 
+
+      # -----------------------------------------------
+      # Run scanner
+      # -----------------------------------------------
+
       - name: Run RSI scanner
+
         env:
+
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+
           TOP_N: "100"
+
           RSI_PERIOD: "14"
+
           MARKET: "spot"
+
           ALERT_MODE: "changes"
-        run: python -u ./bot_fixed.py
+
+        run: |
+
+          python -u ./bot_fixed.py
+
+
+      # -----------------------------------------------
+      # Save multi-user state
+      # -----------------------------------------------
 
       - name: Save multi-user state
+
         run: |
+
           if git diff --quiet -- users.json; then
+
             echo "No user-state changes."
+
             exit 0
+
           fi
 
+
           git config user.name "github-actions[bot]"
+
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+
           git add users.json
+
+
           git commit -m "Update Telegram subscriber state"
+
+
           git push
