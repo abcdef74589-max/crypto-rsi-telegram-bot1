@@ -490,4 +490,644 @@ def load_state():
         }
 
     try:
-       
+        data = json.loads(
+            USERS_FILE.read_text(
+                encoding='utf-8'
+            )
+        )
+
+        return {
+            'users': [
+                str(x)
+                for x in data.get(
+                    'users',
+                    []
+                )
+            ],
+
+            'offset': int(
+                data.get(
+                    'offset',
+                    0
+                )
+            ),
+
+            'signals': dict(
+                data.get(
+                    'signals',
+                    {}
+                )
+            )
+        }
+
+    except Exception:
+        logging.warning(
+            'Could not read %s; '
+            'starting with empty state.',
+            USERS_FILE
+        )
+
+        return {
+            'users': [],
+            'offset': 0,
+            'signals': {}
+        }
+
+
+def save_state(state):
+    USERS_FILE.write_text(
+        json.dumps(
+            state,
+            ensure_ascii=False,
+            indent=2
+        ) + '\n',
+        encoding='utf-8'
+    )
+
+
+async def process_commands(session, state):
+    offset = state.get(
+        'offset',
+        0
+    )
+
+    updates = await telegram(
+        session,
+        'getUpdates',
+        {
+            'offset': offset,
+            'timeout': 0,
+            'allowed_updates': [
+                'message'
+            ]
+        }
+    )
+
+    changed = False
+
+    max_update_id = offset
+
+    for u in updates or []:
+
+        max_update_id = max(
+            max_update_id,
+            int(u['update_id']) + 1
+        )
+
+        msg = u.get(
+            'message'
+        ) or {}
+
+        chat = msg.get(
+            'chat'
+        ) or {}
+
+        chat_id = str(
+            chat.get(
+                'id',
+                ''
+            )
+        )
+
+        if not chat_id:
+            continue
+
+        text = (
+            msg.get('text') or ''
+        ).strip().lower()
+
+        command = (
+            text.split()[0]
+            if text
+            else ''
+        )
+
+        # START
+        if command.startswith('/start'):
+
+            if chat_id not in state['users']:
+
+                state['users'].append(
+                    chat_id
+                )
+
+                changed = True
+
+                await telegram(
+                    session,
+                    'sendMessage',
+                    {
+                        'chat_id': chat_id,
+                        'text':
+                            '✅ ربات فعال شد.\n'
+                            'از این به بعد '
+                            'هشدارهای RSI را '
+                            'دریافت می‌کنید.'
+                    }
+                )
+
+            else:
+
+                await telegram(
+                    session,
+                    'sendMessage',
+                    {
+                        'chat_id': chat_id,
+                        'text':
+                            'ℹ️ شما از قبل فعال هستید.'
+                    }
+                )
+
+        # STOP
+        elif command.startswith('/stop'):
+
+            if chat_id in state['users']:
+
+                state['users'].remove(
+                    chat_id
+                )
+
+                changed = True
+
+                await telegram(
+                    session,
+                    'sendMessage',
+                    {
+                        'chat_id': chat_id,
+                        'text':
+                            '⛔ هشدارها متوقف شد.\n'
+                            'برای فعال‌سازی دوباره '
+                            '/start را بزنید.'
+                    }
+                )
+
+        # STATUS
+        elif command.startswith('/status'):
+
+            status = (
+                'فعال ✅'
+                if chat_id in state['users']
+                else
+                'غیرفعال ⛔'
+            )
+
+            await telegram(
+                session,
+                'sendMessage',
+                {
+                    'chat_id': chat_id,
+                    'text':
+                        f'📡 وضعیت اشتراک هشدار: '
+                        f'{status}'
+                }
+            )
+
+    if updates:
+
+        state['offset'] = max_update_id
+
+        changed = True
+
+    # پشتیبانی از Chat ID قدیمی
+    if (
+        LEGACY_CHAT_ID
+        and LEGACY_CHAT_ID not in state['users']
+    ):
+        state['users'].append(
+            LEGACY_CHAT_ID
+        )
+
+        changed = True
+
+        logging.info(
+            'Added TELEGRAM_CHAT_ID '
+            'to subscriber list.'
+        )
+
+    if changed:
+        save_state(state)
+
+    return state
+
+
+def mark_new_or_repeat(alerts, state):
+    """
+    🟢 اولین مشاهده سیگنال در همان کندل
+    ⚪ مشاهده‌های بعدی همان سیگنال در همان کندل
+
+    با شروع کندل جدید، دوباره 🟢 می‌شود.
+    """
+
+    signals = state.setdefault(
+        'signals',
+        {}
+    )
+
+    now_ms = int(
+        datetime.now(
+            timezone.utc
+        ).timestamp()
+        * 1000
+    )
+
+    # پاک کردن اطلاعات قدیمی‌تر از 2 روز
+    cutoff = (
+        now_ms
+        - 2 * 24 * 60 * 60 * 1000
+    )
+
+    state['signals'] = {
+        k: v
+        for k, v in signals.items()
+        if (
+            isinstance(v, dict)
+            and int(
+                v.get(
+                    'candle_open_ms',
+                    0
+                )
+            ) >= cutoff
+        )
+    }
+
+    signals = state['signals']
+
+    for a in alerts:
+
+        key = (
+            f"{a['symbol']}|"
+            f"{a['tf']}|"
+            f"{a['zone']}"
+        )
+
+        old = signals.get(key)
+
+        # همان ارز + تایم‌فریم
+        # + محدوده RSI
+        # + همان کندل
+        if (
+            old
+            and int(
+                old.get(
+                    'candle_open_ms',
+                    -1
+                )
+            )
+            == a['candle_open_ms']
+        ):
+
+            a['new_signal'] = False
+
+        else:
+
+            a['new_signal'] = True
+
+            signals[key] = {
+                'candle_open_ms':
+                    a['candle_open_ms'],
+
+                'last_seen_ms':
+                    now_ms
+            }
+
+    return alerts
+
+
+def messages(alerts):
+    if not alerts:
+        return []
+
+    grouped = {}
+
+    for a in alerts:
+
+        grouped.setdefault(
+            a['tf'],
+            []
+        ).append(a)
+
+    result = []
+
+    # ترتیب:
+    # 15m
+    # 1h
+    # 4h
+    # 1D
+    for tf in sorted(
+        grouped,
+        key=lambda x:
+            TF_ORDER.get(
+                x,
+                99
+            )
+    ):
+
+        s = (
+            '🚨 RSI Scanner Alert\n\n'
+        )
+
+        for a in sorted(
+            grouped[tf],
+            key=lambda x:
+                x['symbol']
+        ):
+
+            # 🟢 سیگنال جدید
+            # ⚪ سیگنال تکراری
+            status = (
+                '🟢'
+                if a.get(
+                    'new_signal'
+                )
+                else
+                '⚪'
+            )
+
+            # جهت RSI
+            rsi_icon = (
+                '🔴'
+                if a['rsi'] < 30
+                else
+                '🟢'
+            )
+
+            base = a['symbol'].replace(
+                'USDT',
+                ''
+            )
+
+            remaining_min = max(
+                0,
+                a['remaining_ms'] / 60000
+            )
+
+            s += (
+                f"{status} "
+                f"{a['name']} "
+                f"({a['symbol']})\n"
+            )
+
+            s += (
+                f"⏱ TF: "
+                f"{a['tf']}\n"
+            )
+
+            s += (
+                f"📊 RSI(14): "
+                f"{a['rsi']:.2f} "
+                f"{rsi_icon}\n"
+            )
+
+            s += (
+                f"⏳ مانده تا بسته‌شدن: "
+                f"{remaining_min:.1f} دقیقه\n"
+            )
+
+            s += (
+                f"📊 وضعیت حجم: "
+                f"{a['vol_state']}\n"
+            )
+
+            s += (
+                f"📦 حجم فعلی: "
+                f"{fmtv(a['volume'])} "
+                f"{base}\n"
+            )
+
+            s += (
+                f"1️⃣: "
+                f"{fmtv(a['prev3_vol'][0])} "
+                f"{base}\n"
+            )
+
+            s += (
+                f"2️⃣: "
+                f"{fmtv(a['prev3_vol'][1])} "
+                f"{base}\n"
+            )
+
+            s += (
+                f"3️⃣: "
+                f"{fmtv(a['prev3_vol'][2])} "
+                f"{base}\n"
+            )
+
+            s += (
+                f"📈 "
+                f"https://www.tradingview.com/"
+                f"symbols/{a['symbol']}/\n\n"
+            )
+
+        # جلوگیری از عبور از محدودیت Telegram
+        while len(s) > 3900:
+
+            cut = (
+                s.rfind(
+                    '\n\n',
+                    0,
+                    3900
+                )
+                or 3900
+            )
+
+            result.append(
+                s[:cut]
+            )
+
+            s = (
+                '🚨 RSI Scanner Alert\n\n'
+                + s[cut:].lstrip()
+            )
+
+        if s.strip() != (
+            '🚨 RSI Scanner Alert'
+        ):
+            result.append(s)
+
+    return result
+
+
+async def send_to_all(
+    session,
+    state,
+    text
+):
+    for chat_id in list(
+        dict.fromkeys(
+            state.get(
+                'users',
+                []
+            )
+        )
+    ):
+
+        try:
+
+            await telegram(
+                session,
+                'sendMessage',
+                {
+                    'chat_id': chat_id,
+                    'text': text,
+                    'disable_web_page_preview':
+                        True
+                }
+            )
+
+        except Exception as e:
+
+            logging.warning(
+                'Could not send to %s: %s',
+                chat_id,
+                e
+            )
+
+
+async def main():
+
+    if not TOKEN:
+        raise RuntimeError(
+            'Missing TELEGRAM_BOT_TOKEN '
+            'GitHub Secret.'
+        )
+
+    state = load_state()
+
+    async with aiohttp.ClientSession(
+        connector=aiohttp.TCPConnector(
+            limit=30
+        )
+    ) as session:
+
+        # دریافت /start /stop /status
+        state = await process_commands(
+            session,
+            state
+        )
+
+        # پیدا کردن تایم‌فریم‌هایی که
+        # وارد 10 دقیقه پایانی شده‌اند
+        timeframes = active_timeframes()
+
+        now = datetime.now(
+            timezone.utc
+        )
+
+        logging.info(
+            'UTC time: %s',
+            now.isoformat()
+        )
+
+        logging.info(
+            'Final-10-minute timeframes: %s',
+            (
+                ', '.join(timeframes)
+                if timeframes
+                else 'none'
+            )
+        )
+
+        if not timeframes:
+
+            logging.info(
+                'No timeframe is in its '
+                'final 10 minutes. '
+                'Nothing to scan.'
+            )
+
+            return
+
+        # Top 100
+        coins = await top_coins(
+            session
+        )
+
+        logging.info(
+            'Top coins: %s',
+            len(coins)
+        )
+
+        # Binance tickers
+        tick = await tickers(
+            session
+        )
+
+        logging.info(
+            'Binance tickers: %s',
+            len(tick)
+        )
+
+        sem = asyncio.Semaphore(12)
+
+        groups = await asyncio.gather(
+            *(
+                scan_coin(
+                    session,
+                    c,
+                    tick,
+                    sem,
+                    timeframes
+                )
+                for c in coins
+            )
+        )
+
+        alerts = [
+            a
+            for g in groups
+            for a in g
+        ]
+
+        # تعیین 🟢 یا ⚪
+        alerts = mark_new_or_repeat(
+            alerts,
+            state
+        )
+
+        save_state(state)
+
+        logging.info(
+            'Alerts: %s | Subscribers: %s',
+            len(alerts),
+            len(state['users'])
+        )
+
+        if not state['users']:
+
+            logging.info(
+                'No subscribers yet. '
+                'Send /start to the bot.'
+            )
+
+            return
+
+        # ارسال پیام‌ها به ترتیب TF
+        for m in messages(alerts):
+
+            await send_to_all(
+                session,
+                state,
+                m
+            )
+
+        if not alerts:
+
+            logging.info(
+                'No RSI >70 or <30 signals '
+                'during the final '
+                '10-minute windows.'
+            )
+
+
+if __name__ == '__main__':
+
+    try:
+        asyncio.run(main())
+
+    except Exception:
+
+        logging.exception(
+            'FATAL ERROR'
+        )
+
+        raise
