@@ -45,4 +45,13 @@ jobs:
           RSI_PERIOD: "14"
           MARKET: "spot"
           ALERT_MODE: "changes"
-        run: python -u ./bot_fixed.py
+        run: |
+         python -u ./bot_fixed.py 2>&1 | tee bot_error.log
+         STATUS=${PIPESTATUS[0]}
+
+         echo "## BOT OUTPUT" >> "$GITHUB_STEP_SUMMARY"
+         echo '```text' >> "$GITHUB_STEP_SUMMARY"
+         cat bot_error.log >> "$GITHUB_STEP_SUMMARY"
+         echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+         exit $STATUS
