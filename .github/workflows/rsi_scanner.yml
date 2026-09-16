@@ -6,7 +6,7 @@ on:
     - cron: "1,16,31,46 * * * *"
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: rsi-scanner
@@ -30,28 +30,24 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Check bot file
-        run: |
-          echo "===== BOT FILE ====="
-          ls -lh bot_fixed.py
-          echo "===== PYTHON ====="
-          python --version
-
       - name: Run RSI scanner
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TOP_N: "100"
           RSI_PERIOD: "14"
           MARKET: "spot"
           ALERT_MODE: "changes"
+        run: python -u ./bot_fixed.py
+
+      - name: Save users
         run: |
-         python -u ./bot_fixed.py 2>&1 | tee bot_error.log
-         STATUS=${PIPESTATUS[0]}
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add users.json
 
-         echo "## BOT OUTPUT" >> "$GITHUB_STEP_SUMMARY"
-         echo '```text' >> "$GITHUB_STEP_SUMMARY"
-         cat bot_error.log >> "$GITHUB_STEP_SUMMARY"
-         echo '```' >> "$GITHUB_STEP_SUMMARY"
-
-         exit $STATUS
+          if git diff --cached --quiet; then
+            echo "No user changes"
+          else
+            git commit -m "Update Telegram users"
+            git push
+          fi
