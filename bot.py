@@ -281,6 +281,21 @@ async def main():
         "Alerts sent: symbols=%d alerts=%d oversold=%d overbought=%d",
         len(symbols), len(alerts), len(oversold), len(overbought)
     )
-
 if __name__ == "__main__":
-    asyncio.run(main())
+    try:
+        asyncio.run(main())
+    except Exception:
+        import traceback
+        error = traceback.format_exc()
+        print(error)
+
+        summary_file = os.environ.get("GITHUB_STEP_SUMMARY")
+        if summary_file:
+            with open(summary_file, "a", encoding="utf-8") as f:
+                f.write("## RSI Scanner Error\n\n")
+                f.write("```text\n")
+                f.write(error)
+                f.write("\n```\n")
+
+        raise
+
