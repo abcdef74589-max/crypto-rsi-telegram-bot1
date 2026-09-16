@@ -33,7 +33,7 @@ jobs:
       - name: Check bot file
         run: |
           echo "===== BOT FILE ====="
-          ls -lh bot.py
+          ls -lh bot_fixed.py
           echo "===== PYTHON ====="
           python --version
 
@@ -45,4 +45,4 @@ jobs:
           RSI_PERIOD: "14"
           MARKET: "spot"
           ALERT_MODE: "changes"
-        run: python -u ./bot.py
+        run: python -u ./bot_fixed.py
