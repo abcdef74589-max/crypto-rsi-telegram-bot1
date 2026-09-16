@@ -4,7 +4,6 @@ on:
   workflow_dispatch:
 
   schedule:
-    # اجرای GitHub Actions هر 5 دقیقه
     - cron: "*/5 * * * *"
 
 permissions:
@@ -42,7 +41,7 @@ jobs:
         run: |
           python --version
 
-      - name: Check bot syntax
+      - name: Check syntax
         run: |
           python -m py_compile bot_fixed.py
 
@@ -50,12 +49,10 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          TOP_N: "100"
-          RSI_PERIOD: "14"
         run: |
           python -u bot_fixed.py
 
-      - name: Save users state
+      - name: Save state
         run: |
 
           if git diff --quiet -- users.json; then
@@ -64,9 +61,7 @@ jobs:
           fi
 
           git config user.name "github-actions[bot]"
-
-          git config user.email \
-            "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add users.json
 
