@@ -753,10 +753,10 @@ async def main():
                     )
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     try:
         asyncio.run(main())
-
-    except Exception:
-        logging.exception(
-            "FATAL
+    except Exception as e:
+        logging.exception('FATAL ERROR: %s', e)
+        print(f'ERROR: {type(e).__name__}: {e}', flush=True)
+        
