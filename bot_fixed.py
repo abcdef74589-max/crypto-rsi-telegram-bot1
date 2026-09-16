@@ -760,5 +760,3 @@ if __name__ == "__main__":
     except Exception:
         logging.exception(
             "FATAL
-            
-        python -u bot_fixed.py
