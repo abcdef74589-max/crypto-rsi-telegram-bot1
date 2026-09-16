@@ -3,7 +3,7 @@ name: RSI Telegram Scanner
 on:
   workflow_dispatch:
   schedule:
-    - cron: "1,16,31,46 * * * *"
+    - cron: "0,15,30,45 * * * *"
 
 permissions:
   contents: write
@@ -30,6 +30,13 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Check bot file
+        run: |
+          echo "===== BOT FILE ====="
+          ls -lh bot_fixed.py
+          echo "===== PYTHON ====="
+          python --version
+
       - name: Run RSI scanner
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -39,15 +46,15 @@ jobs:
           ALERT_MODE: "changes"
         run: python -u ./bot_fixed.py
 
-      - name: Save users
+      - name: Save multi-user state
         run: |
+          if git diff --quiet -- users.json; then
+            echo "No user-state changes."
+            exit 0
+          fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add users.json
-
-          if git diff --cached --quiet; then
-            echo "No user changes"
-          else
-            git commit -m "Update Telegram users"
-            git push
-          fi
+          git commit -m "Update Telegram subscriber state"
+          git push
