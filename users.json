@@ -1,6 +1,9 @@
 {
-  "users": [],
-  "offset": 0,
+  "users": [
+    "1749287043",
+    "5952888026"
+  ],
+  "offset": 988370752,
   "signals": {},
   "last_scan_slot": null
 }
