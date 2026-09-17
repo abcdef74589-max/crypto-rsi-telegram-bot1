@@ -18,10 +18,7 @@ LEGACY_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
 TOP_N = int(os.getenv("TOP_N", "100"))
 RSI_PERIOD = int(os.getenv("RSI_PERIOD", "14"))
 
-# تقریباً 5 دقیقه مانیتور می‌کند
 MONITOR_SECONDS = 285
-
-# هر 60 ثانیه یک اسکن
 SCAN_INTERVAL_SECONDS = 60
 
 USERS_FILE = Path(
@@ -32,7 +29,6 @@ COINGECKO_URL = (
     "https://api.coingecko.com/api/v3/coins/markets"
 )
 
-# Binance public market-data endpoint
 BINANCE_BASE_URL = os.getenv(
     "BINANCE_BASE_URL",
     "https://data-api.binance.vision"
@@ -54,7 +50,6 @@ TF_ORDER = {
     "1D": 3,
 }
 
-# حداکثر درخواست همزمان Binance
 BINANCE_CONCURRENCY = 10
 
 
@@ -84,9 +79,7 @@ async def http_get(
 
     for attempt in range(retries):
         try:
-            timeout = aiohttp.ClientTimeout(
-                total=25
-            )
+            timeout = aiohttp.ClientTimeout(total=25)
 
             async with session.get(
                 url,
@@ -94,7 +87,7 @@ async def http_get(
                 timeout=timeout,
                 headers={
                     "User-Agent":
-                    "crypto-rsi-telegram-bot/6.0"
+                    "crypto-rsi-telegram-bot/7.0"
                 }
             ) as response:
 
@@ -117,8 +110,7 @@ async def http_get(
                         delay = 3
 
                     logger.warning(
-                        "HTTP 429 from %s - "
-                        "waiting %.1fs",
+                        "HTTP 429 from %s - waiting %.1fs",
                         url,
                         delay
                     )
@@ -225,6 +217,7 @@ async def send_telegram(
             {
                 "chat_id": chat_id,
                 "text": text,
+                "parse_mode": "HTML",
                 "disable_web_page_preview": True,
             }
         )
@@ -264,7 +257,6 @@ def load_state():
             "%s does not exist.",
             USERS_FILE
         )
-
         return default_state()
 
     try:
@@ -338,7 +330,6 @@ async def process_commands(
             "getUpdates failed: %s",
             exc
         )
-
         return state
 
     max_update_id = offset
@@ -447,8 +438,7 @@ async def process_commands(
             status = (
                 "فعال ✅"
                 if chat_id in state["users"]
-                else
-                "غیرفعال ⛔"
+                else "غیرفعال ⛔"
             )
 
             await send_telegram(
@@ -462,7 +452,6 @@ async def process_commands(
         state["offset"] = max_update_id
         changed = True
 
-    # پشتیبانی از Chat ID قدیمی
     if (
         LEGACY_CHAT_ID
         and LEGACY_CHAT_ID
@@ -486,7 +475,7 @@ async def process_commands(
 
 
 # ============================================================
-# COINGECKO TOP 100
+# COINGECKO
 # ============================================================
 
 async def get_top_coins(session):
@@ -565,11 +554,9 @@ def build_valid_symbols(
     ):
         return valid
 
-    for item in (
-        exchange_info.get(
-            "symbols",
-            []
-        )
+    for item in exchange_info.get(
+        "symbols",
+        []
     ):
 
         symbol = item.get(
@@ -734,7 +721,7 @@ def calculate_rsi(
 
 
 # ============================================================
-# EMA / TECHNICAL MODEL
+# TECHNICAL MODEL
 # ============================================================
 
 def ema(
@@ -768,11 +755,6 @@ def technical_probability(
     closes,
     rsi_value
 ):
-    """
-    Local technical heuristic.
-    این مدل هوش مصنوعی خارجی نیست.
-    """
-
     if len(closes) < 30:
         return 50.0, "خنثی"
 
@@ -794,13 +776,11 @@ def technical_probability(
 
     score = 50.0
 
-    # روند
     if fast > slow:
         score += 15
     else:
         score -= 15
 
-    # RSI
     if rsi_value >= 75:
         score -= 12
 
@@ -813,7 +793,6 @@ def technical_probability(
     elif rsi_value <= 30:
         score += 6
 
-    # مومنتوم کوتاه
     if len(closes) >= 6:
 
         momentum = (
@@ -957,11 +936,6 @@ def remaining_text(close_ms):
 def extract_probability(
     market
 ):
-    """
-    تلاش برای استخراج احتمال از
-    داده عمومی Polymarket.
-    """
-
     if not isinstance(
         market,
         dict
@@ -976,6 +950,7 @@ def extract_probability(
         value,
         (int, float)
     ):
+
         value = float(value)
 
         if 0 <= value <= 1:
@@ -1000,10 +975,10 @@ def extract_probability(
         except Exception:
             parsed = None
 
-        if isinstance(
-            parsed,
-            list
-        ) and parsed:
+        if (
+            isinstance(parsed, list)
+            and parsed
+        ):
 
             try:
                 p = float(
@@ -1019,10 +994,10 @@ def extract_probability(
             except Exception:
                 pass
 
-    if isinstance(
-        value,
-        list
-    ) and value:
+    if (
+        isinstance(value, list)
+        and value
+    ):
 
         try:
             p = float(
@@ -1063,11 +1038,6 @@ async def polymarket_sentiment(
     coin_name,
     symbol
 ):
-    """
-    داده عمومی Polymarket.
-    در صورت نبود بازار مرتبط، None.
-    """
-
     clean_symbol = (
         symbol
         .replace("USDT", "")
@@ -1218,8 +1188,6 @@ def is_new_signal(
         .get(key)
     )
 
-    # وقتی RSI به حالت خنثی برگشت،
-    # وضعیت قبلی پاک می‌شود.
     if zone == "neutral":
 
         if previous is not None:
@@ -1230,8 +1198,6 @@ def is_new_signal(
 
         return False
 
-    # ورود دوباره به همان منطقه
-    # هشدار تکراری ایجاد نمی‌کند.
     if previous == zone:
         return False
 
@@ -1267,7 +1233,6 @@ async def build_signal(
     if len(rows) < RSI_PERIOD + 5:
         return None
 
-    # close کندل باز را هم شامل می‌کنیم.
     closes = [
         float(row[4])
         for row in rows
@@ -1304,7 +1269,6 @@ async def build_signal(
             f"اشباع فروش"
         )
 
-    # مدل تکنیکال
     technical_score, technical_direction = (
         technical_probability(
             closes,
@@ -1312,7 +1276,6 @@ async def build_signal(
         )
     )
 
-    # Polymarket
     poly = await polymarket_sentiment(
         session,
         coin_name,
@@ -1353,9 +1316,6 @@ async def build_signal(
 
         else:
 
-            # اگر دو منبع مخالف باشند،
-            # امتیاز جهت تکنیکال با وزن 70%
-            # و Polymarket با وزن 30% ترکیب می‌شود.
             if technical_direction == "صعودی":
                 technical_signed = (
                     technical_score
@@ -1445,16 +1405,15 @@ async def build_signal(
         f"{remaining}"
     )
 
-    tv_symbol = symbol
-
+    # لینک کوتاه TradingView
     tv_url = (
         "https://www.tradingview.com/"
-        f"symbols/{tv_symbol}/"
+        f"symbols/{symbol}/"
         "?exchange=BINANCE"
     )
 
     tv_line = (
-        f"📈 TV: {tv_url}"
+        f'📈 <a href="{tv_url}">TV</a>'
     )
 
     return {
@@ -1476,7 +1435,7 @@ async def build_signal(
 
 
 # ============================================================
-# SCAN ONE SYMBOL
+# SCAN SYMBOL
 # ============================================================
 
 async def scan_symbol(
@@ -1504,7 +1463,7 @@ async def scan_symbol(
             ):
                 return None
 
-            result = await build_signal(
+            return await build_signal(
                 session,
                 coin["name"],
                 binance_symbol,
@@ -1512,8 +1471,6 @@ async def scan_symbol(
                 interval,
                 rows
             )
-
-            return result
 
         except Exception as exc:
 
@@ -1603,7 +1560,6 @@ async def scan_once(
             timeframe
         )
 
-        # خنثی شدن RSI وضعیت قبلی را آزاد می‌کند
         if zone == "neutral":
 
             state["signals"].pop(
@@ -1613,11 +1569,9 @@ async def scan_once(
 
             continue
 
-        # جلوگیری از تکرار در همان پنجره
         if key in window_seen:
             continue
 
-        # بررسی وضعیت ذخیره‌شده قبلی
         if not is_new_signal(
             state,
             symbol,
@@ -1628,19 +1582,17 @@ async def scan_once(
 
         alerts.append(result)
 
-        # فقط داخل همین پنجره علامت می‌زنیم.
         window_seen.add(key)
 
     return alerts
 
 
 # ============================================================
-# FORMAT BATCH MESSAGE
+# BATCH MESSAGE
 # ============================================================
 
-def build_batch_message(
-    alerts
-):
+def build_batch_message(alerts):
+
     if not alerts:
         return None
 
@@ -1648,35 +1600,64 @@ def build_batch_message(
 
     for alert in alerts:
 
-        symbol = alert["symbol"]
+        timeframe = (
+            alert["timeframe"]
+        )
 
         grouped.setdefault(
-            symbol,
+            timeframe,
             []
         ).append(alert)
 
     blocks = []
 
-    for symbol, items in grouped.items():
+    timeframe_order = [
+        "15M",
+        "1H",
+        "4H",
+        "1D"
+    ]
 
-        items.sort(
-            key=lambda x:
-            TF_ORDER.get(
-                x["timeframe"],
-                99
-            )
+    for timeframe in timeframe_order:
+
+        items = grouped.get(
+            timeframe,
+            []
+        )
+
+        if not items:
+            continue
+
+        # هدر تایم‌فریم
+        # کاراکترهای دو طرف باعث می‌شوند
+        # در Telegram حالت وسط‌نما داشته باشد.
+        tf = timeframe.lower()
+
+        header = (
+            f"━━━━━━ {tf} ━━━━━━"
         )
 
         lines = [
-            f"💠 {symbol}"
+            f"<b>{header}</b>"
         ]
+
+        items.sort(
+            key=lambda x: x["symbol"]
+        )
 
         for item in items:
 
+            symbol = item["symbol"]
+
+            # BTCUSDT -> BTC
+            if symbol.endswith("USDT"):
+                display_symbol = symbol[:-4]
+            else:
+                display_symbol = symbol
+
+            # تمام اطلاعات از یک سمت
             lines.append(
-                f"\n━━━ "
-                f"{item['timeframe']} "
-                f"━━━"
+                f"\n<b>💠 {display_symbol}</b>"
             )
 
             lines.append(
@@ -1716,10 +1697,7 @@ async def main():
         connector=connector
     ) as session:
 
-        # -----------------------------
-        # Telegram commands
-        # -----------------------------
-
+        # Telegram
         state = await process_commands(
             session,
             state
@@ -1735,10 +1713,7 @@ async def main():
                 "No Telegram users are active."
             )
 
-        # -----------------------------
         # Top 100
-        # -----------------------------
-
         logger.info(
             "Getting Top 100..."
         )
@@ -1763,10 +1738,7 @@ async def main():
             len(coins)
         )
 
-        # -----------------------------
-        # Binance exchange info
-        # -----------------------------
-
+        # Binance
         try:
 
             exchange_info = (
@@ -1805,16 +1777,14 @@ async def main():
 
             return
 
-        # -----------------------------
-        # Monitoring window
-        # -----------------------------
-
-        start_time = asyncio.get_running_loop().time()
+        # Monitoring
+        start_time = (
+            asyncio.get_running_loop()
+            .time()
+        )
 
         scan_number = 0
-
         collected = []
-
         window_seen = set()
 
         while (
@@ -1830,7 +1800,6 @@ async def main():
                 scan_number
             )
 
-            # دریافت /start و /stop
             state = await process_commands(
                 session,
                 state
@@ -1857,7 +1826,8 @@ async def main():
                 )
 
             elapsed = (
-                asyncio.get_running_loop().time()
+                asyncio.get_running_loop()
+                .time()
                 - start_time
             )
 
@@ -1869,22 +1839,15 @@ async def main():
             if remaining <= 0:
                 break
 
-            sleep_for = min(
-                SCAN_INTERVAL_SECONDS,
-                remaining
-            )
-
             await asyncio.sleep(
-                sleep_for
+                min(
+                    SCAN_INTERVAL_SECONDS,
+                    remaining
+                )
             )
-
-        # -----------------------------
-        # End of window
-        # -----------------------------
 
         logger.info(
-            "5-minute monitoring window "
-            "finished."
+            "5-minute monitoring window finished."
         )
 
         if not collected:
@@ -1896,14 +1859,10 @@ async def main():
             save_state(state)
             return
 
-        # مرتب‌سازی
         collected.sort(
             key=lambda x: (
-                x["symbol"],
-                TF_ORDER.get(
-                    x["timeframe"],
-                    99
-                )
+                x["timeframe"],
+                x["symbol"]
             )
         )
 
@@ -1912,6 +1871,7 @@ async def main():
         )
 
         if not message:
+
             save_state(state)
             return
 
@@ -1919,10 +1879,6 @@ async def main():
             "Sending %d collected alerts.",
             len(collected)
         )
-
-        # -----------------------------
-        # Send to all users
-        # -----------------------------
 
         successful = False
 
@@ -1939,8 +1895,6 @@ async def main():
             if ok:
                 successful = True
 
-        # فقط اگر پیام واقعاً ارسال شد،
-        # وضعیت سیگنال‌ها ذخیره شود.
         if successful:
 
             for alert in collected:
@@ -1958,15 +1912,20 @@ async def main():
 
             logger.warning(
                 "No Telegram message was "
-                "successfully delivered. "
-                "Signal state was not marked."
+                "successfully delivered."
             )
 
             save_state(state)
 
 
+# ============================================================
+# START
+# ============================================================
+
 if __name__ == "__main__":
+
     try:
+
         asyncio.run(main())
 
     except KeyboardInterrupt:
