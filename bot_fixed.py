@@ -1,5 +1,4 @@
 import os
-import re
 import json
 import asyncio
 import logging
@@ -14,30 +13,66 @@ import aiohttp
 # ============================================================
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
-LEGACY_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
 
-TOP_N = int(os.getenv("TOP_N", "100"))
-PERIOD = int(os.getenv("RSI_PERIOD", "14"))
+LEGACY_CHAT_ID = os.getenv(
+    "TELEGRAM_CHAT_ID",
+    ""
+).strip()
 
-USERS_FILE = Path(os.getenv("USERS_FILE", "users.json"))
+TOP_N = int(
+    os.getenv(
+        "TOP_N",
+        "100"
+    )
+)
 
-MARKET = os.getenv("MARKET", "spot").lower()
+RSI_PERIOD = int(
+    os.getenv(
+        "RSI_PERIOD",
+        "14"
+    )
+)
 
-# Alert when the CURRENT candle has 9-11 minutes remaining.
+USERS_FILE = Path(
+    os.getenv(
+        "USERS_FILE",
+        "users.json"
+    )
+)
+
+# Number of top Binance USDT spot coins.
+TOP_BINANCE_COINS = 100
+
+# Alert when current candle has about 10 minutes remaining.
 ALERT_MINUTES_BEFORE_CLOSE = 10
-ALERT_WINDOW_SECONDS = 120
 
-# Binance public endpoints.
-BASES = [
+# We accept 9-11 minutes remaining.
+ALERT_MIN_SECONDS = 9 * 60
+ALERT_MAX_SECONDS = 11 * 60
+
+# Scan every minute during a GitHub Actions run.
+SCAN_INTERVAL_SECONDS = 60
+
+# GitHub workflow runs every 5 minutes.
+# Keep bot runtime below 5 minutes.
+RUN_DURATION_SECONDS = 285
+
+# Iran time UTC+3:30
+IRAN_TZ = timezone(
+    timedelta(
+        hours=3,
+        minutes=30
+    )
+)
+
+# Binance public market-data endpoints.
+BINANCE_BASES = [
     "https://data-api.binance.vision",
     "https://api-gcp.binance.com",
     "https://api.binance.com",
 ]
 
-# DeFiLlama token ranking page.
-DEFILLAMA_TOKENS_URL = "https://defillama.com/tokens"
-
-# Timeframes.
+# Timeframes
 TFS = {
     "15m": "15m",
     "1h": "1h",
@@ -52,8 +87,10 @@ TF_ORDER = {
     "1D": 3,
 }
 
-# Iran time = UTC+3:30.
-IRAN_TZ = timezone(timedelta(hours=3, minutes=30))
+
+# ============================================================
+# LOGGING
+# ============================================================
 
 logging.basicConfig(
     level=logging.INFO,
@@ -62,110 +99,57 @@ logging.basicConfig(
 
 
 # ============================================================
-# RSI
+# HTTP HELPERS
 # ============================================================
 
-def rsi(values, period=14):
-    """
-    Wilder RSI.
-    Returns one RSI value for every input position after
-    enough candles are available.
-    """
-    if len(values) < period + 1:
-        return []
-
-    gains = []
-    losses = []
-
-    for i in range(1, period + 1):
-        change = values[i] - values[i - 1]
-
-        if change > 0:
-            gains.append(change)
-            losses.append(0.0)
-        else:
-            gains.append(0.0)
-            losses.append(-change)
-
-    avg_gain = sum(gains) / period
-    avg_loss = sum(losses) / period
-
-    result = [None] * period
-
-    if avg_loss == 0:
-        first_rsi = 100.0 if avg_gain > 0 else 50.0
-    else:
-        rs = avg_gain / avg_loss
-        first_rsi = 100.0 - (100.0 / (1.0 + rs))
-
-    result.append(first_rsi)
-
-    for i in range(period + 1, len(values)):
-        change = values[i] - values[i - 1]
-
-        gain = max(change, 0.0)
-        loss = max(-change, 0.0)
-
-        avg_gain = ((avg_gain * (period - 1)) + gain) / period
-        avg_loss = ((avg_loss * (period - 1)) + loss) / period
-
-        if avg_loss == 0:
-            value = 100.0 if avg_gain > 0 else 50.0
-        else:
-            rs = avg_gain / avg_loss
-            value = 100.0 - (100.0 / (1.0 + rs))
-
-        result.append(value)
-
-    return result
-
-
-def zone(value):
-    if value < 30:
-        return "oversold"
-
-    if value > 70:
-        return "overbought"
-
-    return "neutral"
-
-
-# ============================================================
-# HTTP
-# ============================================================
-
-async def get_json(session, url, params=None, timeout=20):
+async def get_json(
+    session,
+    url,
+    params=None,
+    timeout=20
+):
     last_error = None
 
     for attempt in range(3):
+
         try:
+
             async with session.get(
                 url,
                 params=params,
-                timeout=aiohttp.ClientTimeout(total=timeout),
+                timeout=aiohttp.ClientTimeout(
+                    total=timeout
+                ),
                 headers={
-                    "User-Agent": (
-                        "Mozilla/5.0 "
-                        "(compatible; CryptoRSITelegramBot/3.0)"
-                    )
+                    "User-Agent":
+                        "Crypto-RSI-Telegram-Bot/4.0"
                 },
             ) as response:
 
                 if response.status == 429:
-                    retry_after = response.headers.get(
-                        "Retry-After",
-                        "3",
+
+                    retry_after = (
+                        response.headers.get(
+                            "Retry-After",
+                            "3"
+                        )
                     )
 
                     try:
-                        delay = min(float(retry_after), 15)
+                        delay = float(
+                            retry_after
+                        )
                     except Exception:
                         delay = 3
 
-                    await asyncio.sleep(delay)
+                    await asyncio.sleep(
+                        min(delay, 10)
+                    )
+
                     continue
 
                 if response.status >= 400:
+
                     text = await response.text()
 
                     raise aiohttp.ClientResponseError(
@@ -176,7 +160,9 @@ async def get_json(session, url, params=None, timeout=20):
                         headers=response.headers,
                     )
 
-                return await response.json(content_type=None)
+                return await response.json(
+                    content_type=None
+                )
 
         except (
             aiohttp.ClientError,
@@ -186,106 +172,82 @@ async def get_json(session, url, params=None, timeout=20):
 
             last_error = exc
 
-            if attempt == 2:
-                raise
-
-            await asyncio.sleep(1.5 * (attempt + 1))
-
-    raise last_error
-
-
-async def get_text(session, url, params=None, timeout=30):
-    last_error = None
-
-    for attempt in range(3):
-        try:
-            async with session.get(
-                url,
-                params=params,
-                timeout=aiohttp.ClientTimeout(total=timeout),
-                headers={
-                    "User-Agent": (
-                        "Mozilla/5.0 "
-                        "(compatible; CryptoRSITelegramBot/3.0)"
-                    ),
-                    "Accept": (
-                        "text/html,application/xhtml+xml,"
-                        "application/xml;q=0.9,*/*;q=0.8"
-                    ),
-                },
-            ) as response:
-
-                if response.status == 429:
-                    await asyncio.sleep(3)
-                    continue
-
-                if response.status >= 400:
-                    text = await response.text()
-
-                    raise aiohttp.ClientResponseError(
-                        response.request_info,
-                        response.history,
-                        status=response.status,
-                        message=text[:500],
-                        headers=response.headers,
-                    )
-
-                return await response.text()
-
-        except (
-            aiohttp.ClientError,
-            asyncio.TimeoutError,
-        ) as exc:
-
-            last_error = exc
-
-            if attempt == 2:
-                raise
-
-            await asyncio.sleep(1.5 * (attempt + 1))
+            if attempt < 2:
+                await asyncio.sleep(
+                    1.5 * (attempt + 1)
+                )
 
     raise last_error
 
 
-async def post_json(session, url, payload):
+async def post_json(
+    session,
+    url,
+    payload
+):
+
     async with session.post(
         url,
         json=payload,
-        timeout=aiohttp.ClientTimeout(total=20),
+        timeout=aiohttp.ClientTimeout(
+            total=20
+        ),
     ) as response:
 
         text = await response.text()
 
         if response.status >= 400:
+
             raise RuntimeError(
-                f"HTTP {response.status}: {text[:500]}"
+                f"HTTP {response.status}: "
+                f"{text[:500]}"
             )
 
         try:
             data = json.loads(text)
+
         except Exception:
+
             raise RuntimeError(
-                f"Invalid JSON response: {text[:500]}"
+                "Invalid JSON response: "
+                + text[:500]
             )
 
         if not data.get("ok"):
+
             raise RuntimeError(
-                f"Telegram API error: {text[:500]}"
+                "Telegram API error: "
+                + text[:500]
             )
 
         return data.get("result")
 
 
-async def telegram(session, method, payload=None):
+# ============================================================
+# TELEGRAM
+# ============================================================
+
+async def telegram(
+    session,
+    method,
+    payload=None
+):
+
     if not TOKEN:
+
         raise RuntimeError(
             "TELEGRAM_BOT_TOKEN is missing."
         )
 
+    url = (
+        f"https://api.telegram.org/"
+        f"bot{TOKEN}/{method}"
+    )
+
     return await post_json(
         session,
-        f"https://api.telegram.org/bot{TOKEN}/{method}",
-        payload or {},
+        url,
+        payload or {}
     )
 
 
@@ -293,19 +255,34 @@ async def telegram(session, method, payload=None):
 # BINANCE
 # ============================================================
 
-async def binance(session, path, params=None):
+async def binance(
+    session,
+    path,
+    params=None
+):
+
     last_error = None
 
-    for base in BASES:
+    for base in BINANCE_BASES:
+
         try:
+
             return await get_json(
                 session,
                 base + path,
-                params,
+                params=params,
+                timeout=25,
             )
 
         except aiohttp.ClientResponseError as exc:
+
             last_error = exc
+
+            logging.warning(
+                "%s returned HTTP %s",
+                base,
+                exc.status
+            )
 
             if exc.status not in (
                 400,
@@ -313,597 +290,547 @@ async def binance(session, path, params=None):
                 418,
                 429,
                 451,
+                500,
+                502,
+                503,
+                504,
             ):
                 raise
 
+        except Exception as exc:
+
+            last_error = exc
+
             logging.warning(
-                "%s returned HTTP %s; trying next Binance endpoint.",
+                "%s failed: %s",
                 base,
-                exc.status,
+                exc
             )
 
-    raise last_error
+    if last_error:
+        raise last_error
+
+    raise RuntimeError(
+        "No Binance endpoint available."
+    )
 
 
-async def get_binance_exchange_info(session):
+# ============================================================
+# TOP 100 BINANCE
+# ============================================================
+
+# Stablecoins are excluded so that "top coins"
+# does not become dominated by stablecoin pairs.
+EXCLUDED_BASE_ASSETS = {
+    "USDT",
+    "USDC",
+    "FDUSD",
+    "TUSD",
+    "USDP",
+    "DAI",
+    "USDE",
+    "PYUSD",
+    "BUSD",
+    "EUR",
+    "EURI",
+}
+
+# Leveraged-token suffixes.
+LEVERAGED_SUFFIXES = (
+    "UP",
+    "DOWN",
+    "BULL",
+    "BEAR",
+)
+
+
+def is_normal_spot_coin(
+    symbol_info
+):
+    symbol = symbol_info.get(
+        "symbol",
+        ""
+    )
+
+    status = symbol_info.get(
+        "status",
+        ""
+    )
+
+    base_asset = symbol_info.get(
+        "baseAsset",
+        ""
+    )
+
+    quote_asset = symbol_info.get(
+        "quoteAsset",
+        ""
+    )
+
+    spot_allowed = symbol_info.get(
+        "isSpotTradingAllowed",
+        False
+    )
+
+    if status != "TRADING":
+        return False
+
+    if quote_asset != "USDT":
+        return False
+
+    if not spot_allowed:
+        return False
+
+    if not symbol.endswith("USDT"):
+        return False
+
+    if base_asset in EXCLUDED_BASE_ASSETS:
+        return False
+
+    upper_base = base_asset.upper()
+
+    for suffix in LEVERAGED_SUFFIXES:
+
+        if upper_base.endswith(suffix):
+            return False
+
+    return True
+
+
+async def get_exchange_info(
+    session
+):
+
     return await binance(
         session,
-        "/api/v3/exchangeInfo",
+        "/api/v3/exchangeInfo"
     )
 
 
-async def get_binance_spot_usdt_symbols(session):
+async def get_top_100_binance_coins(
+    session
+):
     """
-    Returns Binance spot USDT symbols.
-    """
-
-    data = await get_binance_exchange_info(session)
-
-    result = set()
-
-    for item in data.get("symbols", []):
-        symbol = item.get("symbol", "")
-        status = item.get("status", "")
-        quote = item.get("quoteAsset", "")
-        market_type = item.get("isSpotTradingAllowed", False)
-
-        if (
-            status == "TRADING"
-            and quote == "USDT"
-            and market_type
-            and symbol.endswith("USDT")
-        ):
-            result.add(symbol)
-
-    return result
-
-
-async def tickers(session):
-    data = await binance(
-        session,
-        "/api/v3/ticker/24hr",
-    )
-
-    return {
-        x["symbol"]: x
-        for x in data
-        if x.get("symbol")
-    }
-
-
-# ============================================================
-# DEFILLAMA RANKING
-# ============================================================
-
-def clean_html_text(value):
-    value = re.sub(r"<[^>]+>", " ", value)
-    value = re.sub(r"\s+", " ", value)
-    return value.strip()
-
-
-def normalize_symbol(symbol):
-    if not symbol:
-        return ""
-
-    symbol = str(symbol).strip().upper()
-
-    symbol = symbol.replace(
-        "$",
-        "",
-    )
-
-    symbol = re.sub(
-        r"[^A-Z0-9._-]",
-        "",
-        symbol,
-    )
-
-    return symbol
-
-
-def normalize_name(name, symbol):
-    if name:
-        name = str(name).strip()
-
-        if name:
-            return name
-
-    return symbol
-
-
-def token_object_is_valid(obj):
-    if not isinstance(obj, dict):
-        return False
-
-    symbol = (
-        obj.get("symbol")
-        or obj.get("ticker")
-        or obj.get("tokenSymbol")
-    )
-
-    if not symbol:
-        return False
-
-    symbol = normalize_symbol(symbol)
-
-    if not symbol:
-        return False
-
-    # Require at least one ranking-related metric.
-    metric_keys = (
-        "mcap",
-        "marketCap",
-        "market_cap",
-        "fdv",
-        "rank",
-        "price",
-        "circulatingMarketCap",
-    )
-
-    return any(
-        key in obj
-        for key in metric_keys
-    )
-
-
-def extract_token_from_object(obj, fallback_rank=None):
-    if not token_object_is_valid(obj):
-        return None
-
-    symbol = (
-        obj.get("symbol")
-        or obj.get("ticker")
-        or obj.get("tokenSymbol")
-    )
-
-    symbol = normalize_symbol(symbol)
-
-    name = (
-        obj.get("name")
-        or obj.get("tokenName")
-        or obj.get("displayName")
-        or symbol
-    )
-
-    rank = (
-        obj.get("rank")
-        or obj.get("position")
-        or obj.get("index")
-        or fallback_rank
-    )
-
-    try:
-        rank = int(rank) if rank is not None else None
-    except Exception:
-        rank = fallback_rank
-
-    mcap = (
-        obj.get("mcap")
-        or obj.get("marketCap")
-        or obj.get("market_cap")
-        or 0
-    )
-
-    try:
-        mcap = float(mcap or 0)
-    except Exception:
-        mcap = 0.0
-
-    return {
-        "symbol": symbol,
-        "name": normalize_name(name, symbol),
-        "rank": rank,
-        "mcap": mcap,
-    }
-
-
-def walk_json_for_tokens(value, output):
-    """
-    Recursively searches JSON structures for token objects.
-    """
-
-    if isinstance(value, dict):
-
-        token = extract_token_from_object(value)
-
-        if token:
-            output.append(token)
-
-        for child in value.values():
-            walk_json_for_tokens(
-                child,
-                output,
-            )
-
-    elif isinstance(value, list):
-
-        for child in value:
-            walk_json_for_tokens(
-                child,
-                output,
-            )
-
-
-def extract_json_scripts(html):
-    """
-    Extract JSON-like <script> blocks.
-    """
-
-    scripts = []
-
-    patterns = [
-        r'<script[^>]+type=["\']application/json["\'][^>]*>(.*?)</script>',
-        r'<script[^>]*>(.*?)</script>',
-    ]
-
-    for pattern in patterns:
-
-        for match in re.finditer(
-            pattern,
-            html,
-            flags=re.IGNORECASE | re.DOTALL,
-        ):
-            content = match.group(1).strip()
-
-            if content:
-                scripts.append(content)
-
-    return scripts
-
-
-def parse_defillama_html(html):
-    """
-    Multi-method parser.
-
-    DeFiLlama's /tokens page is a web page rather than a documented
-    free ranking API, so the parser checks:
-      1. JSON script data
-      2. embedded application state
-      3. raw HTML patterns
-    """
-
-    found = []
-
-    # --------------------------------------------------------
-    # Method 1: JSON scripts
-    # --------------------------------------------------------
-
-    for script in extract_json_scripts(html):
-
-        candidates = [
-            script,
-        ]
-
-        # Some pages wrap JSON in a JS assignment.
-        for prefix in (
-            "self.__next_f.push(",
-            "window.__INITIAL_STATE__ =",
-            "window.__NEXT_DATA__ =",
-        ):
-            if script.startswith(prefix):
-                candidates.append(
-                    script[len(prefix):].rstrip(");")
-                )
-
-        for candidate in candidates:
-
-            candidate = candidate.strip()
-
-            try:
-                parsed = json.loads(candidate)
-
-                walk_json_for_tokens(
-                    parsed,
-                    found,
-                )
-
-            except Exception:
-                pass
-
-    # --------------------------------------------------------
-    # Method 2: regex around common token JSON fields
-    # --------------------------------------------------------
-
-    patterns = [
-        re.compile(
-            r'"symbol"\s*:\s*"([^"]{1,20})".{0,1000}?'
-            r'"(?:mcap|marketCap|market_cap)"\s*:\s*'
-            r'([0-9.eE+-]+)',
-            re.IGNORECASE | re.DOTALL,
-        ),
-        re.compile(
-            r'"(?:ticker|tokenSymbol)"\s*:\s*"([^"]{1,20})".{0,1000}?'
-            r'"(?:mcap|marketCap|market_cap)"\s*:\s*'
-            r'([0-9.eE+-]+)',
-            re.IGNORECASE | re.DOTALL,
-        ),
-    ]
-
-    for pattern in patterns:
-
-        for match in pattern.finditer(html):
-
-            symbol = normalize_symbol(
-                match.group(1)
-            )
-
-            try:
-                mcap = float(
-                    match.group(2)
-                )
-            except Exception:
-                mcap = 0
-
-            if symbol:
-                found.append(
-                    {
-                        "symbol": symbol,
-                        "name": symbol,
-                        "rank": None,
-                        "mcap": mcap,
-                    }
-                )
-
-    # --------------------------------------------------------
-    # Deduplicate
-    # --------------------------------------------------------
-
-    unique = {}
-
-    for item in found:
-
-        symbol = item["symbol"]
-
-        if not symbol:
-            continue
-
-        old = unique.get(symbol)
-
-        if old is None:
-            unique[symbol] = item
-            continue
-
-        # Prefer item containing a rank.
-        if (
-            old.get("rank") is None
-            and item.get("rank") is not None
-        ):
-            unique[symbol] = item
-
-        elif (
-            item.get("mcap", 0)
-            > old.get("mcap", 0)
-        ):
-            unique[symbol] = item
-
-    result = list(unique.values())
-
-    # --------------------------------------------------------
-    # Sort
-    # --------------------------------------------------------
-
-    ranked = [
-        x for x in result
-        if x.get("rank") is not None
-    ]
-
-    if len(ranked) >= 10:
-
-        ranked.sort(
-            key=lambda x: (
-                x.get("rank", 999999),
-                -x.get("mcap", 0),
-            )
-        )
-
-        return ranked
-
-    result.sort(
-        key=lambda x: (
-            -x.get("mcap", 0),
-            x["symbol"],
-        )
-    )
-
-    return result
-
-
-async def top_coins(session):
-    """
-    Get top tokens from DeFiLlama and then keep only tokens
-    that have Binance USDT spot markets.
-
-    Final result: up to TOP_N coins.
+    Gets Binance USDT spot markets and ranks them
+    by 24h quote volume.
+
+    Result:
+        up to 100 normal USDT spot coins.
     """
 
     logging.info(
-        "Downloading DeFiLlama token ranking..."
+        "Getting Binance exchange information..."
     )
 
-    html = await get_text(
-        session,
-        DEFILLAMA_TOKENS_URL,
-        timeout=40,
-    )
-
-    if not html:
-        raise RuntimeError(
-            "DeFiLlama returned an empty page."
-        )
-
-    tokens = parse_defillama_html(html)
-
-    logging.info(
-        "DeFiLlama parser found %s token candidates.",
-        len(tokens),
-    )
-
-    if not tokens:
-        raise RuntimeError(
-            "Could not parse DeFiLlama token ranking."
-        )
-
-    # Binance markets.
-    binance_symbols = (
-        await get_binance_spot_usdt_symbols(
+    exchange_info = (
+        await get_exchange_info(
             session
         )
     )
 
+    valid_symbols = {}
+
+    for item in exchange_info.get(
+        "symbols",
+        []
+    ):
+
+        if is_normal_spot_coin(
+            item
+        ):
+
+            symbol = item.get(
+                "symbol"
+            )
+
+            base = item.get(
+                "baseAsset"
+            )
+
+            if symbol and base:
+
+                valid_symbols[
+                    symbol
+                ] = {
+                    "symbol": symbol,
+                    "base": base,
+                }
+
     logging.info(
-        "Binance USDT spot symbols: %s",
-        len(binance_symbols),
+        "Valid Binance USDT spot markets: %s",
+        len(valid_symbols)
     )
 
-    # Some common symbols require mapping.
-    symbol_aliases = {
-        "WETH": "ETH",
-        "WBTC": "BTC",
-        "WBNB": "BNB",
-        "WSTETH": "ETH",
-        "STETH": "ETH",
-        "WEETH": "ETH",
-        "WSOL": "SOL",
-    }
+    if not valid_symbols:
 
-    result = []
-    seen_pairs = set()
-
-    for token in tokens:
-
-        original_symbol = token["symbol"]
-
-        symbol = symbol_aliases.get(
-            original_symbol,
-            original_symbol,
+        raise RuntimeError(
+            "No Binance USDT spot markets found."
         )
 
-        pair = symbol + "USDT"
+    logging.info(
+        "Getting Binance 24h ticker data..."
+    )
 
-        if pair not in binance_symbols:
+    ticker_data = await binance(
+        session,
+        "/api/v3/ticker/24hr"
+    )
+
+    ranked = []
+
+    for ticker in ticker_data:
+
+        symbol = ticker.get(
+            "symbol"
+        )
+
+        if symbol not in valid_symbols:
             continue
 
-        if pair in seen_pairs:
+        try:
+
+            quote_volume = float(
+                ticker.get(
+                    "quoteVolume",
+                    0
+                )
+            )
+
+        except Exception:
+
+            quote_volume = 0.0
+
+        if quote_volume <= 0:
             continue
 
-        seen_pairs.add(pair)
+        info = valid_symbols[
+            symbol
+        ]
 
-        result.append(
+        ranked.append(
             {
-                "name": token.get(
-                    "name",
-                    symbol,
-                ),
                 "symbol": symbol,
-                "rank": token.get(
-                    "rank"
-                ),
+                "base": info["base"],
+                "quote_volume": quote_volume,
             }
         )
 
-        if len(result) >= TOP_N:
-            break
+    ranked.sort(
+        key=lambda x:
+            x["quote_volume"],
+        reverse=True
+    )
 
-    if not result:
-        raise RuntimeError(
-            "DeFiLlama ranking was obtained, "
-            "but no Binance USDT spot pairs matched."
-        )
+    top = ranked[
+        :TOP_BINANCE_COINS
+    ]
 
     logging.info(
-        "Final DeFiLlama ∩ Binance list: %s coins.",
-        len(result),
+        "Top Binance coins selected: %s",
+        len(top)
     )
+
+    if top:
+
+        preview = ", ".join(
+            x["symbol"]
+            for x in top[:10]
+        )
+
+        logging.info(
+            "Top 10 Binance volume coins: %s",
+            preview
+        )
+
+    return top
+
+
+# ============================================================
+# RSI
+# ============================================================
+
+def calculate_rsi(
+    values,
+    period=14
+):
+    """
+    Wilder RSI.
+    """
+
+    if len(values) < period + 1:
+        return []
+
+    gains = []
+    losses = []
+
+    for i in range(
+        1,
+        period + 1
+    ):
+
+        change = (
+            values[i]
+            - values[i - 1]
+        )
+
+        if change > 0:
+
+            gains.append(
+                change
+            )
+
+            losses.append(
+                0.0
+            )
+
+        else:
+
+            gains.append(
+                0.0
+            )
+
+            losses.append(
+                -change
+            )
+
+    avg_gain = (
+        sum(gains)
+        / period
+    )
+
+    avg_loss = (
+        sum(losses)
+        / period
+    )
+
+    result = [
+        None
+    ] * period
+
+    if avg_loss == 0:
+
+        first = (
+            100.0
+            if avg_gain > 0
+            else 50.0
+        )
+
+    else:
+
+        rs = (
+            avg_gain
+            / avg_loss
+        )
+
+        first = (
+            100.0
+            - (
+                100.0
+                / (1.0 + rs)
+            )
+        )
+
+    result.append(
+        first
+    )
+
+    for i in range(
+        period + 1,
+        len(values)
+    ):
+
+        change = (
+            values[i]
+            - values[i - 1]
+        )
+
+        gain = max(
+            change,
+            0.0
+        )
+
+        loss = max(
+            -change,
+            0.0
+        )
+
+        avg_gain = (
+            (
+                avg_gain
+                * (period - 1)
+            )
+            + gain
+        ) / period
+
+        avg_loss = (
+            (
+                avg_loss
+                * (period - 1)
+            )
+            + loss
+        ) / period
+
+        if avg_loss == 0:
+
+            current = (
+                100.0
+                if avg_gain > 0
+                else 50.0
+            )
+
+        else:
+
+            rs = (
+                avg_gain
+                / avg_loss
+            )
+
+            current = (
+                100.0
+                - (
+                    100.0
+                    / (1.0 + rs)
+                )
+            )
+
+        result.append(
+            current
+        )
 
     return result
 
 
+def rsi_zone(
+    value
+):
+
+    if value > 70:
+        return "overbought"
+
+    if value < 30:
+        return "oversold"
+
+    return "neutral"
+
+
 # ============================================================
-# CANDLE / RSI
+# CURRENT CANDLE ANALYSIS
 # ============================================================
 
-def candle_remaining_seconds(close_ms):
+def seconds_until_close(
+    close_ms
+):
+
     now_ms = (
-        datetime.now(timezone.utc).timestamp()
+        datetime.now(
+            timezone.utc
+        ).timestamp()
         * 1000
     )
 
     return (
-        float(close_ms) - now_ms
+        float(close_ms)
+        - now_ms
     ) / 1000.0
 
 
-async def one_tf(session, symbol, tf):
-    """
-    Analyze the CURRENT OPEN candle.
-
-    Alert only when approximately 10 minutes remain.
-    """
+async def analyze_timeframe(
+    session,
+    symbol,
+    timeframe
+):
 
     rows = await binance(
         session,
         "/api/v3/klines",
         {
             "symbol": symbol,
-            "interval": tf,
+            "interval": timeframe,
             "limit": 200,
-        },
+        }
     )
 
-    if len(rows) < PERIOD + 5:
+    if len(rows) < (
+        RSI_PERIOD + 5
+    ):
+
         return None
 
-    # Binance's last kline is the current open candle.
+    # --------------------------------------------------------
+    # CURRENT OPEN CANDLE
+    # --------------------------------------------------------
+
     current = rows[-1]
 
-    close_ms = int(current[6])
-
-    remaining = candle_remaining_seconds(
-        close_ms
+    open_time_ms = int(
+        current[0]
     )
 
-    # Alert window: 9 to 11 minutes.
-    target = ALERT_MINUTES_BEFORE_CLOSE * 60
+    close_time_ms = int(
+        current[6]
+    )
 
-    if abs(remaining - target) > (
-        ALERT_WINDOW_SECONDS / 2
+    remaining = (
+        seconds_until_close(
+            close_time_ms
+        )
+    )
+
+    # --------------------------------------------------------
+    # 10 MINUTES BEFORE CLOSE
+    # --------------------------------------------------------
+
+    if not (
+        ALERT_MIN_SECONDS
+        <= remaining
+        <= ALERT_MAX_SECONDS
     ):
+
         return None
+
+    # --------------------------------------------------------
+    # CLOSE PRICES
+    # --------------------------------------------------------
 
     closes = [
         float(row[4])
         for row in rows
     ]
 
-    values = rsi(
+    rsi_values = calculate_rsi(
         closes,
-        PERIOD,
+        RSI_PERIOD
     )
 
-    if len(values) < 2:
+    if len(rsi_values) < 2:
         return None
 
-    current_rsi = values[-1]
+    current_rsi = (
+        rsi_values[-1]
+    )
+
+    previous_rsi = (
+        rsi_values[-2]
+    )
 
     if current_rsi is None:
         return None
 
-    current_zone = zone(
+    current_zone = rsi_zone(
         current_rsi
     )
 
     if current_zone == "neutral":
-        return None
 
-    # Previous candle RSI.
-    previous_rsi = (
-        values[-2]
-        if values[-2] is not None
-        else 50.0
-    )
+        return {
+            "symbol": symbol,
+            "tf": timeframe,
+            "neutral": True,
+            "open_time_ms": open_time_ms,
+        }
 
     # --------------------------------------------------------
-    # Volume
+    # VOLUME
     # --------------------------------------------------------
 
     current_volume = float(
@@ -916,128 +843,199 @@ async def one_tf(session, symbol, tf):
         float(rows[-4][5]),
     ]
 
-    avg_previous = (
+    avg_previous_volume = (
         sum(previous_volumes)
         / len(previous_volumes)
     )
 
-    if avg_previous <= 0:
-        volume_ratio = 1.0
-    else:
+    if avg_previous_volume > 0:
+
         volume_ratio = (
             current_volume
-            / avg_previous
+            / avg_previous_volume
         )
+
+    else:
+
+        volume_ratio = 1.0
 
     if current_volume > max(
         previous_volumes
     ):
-        volume_state = "زیاد 🔥"
+
+        volume_state = (
+            "زیاد 🔥"
+        )
 
     elif current_volume < min(
         previous_volumes
     ):
-        volume_state = "کم 📉"
+
+        volume_state = (
+            "کم 📉"
+        )
 
     else:
-        volume_state = "معمولی ➖"
+
+        volume_state = (
+            "معمولی ➖"
+        )
 
     return {
-        "tf": tf,
-        "rsi": float(current_rsi),
-        "prev_rsi": float(previous_rsi),
+        "symbol": symbol,
+        "tf": timeframe,
+
+        "rsi": float(
+            current_rsi
+        ),
+
+        "previous_rsi": (
+            float(previous_rsi)
+            if previous_rsi is not None
+            else 50.0
+        ),
+
         "zone": current_zone,
 
         "volume": current_volume,
-        "prev_volumes": previous_volumes,
-        "volume_ratio": volume_ratio,
-        "volume_state": volume_state,
 
-        "close_ms": close_ms,
-        "remaining": remaining,
+        "previous_volumes":
+            previous_volumes,
 
-        "open_time_ms": int(
-            current[0]
-        ),
+        "volume_ratio":
+            volume_ratio,
+
+        "volume_state":
+            volume_state,
+
+        "open_time_ms":
+            open_time_ms,
+
+        "close_time_ms":
+            close_time_ms,
+
+        "remaining":
+            remaining,
+
+        "neutral":
+            False,
     }
 
+
+# ============================================================
+# SCAN ONE COIN
+# ============================================================
 
 async def scan_coin(
     session,
     coin,
-    ticker_data,
-    semaphore,
+    semaphore
 ):
-    symbol = coin["symbol"] + "USDT"
 
-    if symbol not in ticker_data:
-        return []
+    symbol = coin["symbol"]
 
-    async def run_tf(tf_name):
+    results = []
+
+    async def worker(
+        tf_name,
+        tf_value
+    ):
 
         async with semaphore:
 
             try:
-                result = await one_tf(
-                    session,
-                    symbol,
-                    tf_name,
+
+                result = (
+                    await analyze_timeframe(
+                        session,
+                        symbol,
+                        tf_value
+                    )
                 )
 
                 if result:
-                    result.update(
-                        {
-                            "name": coin["name"],
-                            "symbol": symbol,
-                        }
+
+                    result["base"] = (
+                        coin["base"]
                     )
 
-                return result
-
-            except aiohttp.ClientResponseError as exc:
-
-                if exc.status not in (
-                    400,
-                    404,
-                ):
-                    logging.warning(
-                        "%s %s HTTP %s",
-                        symbol,
-                        tf_name,
-                        exc.status,
+                    result["quote_volume"] = (
+                        coin[
+                            "quote_volume"
+                        ]
                     )
 
-                return None
+                    return result
 
             except Exception as exc:
 
                 logging.warning(
-                    "%s %s: %s",
+                    "%s %s failed: %s",
                     symbol,
                     tf_name,
-                    exc,
+                    exc
                 )
 
-                return None
+            return None
+
+    tasks = [
+        worker(
+            tf_name,
+            tf_value
+        )
+        for tf_name, tf_value
+        in TFS.items()
+    ]
 
     results = await asyncio.gather(
-        *(
-            run_tf(tf)
-            for tf in TFS.keys()
-        )
+        *tasks
     )
 
     return [
-        x for x in results
+        x
+        for x in results
         if x is not None
     ]
 
 
+async def scan_all(
+    session,
+    coins
+):
+
+    semaphore = asyncio.Semaphore(
+        12
+    )
+
+    tasks = [
+        scan_coin(
+            session,
+            coin,
+            semaphore
+        )
+        for coin in coins
+    ]
+
+    groups = await asyncio.gather(
+        *tasks
+    )
+
+    results = []
+
+    for group in groups:
+        results.extend(
+            group
+        )
+
+    return results
+
+
 # ============================================================
-# PERSISTENT STATE
+# USERS.JSON
 # ============================================================
 
 def default_state():
+
     return {
         "users": [],
         "offset": 0,
@@ -1046,36 +1044,44 @@ def default_state():
 
 
 def load_state():
+
     if not USERS_FILE.exists():
+
         return default_state()
 
     try:
+
         data = json.loads(
             USERS_FILE.read_text(
                 encoding="utf-8"
             )
         )
 
-        if not isinstance(data, dict):
+        if not isinstance(
+            data,
+            dict
+        ):
+
             return default_state()
 
         users = [
             str(x)
             for x in data.get(
                 "users",
-                [],
+                []
             )
         ]
 
         signals = data.get(
             "signals",
-            {},
+            {}
         )
 
         if not isinstance(
             signals,
-            dict,
+            dict
         ):
+
             signals = {}
 
         return {
@@ -1083,7 +1089,7 @@ def load_state():
             "offset": int(
                 data.get(
                     "offset",
-                    0,
+                    0
                 )
             ),
             "signals": signals,
@@ -1092,22 +1098,25 @@ def load_state():
     except Exception as exc:
 
         logging.warning(
-            "Could not read %s: %s",
-            USERS_FILE,
-            exc,
+            "Could not load users.json: %s",
+            exc
         )
 
         return default_state()
 
 
-def save_state(state):
+def save_state(
+    state
+):
+
     USERS_FILE.write_text(
         json.dumps(
             state,
             ensure_ascii=False,
-            indent=2,
-        ) + "\n",
-        encoding="utf-8",
+            indent=2
+        )
+        + "\n",
+        encoding="utf-8"
     )
 
 
@@ -1117,76 +1126,103 @@ def save_state(state):
 
 async def process_commands(
     session,
-    state,
+    state
 ):
+
     offset = int(
         state.get(
             "offset",
-            0,
+            0
         )
     )
 
-    updates = await telegram(
-        session,
-        "getUpdates",
-        {
-            "offset": offset,
-            "timeout": 0,
-            "allowed_updates": [
-                "message"
-            ],
-        },
-    )
+    try:
+
+        updates = await telegram(
+            session,
+            "getUpdates",
+            {
+                "offset": offset,
+                "timeout": 0,
+                "allowed_updates": [
+                    "message"
+                ],
+            }
+        )
+
+    except Exception as exc:
+
+        logging.warning(
+            "Telegram getUpdates failed: %s",
+            exc
+        )
+
+        return state
 
     changed = False
 
-    max_update_id = offset - 1
+    next_offset = offset
 
-    for update in updates or []:
+    for update in (
+        updates or []
+    ):
 
         try:
+
             update_id = int(
-                update["update_id"]
+                update[
+                    "update_id"
+                ]
             )
 
-            max_update_id = max(
-                max_update_id,
-                update_id + 1,
+            next_offset = max(
+                next_offset,
+                update_id + 1
             )
 
         except Exception:
+
             continue
 
         message = (
-            update.get("message")
+            update.get(
+                "message"
+            )
             or {}
         )
 
         chat = (
-            message.get("chat")
+            message.get(
+                "chat"
+            )
             or {}
         )
 
         chat_id = str(
-            chat.get("id", "")
+            chat.get(
+                "id",
+                ""
+            )
         )
 
         if not chat_id:
             continue
 
         text = (
-            message.get("text")
+            message.get(
+                "text"
+            )
             or ""
-        ).strip().lower()
+        ).strip()
 
         command = (
-            text.split()[0]
+            text.split()[0].lower()
             if text
             else ""
         )
 
         # ----------------------------------------------------
-        # /start
+        # START
         # ----------------------------------------------------
 
         if command.startswith(
@@ -1197,7 +1233,9 @@ async def process_commands(
                 "users"
             ]:
 
-                state["users"].append(
+                state[
+                    "users"
+                ].append(
                     chat_id
                 )
 
@@ -1207,13 +1245,14 @@ async def process_commands(
                     session,
                     "sendMessage",
                     {
-                        "chat_id": chat_id,
-                        "text": (
+                        "chat_id":
+                            chat_id,
+
+                        "text":
                             "✅ ربات فعال شد.\n"
-                            "از این به بعد هشدارهای RSI "
-                            "را دریافت می‌کنید."
-                        ),
-                    },
+                            "هشدارهای RSI "
+                            "برای شما فعال شد."
+                    }
                 )
 
             else:
@@ -1222,15 +1261,17 @@ async def process_commands(
                     session,
                     "sendMessage",
                     {
-                        "chat_id": chat_id,
-                        "text": (
-                            "ℹ️ شما از قبل فعال هستید."
-                        ),
-                    },
+                        "chat_id":
+                            chat_id,
+
+                        "text":
+                            "ℹ️ ربات از قبل "
+                            "برای شما فعال است."
+                    }
                 )
 
         # ----------------------------------------------------
-        # /stop
+        # STOP
         # ----------------------------------------------------
 
         elif command.startswith(
@@ -1241,7 +1282,9 @@ async def process_commands(
                 "users"
             ]:
 
-                state["users"].remove(
+                state[
+                    "users"
+                ].remove(
                     chat_id
                 )
 
@@ -1251,17 +1294,18 @@ async def process_commands(
                     session,
                     "sendMessage",
                     {
-                        "chat_id": chat_id,
-                        "text": (
+                        "chat_id":
+                            chat_id,
+
+                        "text":
                             "⛔ هشدارها متوقف شد.\n"
                             "برای فعال‌سازی دوباره "
                             "/start را بزنید."
-                        ),
-                    },
+                    }
                 )
 
         # ----------------------------------------------------
-        # /status
+        # STATUS
         # ----------------------------------------------------
 
         elif command.startswith(
@@ -1283,16 +1327,20 @@ async def process_commands(
                 session,
                 "sendMessage",
                 {
-                    "chat_id": chat_id,
-                    "text": (
-                        f"📡 وضعیت اشتراک هشدار: "
-                        f"{status}"
-                    ),
-                },
+                    "chat_id":
+                        chat_id,
+
+                    "text":
+                        f"📡 وضعیت: {status}"
+                }
             )
 
     if updates:
-        state["offset"] = max_update_id
+
+        state[
+            "offset"
+        ] = next_offset
+
         changed = True
 
     # Backward compatibility.
@@ -1302,56 +1350,75 @@ async def process_commands(
         not in state["users"]
     ):
 
-        state["users"].append(
+        state[
+            "users"
+        ].append(
             LEGACY_CHAT_ID
         )
 
         changed = True
 
-        logging.info(
-            "Added TELEGRAM_CHAT_ID "
-            "to subscribers."
-        )
-
     if changed:
-        save_state(state)
+
+        save_state(
+            state
+        )
 
     return state
 
 
 # ============================================================
-# SIGNAL DEDUPE
+# SIGNAL STATE
 # ============================================================
 
-def signal_key(alert):
+def signal_key(
+    alert
+):
+
     return (
         f"{alert['symbol']}|"
         f"{alert['tf']}"
     )
 
 
-def is_new_signal(
+def handle_signal(
     state,
-    alert,
+    alert
 ):
     """
-    Same RSI zone on the same timeframe is not repeatedly
-    sent during the same candle/run cycle.
+    State machine:
 
-    When RSI returns to neutral, the signal becomes available
-    again for the next overbought/oversold entry.
+    neutral -> oversold   = NEW
+    neutral -> overbought = NEW
+
+    oversold -> oversold   = NO
+    overbought -> overbought = NO
+
+    oversold -> neutral -> oversold = NEW
+    overbought -> neutral -> overbought = NEW
+
+    oversold -> overbought = NEW
+    overbought -> oversold = NEW
     """
 
-    key = signal_key(alert)
+    key = signal_key(
+        alert
+    )
 
     signals = state.setdefault(
         "signals",
-        {},
+        {}
     )
 
     current_zone = alert[
         "zone"
     ]
+
+    current_open = int(
+        alert[
+            "open_time_ms"
+        ]
+    )
 
     previous = signals.get(
         key
@@ -1361,203 +1428,211 @@ def is_new_signal(
     if previous is None:
 
         signals[key] = {
-            "zone": current_zone,
-            "open_time_ms": alert[
-                "open_time_ms"
-            ],
+            "zone":
+                current_zone,
+
+            "open_time_ms":
+                current_open,
         }
 
         return True
 
-    previous_zone = previous.get(
-        "zone",
-        "neutral",
+    previous_zone = (
+        previous.get(
+            "zone",
+            "neutral"
+        )
     )
 
     previous_open = int(
         previous.get(
             "open_time_ms",
-            0,
+            0
         )
     )
 
-    current_open = int(
-        alert["open_time_ms"]
-    )
-
-    # New candle:
-    # We still alert only when the zone has newly appeared.
+    # New candle.
     if current_open != previous_open:
 
-        # If previous candle was neutral, this is a new entry.
-        if previous_zone == "neutral":
+        # Same extreme zone on a new candle:
+        # keep it suppressed.
+        if (
+            previous_zone
+            == current_zone
+        ):
 
             signals[key] = {
-                "zone": current_zone,
-                "open_time_ms": current_open,
+                "zone":
+                    current_zone,
+
+                "open_time_ms":
+                    current_open,
             }
 
-            return True
+            return False
 
-        # If zone changed from overbought to oversold
-        # or vice versa, alert again.
-        if previous_zone != current_zone:
-
-            signals[key] = {
-                "zone": current_zone,
-                "open_time_ms": current_open,
-            }
-
-            return True
-
-        # Same zone in next candle:
-        # don't send duplicate.
+        # Zone changed.
         signals[key] = {
-            "zone": current_zone,
-            "open_time_ms": current_open,
+            "zone":
+                current_zone,
+
+            "open_time_ms":
+                current_open,
         }
 
-        return False
+        return True
 
     # Same candle.
-    if previous_zone == current_zone:
+    if (
+        previous_zone
+        == current_zone
+    ):
+
         return False
 
-    # Zone changed inside current candle.
     signals[key] = {
-        "zone": current_zone,
-        "open_time_ms": current_open,
+        "zone":
+            current_zone,
+
+        "open_time_ms":
+            current_open,
     }
 
     return True
 
 
-def reset_neutral_states(
+def update_neutral_states(
     state,
-    observed_alerts,
+    all_alerts
 ):
-    """
-    If a symbol/timeframe is not currently in an extreme zone,
-    reset its state to neutral.
 
-    This allows a later RSI re-entry to generate a new alert.
-    """
+    observed = {}
 
-    observed = {
-        (
-            a["symbol"],
-            a["tf"],
+    for alert in all_alerts:
+
+        key = signal_key(
+            alert
         )
-        for a in observed_alerts
-    }
+
+        observed[
+            key
+        ] = alert
 
     signals = state.setdefault(
         "signals",
-        {},
+        {}
     )
 
-    for key, item in list(
-        signals.items()
+    for key in list(
+        signals.keys()
     ):
 
-        try:
-            symbol, tf = key.split(
-                "|",
-                1,
-            )
-        except ValueError:
-            continue
+        if key not in observed:
 
-        if (
-            symbol,
-            tf,
-        ) not in observed:
-
-            item["zone"] = "neutral"
+            signals[key][
+                "zone"
+            ] = "neutral"
 
 
 # ============================================================
-# NUMBER FORMATTING
+# NUMBER FORMAT
 # ============================================================
 
-DIGIT_MAP = str.maketrans(
+DIGITS = str.maketrans(
     "0123456789",
-    "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",
+    "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵"
 )
 
 
-def bold_digits(value):
-    return str(value).translate(
-        DIGIT_MAP
+def bold_digits(
+    value
+):
+
+    return str(
+        value
+    ).translate(
+        DIGITS
     )
 
 
-def fmt_rsi(value):
+def format_rsi(
+    value
+):
+
     return bold_digits(
         f"{value:.2f}"
     )
 
 
-def fmt_percent(value):
+def format_percent(
+    value
+):
+
     return bold_digits(
         f"{value:.0f}"
     )
 
 
-def fmt_price(value):
-    if value >= 1000:
-        text = f"{value:.2f}"
-    elif value >= 1:
-        text = f"{value:.4f}"
-    elif value >= 0.01:
-        text = f"{value:.6f}"
-    else:
-        text = f"{value:.8f}"
+def format_volume(
+    value
+):
 
-    return bold_digits(
-        text
-    )
-
-
-def fmt_volume(value):
     if value >= 1_000_000_000:
-        text = f"{value / 1e9:.2f}B"
+
+        text = (
+            f"{value / 1e9:.2f}B"
+        )
 
     elif value >= 1_000_000:
-        text = f"{value / 1e6:.2f}M"
+
+        text = (
+            f"{value / 1e6:.2f}M"
+        )
 
     elif value >= 1_000:
-        text = f"{value / 1e3:.2f}K"
+
+        text = (
+            f"{value / 1e3:.2f}K"
+        )
 
     else:
-        text = f"{value:.2f}"
+
+        text = (
+            f"{value:.2f}"
+        )
 
     return bold_digits(
         text
     )
 
 
-def iran_close_time(close_ms):
+def format_close_time(
+    close_ms
+):
+
     dt = datetime.fromtimestamp(
         close_ms / 1000,
-        tz=timezone.utc,
+        tz=timezone.utc
     ).astimezone(
         IRAN_TZ
     )
 
     return bold_digits(
-        dt.strftime("%H:%M")
+        dt.strftime(
+            "%H:%M"
+        )
     )
 
 
 # ============================================================
-# ALERT MESSAGE
+# TRADINGVIEW
 # ============================================================
 
 def tradingview_url(
     symbol,
-    tf,
+    timeframe
 ):
+
     intervals = {
         "15m": "15",
         "1h": "60",
@@ -1566,52 +1641,69 @@ def tradingview_url(
     }
 
     interval = intervals.get(
-        tf,
-        "15",
-    )
-
-    encoded = symbol.replace(
-        ":",
-        "%3A",
+        timeframe,
+        "15"
     )
 
     return (
         "https://www.tradingview.com/"
-        f"chart/?symbol=BINANCE%3A{encoded}"
+        "chart/?symbol=BINANCE%3A"
+        f"{symbol}"
         f"&interval={interval}"
     )
 
 
-def build_alert(
-    alert,
-    is_new,
-):
-    symbol = alert["symbol"]
-    base = symbol[:-4] if symbol.endswith(
-        "USDT"
-    ) else symbol
+# ============================================================
+# ALERT FORMAT
+# ============================================================
 
-    if alert["rsi"] > 70:
-        direction = "↑"
-        emoji = "🟢"
+def build_alert_block(
+    alert,
+    is_new
+):
+
+    symbol = alert[
+        "symbol"
+    ]
+
+    if symbol.endswith(
+        "USDT"
+    ):
+
+        base = symbol[
+            :-4
+        ]
 
     else:
-        direction = "↓"
-        emoji = "🔴"
 
-    # Green = newly appearing signal.
-    # White = same signal already seen.
+        base = symbol
+
+    # Direction.
+    if alert[
+        "rsi"
+    ] > 70:
+
+        direction = "↑"
+        direction_emoji = "🟢"
+
+    else:
+
+        direction = "↓"
+        direction_emoji = "🔴"
+
+    # Newly appearing data = green.
+    # Repeated data = white.
     marker = (
         "🟢"
         if is_new
         else "⚪"
     )
 
-    rsi_value = fmt_rsi(
+    rsi_value = format_rsi(
         alert["rsi"]
     )
 
-    rsi_percent = fmt_percent(
+    rsi_percent = format_percent(
         alert["rsi"]
     )
 
@@ -1619,154 +1711,174 @@ def build_alert(
         f"{alert['volume_ratio']:.2f}"
     )
 
-    current_volume = fmt_volume(
-        alert["volume"]
-    )
-
-    previous = [
-        fmt_volume(x)
-        for x in alert[
-            "prev_volumes"
+    previous_volumes = [
+        format_volume(
+            value
+        )
+        for value
+        in alert[
+            "previous_volumes"
         ]
     ]
 
-    close_time = iran_close_time(
-        alert["close_ms"]
+    close_time = (
+        format_close_time(
+            alert[
+                "close_time_ms"
+            ]
+        )
     )
 
-    url = tradingview_url(
+    tv = tradingview_url(
         symbol,
-        alert["tf"],
+        alert["tf"]
     )
 
     text = (
         f"{marker} {base}\n\n"
 
-        f"{emoji} RSI                 "
+        f"{direction_emoji} RSI"
+        f"                 "
         f"{rsi_value}\n"
 
-        f"🔮 {emoji} {direction}                "
+        f"🔮 {direction_emoji} "
+        f"{direction}"
+        f"                "
         f"{rsi_percent} %\n"
 
-        f"volume                 "
+        f"volume"
+        f"                 "
         f"{volume_ratio} ×\n"
 
-        f"close                  "
+        f"close"
+        f"                  "
         f"{close_time}\n"
 
-        f"volume state            "
+        f"volume state"
+        f"            "
         f"{alert['volume_state']}\n"
 
-        f"1                      "
-        f"{previous[0]}\n"
+        f"1"
+        f"                      "
+        f"{previous_volumes[0]}\n"
 
-        f"2                      "
-        f"{previous[1]}\n"
+        f"2"
+        f"                      "
+        f"{previous_volumes[1]}\n"
 
-        f"3                      "
-        f"{previous[2]}\n"
+        f"3"
+        f"                      "
+        f"{previous_volumes[2]}\n"
 
         f"📈 TV\n"
-        f"{url}"
+        f"{tv}"
     )
 
     return text
 
 
+# ============================================================
+# MESSAGE SPLITTER
+# ============================================================
+
 def split_message(
     text,
-    max_length=3900,
+    max_length=3900
 ):
-    """
-    Safe Telegram splitter.
-    """
 
     if len(text) <= max_length:
-        return [text]
 
-    parts = []
+        return [
+            text
+        ]
+
+    result = []
+
     remaining = text
 
-    while len(remaining) > max_length:
+    while len(
+        remaining
+    ) > max_length:
 
         cut = remaining.rfind(
             "\n\n",
             0,
-            max_length,
+            max_length
         )
 
         if cut <= 0:
+
             cut = remaining.rfind(
                 "\n",
                 0,
-                max_length,
+                max_length
             )
 
         if cut <= 0:
+
             cut = max_length
 
-        parts.append(
-            remaining[:cut].rstrip()
+        result.append(
+            remaining[
+                :cut
+            ].rstrip()
         )
 
         remaining = (
-            remaining[cut:]
-            .lstrip()
+            remaining[
+                cut:
+            ].lstrip()
         )
 
     if remaining:
-        parts.append(
+
+        result.append(
             remaining
         )
 
-    return parts
+    return result
 
+
+# ============================================================
+# BUILD ALERT MESSAGES
+# ============================================================
 
 def build_messages(
-    alerts_with_status,
+    alerts
 ):
-    """
-    Requested order:
-    15m
-    1h
-    4h
-    1D
-    """
 
-    if not alerts_with_status:
+    if not alerts:
+
         return []
 
     grouped = {}
 
-    for alert, is_new in (
-        alerts_with_status
-    ):
+    for alert, is_new in alerts:
+
+        tf = alert[
+            "tf"
+        ]
+
         grouped.setdefault(
-            alert["tf"],
-            [],
+            tf,
+            []
         ).append(
             (
                 alert,
-                is_new,
+                is_new
             )
         )
 
     messages = []
 
     for tf in sorted(
-        grouped,
-        key=lambda x: TF_ORDER.get(
-            x,
-            99,
-        ),
+        grouped.keys(),
+        key=lambda x:
+            TF_ORDER.get(
+                x,
+                99
+            )
     ):
-
-        items = sorted(
-            grouped[tf],
-            key=lambda pair: pair[0][
-                "symbol"
-            ],
-        )
 
         header = (
             "━━━━━━━━ "
@@ -1779,33 +1891,34 @@ def build_messages(
             f"{header}\n\n"
         )
 
-        blocks = []
+        items = sorted(
+            grouped[tf],
+            key=lambda x:
+                x[0]["symbol"]
+        )
 
         for alert, is_new in items:
 
-            block = build_alert(
+            block = build_alert_block(
                 alert,
-                is_new,
+                is_new
             )
 
-            blocks.append(
-                block
+            separator = (
+                "\n\n"
+                "--------------------"
+                "\n\n"
             )
-
-        for block in blocks:
 
             candidate = (
                 current
                 + block
-                + "\n\n"
-                + "--------------------"
-                + "\n\n"
+                + separator
             )
 
-            if (
-                len(candidate)
-                > 3900
-            ):
+            if len(
+                candidate
+            ) > 3900:
 
                 messages.append(
                     current.rstrip()
@@ -1815,15 +1928,15 @@ def build_messages(
                     "🚨 RSI Scanner Alert\n\n"
                     f"{header}\n\n"
                     + block
-                    + "\n\n"
-                    + "--------------------"
-                    + "\n\n"
+                    + separator
                 )
 
             else:
+
                 current = candidate
 
         if current.strip():
+
             messages.append(
                 current.rstrip()
             )
@@ -1832,24 +1945,31 @@ def build_messages(
 
 
 # ============================================================
-# SEND
+# SEND ALERTS
 # ============================================================
 
-async def send_to_all(
+async def send_message_to_users(
     session,
     state,
-    text,
+    text
 ):
+
     users = list(
         dict.fromkeys(
             state.get(
                 "users",
-                [],
+                []
             )
         )
     )
 
-    failed = []
+    if not users:
+
+        logging.info(
+            "No Telegram subscribers."
+        )
+
+        return
 
     for chat_id in users:
 
@@ -1859,43 +1979,108 @@ async def send_to_all(
                 session,
                 "sendMessage",
                 {
-                    "chat_id": chat_id,
-                    "text": text,
-                    "disable_web_page_preview": True,
-                },
+                    "chat_id":
+                        chat_id,
+
+                    "text":
+                        text,
+
+                    "disable_web_page_preview":
+                        True,
+                }
             )
 
         except Exception as exc:
 
             logging.warning(
-                "Could not send to %s: %s",
+                "Telegram send failed "
+                "for %s: %s",
                 chat_id,
-                exc,
+                exc
             )
-
-            failed.append(
-                chat_id
-            )
-
-    return failed
 
 
 # ============================================================
-# MANUAL WORKFLOW
+# ONE SCAN CYCLE
 # ============================================================
 
-async def wait_for_manual_run():
-    """
-    Scheduled GitHub Actions:
-        scan immediately.
+async def run_scan_cycle(
+    session,
+    state,
+    coins
+):
 
-    workflow_dispatch:
-        also scan immediately.
+    alerts = await scan_all(
+        session,
+        coins
+    )
 
-    No 15-minute waiting is used.
-    """
+    logging.info(
+        "Extreme/open-candle results: %s",
+        len(alerts)
+    )
 
-    return
+    new_alerts = []
+
+    for alert in alerts:
+
+        if alert.get(
+            "neutral"
+        ):
+
+            continue
+
+        is_new = handle_signal(
+            state,
+            alert
+        )
+
+        if is_new:
+
+            new_alerts.append(
+                (
+                    alert,
+                    True
+                )
+            )
+
+    # Reset states for pairs that have returned
+    # to neutral.
+    update_neutral_states(
+        state,
+        [
+            x
+            for x in alerts
+            if not x.get(
+                "neutral"
+            )
+        ]
+    )
+
+    save_state(
+        state
+    )
+
+    logging.info(
+        "New alerts this cycle: %s",
+        len(new_alerts)
+    )
+
+    if not new_alerts:
+
+        return
+
+    messages = build_messages(
+        new_alerts
+    )
+
+    for message in messages:
+
+        await send_message_to_users(
+            session,
+            state,
+            message
+        )
 
 
 # ============================================================
@@ -1905,18 +2090,21 @@ async def wait_for_manual_run():
 async def main():
 
     if not TOKEN:
-        raise RuntimeError(
-            "Missing TELEGRAM_BOT_TOKEN GitHub Secret."
-        )
 
-    await wait_for_manual_run()
+        raise RuntimeError(
+            "TELEGRAM_BOT_TOKEN "
+            "GitHub Secret is missing."
+        )
 
     state = load_state()
 
+    connector = aiohttp.TCPConnector(
+        limit=50,
+        ttl_dns_cache=300
+    )
+
     async with aiohttp.ClientSession(
-        connector=aiohttp.TCPConnector(
-            limit=40
-        )
+        connector=connector
     ) as session:
 
         # ----------------------------------------------------
@@ -1925,149 +2113,126 @@ async def main():
 
         state = await process_commands(
             session,
-            state,
+            state
         )
 
         # ----------------------------------------------------
-        # DeFiLlama ∩ Binance
+        # GET TOP 100 BINANCE
         # ----------------------------------------------------
 
-        coins = await top_coins(
-            session
-        )
-
-        logging.info(
-            "Final coins: %s",
-            len(coins),
-        )
-
-        # ----------------------------------------------------
-        # Binance ticker data
-        # ----------------------------------------------------
-
-        ticker_data = await tickers(
-            session
-        )
-
-        logging.info(
-            "Binance tickers: %s",
-            len(ticker_data),
-        )
-
-        # ----------------------------------------------------
-        # Scan
-        # ----------------------------------------------------
-
-        semaphore = asyncio.Semaphore(
-            12
-        )
-
-        groups = await asyncio.gather(
-            *(
-                scan_coin(
-                    session,
-                    coin,
-                    ticker_data,
-                    semaphore,
-                )
-                for coin in coins
+        coins = (
+            await get_top_100_binance_coins(
+                session
             )
         )
 
-        alerts = [
-            alert
-            for group in groups
-            for alert in group
-        ]
+        if not coins:
 
-        logging.info(
-            "Extreme candles found: %s",
-            len(alerts),
-        )
-
-        # ----------------------------------------------------
-        # Dedupe
-        # ----------------------------------------------------
-
-        alerts_with_status = []
-
-        for alert in alerts:
-
-            new_signal = is_new_signal(
-                state,
-                alert,
+            raise RuntimeError(
+                "Could not obtain "
+                "top Binance coins."
             )
 
-            # Only newly appearing signals
-            # are sent.
-            if new_signal:
-                alerts_with_status.append(
-                    (
-                        alert,
-                        True,
+        # ----------------------------------------------------
+        # RUN MULTIPLE SCANS
+        # ----------------------------------------------------
+
+        start = (
+            asyncio.get_running_loop()
+            .time()
+        )
+
+        cycle = 0
+
+        while True:
+
+            cycle += 1
+
+            elapsed = (
+                asyncio.get_running_loop()
+                .time()
+                - start
+            )
+
+            if elapsed >= (
+                RUN_DURATION_SECONDS
+            ):
+
+                break
+
+            logging.info(
+                "========== SCAN %s ==========",
+                cycle
+            )
+
+            try:
+
+                # Process Telegram commands again.
+                state = (
+                    await process_commands(
+                        session,
+                        state
                     )
                 )
 
-        # Save state after signal processing.
-        save_state(state)
-
-        logging.info(
-            "New alerts: %s | Subscribers: %s",
-            len(
-                alerts_with_status
-            ),
-            len(
-                state.get(
-                    "users",
-                    [],
+                # Refresh top Binance ranking.
+                # This means the 100 coins can change
+                # with Binance volume.
+                coins = (
+                    await get_top_100_binance_coins(
+                        session
+                    )
                 )
-            ),
-        )
 
-        # ----------------------------------------------------
-        # No subscribers
-        # ----------------------------------------------------
+                await run_scan_cycle(
+                    session,
+                    state,
+                    coins
+                )
 
-        if not state.get(
-            "users"
-        ):
+            except Exception as exc:
+
+                logging.exception(
+                    "Scan cycle failed: %s",
+                    exc
+                )
+
+            elapsed = (
+                asyncio.get_running_loop()
+                .time()
+                - start
+            )
+
+            remaining_runtime = (
+                RUN_DURATION_SECONDS
+                - elapsed
+            )
+
+            if remaining_runtime <= 0:
+
+                break
+
+            sleep_time = min(
+                SCAN_INTERVAL_SECONDS,
+                remaining_runtime
+            )
 
             logging.info(
-                "No subscribers yet. "
-                "Send /start to the bot."
+                "Next scan in %s seconds.",
+                int(sleep_time)
             )
 
-        # ----------------------------------------------------
-        # Send
-        # ----------------------------------------------------
-
-        messages = build_messages(
-            alerts_with_status
-        )
-
-        for message in messages:
-
-            await send_to_all(
-                session,
-                state,
-                message,
+            await asyncio.sleep(
+                sleep_time
             )
 
-        # ----------------------------------------------------
-        # Final save
-        # ----------------------------------------------------
-
-        save_state(state)
-
-        if not alerts_with_status:
-
-            logging.info(
-                "No new RSI alerts."
-            )
+    logging.info(
+        "Bot run finished."
+    )
 
 
 # ============================================================
-# ENTRY
+# ENTRY POINT
 # ============================================================
 
 if __name__ == "__main__":
@@ -2076,6 +2241,12 @@ if __name__ == "__main__":
 
         asyncio.run(
             main()
+        )
+
+    except KeyboardInterrupt:
+
+        logging.info(
+            "Stopped by user."
         )
 
     except Exception:
