@@ -22,6 +22,7 @@
     "PUMPUSDT:15M": "high",
     "PUMPUSDT:1H": "high",
     "ETHFIUSDT:15M": "high",
-    "USDEUSDT:4H": "high"
+    "USDEUSDT:4H": "high",
+    "NEARUSDT:4H": "high"
   }
 }
