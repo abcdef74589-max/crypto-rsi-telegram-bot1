@@ -1,32 +1,23 @@
 {
   "users": [
     "1749287043",
-    "5952888026"
+    "5952888026",
+    5952888026
   ],
-  "offset": 988370760,
+  "offset": 988370761,
   "signals": {
-    "ASTERUSDT:1H": "high",
-    "BFUSDUSDT:15M": "high",
-    "SKYUSDT:4H": "low",
-    "UUSDT:4H": "high",
-    "ZECUSDT:4H": "high",
-    "ASTERUSDT:15M": "high",
-    "CAKEUSDT:1H": "high",
-    "RENDERUSDT:1H": "high",
-    "NEARUSDT:1H": "high",
-    "WLFIUSDT:1H": "high",
-    "USDEUSDT:1H": "high",
-    "ARBUSDT:4H": "high",
-    "USDEUSDT:15M": "high",
-    "USDCUSDT:15M": "high",
-    "PUMPUSDT:15M": "high",
-    "PUMPUSDT:1H": "high",
-    "ETHFIUSDT:15M": "high",
-    "USDEUSDT:4H": "high",
-    "NEARUSDT:4H": "high",
-    "AAVEUSDT:15M": "high",
-    "ADAUSDT:15M": "high",
-    "LTCUSDT:15M": "high",
-    "ASTERUSDT:4H": "high"
-  }
+    "ATOMUSDT:15M": "overbought",
+    "LTCUSDT:15M": "overbought",
+    "ASTERUSDT:1H": "overbought",
+    "NEARUSDT:1H": "overbought",
+    "PUMPUSDT:1H": "overbought",
+    "USDEUSDT:1H": "overbought",
+    "ASTERUSDT:4H": "overbought",
+    "NEARUSDT:4H": "overbought",
+    "SKYUSDT:4H": "oversold",
+    "USDEUSDT:4H": "overbought",
+    "ZECUSDT:4H": "overbought"
+  },
+  "running": true,
+  "startup_scan_done": true
 }
