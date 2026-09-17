@@ -7,7 +7,67 @@
   "signals": {
     "COTIUSDT|15m": {
       "zone": "neutral",
-      "open_time_ms": 1789680600000
+      "open_time_ms": 1789681500000
+    },
+    "NEARUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789678800000
+    },
+    "UNIUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789678800000
+    },
+    "SNDKBUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789678800000
+    },
+    "COTIUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789678800000
+    },
+    "LTCUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789678800000
+    },
+    "BCHUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789678800000
+    },
+    "SPCXBUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789678800000
+    },
+    "CAKEUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789678800000
+    },
+    "FETUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789678800000
+    },
+    "ASTERUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789678800000
+    },
+    "NVDABUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789678800000
+    },
+    "MUBUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789678800000
+    },
+    "SOXLBUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789678800000
+    },
+    "SNXXBUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789678800000
+    },
+    "BNCBUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789678800000
     }
   }
 }
