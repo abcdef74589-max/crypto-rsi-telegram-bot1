@@ -491,5 +491,11 @@
     "VETUSDT_1D": "normal"
   },
   "running": false,
-  "startup_scan_done": true
+  "startup_scan_done": true,
+  "states": {
+    "USDS:1h": "high",
+    "NEAR:1h": "high",
+    "ASTER:1h": "high",
+    "CAKE:1h": "high"
+  }
 }
