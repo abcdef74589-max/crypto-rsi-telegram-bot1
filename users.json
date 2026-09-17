@@ -7,7 +7,7 @@
   "signals": {
     "COTIUSDT|15m": {
       "zone": "neutral",
-      "open_time_ms": 1789681500000
+      "open_time_ms": 1789682400000
     },
     "NEARUSDT|1h": {
       "zone": "neutral",
