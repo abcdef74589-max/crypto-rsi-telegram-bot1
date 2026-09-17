@@ -20,6 +20,8 @@
     "USDEUSDT:15M": "high",
     "USDCUSDT:15M": "high",
     "PUMPUSDT:15M": "high",
-    "PUMPUSDT:1H": "high"
+    "PUMPUSDT:1H": "high",
+    "ETHFIUSDT:15M": "high",
+    "USDEUSDT:4H": "high"
   }
 }
