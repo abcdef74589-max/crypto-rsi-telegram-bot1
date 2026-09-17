@@ -29,9 +29,12 @@
     "NEAR:15m": "high",
     "AAVE:15m": "high",
     "POL:15m": "high",
-    "VET:15m": "high"
+    "VET:15m": "high",
+    "UNI:15m": "high",
+    "ARB:15m": "high",
+    "CAKE:15m": "high"
   },
   "sent_messages": {
-    "e66e7cf5e690206d90a61e9de4450c33e8474b30d9a8c0123c82c8b37f15727d": 1789666478
+    "ec2cca77cfecfe49dfef391e292b9c33c7519ac894e4b51b559fafcdcb1e6e6e": 1789668341
   }
 }
