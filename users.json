@@ -12,6 +12,8 @@
     "ZECUSDT:4H": "high",
     "ASTERUSDT:15M": "high",
     "CAKEUSDT:1H": "high",
-    "RENDERUSDT:1H": "high"
+    "RENDERUSDT:1H": "high",
+    "NEARUSDT:1H": "high",
+    "WLFIUSDT:1H": "high"
   }
 }
