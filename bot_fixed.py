@@ -2,7 +2,6 @@ import os
 import json
 import asyncio
 import logging
-import math
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
@@ -18,23 +17,16 @@ LEGACY_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
 
 TOP_N = int(os.getenv("TOP_N", "100"))
 RSI_PERIOD = int(os.getenv("RSI_PERIOD", "14"))
-MARKET = os.getenv("MARKET", "spot").lower()
-ALERT_MODE = os.getenv("ALERT_MODE", "changes").lower()
 
 USERS_FILE = Path(os.getenv("USERS_FILE", "users.json"))
 
-# Optional PRISM API key
 PRISM_API_KEY = os.getenv("PRISM_API_KEY", "").strip()
 
-# How long one GitHub Actions invocation should run
 RUN_SECONDS = int(os.getenv("RUN_SECONDS", "285"))
-
-# Scan interval
 SCAN_INTERVAL = int(os.getenv("SCAN_INTERVAL", "60"))
 
-# We only want alerts when the CURRENT OPEN candle
-# has approximately this much time left.
 ALERT_MINUTES_BEFORE_CLOSE = 10
+
 
 BINANCE_BASE_URLS = [
     "https://data-api.binance.vision",
@@ -42,9 +34,7 @@ BINANCE_BASE_URLS = [
     "https://api.binance.com",
 ]
 
-COINGECKO_URL = (
-    "https://api.coingecko.com/api/v3/coins/markets"
-)
+COINGECKO_URL = "https://api.coingecko.com/api/v3/coins/markets"
 
 POLYMARKET_MARKETS_URL = (
     "https://gamma-api.polymarket.com/markets"
@@ -78,12 +68,13 @@ TIMEFRAMES = {
     },
 }
 
-TIMEFRAME_ORDER = ["15m", "1h", "4h", "1D"]
+TIMEFRAME_ORDER = [
+    "15m",
+    "1h",
+    "4h",
+    "1D",
+]
 
-
-# ============================================================
-# LOGGING
-# ============================================================
 
 logging.basicConfig(
     level=logging.INFO,
@@ -94,12 +85,12 @@ logger = logging.getLogger("rsi-scanner")
 
 
 # ============================================================
-# NUMBER FORMATTING
+# NUMBER FORMAT
 # ============================================================
 
 BOLD_DIGITS = str.maketrans(
     "0123456789",
-    "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵"
+    "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵",
 )
 
 
@@ -109,49 +100,76 @@ def bold_numbers(value):
 
 def format_number(value, decimals=2):
     try:
-        return bold_numbers(f"{float(value):.{decimals}f}")
+        return bold_numbers(
+            f"{float(value):.{decimals}f}"
+        )
     except Exception:
         return bold_numbers(str(value))
 
 
 # ============================================================
-# USERS / STATE
+# STATE
 # ============================================================
 
-DEFAULT_USERS = {
+DEFAULT_STATE = {
     "users": [],
     "offset": 0,
     "states": {},
+    "sent_alerts": {},
 }
 
 
 def load_state():
+
     if not USERS_FILE.exists():
-        return DEFAULT_USERS.copy()
+        return json.loads(
+            json.dumps(DEFAULT_STATE)
+        )
 
     try:
-        with USERS_FILE.open("r", encoding="utf-8") as f:
+
+        with USERS_FILE.open(
+            "r",
+            encoding="utf-8",
+        ) as f:
+
             data = json.load(f)
 
         if not isinstance(data, dict):
-            return DEFAULT_USERS.copy()
+            return json.loads(
+                json.dumps(DEFAULT_STATE)
+            )
 
         data.setdefault("users", [])
         data.setdefault("offset", 0)
         data.setdefault("states", {})
+        data.setdefault("sent_alerts", {})
 
         return data
 
     except Exception as e:
-        logger.error("Cannot load users.json: %s", e)
-        return DEFAULT_USERS.copy()
+
+        logger.error(
+            "Cannot load users.json: %s",
+            e,
+        )
+
+        return json.loads(
+            json.dumps(DEFAULT_STATE)
+        )
 
 
 def save_state(state):
+
     tmp = USERS_FILE.with_suffix(".tmp")
 
     try:
-        with tmp.open("w", encoding="utf-8") as f:
+
+        with tmp.open(
+            "w",
+            encoding="utf-8",
+        ) as f:
+
             json.dump(
                 state,
                 f,
@@ -162,7 +180,11 @@ def save_state(state):
         tmp.replace(USERS_FILE)
 
     except Exception as e:
-        logger.error("Cannot save users.json: %s", e)
+
+        logger.error(
+            "Cannot save users.json: %s",
+            e,
+        )
 
 
 # ============================================================
@@ -174,35 +196,47 @@ async def telegram_request(
     method,
     params=None,
 ):
+
     if not TOKEN:
         return None
 
-    url = f"https://api.telegram.org/bot{TOKEN}/{method}"
+    url = (
+        f"https://api.telegram.org/"
+        f"bot{TOKEN}/{method}"
+    )
 
     try:
+
         async with session.post(
             url,
             data=params or {},
-            timeout=aiohttp.ClientTimeout(total=20),
+            timeout=aiohttp.ClientTimeout(
+                total=20
+            ),
         ) as response:
 
             if response.status != 200:
+
                 text = await response.text()
+
                 logger.error(
                     "Telegram %s HTTP %s: %s",
                     method,
                     response.status,
                     text[:500],
                 )
+
                 return None
 
             return await response.json()
 
     except Exception as e:
+
         logger.error(
             "Telegram request failed: %s",
             e,
         )
+
         return None
 
 
@@ -211,6 +245,7 @@ async def send_message(
     chat_id,
     text,
 ):
+
     if not chat_id:
         return False
 
@@ -226,7 +261,8 @@ async def send_message(
     )
 
     return bool(
-        result and result.get("ok")
+        result
+        and result.get("ok")
     )
 
 
@@ -235,54 +271,62 @@ async def send_long_message(
     chat_id,
     text,
 ):
-    MAX_LENGTH = 4000
 
-    if len(text) <= MAX_LENGTH:
-        await send_message(
+    max_length = 4000
+
+    if len(text) <= max_length:
+
+        return await send_message(
             session,
             chat_id,
             text,
         )
-        return
 
     parts = []
     current = ""
 
     for block in text.split("\n\n"):
+
         candidate = (
-            current + "\n\n" + block
+            f"{current}\n\n{block}"
             if current
             else block
         )
 
-        if len(candidate) > MAX_LENGTH:
+        if len(candidate) > max_length:
+
             if current:
                 parts.append(current)
 
             current = block
 
         else:
+
             current = candidate
 
     if current:
         parts.append(current)
 
+    success = True
+
     for part in parts:
-        await send_message(
+
+        if not await send_message(
             session,
             chat_id,
             part,
-        )
+        ):
 
+            success = False
 
-# ============================================================
-# TELEGRAM COMMANDS
-# ============================================================
+    return success
+
 
 async def process_updates(
     session,
     state,
 ):
+
     offset = int(
         state.get("offset", 0)
     )
@@ -302,27 +346,49 @@ async def process_updates(
     if not result or not result.get("ok"):
         return
 
-    updates = result.get("result", [])
+    for update in result.get(
+        "result",
+        [],
+    ):
 
-    for update in updates:
-        update_id = update.get("update_id")
+        update_id = update.get(
+            "update_id"
+        )
 
         if update_id is not None:
-            state["offset"] = update_id + 1
 
-        message = update.get("message") or {}
-        chat = message.get("chat") or {}
+            state["offset"] = (
+                update_id + 1
+            )
+
+        message = (
+            update.get("message")
+            or {}
+        )
+
+        chat = (
+            message.get("chat")
+            or {}
+        )
 
         chat_id = chat.get("id")
+
         text = (
-            message.get("text") or ""
+            message.get("text")
+            or ""
         ).strip()
 
         if not chat_id or not text:
             continue
 
+        # ----------------------------------------------------
+        # START
+        # ----------------------------------------------------
+
         if text.startswith("/start"):
+
             if chat_id not in state["users"]:
+
                 state["users"].append(
                     chat_id
                 )
@@ -330,18 +396,24 @@ async def process_updates(
             await send_message(
                 session,
                 chat_id,
-                (
-                    "🤖 RSI Telegram Scanner\n\n"
-                    "فعال شد.\n\n"
-                    "RSI زیر 30 یا بالای 70 "
-                    "در تایم‌فریم‌های 15m، 1h، 4h و 1D "
-                    "بررسی می‌شود."
-                ),
+                "🤖 RSI Telegram Scanner\n\n"
+                "فعال شد.\n\n"
+                "RSI زیر 30 یا بالای 70 در "
+                "تایم‌فریم‌های 15m، 1h، 4h و 1D "
+                "بررسی می‌شود.",
             )
 
+        # ----------------------------------------------------
+        # STOP
+        # ----------------------------------------------------
+
         elif text.startswith("/stop"):
+
             if chat_id in state["users"]:
-                state["users"].remove(chat_id)
+
+                state["users"].remove(
+                    chat_id
+                )
 
             await send_message(
                 session,
@@ -349,19 +421,22 @@ async def process_updates(
                 "⛔ ربات برای شما متوقف شد.",
             )
 
+        # ----------------------------------------------------
+        # STATUS
+        # ----------------------------------------------------
+
         elif text.startswith("/status"):
-            active = (
-                chat_id in state["users"]
+
+            status = (
+                "🟢 فعال"
+                if chat_id in state["users"]
+                else "🔴 غیرفعال"
             )
 
             await send_message(
                 session,
                 chat_id,
-                (
-                    "🟢 فعال"
-                    if active
-                    else "🔴 غیرفعال"
-                ),
+                status,
             )
 
     save_state(state)
@@ -376,22 +451,22 @@ async def binance_get(
     path,
     params=None,
 ):
+
     for base in BINANCE_BASE_URLS:
-        url = f"{base}{path}"
 
         try:
+
             async with session.get(
-                url,
+                f"{base}{path}",
                 params=params or {},
                 timeout=aiohttp.ClientTimeout(
                     total=20
                 ),
             ) as response:
 
-                if response.status != 200:
-                    continue
+                if response.status == 200:
 
-                return await response.json()
+                    return await response.json()
 
         except Exception:
             continue
@@ -402,18 +477,10 @@ async def binance_get(
 async def get_binance_exchange_info(
     session,
 ):
+
     return await binance_get(
         session,
         "/api/v3/exchangeInfo",
-    )
-
-
-async def get_binance_tickers(
-    session,
-):
-    return await binance_get(
-        session,
-        "/api/v3/ticker/24hr",
     )
 
 
@@ -423,6 +490,7 @@ async def get_klines(
     interval,
     limit=100,
 ):
+
     return await binance_get(
         session,
         "/api/v3/klines",
@@ -435,34 +503,36 @@ async def get_klines(
 
 
 # ============================================================
-# COINGECKO TOP COINS
+# TOP COINS
 # ============================================================
 
 async def get_top_coins(
     session,
 ):
-    params = {
-        "vs_currency": "usd",
-        "order": "market_cap_desc",
-        "per_page": TOP_N,
-        "page": 1,
-        "sparkline": "false",
-    }
 
     try:
+
         async with session.get(
             COINGECKO_URL,
-            params=params,
+            params={
+                "vs_currency": "usd",
+                "order": "market_cap_desc",
+                "per_page": TOP_N,
+                "page": 1,
+                "sparkline": "false",
+            },
             timeout=aiohttp.ClientTimeout(
                 total=30
             ),
         ) as response:
 
             if response.status != 200:
+
                 logger.error(
                     "CoinGecko HTTP %s",
                     response.status,
                 )
+
                 return []
 
             data = await response.json()
@@ -470,8 +540,10 @@ async def get_top_coins(
             result = []
 
             for coin in data:
+
                 symbol = (
-                    coin.get("symbol") or ""
+                    coin.get("symbol")
+                    or ""
                 ).upper()
 
                 if symbol:
@@ -480,20 +552,19 @@ async def get_top_coins(
             return result
 
     except Exception as e:
+
         logger.error(
             "CoinGecko failed: %s",
             e,
         )
+
         return []
 
-
-# ============================================================
-# VALID BINANCE SYMBOLS
-# ============================================================
 
 async def get_valid_usdt_symbols(
     session,
 ):
+
     info = await get_binance_exchange_info(
         session
     )
@@ -507,14 +578,18 @@ async def get_valid_usdt_symbols(
         "symbols",
         [],
     ):
+
         if (
-            item.get("status") == "TRADING"
-            and item.get("quoteAsset") == "USDT"
+            item.get("status")
+            == "TRADING"
+            and item.get("quoteAsset")
+            == "USDT"
             and item.get(
                 "isSpotTradingAllowed",
                 True,
             )
         ):
+
             symbols.add(
                 item.get(
                     "baseAsset",
@@ -533,44 +608,59 @@ def calculate_rsi(
     closes,
     period=14,
 ):
+
     if len(closes) < period + 1:
         return None
 
     gains = []
     losses = []
 
-    for i in range(1, len(closes)):
+    for i in range(
+        1,
+        len(closes),
+    ):
+
         change = (
-            closes[i] - closes[i - 1]
+            closes[i]
+            - closes[i - 1]
         )
 
-        if change > 0:
-            gains.append(change)
-            losses.append(0.0)
+        gains.append(
+            max(change, 0.0)
+        )
 
-        else:
-            gains.append(0.0)
-            losses.append(abs(change))
+        losses.append(
+            max(-change, 0.0)
+        )
 
-    avg_gain = sum(
-        gains[:period]
-    ) / period
+    avg_gain = (
+        sum(gains[:period])
+        / period
+    )
 
-    avg_loss = sum(
-        losses[:period]
-    ) / period
+    avg_loss = (
+        sum(losses[:period])
+        / period
+    )
 
     for i in range(
         period,
         len(gains),
     ):
+
         avg_gain = (
-            (avg_gain * (period - 1))
+            (
+                avg_gain
+                * (period - 1)
+            )
             + gains[i]
         ) / period
 
         avg_loss = (
-            (avg_loss * (period - 1))
+            (
+                avg_loss
+                * (period - 1)
+            )
             + losses[i]
         ) / period
 
@@ -579,8 +669,12 @@ def calculate_rsi(
 
     rs = avg_gain / avg_loss
 
-    return 100.0 - (
-        100.0 / (1.0 + rs)
+    return (
+        100.0
+        - (
+            100.0
+            / (1.0 + rs)
+        )
     )
 
 
@@ -592,38 +686,32 @@ def candle_close_datetime(
     timeframe,
     now=None,
 ):
-    if now is None:
-        now = datetime.now(
-            timezone.utc
-        )
+
+    now = (
+        now
+        or datetime.now(timezone.utc)
+    )
 
     minutes = TIMEFRAMES[
         timeframe
     ]["minutes"]
 
+    seconds = minutes * 60
+
     timestamp = int(
         now.timestamp()
     )
 
-    seconds_per_candle = (
-        minutes * 60
-    )
-
-    candle_open_timestamp = (
+    candle_open = (
         timestamp
         - (
             timestamp
-            % seconds_per_candle
+            % seconds
         )
     )
 
-    close_timestamp = (
-        candle_open_timestamp
-        + seconds_per_candle
-    )
-
     return datetime.fromtimestamp(
-        close_timestamp,
+        candle_open + seconds,
         timezone.utc,
     )
 
@@ -632,35 +720,34 @@ def minutes_until_close(
     timeframe,
     now=None,
 ):
+
+    now = (
+        now
+        or datetime.now(timezone.utc)
+    )
+
     close_dt = candle_close_datetime(
         timeframe,
         now,
     )
-
-    if now is None:
-        now = datetime.now(
-            timezone.utc
-        )
 
     return (
         close_dt - now
     ).total_seconds() / 60.0
 
 
-def iran_time_string(
-    dt,
-):
+def iran_time_string(dt):
+
     iran_tz = timezone(
-        timedelta(hours=3, minutes=30)
+        timedelta(
+            hours=3,
+            minutes=30,
+        )
     )
 
-    local = dt.astimezone(
+    return dt.astimezone(
         iran_tz
-    )
-
-    return local.strftime(
-        "%H:%M"
-    )
+    ).strftime("%H:%M")
 
 
 # ============================================================
@@ -670,40 +757,39 @@ def iran_time_string(
 def calculate_volume_ratio(
     klines,
 ):
+
     if len(klines) < 5:
         return None
 
-    current_volume = float(
+    current = float(
         klines[-1][5]
     )
 
-    previous_volumes = [
+    previous = [
         float(x[5])
         for x in klines[-4:-1]
     ]
 
-    if not previous_volumes:
+    if not previous:
         return None
 
-    average = sum(
-        previous_volumes
-    ) / len(previous_volumes)
+    average = (
+        sum(previous)
+        / len(previous)
+    )
 
     if average <= 0:
         return None
 
-    return (
-        current_volume / average
-    )
+    return current / average
 
 
 # ============================================================
-# RSI SIGNAL
+# RSI ZONE
 # ============================================================
 
-def get_rsi_zone(
-    rsi,
-):
+def get_rsi_zone(rsi):
+
     if rsi is None:
         return None
 
@@ -716,28 +802,20 @@ def get_rsi_zone(
     return None
 
 
-def get_rsi_icon(
-    zone,
-):
+def get_rsi_icon(zone):
+
     if zone == "high":
         return "🟢"
 
-    if zone == "low":
-        return "🔴"
-
-    return "⚪"
+    return "🔴"
 
 
-def get_direction(
-    zone,
-):
+def get_direction(zone):
+
     if zone == "high":
         return "↑"
 
-    if zone == "low":
-        return "↓"
-
-    return "→"
+    return "↓"
 
 
 # ============================================================
@@ -748,7 +826,8 @@ def tradingview_url(
     symbol,
     timeframe,
 ):
-    tv_tf = TIMEFRAMES[
+
+    interval = TIMEFRAMES[
         timeframe
     ]["tradingview"]
 
@@ -756,7 +835,7 @@ def tradingview_url(
         "https://www.tradingview.com/chart/"
         "?symbol=BINANCE%3A"
         f"{symbol}USDT"
-        f"&interval={tv_tf}"
+        f"&interval={interval}"
     )
 
 
@@ -764,9 +843,8 @@ def tradingview_url(
 # POLYMARKET
 # ============================================================
 
-def parse_json_string(
-    value,
-):
+def parse_json_string(value):
+
     if isinstance(value, list):
         return value
 
@@ -775,75 +853,9 @@ def parse_json_string(
 
     try:
         return json.loads(value)
-    except Exception:
-        return None
-
-
-def extract_polymarket_probability(
-    market,
-    symbol,
-):
-    question = (
-        market.get("question")
-        or ""
-    ).lower()
-
-    symbol_lower = symbol.lower()
-
-    if symbol_lower not in question:
-        return None
-
-    # We prefer short-term Up/Down markets
-    crypto_words = [
-        "up or down",
-        "up/down",
-        "up or down 15m",
-        "up or down 1h",
-        "up or down 4h",
-    ]
-
-    if not any(
-        word in question
-        for word in crypto_words
-    ):
-        return None
-
-    outcomes = parse_json_string(
-        market.get("outcomes")
-    )
-
-    prices = parse_json_string(
-        market.get("outcomePrices")
-    )
-
-    if not outcomes or not prices:
-        return None
-
-    try:
-        pairs = []
-
-        for outcome, price in zip(
-            outcomes,
-            prices,
-        ):
-            pairs.append(
-                (
-                    str(outcome).lower(),
-                    float(price),
-                )
-            )
-
-        for outcome, price in pairs:
-            if outcome in (
-                "up",
-                "yes",
-            ):
-                return price * 100.0
 
     except Exception:
         return None
-
-    return None
 
 
 async def get_polymarket_probability(
@@ -851,15 +863,7 @@ async def get_polymarket_probability(
     symbol,
     timeframe,
 ):
-    """
-    Public Polymarket market lookup.
 
-    Only uses a real market probability.
-    It does NOT insert 50% when no market exists.
-    """
-
-    # Polymarket currently has especially
-    # visible short-term crypto markets.
     if timeframe not in (
         "15m",
         "1h",
@@ -868,14 +872,13 @@ async def get_polymarket_probability(
         return None
 
     try:
-        params = {
-            "closed": "false",
-            "limit": 100,
-        }
 
         async with session.get(
             POLYMARKET_MARKETS_URL,
-            params=params,
+            params={
+                "closed": "false",
+                "limit": 100,
+            },
             timeout=aiohttp.ClientTimeout(
                 total=20
             ),
@@ -889,8 +892,11 @@ async def get_polymarket_probability(
         candidates = []
 
         for market in markets:
+
             question = (
-                market.get("question")
+                market.get(
+                    "question"
+                )
                 or ""
             ).lower()
 
@@ -903,52 +909,82 @@ async def get_polymarket_probability(
             if "up or down" not in question:
                 continue
 
-            if timeframe == "15m":
-                if "15m" not in question:
-                    continue
+            if (
+                timeframe == "15m"
+                and "15m" not in question
+            ):
+                continue
 
-            if timeframe == "1h":
-                if (
-                    "1h" not in question
-                    and "1 hour"
-                    not in question
-                ):
-                    continue
+            if (
+                timeframe == "1h"
+                and "1h" not in question
+                and "1 hour"
+                not in question
+            ):
+                continue
 
-            if timeframe == "4h":
-                if (
-                    "4h" not in question
-                    and "4 hour"
-                    not in question
-                ):
-                    continue
+            if (
+                timeframe == "4h"
+                and "4h" not in question
+                and "4 hour"
+                not in question
+            ):
+                continue
 
             candidates.append(market)
 
-        if not candidates:
-            return None
-
-        # Prefer the market ending soonest.
         candidates.sort(
-            key=lambda x: x.get(
+            key=lambda x:
+            x.get(
                 "endDate",
                 "",
             )
         )
 
         for market in candidates:
-            probability = (
-                extract_polymarket_probability(
-                    market,
-                    symbol,
+
+            outcomes = parse_json_string(
+                market.get(
+                    "outcomes"
                 )
             )
 
-            if probability is not None:
-                if 0 <= probability <= 100:
-                    return probability
+            prices = parse_json_string(
+                market.get(
+                    "outcomePrices"
+                )
+            )
+
+            if not outcomes or not prices:
+                continue
+
+            for outcome, price in zip(
+                outcomes,
+                prices,
+            ):
+
+                if str(
+                    outcome
+                ).lower() in (
+                    "up",
+                    "yes",
+                ):
+
+                    probability = (
+                        float(price)
+                        * 100.0
+                    )
+
+                    if (
+                        0
+                        <= probability
+                        <= 100
+                    ):
+
+                        return probability
 
     except Exception as e:
+
         logger.debug(
             "Polymarket unavailable: %s",
             e,
@@ -958,7 +994,7 @@ async def get_polymarket_probability(
 
 
 # ============================================================
-# PRISM FORECASTING
+# PRISM
 # ============================================================
 
 PRISM_TIMEFRAMES = {
@@ -974,40 +1010,27 @@ async def get_prism_probability(
     symbol,
     timeframe,
 ):
-    """
-    PRISM official API.
-
-    Requires PRISM_API_KEY.
-    Returns the probability of UP for the
-    first forecast candle when available.
-    """
 
     if not PRISM_API_KEY:
         return None
 
-    prism_symbol = (
-        f"{symbol}USD"
-    )
-
-    params = {
-        "symbol": prism_symbol,
-        "timeframe": PRISM_TIMEFRAMES[
-            timeframe
-        ],
-    }
-
-    headers = {
-        "Authorization":
-            f"Bearer {PRISM_API_KEY}",
-        "Accept":
-            "application/json",
-    }
-
     try:
+
         async with session.get(
             PRISM_BASE_URL,
-            params=params,
-            headers=headers,
+            params={
+                "symbol": f"{symbol}USD",
+                "timeframe":
+                    PRISM_TIMEFRAMES[
+                        timeframe
+                    ],
+            },
+            headers={
+                "Authorization":
+                    f"Bearer {PRISM_API_KEY}",
+                "Accept":
+                    "application/json",
+            },
             timeout=aiohttp.ClientTimeout(
                 total=20
             ),
@@ -1018,33 +1041,38 @@ async def get_prism_probability(
 
             data = await response.json()
 
-        candles = data.get(
+        for candle in data.get(
             "candles",
             [],
-        )
+        ):
 
-        # Find the first FUTURE candle
-        for candle in candles:
+            if candle.get(
+                "kind"
+            ) != "future":
+                continue
+
+            probability = candle.get(
+                "dir_prob"
+            )
+
+            if probability is None:
+                continue
+
+            probability = (
+                float(probability)
+                * 100.0
+            )
+
             if (
-                candle.get("kind")
-                == "future"
+                0
+                <= probability
+                <= 100
             ):
-                probability = candle.get(
-                    "dir_prob"
-                )
 
-                if probability is None:
-                    continue
-
-                probability = (
-                    float(probability)
-                    * 100.0
-                )
-
-                if 0 <= probability <= 100:
-                    return probability
+                return probability
 
     except Exception as e:
+
         logger.debug(
             "PRISM unavailable: %s",
             e,
@@ -1054,132 +1082,49 @@ async def get_prism_probability(
 
 
 # ============================================================
-# EXTERNAL SOURCES
-# ============================================================
-
-async def get_external_predictions(
-    session,
-    symbol,
-    timeframe,
-):
-    """
-    Returns ONLY real numerical values that can
-    actually be retrieved.
-
-    Sources:
-      1. Next Candle Predictor
-      2. CandleCast
-      3. NextCandle
-      4. LiveCharts.AI
-      5. PRISM Forecasting
-      6. TradingView
-      7. Polymarket
-      8. Polymarket AI (when a real numeric API
-         is configured)
-
-    Important:
-    We do not fabricate values for sources that
-    do not expose a usable public API.
-    """
-
-    values = []
-
-    # --------------------------------------------------------
-    # PRISM
-    # --------------------------------------------------------
-
-    prism = await get_prism_probability(
-        session,
-        symbol,
-        timeframe,
-    )
-
-    if prism is not None:
-        values.append(prism)
-
-    # --------------------------------------------------------
-    # POLYMARKET
-    # --------------------------------------------------------
-
-    polymarket = (
-        await get_polymarket_probability(
-            session,
-            symbol,
-            timeframe,
-        )
-    )
-
-    if polymarket is not None:
-        values.append(
-            polymarket
-        )
-
-    # --------------------------------------------------------
-    # The following sources currently do not have
-    # a verified public endpoint that can safely
-    # be called from this free GitHub Actions bot.
-    #
-    # Therefore:
-    #
-    # Next Candle Predictor -> no fake value
-    # CandleCast            -> no fake value
-    # NextCandle             -> no fake value
-    # LiveCharts.AI          -> no fake value
-    # TradingView            -> no fake value
-    #
-    # They can be added later if a real API/output
-    # endpoint is available.
-    # --------------------------------------------------------
-
-    return values
-
-
-# ============================================================
-# LOCAL TECHNICAL SCORE
+# LOCAL FALLBACK PREDICTION
 # ============================================================
 
 def technical_score(
     klines,
     rsi,
 ):
-    """
-    Local technical estimate.
-
-    Used ONLY as fallback if no external
-    statistical source is available.
-    """
 
     if not klines or rsi is None:
         return None
 
     score = 50.0
 
-    # RSI contribution
     if rsi >= 70:
+
         score += min(
             20,
-            (rsi - 70) * 0.8,
+            (rsi - 70)
+            * 0.8,
         )
 
     elif rsi <= 30:
+
         score -= min(
             20,
-            (30 - rsi) * 0.8,
+            (30 - rsi)
+            * 0.8,
         )
 
-    # Recent candle direction
     try:
-        close_now = float(
+
+        current = float(
             klines[-1][4]
         )
-        close_prev = float(
+
+        previous = float(
             klines[-2][4]
         )
 
-        if close_now > close_prev:
+        if current > previous:
             score += 5
 
-        elif close_now < close_prev:
+        elif current < previous:
             score -= 5
 
     except Exception:
@@ -1187,20 +1132,19 @@ def technical_score(
 
     return max(
         0,
-        min(
-            100,
-            score,
-        ),
+        min(100, score),
     )
 
 
 def momentum_score(
     klines,
 ):
+
     if len(klines) < 6:
         return None
 
     try:
+
         closes = [
             float(x[4])
             for x in klines[-6:]
@@ -1224,59 +1168,53 @@ def momentum_score(
 
         return max(
             0,
-            min(
-                100,
-                score,
-            ),
+            min(100, score),
         )
 
     except Exception:
         return None
 
 
-# ============================================================
-# NEXT CANDLE SCORE
-# ============================================================
-
-async def calculate_next_candle(
+async def calculate_prediction(
     session,
     symbol,
     timeframe,
     klines,
     rsi,
 ):
-    external_scores = (
-        await get_external_predictions(
+
+    external_values = []
+
+    prism = await get_prism_probability(
+        session,
+        symbol,
+        timeframe,
+    )
+
+    if prism is not None:
+        external_values.append(prism)
+
+    polymarket = (
+        await get_polymarket_probability(
             session,
             symbol,
             timeframe,
         )
     )
 
-    # --------------------------------------------------------
-    # REAL EXTERNAL DATA AVAILABLE
-    # --------------------------------------------------------
-
-    if external_scores:
-        final_score = (
-            sum(external_scores)
-            / len(external_scores)
+    if polymarket is not None:
+        external_values.append(
+            polymarket
         )
 
-        return {
-            "score": final_score,
-            "sources_count": len(
-                external_scores
-            ),
-            "is_external": True,
-        }
+    if external_values:
 
-    # --------------------------------------------------------
-    # NO EXTERNAL SOURCE AVAILABLE
-    # --------------------------------------------------------
-    # Keep the bot functional.
-    # This is NOT mixed into an external average.
-    # --------------------------------------------------------
+        return (
+            sum(external_values)
+            / len(external_values)
+        )
+
+    local_values = []
 
     technical = technical_score(
         klines,
@@ -1284,78 +1222,94 @@ async def calculate_next_candle(
     )
 
     momentum = momentum_score(
-        klines,
+        klines
     )
 
-    local_values = [
-        x
-        for x in (
-            technical,
-            momentum,
+    if technical is not None:
+        local_values.append(
+            technical
         )
-        if x is not None
-    ]
 
-    if not local_values:
-        return {
-            "score": 50.0,
-            "sources_count": 0,
-            "is_external": False,
-        }
+    if momentum is not None:
+        local_values.append(
+            momentum
+        )
 
-    local_score = (
-        sum(local_values)
-        / len(local_values)
+    if local_values:
+
+        return (
+            sum(local_values)
+            / len(local_values)
+        )
+
+    return 50.0
+
+
+# ============================================================
+# DUPLICATE PROTECTION
+# ============================================================
+
+def alert_key(signal):
+
+    close_timestamp = int(
+        signal[
+            "close_dt"
+        ].timestamp()
     )
 
-    return {
-        "score": local_score,
-        "sources_count": 0,
-        "is_external": False,
-    }
+    return (
+        f'{signal["symbol"]}:'
+        f'{signal["timeframe"]}:'
+        f'{signal["zone"]}:'
+        f'{close_timestamp}'
+    )
 
 
-# ============================================================
-# ALERT STATE
-# ============================================================
-
-def state_key(
-    symbol,
-    timeframe,
-):
-    return f"{symbol}:{timeframe}"
-
-
-def should_alert(
+def claim_alert(
     state,
-    symbol,
-    timeframe,
-    zone,
+    signal,
 ):
-    key = state_key(
-        symbol,
-        timeframe,
-    )
 
-    states = state.setdefault(
-        "states",
+    key = alert_key(signal)
+
+    sent_alerts = state.setdefault(
+        "sent_alerts",
         {},
     )
 
-    previous = states.get(key)
+    if key in sent_alerts:
 
-    # First occurrence
-    if previous is None:
-        states[key] = zone
-        return True
-
-    # Same zone -> no duplicate
-    if previous == zone:
         return False
 
-    # RSI returned to neutral and later
-    # enters again -> alert again
-    states[key] = zone
+    sent_alerts[key] = {
+        "created_at":
+            datetime.now(
+                timezone.utc
+            ).isoformat()
+    }
+
+    # Keep users.json small.
+    if len(sent_alerts) > 2000:
+
+        sorted_items = sorted(
+            sent_alerts.items(),
+            key=lambda item:
+                item[1].get(
+                    "created_at",
+                    "",
+                ),
+        )
+
+        for old_key, _ in sorted_items[
+            :500
+        ]:
+
+            sent_alerts.pop(
+                old_key,
+                None,
+            )
+
+    save_state(state)
 
     return True
 
@@ -1365,30 +1319,29 @@ def should_alert(
 # ============================================================
 
 def format_signal(
-    symbol,
-    timeframe,
-    rsi,
-    zone,
-    volume_ratio,
-    close_dt,
-    prediction,
+    signal,
 ):
+
+    symbol = signal["symbol"]
+    timeframe = signal["timeframe"]
+    rsi = signal["rsi"]
+    zone = signal["zone"]
+    volume_ratio = signal[
+        "volume_ratio"
+    ]
+    close_dt = signal[
+        "close_dt"
+    ]
+    prediction = signal[
+        "prediction"
+    ]
+
     rsi_icon = get_rsi_icon(
         zone
     )
 
     direction = get_direction(
         zone
-    )
-
-    rsi_text = format_number(
-        rsi,
-        2,
-    )
-
-    score_text = format_number(
-        prediction,
-        1,
     )
 
     if volume_ratio is None:
@@ -1412,16 +1365,90 @@ def format_signal(
 
     return (
         f"💠 {symbol}\n\n"
-        f"{rsi_icon} RSI                 "
-        f"{rsi_text}\n"
-        f"🔮 {direction}                "
-        f"{score_text} %\n"
-        f"volume                 "
+        f"{rsi_icon} RSI"
+        f"                 "
+        f"{format_number(rsi, 2)}\n"
+        f"🔮 {direction}"
+        f"                "
+        f"{format_number(prediction, 1)} %\n"
+        f"volume"
+        f"                 "
         f"{volume_text} ×\n"
-        f"close                  "
+        f"close"
+        f"                  "
         f"{close_text}\n"
-        f"📈 <a href=\"{tv_url}\">TV</a>"
+        f'📈 <a href="{tv_url}">TV</a>'
     )
+
+
+def timeframe_header(
+    timeframe,
+):
+
+    return (
+        f"━━━━━━━━ "
+        f"{timeframe} "
+        f"━━━━━━━━"
+    )
+
+
+def build_message(
+    signals,
+):
+
+    if not signals:
+        return None
+
+    ordered = []
+
+    for timeframe in TIMEFRAME_ORDER:
+
+        ordered.extend(
+            [
+                signal
+                for signal in signals
+                if signal[
+                    "timeframe"
+                ] == timeframe
+            ]
+        )
+
+    blocks = []
+
+    current_timeframe = None
+
+    for signal in ordered:
+
+        timeframe = signal[
+            "timeframe"
+        ]
+
+        if (
+            timeframe
+            != current_timeframe
+        ):
+
+            blocks.append(
+                timeframe_header(
+                    timeframe
+                )
+            )
+
+            current_timeframe = (
+                timeframe
+            )
+
+        blocks.append(
+            format_signal(
+                signal
+            )
+        )
+
+    return (
+        "\n\n"
+        "--------------------"
+        "\n\n"
+    ).join(blocks)
 
 
 # ============================================================
@@ -1433,6 +1460,7 @@ async def scan_symbol(
     symbol,
     timeframe,
 ):
+
     config = TIMEFRAMES[
         timeframe
     ]
@@ -1444,9 +1472,12 @@ async def scan_symbol(
         limit=100,
     )
 
-    if not klines or len(klines) < (
-        RSI_PERIOD + 10
+    if (
+        not klines
+        or len(klines)
+        < RSI_PERIOD + 10
     ):
+
         return None
 
     closes = [
@@ -1469,25 +1500,28 @@ async def scan_symbol(
     if zone is None:
         return None
 
-    # Only alert when current OPEN candle
-    # has around 10 minutes remaining.
+    # --------------------------------------------------------
+    # ONLY CURRENT OPEN CANDLE WITH ~10 MINUTES LEFT
+    # --------------------------------------------------------
+
     remaining = minutes_until_close(
         timeframe
     )
 
     if not (
-        9.0 <= remaining <= 11.0
+        9.0
+        <= remaining
+        <= 11.0
     ):
+
         return None
 
-    volume_ratio = (
-        calculate_volume_ratio(
-            klines
-        )
+    close_dt = candle_close_datetime(
+        timeframe
     )
 
     prediction = (
-        await calculate_next_candle(
+        await calculate_prediction(
             session,
             symbol,
             timeframe,
@@ -1496,26 +1530,17 @@ async def scan_symbol(
         )
     )
 
-    close_dt = candle_close_datetime(
-        timeframe
-    )
-
     return {
         "symbol": symbol,
         "timeframe": timeframe,
         "rsi": rsi,
         "zone": zone,
-        "volume_ratio": volume_ratio,
+        "volume_ratio":
+            calculate_volume_ratio(
+                klines
+            ),
         "close_dt": close_dt,
-        "prediction": prediction[
-            "score"
-        ],
-        "sources_count": prediction[
-            "sources_count"
-        ],
-        "is_external": prediction[
-            "is_external"
-        ],
+        "prediction": prediction,
     }
 
 
@@ -1525,8 +1550,8 @@ async def scan_symbol(
 
 async def scan_all(
     session,
-    state,
 ):
+
     top_coins = await get_top_coins(
         session
     )
@@ -1550,41 +1575,30 @@ async def scan_all(
 
     signals = []
 
-    # --------------------------------------------------------
-    # IMPORTANT:
-    # 15m first
-    # 1h second
-    # 4h third
-    # 1D last
-    # --------------------------------------------------------
+    # Exact requested order:
+    # 15m -> 1h -> 4h -> 1D
 
     for timeframe in TIMEFRAME_ORDER:
 
         for symbol in coins:
 
             try:
-                signal = await scan_symbol(
-                    session,
-                    symbol,
-                    timeframe,
+
+                signal = (
+                    await scan_symbol(
+                        session,
+                        symbol,
+                        timeframe,
+                    )
                 )
 
-                if signal is None:
-                    continue
-
-                if not should_alert(
-                    state,
-                    symbol,
-                    timeframe,
-                    signal["zone"],
-                ):
-                    continue
-
-                signals.append(
-                    signal
-                )
+                if signal is not None:
+                    signals.append(
+                        signal
+                    )
 
             except Exception as e:
+
                 logger.debug(
                     "Scan failed %s %s: %s",
                     symbol,
@@ -1596,83 +1610,26 @@ async def scan_all(
 
 
 # ============================================================
-# MESSAGE BUILDING
-# ============================================================
-
-def timeframe_header(
-    timeframe,
-):
-    return (
-        f"━━━━━━━━ {timeframe} ━━━━━━━━"
-    )
-
-
-def build_message(
-    signals,
-):
-    if not signals:
-        return None
-
-    # Explicit ordering
-    ordered = []
-
-    for timeframe in TIMEFRAME_ORDER:
-        ordered.extend(
-            [
-                s
-                for s in signals
-                if s["timeframe"]
-                == timeframe
-            ]
-        )
-
-    blocks = []
-
-    current_tf = None
-
-    for signal in ordered:
-
-        tf = signal["timeframe"]
-
-        if tf != current_tf:
-            blocks.append(
-                timeframe_header(tf)
-            )
-            current_tf = tf
-
-        blocks.append(
-            format_signal(
-                signal["symbol"],
-                signal["timeframe"],
-                signal["rsi"],
-                signal["zone"],
-                signal["volume_ratio"],
-                signal["close_dt"],
-                signal["prediction"],
-            )
-        )
-
-    return "\n\n--------------------\n\n".join(
-        blocks
-    )
-
-
-# ============================================================
 # MAIN
 # ============================================================
 
 async def main():
+
     if not TOKEN:
+
         logger.error(
             "TELEGRAM_BOT_TOKEN is missing."
         )
+
         return
 
     state = load_state()
 
-    # Legacy single-user compatibility
+    # Optional legacy user.
     if LEGACY_CHAT_ID:
+
         try:
+
             legacy_id = int(
                 LEGACY_CHAT_ID
             )
@@ -1681,6 +1638,7 @@ async def main():
                 legacy_id
                 not in state["users"]
             ):
+
                 state["users"].append(
                     legacy_id
                 )
@@ -1688,17 +1646,15 @@ async def main():
         except Exception:
             pass
 
-    timeout = aiohttp.ClientTimeout(
-        total=40
-    )
-
     connector = aiohttp.TCPConnector(
         limit=30,
         ttl_dns_cache=300,
     )
 
     async with aiohttp.ClientSession(
-        timeout=timeout,
+        timeout=aiohttp.ClientTimeout(
+            total=40
+        ),
         connector=connector,
         headers={
             "User-Agent":
@@ -1706,31 +1662,36 @@ async def main():
         },
     ) as session:
 
-        # Process Telegram commands
         await process_updates(
             session,
             state,
         )
 
         if not state["users"]:
+
             logger.info(
                 "No active Telegram users."
             )
+
             save_state(state)
+
             return
 
-        start = asyncio.get_event_loop().time()
+        start_time = (
+            asyncio.get_event_loop()
+            .time()
+        )
 
         sent_any = False
 
         while (
             asyncio.get_event_loop().time()
-            - start
+            - start_time
             < RUN_SECONDS
         ):
+
             try:
-                # Commands can arrive during
-                # the current workflow too.
+
                 await process_updates(
                     session,
                     state,
@@ -1740,24 +1701,48 @@ async def main():
                     break
 
                 signals = await scan_all(
-                    session,
-                    state,
+                    session
                 )
 
                 logger.info(
-                    "Alerts: %s",
+                    "Alerts found: %s",
                     len(signals),
                 )
 
-                if signals:
+                # ------------------------------------------------
+                # REMOVE DUPLICATES BEFORE SENDING
+                # ------------------------------------------------
+
+                new_signals = []
+
+                for signal in signals:
+
+                    if claim_alert(
+                        state,
+                        signal,
+                    ):
+
+                        new_signals.append(
+                            signal
+                        )
+
+                logger.info(
+                    "New alerts to send: %s",
+                    len(new_signals),
+                )
+
+                if new_signals:
+
                     message = build_message(
-                        signals
+                        new_signals
                     )
 
                     if message:
+
                         for chat_id in list(
                             state["users"]
                         ):
+
                             await send_long_message(
                                 session,
                                 chat_id,
@@ -1769,6 +1754,7 @@ async def main():
                 save_state(state)
 
             except Exception as e:
+
                 logger.exception(
                     "Scanner error: %s",
                     e,
@@ -1786,10 +1772,16 @@ async def main():
         )
 
 
+# ============================================================
+# START
+# ============================================================
+
 if __name__ == "__main__":
+
     try:
-        asyncio.run(
-            main()
-        )
+
+        asyncio.run(main())
+
     except KeyboardInterrupt:
+
         pass
