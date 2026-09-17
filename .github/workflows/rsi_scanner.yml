@@ -2,7 +2,6 @@ name: RSI Telegram Scanner
 
 on:
   workflow_dispatch:
-
   schedule:
     - cron: "*/5 * * * *"
 
@@ -14,15 +13,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-
   scan:
-
     runs-on: ubuntu-latest
-
     timeout-minutes: 10
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v5
         with:
@@ -50,10 +45,15 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+          # Binance public market data
+          BINANCE_BASE_URL: https://data-api.binance.vision
+
         run: |
           python -u bot_fixed.py
 
       - name: Save state
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
