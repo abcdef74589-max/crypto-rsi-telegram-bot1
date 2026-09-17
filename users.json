@@ -18,6 +18,8 @@
     "USDEUSDT:1H": "high",
     "ARBUSDT:4H": "high",
     "USDEUSDT:15M": "high",
-    "USDCUSDT:15M": "high"
+    "USDCUSDT:15M": "high",
+    "PUMPUSDT:15M": "high",
+    "PUMPUSDT:1H": "high"
   }
 }
