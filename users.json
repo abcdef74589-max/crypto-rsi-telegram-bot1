@@ -11,31 +11,31 @@
     },
     "NEARUSDT|1h": {
       "zone": "neutral",
-      "open_time_ms": 1789682400000
+      "open_time_ms": 1789686000000
     },
     "UNIUSDT|1h": {
       "zone": "neutral",
-      "open_time_ms": 1789682400000
+      "open_time_ms": 1789686000000
     },
     "SNDKBUSDT|1h": {
       "zone": "neutral",
-      "open_time_ms": 1789682400000
+      "open_time_ms": 1789686000000
     },
     "COTIUSDT|1h": {
       "zone": "neutral",
-      "open_time_ms": 1789682400000
+      "open_time_ms": 1789686000000
     },
     "LTCUSDT|1h": {
       "zone": "neutral",
-      "open_time_ms": 1789682400000
+      "open_time_ms": 1789686000000
     },
     "BCHUSDT|1h": {
       "zone": "neutral",
-      "open_time_ms": 1789682400000
+      "open_time_ms": 1789686000000
     },
     "SPCXBUSDT|1h": {
       "zone": "neutral",
-      "open_time_ms": 1789682400000
+      "open_time_ms": 1789686000000
     },
     "CAKEUSDT|1h": {
       "zone": "neutral",
@@ -43,7 +43,7 @@
     },
     "FETUSDT|1h": {
       "zone": "neutral",
-      "open_time_ms": 1789682400000
+      "open_time_ms": 1789686000000
     },
     "ASTERUSDT|1h": {
       "zone": "neutral",
@@ -51,11 +51,11 @@
     },
     "NVDABUSDT|1h": {
       "zone": "neutral",
-      "open_time_ms": 1789682400000
+      "open_time_ms": 1789686000000
     },
     "MUBUSDT|1h": {
       "zone": "neutral",
-      "open_time_ms": 1789682400000
+      "open_time_ms": 1789686000000
     },
     "SOXLBUSDT|1h": {
       "zone": "neutral",
@@ -63,11 +63,11 @@
     },
     "SNXXBUSDT|1h": {
       "zone": "neutral",
-      "open_time_ms": 1789682400000
+      "open_time_ms": 1789686000000
     },
     "BNCBUSDT|1h": {
       "zone": "neutral",
-      "open_time_ms": 1789682400000
+      "open_time_ms": 1789686000000
     },
     "IOSTUSDT|15m": {
       "zone": "neutral",
@@ -79,7 +79,7 @@
     },
     "APTUSDT|1h": {
       "zone": "neutral",
-      "open_time_ms": 1789682400000
+      "open_time_ms": 1789686000000
     },
     "TUTUSDT|15m": {
       "zone": "neutral",
@@ -95,19 +95,19 @@
     },
     "FETUSDT|15m": {
       "zone": "neutral",
-      "open_time_ms": 1789687800000
+      "open_time_ms": 1789688700000
     },
     "APTUSDT|15m": {
       "zone": "neutral",
-      "open_time_ms": 1789687800000
+      "open_time_ms": 1789688700000
     },
     "BNBUSDT|15m": {
       "zone": "neutral",
-      "open_time_ms": 1789687800000
+      "open_time_ms": 1789688700000
     },
     "PUMPUSDT|15m": {
       "zone": "neutral",
-      "open_time_ms": 1789687800000
+      "open_time_ms": 1789688700000
     },
     "FILUSDT|15m": {
       "zone": "neutral",
@@ -115,7 +115,95 @@
     },
     "AUSDT|15m": {
       "zone": "neutral",
-      "open_time_ms": 1789687800000
+      "open_time_ms": 1789688700000
+    },
+    "ZECUSDT|4h": {
+      "zone": "neutral",
+      "open_time_ms": 1789675200000
+    },
+    "ZECUSDT|1d": {
+      "zone": "neutral",
+      "open_time_ms": 1789603200000
+    },
+    "NEARUSDT|4h": {
+      "zone": "neutral",
+      "open_time_ms": 1789675200000
+    },
+    "NEARUSDT|1d": {
+      "zone": "neutral",
+      "open_time_ms": 1789603200000
+    },
+    "UNIUSDT|4h": {
+      "zone": "neutral",
+      "open_time_ms": 1789675200000
+    },
+    "UNIUSDT|1d": {
+      "zone": "neutral",
+      "open_time_ms": 1789603200000
+    },
+    "BNBUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789686000000
+    },
+    "ARBUSDT|4h": {
+      "zone": "neutral",
+      "open_time_ms": 1789675200000
+    },
+    "SUIUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789686000000
+    },
+    "ONEUSDT|4h": {
+      "zone": "neutral",
+      "open_time_ms": 1789675200000
+    },
+    "ONEUSDT|1d": {
+      "zone": "neutral",
+      "open_time_ms": 1789603200000
+    },
+    "PUMPUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789686000000
+    },
+    "AVAUSDT|1d": {
+      "zone": "neutral",
+      "open_time_ms": 1789603200000
+    },
+    "SYNUSDT|1d": {
+      "zone": "neutral",
+      "open_time_ms": 1789603200000
+    },
+    "COTIUSDT|4h": {
+      "zone": "neutral",
+      "open_time_ms": 1789675200000
+    },
+    "COTIUSDT|1d": {
+      "zone": "neutral",
+      "open_time_ms": 1789603200000
+    },
+    "DOTUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789686000000
+    },
+    "CAKEUSDT|1d": {
+      "zone": "neutral",
+      "open_time_ms": 1789603200000
+    },
+    "ZENUSDT|4h": {
+      "zone": "neutral",
+      "open_time_ms": 1789675200000
+    },
+    "ASTERUSDT|4h": {
+      "zone": "neutral",
+      "open_time_ms": 1789675200000
+    },
+    "MUBUSDT|4h": {
+      "zone": "neutral",
+      "open_time_ms": 1789675200000
+    },
+    "AUSDT|1h": {
+      "zone": "neutral",
+      "open_time_ms": 1789686000000
     }
   }
 }
