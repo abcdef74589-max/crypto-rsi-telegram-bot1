@@ -17,6 +17,7 @@
     "WLFIUSDT:1H": "high",
     "USDEUSDT:1H": "high",
     "ARBUSDT:4H": "high",
-    "USDEUSDT:15M": "high"
+    "USDEUSDT:15M": "high",
+    "USDCUSDT:15M": "high"
   }
 }
