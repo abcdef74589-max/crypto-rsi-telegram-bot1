@@ -84,6 +84,22 @@
     "TUTUSDT|15m": {
       "zone": "neutral",
       "open_time_ms": 1789685100000
+    },
+    "NEARUSDT|15m": {
+      "zone": "neutral",
+      "open_time_ms": 1789686000000
+    },
+    "ONEUSDT|15m": {
+      "zone": "neutral",
+      "open_time_ms": 1789686000000
+    },
+    "FETUSDT|15m": {
+      "zone": "overbought",
+      "open_time_ms": 1789686000000
+    },
+    "APTUSDT|15m": {
+      "zone": "overbought",
+      "open_time_ms": 1789686000000
     }
   }
 }
