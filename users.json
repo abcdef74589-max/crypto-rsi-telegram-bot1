@@ -4,5 +4,11 @@
     "5952888026"
   ],
   "offset": 988370759,
-  "signals": {}
+  "signals": {
+    "ASTERUSDT:1H": "high",
+    "BFUSDUSDT:15M": "high",
+    "SKYUSDT:4H": "low",
+    "UUSDT:4H": "high",
+    "ZECUSDT:4H": "high"
+  }
 }
