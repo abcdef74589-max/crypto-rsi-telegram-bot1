@@ -32,9 +32,14 @@
     "VET:15m": "high",
     "UNI:15m": "high",
     "ARB:15m": "high",
-    "CAKE:15m": "high"
+    "CAKE:15m": "high",
+    "JST:15m": "low",
+    "UNI:1h": "high",
+    "MORPHO:1h": "high",
+    "JUP:1h": "high",
+    "RENDER:1h": "high"
   },
   "sent_messages": {
-    "ec2cca77cfecfe49dfef391e292b9c33c7519ac894e4b51b559fafcdcb1e6e6e": 1789668341
+    "59a28927ec0ffb5f03c18d2c0bd2a548e39f2dd390af0e92df16f748c9819093": 1789671051
   }
 }
