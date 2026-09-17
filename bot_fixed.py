@@ -4,7 +4,6 @@ import os
 from datetime import datetime, timezone, timedelta
 
 import aiohttp
-import numpy as np
 
 
 # =========================================================
@@ -48,7 +47,6 @@ DEFAULT_STATE = {
     "offset": 0,
     "signals": {},
     "running": False,
-    "startup_scan_done": False,
 }
 
 
@@ -85,22 +83,15 @@ def save_state(state):
 # =========================================================
 
 def bold_number(value):
-    """
-    تبدیل اعداد معمولی به اعداد ریاضی بولد یونیکد
-    بدون استفاده از <b>
-    """
-
     normal = "0123456789"
     bold = "𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵"
-
-    text = str(value)
 
     table = str.maketrans(
         normal,
         bold
     )
 
-    return text.translate(table)
+    return str(value).translate(table)
 
 
 # =========================================================
@@ -108,9 +99,15 @@ def bold_number(value):
 # =========================================================
 
 async def telegram_request(session, method, data=None):
+
+    if not TELEGRAM_BOT_TOKEN:
+        print("TELEGRAM_BOT_TOKEN is missing.")
+        return None
+
     url = f"{TELEGRAM_API}/{method}"
 
     try:
+
         async with session.post(
             url,
             data=data,
@@ -118,15 +115,32 @@ async def telegram_request(session, method, data=None):
         ) as response:
 
             if response.status != 200:
+
+                text = await response.text()
+
+                print(
+                    f"Telegram error {response.status}: {text}"
+                )
+
                 return None
 
             return await response.json()
 
-    except Exception:
+    except Exception as e:
+
+        print(
+            f"Telegram request error: {e}"
+        )
+
         return None
 
 
-async def send_message(session, chat_id, text):
+async def send_message(
+    session,
+    chat_id,
+    text
+):
+
     return await telegram_request(
         session,
         "sendMessage",
@@ -143,23 +157,35 @@ async def send_message(session, chat_id, text):
 # TELEGRAM UPDATES
 # =========================================================
 
-async def get_updates(session, offset):
+async def get_updates(
+    session,
+    offset
+):
+
     result = await telegram_request(
         session,
         "getUpdates",
         {
             "offset": offset,
             "timeout": 1,
+            "allowed_updates": '["message"]',
         }
     )
 
     if not result:
         return []
 
-    return result.get("result", [])
+    return result.get(
+        "result",
+        []
+    )
 
 
-async def process_commands(session, state):
+async def process_commands(
+    session,
+    state
+):
+
     updates = await get_updates(
         session,
         state["offset"]
@@ -167,14 +193,28 @@ async def process_commands(session, state):
 
     for update in updates:
 
-        state["offset"] = update["update_id"] + 1
+        state["offset"] = (
+            update["update_id"] + 1
+        )
 
-        message = update.get("message", {})
+        message = update.get(
+            "message",
+            {}
+        )
 
-        chat = message.get("chat", {})
-        chat_id = str(chat.get("id", ""))
+        chat = message.get(
+            "chat",
+            {}
+        )
 
-        text = message.get("text", "").strip().lower()
+        chat_id = str(
+            chat.get("id", "")
+        )
+
+        text = message.get(
+            "text",
+            ""
+        ).strip().lower()
 
         if not chat_id:
             continue
@@ -186,12 +226,12 @@ async def process_commands(session, state):
         if text == "/start":
 
             if chat_id not in state["users"]:
-                state["users"].append(chat_id)
+
+                state["users"].append(
+                    chat_id
+                )
 
             state["running"] = True
-
-            # برای اسکن اولیه
-            state["startup_scan_done"] = False
 
             await send_message(
                 session,
@@ -209,9 +249,13 @@ async def process_commands(session, state):
         elif text == "/stop":
 
             if chat_id in state["users"]:
-                state["users"].remove(chat_id)
+
+                state["users"].remove(
+                    chat_id
+                )
 
             if not state["users"]:
+
                 state["running"] = False
 
             await send_message(
@@ -226,7 +270,11 @@ async def process_commands(session, state):
 
         elif text == "/status":
 
-            status = "🟢 فعال" if chat_id in state["users"] else "🔴 غیرفعال"
+            status = (
+                "🟢 فعال"
+                if chat_id in state["users"]
+                else "🔴 غیرفعال"
+            )
 
             await send_message(
                 session,
@@ -241,7 +289,9 @@ async def process_commands(session, state):
 # COINGECKO
 # =========================================================
 
-async def get_top_coins(session):
+async def get_top_coins(
+    session
+):
 
     params = {
         "vs_currency": "usd",
@@ -260,6 +310,11 @@ async def get_top_coins(session):
         ) as response:
 
             if response.status != 200:
+
+                print(
+                    f"CoinGecko error: {response.status}"
+                )
+
                 return []
 
             data = await response.json()
@@ -270,7 +325,12 @@ async def get_top_coins(session):
                 if coin.get("symbol")
             ]
 
-    except Exception:
+    except Exception as e:
+
+        print(
+            f"CoinGecko error: {e}"
+        )
+
         return []
 
 
@@ -278,7 +338,9 @@ async def get_top_coins(session):
 # BINANCE SYMBOLS
 # =========================================================
 
-async def get_binance_symbols(session):
+async def get_binance_symbols(
+    session
+):
 
     try:
 
@@ -288,26 +350,49 @@ async def get_binance_symbols(session):
         ) as response:
 
             if response.status != 200:
+
+                print(
+                    f"Binance exchangeInfo error: "
+                    f"{response.status}"
+                )
+
                 return set()
 
             data = await response.json()
 
             valid_symbols = set()
 
-            for item in data.get("symbols", []):
+            for item in data.get(
+                "symbols",
+                []
+            ):
 
                 if (
                     item.get("status") == "TRADING"
                     and item.get("quoteAsset") == "USDT"
-                    and item.get("isSpotTradingAllowed", False)
-                ):
-                    valid_symbols.add(
-                        item.get("symbol")
+                    and item.get(
+                        "isSpotTradingAllowed",
+                        False
                     )
+                ):
+
+                    symbol = item.get(
+                        "symbol"
+                    )
+
+                    if symbol:
+                        valid_symbols.add(
+                            symbol
+                        )
 
             return valid_symbols
 
-    except Exception:
+    except Exception as e:
+
+        print(
+            f"Binance symbols error: {e}"
+        )
+
         return set()
 
 
@@ -315,9 +400,11 @@ async def get_binance_symbols(session):
 # SCAN SYMBOLS
 # =========================================================
 
-async def get_scan_symbols(session):
+async def get_scan_symbols(
+    session
+):
 
-    top_coins_task = asyncio.create_task(
+    top_task = asyncio.create_task(
         get_top_coins(session)
     )
 
@@ -325,9 +412,11 @@ async def get_scan_symbols(session):
         get_binance_symbols(session)
     )
 
-    top_coins, binance_symbols = await asyncio.gather(
-        top_coins_task,
-        binance_task
+    top_coins, binance_symbols = (
+        await asyncio.gather(
+            top_task,
+            binance_task
+        )
     )
 
     result = []
@@ -337,7 +426,14 @@ async def get_scan_symbols(session):
         symbol = f"{coin}USDT"
 
         if symbol in binance_symbols:
-            result.append(symbol)
+
+            result.append(
+                symbol
+            )
+
+    print(
+        f"Scanning {len(result)} symbols."
+    )
 
     return result
 
@@ -372,7 +468,12 @@ async def get_klines(
 
             return await response.json()
 
-    except Exception:
+    except Exception as e:
+
+        print(
+            f"Kline error {symbol} {interval}: {e}"
+        )
+
         return []
 
 
@@ -380,57 +481,82 @@ async def get_klines(
 # RSI
 # =========================================================
 
-def calculate_rsi(closes, period=14):
+def calculate_rsi(
+    closes,
+    period=14
+):
 
     if len(closes) < period + 1:
         return None
 
-    closes = np.asarray(
-        closes,
-        dtype=float
+    closes = [
+        float(x)
+        for x in closes
+    ]
+
+    gains = []
+    losses = []
+
+    for i in range(1, len(closes)):
+
+        change = (
+            closes[i] - closes[i - 1]
+        )
+
+        if change > 0:
+
+            gains.append(change)
+            losses.append(0.0)
+
+        else:
+
+            gains.append(0.0)
+            losses.append(-change)
+
+    avg_gain = (
+        sum(gains[:period])
+        / period
     )
 
-    deltas = np.diff(closes)
-
-    gains = np.where(
-        deltas > 0,
-        deltas,
-        0
+    avg_loss = (
+        sum(losses[:period])
+        / period
     )
 
-    losses = np.where(
-        deltas < 0,
-        -deltas,
-        0
-    )
-
-    avg_gain = np.mean(
-        gains[:period]
-    )
-
-    avg_loss = np.mean(
-        losses[:period]
-    )
-
-    for i in range(period, len(gains)):
+    for i in range(
+        period,
+        len(gains)
+    ):
 
         avg_gain = (
-            (avg_gain * (period - 1))
+            (
+                avg_gain * (period - 1)
+            )
             + gains[i]
         ) / period
 
         avg_loss = (
-            (avg_loss * (period - 1))
+            (
+                avg_loss * (period - 1)
+            )
             + losses[i]
         ) / period
 
     if avg_loss == 0:
+
+        if avg_gain == 0:
+            return 50.0
+
         return 100.0
 
-    rs = avg_gain / avg_loss
+    rs = (
+        avg_gain
+        / avg_loss
+    )
 
-    rsi = 100 - (
-        100 / (1 + rs)
+    rsi = (
+        100
+        - (100 / (1 + rs))
     )
 
     return float(rsi)
@@ -440,10 +566,12 @@ def calculate_rsi(closes, period=14):
 # VOLUME RATIO
 # =========================================================
 
-def calculate_volume_ratio(klines):
+def calculate_volume_ratio(
+    klines
+):
 
     if len(klines) < 4:
-        return 0
+        return 0.0
 
     volumes = [
         float(k[5])
@@ -452,23 +580,34 @@ def calculate_volume_ratio(klines):
 
     current_volume = volumes[-1]
 
-    previous_volumes = volumes[-4:-1]
+    previous_volumes = (
+        volumes[-4:-1]
+    )
 
-    average_volume = np.mean(
-        previous_volumes
+    if not previous_volumes:
+        return 0.0
+
+    average_volume = (
+        sum(previous_volumes)
+        / len(previous_volumes)
     )
 
     if average_volume <= 0:
-        return 0
+        return 0.0
 
-    return current_volume / average_volume
+    return (
+        current_volume
+        / average_volume
+    )
 
 
 # =========================================================
 # CLOSE TIME
 # =========================================================
 
-def get_close_time(klines):
+def get_close_time(
+    klines
+):
 
     if not klines:
         return ""
@@ -484,14 +623,19 @@ def get_close_time(klines):
         IRAN_TZ
     )
 
-    return close_dt.strftime("%H:%M")
+    return close_dt.strftime(
+        "%H:%M"
+    )
 
 
 # =========================================================
 # TECHNICAL SCORE
 # =========================================================
 
-def technical_score(klines, rsi):
+def technical_score(
+    klines,
+    rsi
+):
 
     if rsi is None:
         return 50.0
@@ -522,7 +666,9 @@ def technical_score(klines, rsi):
 # MOMENTUM SCORE
 # =========================================================
 
-def momentum_score(klines):
+def momentum_score(
+    klines
+):
 
     if len(klines) < 6:
         return 50.0
@@ -539,12 +685,15 @@ def momentum_score(klines):
         return 50.0
 
     change_percent = (
-        (current - previous)
+        (
+            current - previous
+        )
         / previous
     ) * 100
 
-    score = 50 + (
-        change_percent * 5
+    score = (
+        50
+        + (change_percent * 5)
     )
 
     return max(
@@ -562,17 +711,9 @@ async def get_polymarket_probability(
     symbol
 ):
 
-    """
-    این بخش فقط در صورت دریافت داده معتبر
-    از منبع مربوطه استفاده می‌کند.
-
-    اگر داده معتبر پیدا نشود:
-    None برمی‌گرداند.
-    """
-
-    # فعلاً API مستقیم و قابل اتکای عمومی
-    # برای نگاشت همه نمادهای Binance به بازار
-    # Polymarket در این ربات تعریف نشده است.
+    # در حال حاضر مقدار معتبر و مستقیم
+    # برای تمام نمادهای Binance از Polymarket
+    # در این ربات تعریف نشده است.
 
     return None
 
@@ -597,9 +738,11 @@ async def calculate_next_candle(
         klines
     )
 
-    polymarket = await get_polymarket_probability(
-        session,
-        symbol
+    polymarket = (
+        await get_polymarket_probability(
+            session,
+            symbol
+        )
     )
 
     if polymarket is None:
@@ -615,8 +758,7 @@ async def calculate_next_candle(
         max(
             0,
             min(100, final_score)
-        ),
-        0
+        )
     )
 
     if final_score >= 50:
@@ -627,14 +769,19 @@ async def calculate_next_candle(
 
         direction = "🔴 ↓"
 
-    return int(final_score), direction
+    return (
+        int(final_score),
+        direction
+    )
 
 
 # =========================================================
 # SIGNAL STATE
 # =========================================================
 
-def get_signal_zone(rsi):
+def get_signal_zone(
+    rsi
+):
 
     if rsi > 70:
         return "high"
@@ -652,38 +799,34 @@ def should_send_signal(
     rsi
 ):
 
-    zone = get_signal_zone(rsi)
-
-    key = f"{symbol}_{timeframe}"
-
-    previous_zone = state["signals"].get(
-        key,
-        "normal"
+    zone = get_signal_zone(
+        rsi
     )
 
-    # -----------------------------------------------------
-    # NORMAL
-    # -----------------------------------------------------
+    key = (
+        f"{symbol}_{timeframe}"
+    )
+
+    previous_zone = (
+        state["signals"].get(
+            key,
+            "normal"
+        )
+    )
 
     if zone == "normal":
 
-        state["signals"][key] = "normal"
+        state["signals"][key] = (
+            "normal"
+        )
 
         return False
-
-    # -----------------------------------------------------
-    # NEW ENTRY
-    # -----------------------------------------------------
 
     if zone != previous_zone:
 
         state["signals"][key] = zone
 
         return True
-
-    # -----------------------------------------------------
-    # SAME ZONE
-    # -----------------------------------------------------
 
     return False
 
@@ -692,7 +835,9 @@ def should_send_signal(
 # DISPLAY SYMBOL
 # =========================================================
 
-def display_symbol(symbol):
+def display_symbol(
+    symbol
+):
 
     if symbol.endswith("USDT"):
 
@@ -705,7 +850,9 @@ def display_symbol(symbol):
 # TRADINGVIEW
 # =========================================================
 
-def tradingview_url(symbol):
+def tradingview_url(
+    symbol
+):
 
     return (
         "https://www.tradingview.com/chart/"
@@ -718,7 +865,9 @@ def tradingview_url(symbol):
 # FORMAT SIGNAL
 # =========================================================
 
-def format_signal(signal):
+def format_signal(
+    signal
+):
 
     symbol = display_symbol(
         signal["symbol"]
@@ -755,7 +904,7 @@ def format_signal(signal):
     )
 
     volume_text = bold_number(
-        f"{volume:.2f}×"
+        f"{volume:.2f}"
     )
 
     close_text = bold_number(
@@ -768,10 +917,10 @@ def format_signal(signal):
 
     return (
         f"💠 {symbol}\n\n"
-        f"{rsi_icon} RSI {rsi_text}\n"
-        f"🔮 {direction} {score_text}%\n"
-        f"volume {volume_text}\n"
-        f"close {close_text}\n"
+        f"{rsi_icon} RSI                       {rsi_text}\n"
+        f"🔮 {direction}                      {score_text} %\n"
+        f"volume                       {volume_text} ×\n"
+        f"close                        {close_text}\n"
         f"📈 <a href=\"{tv_url}\">TV</a>"
     )
 
@@ -780,7 +929,9 @@ def format_signal(signal):
 # BATCH MESSAGE
 # =========================================================
 
-def build_batch_message(signals):
+def build_batch_message(
+    signals
+):
 
     if not signals:
         return None
@@ -799,7 +950,8 @@ def build_batch_message(signals):
         tf_signals = [
             signal
             for signal in signals
-            if signal["timeframe"] == timeframe
+            if signal["timeframe"]
+            == timeframe
         ]
 
         if not tf_signals:
@@ -814,10 +966,14 @@ def build_batch_message(signals):
         ):
 
             parts.append(
-                format_signal(signal)
+                format_signal(
+                    signal
+                )
             )
 
-            if index != len(tf_signals) - 1:
+            if index != len(
+                tf_signals
+            ) - 1:
 
                 parts.append(
                     "--------------------"
@@ -825,11 +981,13 @@ def build_batch_message(signals):
 
         parts.append("")
 
-    return "\n".join(parts).strip()
+    return "\n".join(
+        parts
+    ).strip()
 
 
 # =========================================================
-# MESSAGE SPLITTER
+# SPLIT MESSAGE
 # =========================================================
 
 def split_message(
@@ -848,7 +1006,12 @@ def split_message(
         "\n\n"
     ):
 
-        if len(current) + len(block) + 2 > max_length:
+        if (
+            len(current)
+            + len(block)
+            + 2
+            > max_length
+        ):
 
             if current:
                 parts.append(
@@ -887,7 +1050,9 @@ async def scan_symbol(
 
     async with semaphore:
 
-        for timeframe, interval in TIMEFRAMES.items():
+        for timeframe, interval in (
+            TIMEFRAMES.items()
+        ):
 
             klines = await get_klines(
                 session,
@@ -911,23 +1076,24 @@ async def scan_symbol(
             if rsi is None:
                 continue
 
-            # فقط RSI خارج محدوده
             if not (
                 rsi > 70
                 or rsi < 30
             ):
-                # برای ریست شدن state
+
                 state["signals"][
                     f"{symbol}_{timeframe}"
                 ] = "normal"
 
                 continue
 
-            send_signal = should_send_signal(
-                state,
-                symbol,
-                timeframe,
-                rsi
+            send_signal = (
+                should_send_signal(
+                    state,
+                    symbol,
+                    timeframe,
+                    rsi
+                )
             )
 
             if not send_signal:
@@ -948,8 +1114,10 @@ async def scan_symbol(
                 )
             )
 
-            close_time = get_close_time(
-                klines
+            close_time = (
+                get_close_time(
+                    klines
+                )
             )
 
             results.append(
@@ -1013,13 +1181,17 @@ async def scan_market(
             result,
             Exception
         ):
+
+            print(
+                f"Symbol scan error: {result}"
+            )
+
             continue
 
         signals.extend(
             result
         )
 
-    # ترتیب قطعی تایم‌فریم‌ها
     order = {
         "15m": 0,
         "1h": 1,
@@ -1064,7 +1236,9 @@ async def send_signals(
         message
     )
 
-    for chat_id in state["users"]:
+    for chat_id in list(
+        state["users"]
+    ):
 
         for chunk in chunks:
 
@@ -1087,17 +1261,6 @@ async def monitor():
 
     state = load_state()
 
-    if not state["users"]:
-        print(
-            "No active users."
-        )
-
-        return
-
-    state["running"] = True
-
-    save_state(state)
-
     timeout = aiohttp.ClientTimeout(
         total=30
     )
@@ -1111,25 +1274,30 @@ async def monitor():
         connector=connector
     ) as session:
 
-        # -------------------------------------------------
-        # PROCESS TELEGRAM COMMANDS
-        # -------------------------------------------------
-
         await process_commands(
             session,
             state
         )
 
         if not state["users"]:
+
+            print(
+                "No active users."
+            )
+
             state["running"] = False
+
             save_state(state)
+
             return
 
-        # -------------------------------------------------
-        # MONITOR LOOP
-        # -------------------------------------------------
+        state["running"] = True
 
-        start_time = asyncio.get_event_loop().time()
+        save_state(state)
+
+        start_time = (
+            asyncio.get_event_loop().time()
+        )
 
         while (
             asyncio.get_event_loop().time()
@@ -1137,23 +1305,18 @@ async def monitor():
             < MONITOR_SECONDS
         ):
 
-            # ---------------------------------------------
-            # COMMANDS
-            # ---------------------------------------------
-
             await process_commands(
                 session,
                 state
             )
 
             if not state["users"]:
-                state["running"] = False
-                save_state(state)
-                return
 
-            # ---------------------------------------------
-            # MARKET SCAN
-            # ---------------------------------------------
+                state["running"] = False
+
+                save_state(state)
+
+                return
 
             try:
 
@@ -1164,10 +1327,20 @@ async def monitor():
 
                 if signals:
 
+                    print(
+                        f"Found {len(signals)} new signals."
+                    )
+
                     await send_signals(
                         session,
                         state,
                         signals
+                    )
+
+                else:
+
+                    print(
+                        "No new signals."
                     )
 
                 save_state(state)
@@ -1177,10 +1350,6 @@ async def monitor():
                 print(
                     f"Scan error: {e}"
                 )
-
-            # ---------------------------------------------
-            # WAIT
-            # ---------------------------------------------
 
             await asyncio.sleep(
                 SCAN_INTERVAL
@@ -1213,4 +1382,4 @@ if __name__ == "__main__":
 
         print(
             f"Fatal error: {e}"
-            )
+        )
