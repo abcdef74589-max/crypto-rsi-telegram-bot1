@@ -504,6 +504,12 @@
     "PAXG:15m": "high",
     "WLFI:15m": "low",
     "SKY:15m": "high",
-    "AERO:15m": "high"
+    "AERO:15m": "high",
+    "PUMP:15m": "high",
+    "ONDO:15m": "high",
+    "PUMP:1h": "high",
+    "ONDO:1h": "high",
+    "DOT:1h": "high",
+    "AERO:1h": "high"
   }
 }
