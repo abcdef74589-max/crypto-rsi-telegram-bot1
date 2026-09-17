@@ -3,6 +3,29 @@
     "5952888026"
   ],
   "offset": 988370763,
-  "states": {},
-  "sent_messages": {}
+  "states": {
+    "ZEC:15m": "high",
+    "WLFI:15m": "low",
+    "DOT:15m": "high",
+    "ZEC:1h": "high",
+    "BCH:1h": "high",
+    "LTC:1h": "high",
+    "GRAM:1h": "high",
+    "NEAR:1h": "high",
+    "SHIB:1h": "high",
+    "ASTER:1h": "high",
+    "AAVE:1h": "high",
+    "ONDO:1h": "high",
+    "DOT:1h": "high",
+    "PEPE:1h": "high",
+    "CAKE:1h": "high",
+    "AERO:1h": "high",
+    "ZEC:4h": "high",
+    "USDE:4h": "high",
+    "NEAR:4h": "high",
+    "ASTER:4h": "high"
+  },
+  "sent_messages": {
+    "329b85027ceb7234a04dae437e8790318f971cb97269165219b946d37eb6f481": 1789660263
+  }
 }
