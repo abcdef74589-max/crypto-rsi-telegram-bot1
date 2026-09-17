@@ -16,6 +16,7 @@
     "NEARUSDT:1H": "high",
     "WLFIUSDT:1H": "high",
     "USDEUSDT:1H": "high",
-    "ARBUSDT:4H": "high"
+    "ARBUSDT:4H": "high",
+    "USDEUSDT:15M": "high"
   }
 }
