@@ -15,8 +15,9 @@
     "NEARUSDT:4H": "overbought",
     "ZECUSDT:4H": "overbought",
     "ADAUSDT:15M": "overbought",
-    "USDEUSDT:1H": "overbought",
-    "USDEUSDT:4H": "overbought"
+    "ASTERUSDT:15M": "overbought",
+    "LTCUSDT:1H": "overbought",
+    "ZECUSDT:1D": "overbought"
   },
   "running": true,
   "startup_scan_done": true
