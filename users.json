@@ -6,7 +6,7 @@
   "offset": 988370764,
   "signals": {
     "COTIUSDT|15m": {
-      "zone": "overbought",
+      "zone": "neutral",
       "open_time_ms": 1789680600000
     }
   }
