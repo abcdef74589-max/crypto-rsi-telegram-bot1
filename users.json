@@ -23,6 +23,10 @@
     "PUMPUSDT:1H": "high",
     "ETHFIUSDT:15M": "high",
     "USDEUSDT:4H": "high",
-    "NEARUSDT:4H": "high"
+    "NEARUSDT:4H": "high",
+    "AAVEUSDT:15M": "high",
+    "ADAUSDT:15M": "high",
+    "LTCUSDT:15M": "high",
+    "ASTERUSDT:4H": "high"
   }
 }
