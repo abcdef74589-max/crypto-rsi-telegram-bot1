@@ -498,6 +498,9 @@
     "ASTER:1h": "high",
     "CAKE:1h": "high",
     "TRX:15m": "low",
-    "GRAM:15m": "high"
+    "GRAM:15m": "high",
+    "NEAR:15m": "high",
+    "XAUT:15m": "high",
+    "PAXG:15m": "high"
   }
 }
