@@ -6,72 +6,84 @@
   "offset": 988370764,
   "signals": {
     "COTIUSDT|15m": {
-      "zone": "neutral",
-      "open_time_ms": 1789683300000
+      "zone": "overbought",
+      "open_time_ms": 1789685100000
     },
     "NEARUSDT|1h": {
-      "zone": "neutral",
-      "open_time_ms": 1789678800000
+      "zone": "overbought",
+      "open_time_ms": 1789682400000
     },
     "UNIUSDT|1h": {
-      "zone": "neutral",
-      "open_time_ms": 1789678800000
+      "zone": "overbought",
+      "open_time_ms": 1789682400000
     },
     "SNDKBUSDT|1h": {
-      "zone": "neutral",
-      "open_time_ms": 1789678800000
+      "zone": "overbought",
+      "open_time_ms": 1789682400000
     },
     "COTIUSDT|1h": {
-      "zone": "neutral",
-      "open_time_ms": 1789678800000
+      "zone": "overbought",
+      "open_time_ms": 1789682400000
     },
     "LTCUSDT|1h": {
-      "zone": "neutral",
-      "open_time_ms": 1789678800000
+      "zone": "overbought",
+      "open_time_ms": 1789682400000
     },
     "BCHUSDT|1h": {
-      "zone": "neutral",
-      "open_time_ms": 1789678800000
+      "zone": "overbought",
+      "open_time_ms": 1789682400000
     },
     "SPCXBUSDT|1h": {
-      "zone": "neutral",
-      "open_time_ms": 1789678800000
+      "zone": "overbought",
+      "open_time_ms": 1789682400000
     },
     "CAKEUSDT|1h": {
       "zone": "neutral",
       "open_time_ms": 1789678800000
     },
     "FETUSDT|1h": {
-      "zone": "neutral",
-      "open_time_ms": 1789678800000
+      "zone": "overbought",
+      "open_time_ms": 1789682400000
     },
     "ASTERUSDT|1h": {
       "zone": "neutral",
       "open_time_ms": 1789678800000
     },
     "NVDABUSDT|1h": {
-      "zone": "neutral",
-      "open_time_ms": 1789678800000
+      "zone": "overbought",
+      "open_time_ms": 1789682400000
     },
     "MUBUSDT|1h": {
-      "zone": "neutral",
-      "open_time_ms": 1789678800000
+      "zone": "overbought",
+      "open_time_ms": 1789682400000
     },
     "SOXLBUSDT|1h": {
       "zone": "neutral",
       "open_time_ms": 1789678800000
     },
     "SNXXBUSDT|1h": {
-      "zone": "neutral",
-      "open_time_ms": 1789678800000
+      "zone": "overbought",
+      "open_time_ms": 1789682400000
     },
     "BNCBUSDT|1h": {
-      "zone": "neutral",
-      "open_time_ms": 1789678800000
+      "zone": "overbought",
+      "open_time_ms": 1789682400000
     },
     "IOSTUSDT|15m": {
       "zone": "neutral",
       "open_time_ms": 1789683300000
+    },
+    "ONEUSDT|1h": {
+      "zone": "overbought",
+      "open_time_ms": 1789682400000
+    },
+    "APTUSDT|1h": {
+      "zone": "overbought",
+      "open_time_ms": 1789682400000
+    },
+    "TUTUSDT|15m": {
+      "zone": "overbought",
+      "open_time_ms": 1789685100000
     }
   }
 }
