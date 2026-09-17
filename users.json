@@ -1,46 +1,13 @@
 {
   "users": [
     "5952888026",
-    1413646760
+    "1413646760"
   ],
   "offset": 988370764,
-  "states": {
-    "ZEC:15m": "high",
-    "WLFI:15m": "low",
-    "DOT:15m": "high",
-    "ZEC:1h": "high",
-    "BCH:1h": "high",
-    "LTC:1h": "high",
-    "GRAM:1h": "high",
-    "NEAR:1h": "high",
-    "SHIB:1h": "high",
-    "ASTER:1h": "high",
-    "AAVE:1h": "high",
-    "ONDO:1h": "high",
-    "DOT:1h": "high",
-    "PEPE:1h": "high",
-    "CAKE:1h": "high",
-    "AERO:1h": "high",
-    "ZEC:4h": "high",
-    "USDE:4h": "high",
-    "NEAR:4h": "high",
-    "ASTER:4h": "high",
-    "TRX:15m": "low",
-    "LTC:15m": "high",
-    "NEAR:15m": "high",
-    "AAVE:15m": "high",
-    "POL:15m": "high",
-    "VET:15m": "high",
-    "UNI:15m": "high",
-    "ARB:15m": "high",
-    "CAKE:15m": "high",
-    "JST:15m": "low",
-    "UNI:1h": "high",
-    "MORPHO:1h": "high",
-    "JUP:1h": "high",
-    "RENDER:1h": "high"
-  },
-  "sent_messages": {
-    "59a28927ec0ffb5f03c18d2c0bd2a548e39f2dd390af0e92df16f748c9819093": 1789671051
+  "signals": {
+    "COTIUSDT|15m": {
+      "zone": "neutral",
+      "open_time_ms": 1789679700000
+    }
   }
 }
