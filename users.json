@@ -501,6 +501,9 @@
     "GRAM:15m": "high",
     "NEAR:15m": "high",
     "XAUT:15m": "high",
-    "PAXG:15m": "high"
+    "PAXG:15m": "high",
+    "WLFI:15m": "low",
+    "SKY:15m": "high",
+    "AERO:15m": "high"
   }
 }
