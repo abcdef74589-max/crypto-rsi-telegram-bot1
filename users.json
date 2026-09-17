@@ -94,11 +94,11 @@
       "open_time_ms": 1789686000000
     },
     "FETUSDT|15m": {
-      "zone": "overbought",
+      "zone": "neutral",
       "open_time_ms": 1789686000000
     },
     "APTUSDT|15m": {
-      "zone": "overbought",
+      "zone": "neutral",
       "open_time_ms": 1789686000000
     }
   }
