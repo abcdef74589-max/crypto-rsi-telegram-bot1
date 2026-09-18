@@ -406,10 +406,11 @@
     "PENDLE:4h": "high",
     "AR:4h": "high",
     "BFUSD:4h": "low",
-    "EIGEN:4h": "high"
+    "EIGEN:4h": "high",
+    "PROM:15m": "low"
   },
   "sent_messages": {
-    "757ec4f6e1009320b84e269f9e87802c55a8b35ccefdfa779938fee8950c0a7b": 1789732216,
-    "7a051d00559e3608419883d889c4a142f74df793ddcd94d1ad99b5c34fa6621a": 1789732216
+    "86cf91fb96a7a2e1f69dff1ace2949375d731e81146bb89b049c074296bb719b": 1789736688,
+    "4b7a7cb4e4a115757c4b08964ce14db49f0307b3861ca448b782911baa57110f": 1789736689
   }
 }
