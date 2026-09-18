@@ -438,10 +438,16 @@
     "VIRTUAL:4h": "high",
     "S:4h": "high",
     "STG:4h": "low",
-    "COTI:15m": "low"
+    "COTI:15m": "low",
+    "RLUSD:15m": "low",
+    "PROVE:15m": "high",
+    "AVA:15m": "low",
+    "RLUSD:1h": "low",
+    "PROVE:1h": "high",
+    "LDO:1h": "high"
   },
   "sent_messages": {
-    "b5e8b83ec3f879a6e31d707b1e48030830d5bf8adc1c087835f4c47c1edf9f05": 1789747564,
-    "e553809302867d069541f7e711446a341b483bc255c657d6e00e6ec807c44a8b": 1789747565
+    "5a1df296c99f99d1a270fdef8c0f374976bca63ae959b75a4e6796c11aa0f141": 1789750255,
+    "663fc37c10a985f26f2a48af3eab06e1f361602cd4b1f917770a8e0fd9d21386": 1789750256
   }
 }
