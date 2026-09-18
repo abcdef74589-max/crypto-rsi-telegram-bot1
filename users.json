@@ -446,10 +446,24 @@
     "PROVE:1h": "high",
     "LDO:1h": "high",
     "SAGA:1h": "high",
-    "C:1h": "high"
+    "C:1h": "high",
+    "FIL:15m": "high",
+    "POL:1h": "high",
+    "ZEN:1h": "high",
+    "XUSD:1h": "low",
+    "ZK:1h": "high",
+    "ADA:4h": "high",
+    "SAGA:4h": "high",
+    "OP:4h": "high",
+    "POL:4h": "high",
+    "ZEN:4h": "high",
+    "C:4h": "high",
+    "ZK:4h": "high",
+    "GALA:4h": "high",
+    "LDO:4h": "high"
   },
   "sent_messages": {
-    "4ff42f342964bb40ff1ca16d87e3337d3e239c1443ed5118f0f3bb8d1350ff78": 1789755694,
-    "7be5ad19b699767928e47f50331d370584f275757ae8581d851617385ff679e7": 1789755694
+    "8d6bed2ab3e5392ef67683bc70045e76ff0541944ccd8fca10fa3113107fe427": 1789761064,
+    "8b96c940aede4ced90ac3510fb1dc8cdad927ac7abfe58b7be863e63bc2c8875": 1789761065
   }
 }
