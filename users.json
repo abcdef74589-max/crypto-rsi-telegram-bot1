@@ -444,10 +444,12 @@
     "AVA:15m": "low",
     "RLUSD:1h": "low",
     "PROVE:1h": "high",
-    "LDO:1h": "high"
+    "LDO:1h": "high",
+    "SAGA:1h": "high",
+    "C:1h": "high"
   },
   "sent_messages": {
-    "c724d5be840670f066b3bc8cd1f8286f54ba2074f7897bf26430dcd8cee4fd3f": 1789752070,
-    "8d332a7d0c6f91e42712058d98bbd7df4229a9ea35dd3551764a6f32b698c53a": 1789752071
+    "e8507ac67edaf9d04ddd417bc2d925d437fdcbc1dce06f88e7604debfb44398d": 1789753850,
+    "8c96d395c28e1a636889250eddb8376a9302579c7af8dcbdb03bd3d98f75f307": 1789753850
   }
 }
