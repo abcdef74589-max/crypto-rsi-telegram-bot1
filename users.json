@@ -460,10 +460,11 @@
     "C:4h": "high",
     "ZK:4h": "high",
     "GALA:4h": "high",
-    "LDO:4h": "high"
+    "LDO:4h": "high",
+    "BONK:15m": "high"
   },
   "sent_messages": {
-    "8d6bed2ab3e5392ef67683bc70045e76ff0541944ccd8fca10fa3113107fe427": 1789761064,
-    "8b96c940aede4ced90ac3510fb1dc8cdad927ac7abfe58b7be863e63bc2c8875": 1789761065
+    "33eff44c32f518e0c183d80fd38e0f22e106a42d33fa4efd1e7a6a85ad4ca5e6": 1789767355,
+    "51aeebb3007c1d4b69fd3817db52bc720b698ed5a97445b4057a6e72f9f94eb6": 1789767356
   }
 }
