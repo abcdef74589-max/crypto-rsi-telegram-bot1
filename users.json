@@ -213,5 +213,7 @@
       "zone": "neutral",
       "open_time_ms": 1789689600000
     }
-  }
+  },
+  "states": {},
+  "sent_messages": {}
 }
