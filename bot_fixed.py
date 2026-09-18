@@ -3,7 +3,6 @@ import json
 import asyncio
 import logging
 import hashlib
-import re
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 
@@ -129,17 +128,14 @@ DEFAULT_USERS = {
 
 
 def load_state():
-
     if not USERS_FILE.exists():
         return DEFAULT_USERS.copy()
 
     try:
-
         with USERS_FILE.open(
             "r",
             encoding="utf-8"
         ) as f:
-
             data = json.load(f)
 
         if not isinstance(data, dict):
@@ -153,26 +149,21 @@ def load_state():
         return data
 
     except Exception as e:
-
         logger.error(
             "Cannot load users.json: %s",
-            e,
+            e
         )
-
         return DEFAULT_USERS.copy()
 
 
 def save_state(state):
-
     tmp = USERS_FILE.with_suffix(".tmp")
 
     try:
-
         with tmp.open(
             "w",
             encoding="utf-8"
         ) as f:
-
             json.dump(
                 state,
                 f,
@@ -183,10 +174,9 @@ def save_state(state):
         tmp.replace(USERS_FILE)
 
     except Exception as e:
-
         logger.error(
             "Cannot save users.json: %s",
-            e,
+            e
         )
 
 
@@ -199,7 +189,6 @@ async def telegram_request(
     method,
     params=None,
 ):
-
     if not TOKEN:
         return None
 
@@ -209,7 +198,6 @@ async def telegram_request(
     )
 
     try:
-
         async with session.post(
             url,
             data=params or {},
@@ -219,7 +207,6 @@ async def telegram_request(
         ) as response:
 
             if response.status != 200:
-
                 text = await response.text()
 
                 logger.error(
@@ -234,10 +221,9 @@ async def telegram_request(
             return await response.json()
 
     except Exception as e:
-
         logger.error(
             "Telegram request failed: %s",
-            e,
+            e
         )
 
         return None
@@ -247,30 +233,19 @@ async def send_message(
     session,
     chat_id,
     text,
-    reply_markup=None,
 ):
-
     if not chat_id:
         return False
-
-    params = {
-        "chat_id": chat_id,
-        "text": text,
-        "parse_mode": "HTML",
-        "disable_web_page_preview": True,
-    }
-
-    if reply_markup is not None:
-
-        params["reply_markup"] = json.dumps(
-            reply_markup,
-            ensure_ascii=False,
-        )
 
     result = await telegram_request(
         session,
         "sendMessage",
-        params,
+        {
+            "chat_id": chat_id,
+            "text": text,
+            "parse_mode": "HTML",
+            "disable_web_page_preview": True,
+        },
     )
 
     return bool(
@@ -282,18 +257,14 @@ async def send_long_message(
     session,
     chat_id,
     text,
-    reply_markup=None,
 ):
-
     MAX_LENGTH = 4000
 
     if len(text) <= MAX_LENGTH:
-
         return await send_message(
             session,
             chat_id,
             text,
-            reply_markup,
         )
 
     parts = []
@@ -317,7 +288,6 @@ async def send_long_message(
             current = block
 
         else:
-
             current = candidate
 
     if current:
@@ -325,20 +295,12 @@ async def send_long_message(
 
     success = True
 
-    for index, part in enumerate(parts):
-
-        # Keyboard فقط روی پیام آخر قرار می‌گیرد
-        markup = (
-            reply_markup
-            if index == len(parts) - 1
-            else None
-        )
+    for part in parts:
 
         ok = await send_message(
             session,
             chat_id,
             part,
-            markup,
         )
 
         if not ok:
@@ -355,10 +317,11 @@ def message_hash(
     chat_id,
     text,
 ):
-
     raw = (
         f"{chat_id}|{text}"
-    ).encode("utf-8")
+    ).encode(
+        "utf-8"
+    )
 
     return hashlib.sha256(
         raw
@@ -370,7 +333,6 @@ def already_sent(
     chat_id,
     text,
 ):
-
     sent = state.setdefault(
         "sent_messages",
         {}
@@ -394,12 +356,10 @@ def already_sent(
     for k, timestamp in sent.items():
 
         try:
-
             if int(timestamp) < cutoff:
                 old_keys.append(k)
 
         except Exception:
-
             old_keys.append(k)
 
     for k in old_keys:
@@ -421,7 +381,6 @@ async def process_updates(
     session,
     state,
 ):
-
     offset = int(
         state.get("offset", 0)
     )
@@ -433,10 +392,7 @@ async def process_updates(
             "offset": offset,
             "timeout": 1,
             "allowed_updates": json.dumps(
-                [
-                    "message",
-                    "callback_query",
-                ]
+                ["message"]
             ),
         },
     )
@@ -456,31 +412,9 @@ async def process_updates(
         )
 
         if update_id is not None:
-
             state["offset"] = (
                 update_id + 1
             )
-
-        # ====================================================
-        # CALLBACK QUERY
-        # ====================================================
-
-        callback = update.get(
-            "callback_query"
-        )
-
-        if callback:
-
-            await process_prediction_callback(
-                session,
-                callback,
-            )
-
-            continue
-
-        # ====================================================
-        # NORMAL MESSAGE
-        # ====================================================
 
         message = (
             update.get("message")
@@ -505,7 +439,6 @@ async def process_updates(
         if text.startswith("/start"):
 
             if chat_id not in state["users"]:
-
                 state["users"].append(
                     chat_id
                 )
@@ -525,7 +458,6 @@ async def process_updates(
         elif text.startswith("/stop"):
 
             if chat_id in state["users"]:
-
                 state["users"].remove(
                     chat_id
                 )
@@ -565,7 +497,6 @@ async def binance_get(
     path,
     params=None,
 ):
-
     for base in BINANCE_BASE_URLS:
 
         url = f"{base}{path}"
@@ -594,7 +525,6 @@ async def binance_get(
 async def get_binance_exchange_info(
     session,
 ):
-
     return await binance_get(
         session,
         "/api/v3/exchangeInfo",
@@ -604,7 +534,6 @@ async def get_binance_exchange_info(
 async def get_binance_tickers(
     session,
 ):
-
     return await binance_get(
         session,
         "/api/v3/ticker/24hr",
@@ -617,7 +546,6 @@ async def get_klines(
     interval,
     limit=100,
 ):
-
     return await binance_get(
         session,
         "/api/v3/klines",
@@ -630,58 +558,59 @@ async def get_klines(
 
 
 # ============================================================
-# TOP 100 BINANCE BY 24H TRADING VOLUME
+# TOP 100 BINANCE COINS BY TRADING VOLUME
 # ============================================================
 
 EXCLUDED_BASE_ASSETS = {
     "USDT",
     "USDC",
-    "BUSD",
     "FDUSD",
     "TUSD",
     "USDP",
     "DAI",
+    "BUSD",
     "EUR",
-    "GBP",
     "TRY",
     "BRL",
-    "UAH",
+    "GBP",
     "AUD",
-    "BIDR",
-    "IDRT",
-    "ARS",
+    "UAH",
+    "RUB",
     "PLN",
-    "RON",
+    "ARS",
     "ZAR",
     "NGN",
-    "RUB",
+    "JPY",
+    "MXN",
+    "RON",
+    "IDR",
+    "COP",
+    "VND",
 }
 
 
-def is_normal_coin(base_asset):
-
-    base_asset = (
-        base_asset or ""
-    ).upper()
-
+def is_normal_spot_coin(
+    base_asset
+):
     if not base_asset:
         return False
 
-    if base_asset in EXCLUDED_BASE_ASSETS:
+    base = base_asset.upper()
+
+    if base in EXCLUDED_BASE_ASSETS:
         return False
 
-    # حذف توکن‌های اهرمی Binance
-    bad_suffixes = (
+    leveraged_suffixes = (
         "UP",
         "DOWN",
         "BULL",
         "BEAR",
     )
 
-    for suffix in bad_suffixes:
-
-        if base_asset.endswith(suffix):
-            return False
+    if base.endswith(
+        leveraged_suffixes
+    ):
+        return False
 
     return True
 
@@ -689,19 +618,35 @@ def is_normal_coin(base_asset):
 async def get_top_coins(
     session,
 ):
+    """
+    100 ارز برتر Binance بر اساس
+    حجم معاملات 24 ساعته.
+
+    فقط:
+      - Spot
+      - USDT
+      - TRADING
+      - ارزهای معمولی
+
+    بدون CoinGecko
+    بدون DeFiLlama
+    """
 
     info = await get_binance_exchange_info(
         session
     )
 
-    if not info:
-        logger.error(
-            "Binance exchangeInfo unavailable."
-        )
+    tickers = await get_binance_tickers(
+        session
+    )
 
+    if not info or not tickers:
+        logger.error(
+            "Binance ranking data unavailable."
+        )
         return []
 
-    valid_symbols = set()
+    valid_symbols = {}
 
     for item in info.get(
         "symbols",
@@ -710,55 +655,63 @@ async def get_top_coins(
 
         if (
             item.get("status")
-            == "TRADING"
-            and item.get("quoteAsset")
-            == "USDT"
-            and item.get(
-                "isSpotTradingAllowed",
-                True,
-            )
+            != "TRADING"
         ):
+            continue
 
-            base = (
-                item.get(
-                    "baseAsset",
-                    "",
-                )
-                .upper()
+        if (
+            item.get("quoteAsset")
+            != "USDT"
+        ):
+            continue
+
+        if not item.get(
+            "isSpotTradingAllowed",
+            True,
+        ):
+            continue
+
+        base_asset = (
+            item.get(
+                "baseAsset",
+                "",
             )
-
-            if is_normal_coin(base):
-
-                valid_symbols.add(
-                    base
-                )
-
-    tickers = await get_binance_tickers(
-        session
-    )
-
-    if not tickers:
-        logger.error(
-            "Binance 24h ticker unavailable."
+            .upper()
         )
 
-        return []
+        symbol = (
+            item.get(
+                "symbol",
+                "",
+            )
+            .upper()
+        )
+
+        if not base_asset or not symbol:
+            continue
+
+        if not is_normal_spot_coin(
+            base_asset
+        ):
+            continue
+
+        valid_symbols[
+            symbol
+        ] = base_asset
 
     ranked = []
 
     for ticker in tickers:
 
         symbol = (
-            ticker.get("symbol")
-            or ""
-        ).upper()
+            ticker.get(
+                "symbol",
+                "",
+            )
+            .upper()
+        )
 
-        if not symbol.endswith("USDT"):
-            continue
-
-        base = symbol[:-4]
-
-        if base not in valid_symbols:
+        if symbol not in valid_symbols:
             continue
 
         try:
@@ -766,7 +719,7 @@ async def get_top_coins(
             quote_volume = float(
                 ticker.get(
                     "quoteVolume",
-                    0
+                    0,
                 )
             )
 
@@ -778,22 +731,37 @@ async def get_top_coins(
 
         ranked.append(
             (
-                base,
                 quote_volume,
+                valid_symbols[symbol],
             )
         )
 
     ranked.sort(
-        key=lambda x: x[1],
+        key=lambda x: x[0],
         reverse=True,
     )
 
-    coins = [
-        base
-        for base, _ in ranked[:TOP_N]
-    ]
+    result = []
 
-    return coins
+    seen = set()
+
+    for _, base_asset in ranked:
+
+        if base_asset in seen:
+            continue
+
+        seen.add(base_asset)
+        result.append(base_asset)
+
+        if len(result) >= TOP_N:
+            break
+
+    logger.info(
+        "Top Binance coins by volume: %s",
+        len(result)
+    )
+
+    return result
 
 
 # ============================================================
@@ -804,7 +772,6 @@ def calculate_rsi(
     closes,
     period=14,
 ):
-
     if len(closes) < period + 1:
         return None
 
@@ -822,12 +789,10 @@ def calculate_rsi(
         )
 
         if change > 0:
-
             gains.append(change)
             losses.append(0.0)
 
         else:
-
             gains.append(0.0)
             losses.append(
                 abs(change)
@@ -885,9 +850,7 @@ def candle_close_datetime(
     timeframe,
     now=None,
 ):
-
     if now is None:
-
         now = datetime.now(
             timezone.utc
         )
@@ -927,14 +890,12 @@ def minutes_until_close(
     timeframe,
     now=None,
 ):
-
     close_dt = candle_close_datetime(
         timeframe,
         now,
     )
 
     if now is None:
-
         now = datetime.now(
             timezone.utc
         )
@@ -945,7 +906,6 @@ def minutes_until_close(
 
 
 def iran_time_string(dt):
-
     iran_tz = timezone(
         timedelta(
             hours=3,
@@ -969,7 +929,6 @@ def iran_time_string(dt):
 def calculate_volume_ratio(
     klines,
 ):
-
     if len(klines) < 5:
         return None
 
@@ -1004,7 +963,6 @@ def calculate_volume_ratio(
 # ============================================================
 
 def get_rsi_zone(rsi):
-
     if rsi is None:
         return None
 
@@ -1018,7 +976,6 @@ def get_rsi_zone(rsi):
 
 
 def get_rsi_icon(zone):
-
     if zone == "high":
         return "🟢"
 
@@ -1029,7 +986,6 @@ def get_rsi_icon(zone):
 
 
 def get_direction(zone):
-
     if zone == "high":
         return "↑"
 
@@ -1047,7 +1003,6 @@ def tradingview_url(
     symbol,
     timeframe,
 ):
-
     tv_tf = TIMEFRAMES[
         timeframe
     ]["tradingview"]
@@ -1065,7 +1020,6 @@ def tradingview_url(
 # ============================================================
 
 def parse_json_string(value):
-
     if isinstance(value, list):
         return value
 
@@ -1076,11 +1030,9 @@ def parse_json_string(value):
         return None
 
     try:
-
         return json.loads(value)
 
     except Exception:
-
         return None
 
 
@@ -1089,7 +1041,6 @@ async def get_polymarket_probability(
     symbol,
     timeframe,
 ):
-
     if timeframe not in (
         "15m",
         "1h",
@@ -1214,19 +1165,14 @@ async def get_polymarket_probability(
                         * 100
                     )
 
-                    if (
-                        0
-                        <= probability
-                        <= 100
-                    ):
-
+                    if 0 <= probability <= 100:
                         return probability
 
     except Exception as e:
 
         logger.debug(
             "Polymarket unavailable: %s",
-            e,
+            e
         )
 
     return None
@@ -1249,7 +1195,6 @@ async def get_prism_probability(
     symbol,
     timeframe,
 ):
-
     if not PRISM_API_KEY:
         return None
 
@@ -1308,19 +1253,14 @@ async def get_prism_probability(
                 * 100
             )
 
-            if (
-                0
-                <= probability
-                <= 100
-            ):
-
+            if 0 <= probability <= 100:
                 return probability
 
     except Exception as e:
 
         logger.debug(
             "PRISM unavailable: %s",
-            e,
+            e
         )
 
     return None
@@ -1335,7 +1275,6 @@ async def get_degen_probability(
     symbol,
     timeframe,
 ):
-
     if timeframe != "15m":
         return None
 
@@ -1370,6 +1309,8 @@ async def get_degen_probability(
                 return None
 
             text = await response.text()
+
+        import re
 
         match = re.search(
             r"Call\s*"
@@ -1435,63 +1376,78 @@ async def get_prediction_values(
     symbol,
     timeframe,
 ):
-
-    tasks = [
+    prism_task = asyncio.create_task(
         get_prism_probability(
             session,
             symbol,
             timeframe,
-        ),
+        )
+    )
 
+    polymarket_task = asyncio.create_task(
         get_polymarket_probability(
             session,
             symbol,
             timeframe,
-        ),
+        )
+    )
 
+    degen_task = asyncio.create_task(
         get_degen_probability(
             session,
             symbol,
             timeframe,
-        ),
-    ]
+        )
+    )
 
     results = await asyncio.gather(
-        *tasks,
+        prism_task,
+        polymarket_task,
+        degen_task,
         return_exceptions=True,
     )
 
+    source_names = [
+        "PRISM AI",
+        "Polymarket",
+        "Degen Signal",
+    ]
+
+    details = []
     values = []
 
-    for value in results:
+    for name, value in zip(
+        source_names,
+        results,
+    ):
 
         if isinstance(
             value,
             Exception
         ):
-            continue
-
-        if value is None:
-            continue
+            value = None
 
         try:
+            if value is not None:
+                value = float(value)
 
-            value = float(value)
-
-            if (
-                0
-                <= value
-                <= 100
-            ):
-
-                values.append(
-                    value
-                )
+                if not (
+                    0 <= value <= 100
+                ):
+                    value = None
 
         except Exception:
-            continue
+            value = None
 
-    return values
+        details.append({
+            "name": name,
+            "value": value,
+        })
+
+        if value is not None:
+            values.append(value)
+
+    return values, details
 
 
 # ============================================================
@@ -1502,7 +1458,6 @@ def technical_score(
     klines,
     rsi,
 ):
-
     if not klines or rsi is None:
         return None
 
@@ -1553,7 +1508,6 @@ def technical_score(
 def momentum_score(
     klines,
 ):
-
     if len(klines) < 6:
         return None
 
@@ -1589,7 +1543,6 @@ def momentum_score(
         )
 
     except Exception:
-
         return None
 
 
@@ -1600,8 +1553,7 @@ async def calculate_next_candle(
     klines,
     rsi,
 ):
-
-    external_values = (
+    external_values, details = (
         await get_prediction_values(
             session,
             symbol,
@@ -1625,7 +1577,7 @@ async def calculate_next_candle(
             average,
         )
 
-        return average
+        return average, details
 
     technical = technical_score(
         klines,
@@ -1646,401 +1598,84 @@ async def calculate_next_candle(
     ]
 
     if not values:
-        return 50.0
+        prediction = 50.0
 
-    return (
-        sum(values)
-        / len(values)
-    )
-
-
-# ============================================================
-# PREDICTION DETAILS FOR BUTTON
-# ============================================================
-
-async def get_prediction_details(
-    session,
-    symbol,
-    timeframe,
-):
-
-    results = await asyncio.gather(
-        get_prism_probability(
-            session,
-            symbol,
-            timeframe,
-        ),
-
-        get_polymarket_probability(
-            session,
-            symbol,
-            timeframe,
-        ),
-
-        get_degen_probability(
-            session,
-            symbol,
-            timeframe,
-        ),
-
-        return_exceptions=True,
-    )
-
-    prism = (
-        None
-        if isinstance(results[0], Exception)
-        else results[0]
-    )
-
-    polymarket = (
-        None
-        if isinstance(results[1], Exception)
-        else results[1]
-    )
-
-    degen = (
-        None
-        if isinstance(results[2], Exception)
-        else results[2]
-    )
-
-    return {
-        "PRISM": prism,
-        "Polymarket": polymarket,
-        "Degen Signal": degen,
-    }
-
-
-def prediction_direction(
-    probability,
-):
-
-    if probability is None:
-        return "⚪ بدون داده"
-
-    if probability >= 50:
-
-        return (
-            f"🟢 ↑       "
-            f"{format_number(probability, 1)}٪"
+    else:
+        prediction = (
+            sum(values)
+            / len(values)
         )
 
-    return (
-        f"🔴 ↓       "
-        f"{format_number(probability, 1)}٪"
-    )
+    return prediction, details
+
+
+# ============================================================
+# PREDICTION DRAWER
+# ============================================================
+
+def prediction_direction(
+    value
+):
+    if value is None:
+        return "⚪"
+
+    if value >= 50:
+        return "🟢 ↑"
+
+    return "🔴 ↓"
 
 
 def format_prediction_details(
-    symbol,
-    timeframe,
     details,
 ):
-
     lines = [
-        "",
-        f"🔮 <b>پیش‌بینی منابع</b>",
-        "",
-        "┌────────────────────────┐",
+        "🔮 پیش‌بینی منابع"
     ]
 
-    for name, probability in details.items():
+    for item in details:
 
-        lines.append(
-            f"│ <b>{name}</b>"
-        )
+        name = item["name"]
+        value = item["value"]
 
-        if probability is None:
+        if value is None:
 
             lines.append(
-                "│ ⚪ بدون داده"
+                f"{name:<18} —"
             )
 
         else:
 
-            lines.append(
-                "│ "
-                + prediction_direction(
-                    probability
+            value_text = format_number(
+                value,
+                1,
+            )
+
+            direction = (
+                prediction_direction(
+                    value
                 )
             )
 
-        lines.append(
-            "├────────────────────────┤"
-        )
-
-    if lines[-1].startswith(
-        "├────────────────────────"
-    ):
-
-        lines[-1] = (
-            "└────────────────────────┘"
-        )
+            lines.append(
+                f"{name:<18} "
+                f"{direction} "
+                f"{value_text} %"
+            )
 
     return "\n".join(lines)
 
 
-def remove_prediction_details(
-    text,
-):
-
-    pattern = (
-        r"\n\n🔮 <b>پیش‌بینی منابع</b>"
-        r".*?"
-        r"└────────────────────────┘"
-    )
-
-    return re.sub(
-        pattern,
-        "",
-        text,
-        flags=re.DOTALL,
-    )
-
-
-def insert_prediction_details(
-    text,
-    symbol,
+def prediction_drawer(
     details,
 ):
-
-    marker = (
-        f"💠 {symbol}\n"
+    content = format_prediction_details(
+        details
     )
-
-    details_text = (
-        format_prediction_details(
-            symbol,
-            "",
-            details,
-        )
-    )
-
-    position = text.find(
-        marker
-    )
-
-    if position == -1:
-        return text
-
-    # پیدا کردن سیگنال بعدی
-    next_separator = text.find(
-        "\n\n--------------------",
-        position,
-    )
-
-    if next_separator == -1:
-
-        return (
-            text
-            + details_text
-        )
 
     return (
-        text[:next_separator]
-        + details_text
-        + text[next_separator:]
-    )
-
-
-# ============================================================
-# PREDICTION KEYBOARD
-# ============================================================
-
-def prediction_keyboard(
-    text,
-    expanded_key=None,
-):
-
-    rows = []
-
-    current_tf = None
-
-    for block in text.split(
-        "\n\n--------------------"
-    ):
-
-        tf_match = re.search(
-            r"━━━━━━━━\s*(15m|1h|4h|1D)\s*━━━━━━━━",
-            block,
-        )
-
-        if tf_match:
-
-            current_tf = (
-                tf_match.group(1)
-            )
-
-        symbol_match = re.search(
-            r"💠\s*([A-Z0-9]+)",
-            block,
-        )
-
-        if not symbol_match:
-            continue
-
-        symbol = (
-            symbol_match.group(1)
-        )
-
-        if not current_tf:
-            continue
-
-        key = (
-            f"{symbol}:{current_tf}"
-        )
-
-        is_open = (
-            key == expanded_key
-        )
-
-        rows.append(
-            [
-                {
-                    "text": (
-                        "🔮 پیش‌بینی منابع ▴"
-                        if is_open
-                        else
-                        "🔮 پیش‌بینی منابع ▾"
-                    ),
-                    "callback_data": (
-                        f"pred|{symbol}|"
-                        f"{current_tf}|"
-                        f"{'close' if is_open else 'open'}"
-                    ),
-                }
-            ]
-        )
-
-    if not rows:
-        return None
-
-    return {
-        "inline_keyboard": rows
-    }
-
-
-# ============================================================
-# CALLBACK HANDLER
-# ============================================================
-
-async def process_prediction_callback(
-    session,
-    callback,
-):
-
-    callback_id = (
-        callback.get("id")
-        or ""
-    )
-
-    data = (
-        callback.get("data")
-        or ""
-    )
-
-    await telegram_request(
-        session,
-        "answerCallbackQuery",
-        {
-            "callback_query_id":
-                callback_id,
-        },
-    )
-
-    parts = data.split("|")
-
-    if len(parts) != 4:
-        return
-
-    if parts[0] != "pred":
-        return
-
-    symbol = parts[1]
-    timeframe = parts[2]
-    action = parts[3]
-
-    message = (
-        callback.get("message")
-        or {}
-    )
-
-    chat = (
-        message.get("chat")
-        or {}
-    )
-
-    chat_id = chat.get("id")
-    message_id = message.get(
-        "message_id"
-    )
-
-    current_text = (
-        message.get("text")
-        or ""
-    )
-
-    if not chat_id or not message_id:
-        return
-
-    expanded_key = (
-        f"{symbol}:{timeframe}"
-    )
-
-    if action == "open":
-
-        # اگر بخش دیگری باز بوده،
-        # ابتدا همه جزئیات قبلی حذف می‌شوند.
-        new_text = remove_prediction_details(
-            current_text
-        )
-
-        details = (
-            await get_prediction_details(
-                session,
-                symbol,
-                timeframe,
-            )
-        )
-
-        new_text = (
-            insert_prediction_details(
-                new_text,
-                symbol,
-                details,
-            )
-        )
-
-        markup = prediction_keyboard(
-            new_text,
-            expanded_key,
-        )
-
-    else:
-
-        new_text = remove_prediction_details(
-            current_text
-        )
-
-        markup = prediction_keyboard(
-            new_text,
-            None,
-        )
-
-    await telegram_request(
-        session,
-        "editMessageText",
-        {
-            "chat_id": chat_id,
-            "message_id": message_id,
-            "text": new_text,
-            "parse_mode": "HTML",
-            "disable_web_page_preview": True,
-            "reply_markup": json.dumps(
-                markup or {},
-                ensure_ascii=False,
-            ),
-        },
+        "<blockquote expandable>"
+        f"{content}"
+        "</blockquote>"
     )
 
 
@@ -2052,7 +1687,6 @@ def state_key(
     symbol,
     timeframe,
 ):
-
     return (
         f"{symbol}:{timeframe}"
     )
@@ -2064,7 +1698,6 @@ def should_alert(
     timeframe,
     zone,
 ):
-
     key = state_key(
         symbol,
         timeframe,
@@ -2105,8 +1738,8 @@ def format_signal(
     volume_ratio,
     close_dt,
     prediction,
+    prediction_details,
 ):
-
     rsi_icon = get_rsi_icon(
         zone
     )
@@ -2147,17 +1780,22 @@ def format_signal(
         timeframe,
     )
 
+    drawer = prediction_drawer(
+        prediction_details
+    )
+
     return (
         f"💠 {symbol}\n\n"
         f"{rsi_icon} RSI                 "
         f"{rsi_text}\n"
-        f"{rsi_icon} {direction}                "
+        f"🔮 {rsi_icon} {direction}                "
         f"{score_text} %\n"
         f"volume                 "
         f"{volume_text} ×\n"
         f"close                  "
         f"{close_text}\n"
-        f"📈 <a href=\"{tv_url}\">TV</a>"
+        f"📈 <a href=\"{tv_url}\">TV</a>\n\n"
+        f"{drawer}"
     )
 
 
@@ -2170,7 +1808,6 @@ async def scan_symbol(
     symbol,
     timeframe,
 ):
-
     config = TIMEFRAMES[
         timeframe
     ]
@@ -2185,7 +1822,6 @@ async def scan_symbol(
     if not klines or len(klines) < (
         RSI_PERIOD + 10
     ):
-
         return None
 
     closes = [
@@ -2215,7 +1851,6 @@ async def scan_symbol(
     if not (
         9.0 <= remaining <= 11.0
     ):
-
         return None
 
     volume_ratio = (
@@ -2224,14 +1859,15 @@ async def scan_symbol(
         )
     )
 
-    prediction = (
-        await calculate_next_candle(
-            session,
-            symbol,
-            timeframe,
-            klines,
-            rsi,
-        )
+    (
+        prediction,
+        prediction_details,
+    ) = await calculate_next_candle(
+        session,
+        symbol,
+        timeframe,
+        klines,
+        rsi,
     )
 
     close_dt = candle_close_datetime(
@@ -2246,6 +1882,8 @@ async def scan_symbol(
         "volume_ratio": volume_ratio,
         "close_dt": close_dt,
         "prediction": prediction,
+        "prediction_details":
+            prediction_details,
     }
 
 
@@ -2257,21 +1895,22 @@ async def scan_all(
     session,
     state,
 ):
-
     top_coins = await get_top_coins(
         session
     )
 
+    coins = top_coins
+
     logger.info(
-        "Top Binance coins by volume: %s",
-        len(top_coins),
+        "Top coins: %s",
+        len(coins)
     )
 
     signals = []
 
     for timeframe in TIMEFRAME_ORDER:
 
-        for symbol in top_coins:
+        for symbol in coins:
 
             try:
 
@@ -2290,7 +1929,6 @@ async def scan_all(
                     timeframe,
                     signal["zone"],
                 ):
-
                     continue
 
                 signals.append(
@@ -2316,7 +1954,6 @@ async def scan_all(
 def timeframe_header(
     timeframe,
 ):
-
     return (
         f"━━━━━━━━ {timeframe} ━━━━━━━━"
     )
@@ -2325,7 +1962,6 @@ def timeframe_header(
 def build_message(
     signals,
 ):
-
     if not signals:
         return None
 
@@ -2371,6 +2007,9 @@ def build_message(
                 signal["volume_ratio"],
                 signal["close_dt"],
                 signal["prediction"],
+                signal[
+                    "prediction_details"
+                ],
             )
         )
 
@@ -2392,13 +2031,11 @@ async def send_alert_once(
     chat_id,
     text,
 ):
-
     if already_sent(
         state,
         chat_id,
         text,
     ):
-
         logger.warning(
             "Duplicate blocked: chat=%s",
             chat_id,
@@ -2408,16 +2045,10 @@ async def send_alert_once(
 
     save_state(state)
 
-    markup = prediction_keyboard(
-        text,
-        None,
-    )
-
     return await send_long_message(
         session,
         chat_id,
         text,
-        markup,
     )
 
 
@@ -2449,7 +2080,6 @@ async def main():
                 legacy_id
                 not in state["users"]
             ):
-
                 state["users"].append(
                     legacy_id
                 )
