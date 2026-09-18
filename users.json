@@ -95,7 +95,7 @@
     },
     "FETUSDT|15m": {
       "zone": "neutral",
-      "open_time_ms": 1789688700000
+      "open_time_ms": 1789689600000
     },
     "APTUSDT|15m": {
       "zone": "neutral",
@@ -103,11 +103,11 @@
     },
     "BNBUSDT|15m": {
       "zone": "neutral",
-      "open_time_ms": 1789688700000
+      "open_time_ms": 1789689600000
     },
     "PUMPUSDT|15m": {
       "zone": "neutral",
-      "open_time_ms": 1789688700000
+      "open_time_ms": 1789689600000
     },
     "FILUSDT|15m": {
       "zone": "neutral",
@@ -204,6 +204,14 @@
     "AUSDT|1h": {
       "zone": "neutral",
       "open_time_ms": 1789686000000
+    },
+    "RENDERUSDT|15m": {
+      "zone": "neutral",
+      "open_time_ms": 1789689600000
+    },
+    "KORUBUSDT|15m": {
+      "zone": "neutral",
+      "open_time_ms": 1789689600000
     }
   }
 }
