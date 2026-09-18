@@ -386,10 +386,12 @@
     "SEI:4h": "high",
     "MUB:4h": "high",
     "TIA:4h": "high",
-    "A:4h": "high"
+    "A:4h": "high",
+    "STRK:15m": "high",
+    "FF:15m": "low"
   },
   "sent_messages": {
-    "a6b40ca5f0f05b1166190be7a2ac05581ad9a8a6760850c5b493e36cbde75697": 1789717864,
-    "d414a35337b48c6b6bd8b7bfc4dd51199e008fe035ab48b4ef3c87dad1d78540": 1789717865
+    "005acfdffbde7e73d0243fb7e8f056f5d75248a18367bf44a20c33d639c3d4ac": 1789718774,
+    "b81572d60f78ce93a87ea817921113d52a6fddac79a0c4e2b2a6ee8bd3fa4235": 1789718775
   }
 }
