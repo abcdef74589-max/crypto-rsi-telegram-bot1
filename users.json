@@ -339,7 +339,7 @@
     "TUT:15m": "high",
     "PAXG:15m": "high",
     "XAUT:15m": "high",
-    "SPCXB:15m": "high",
+    "SPCXB:15m": "low",
     "G:15m": "high",
     "SPYB:15m": "high",
     "ETH:1h": "high",
@@ -407,10 +407,15 @@
     "AR:4h": "high",
     "BFUSD:4h": "low",
     "EIGEN:4h": "high",
-    "PROM:15m": "low"
+    "PROM:15m": "low",
+    "SNXXB:15m": "high",
+    "XUSD:15m": "low",
+    "XRP:1h": "high",
+    "CRCLB:1h": "high",
+    "XLM:1h": "high"
   },
   "sent_messages": {
-    "86cf91fb96a7a2e1f69dff1ace2949375d731e81146bb89b049c074296bb719b": 1789736688,
-    "4b7a7cb4e4a115757c4b08964ce14db49f0307b3861ca448b782911baa57110f": 1789736689
+    "414b2a78180d55cd6bea569c9d16e3f2a1b2692e4a04110fc6493ab6be9ffdf8": 1789743085,
+    "b073804077816fd405b3e56144ac873925ded771e86facdc9925b466822d1eb4": 1789743086
   }
 }
