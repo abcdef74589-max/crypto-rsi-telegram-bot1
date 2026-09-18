@@ -280,10 +280,11 @@
     "DOGE:15m": "high",
     "TRX:15m": "high",
     "ICP:15m": "high",
-    "BFUSD:15m": "high"
+    "BFUSD:15m": "high",
+    "BTC:15m": "high"
   },
   "sent_messages": {
-    "4046e99a99aac6647a5b578921554c5c7fdf89a75b7f538990f26105ef411f0a": 1789698044,
-    "8506cfd8bc2d2001493e84da7e0f3668e60d3be98088a67b4597fd32ce4d5f6b": 1789698045
+    "c77d1d09f064f988b6b6c0e07f4ed18d96480433b0d32170cc45ccdfbac0a355": 1789699038,
+    "86079968a3546bf02ffa9adcfa1af45df6a06add7cf554dc607554fa1c0e38b1": 1789699038
   }
 }
