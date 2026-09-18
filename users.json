@@ -215,6 +215,17 @@
       "open_time_ms": 1789689600000
     }
   },
-  "states": {},
-  "sent_messages": {}
+  "states": {
+    "SUI:15m": "high",
+    "ONDO:15m": "high",
+    "APT:15m": "high",
+    "KORUB:15m": "low",
+    "SOXLB:15m": "low",
+    "RENDER:15m": "high",
+    "A:15m": "high"
+  },
+  "sent_messages": {
+    "8bbad8433c1d0c790fc63e33ec201b90566b42eaa2c20704c23a39bb4af05bd0": 1789693497,
+    "c4a4a7520de199cc6fa3f1c76cef86e795475fdc16ddfc5f750bfc5723bf9498": 1789693498
+  }
 }
