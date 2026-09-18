@@ -276,12 +276,14 @@
     "REZ:15m": "high",
     "AVAX:15m": "high",
     "AAVE:15m": "high",
-    "SHIB:15m": "high"
+    "SHIB:15m": "high",
+    "DOGE:15m": "high",
+    "TRX:15m": "high",
+    "ICP:15m": "high",
+    "BFUSD:15m": "high"
   },
   "sent_messages": {
-    "4aed7df21ba5e7f9beebc7ad04874798f499077f2f91efc90cd23a4dc84b9489": 1789696282,
-    "0eb964f312ea2226c490b42e3d91c7a67d22a97a5735b2c9f933f61829973e69": 1789696283,
-    "6e33a46a993a4f73f53c1f22551308e172e0e2a7a237ce3f3de22deb16b869b6": 1789697118,
-    "61a8478db91e5ebba9ce77e6fac60cee5c5b22e98ed5176144c9e47d78e4ade1": 1789697118
+    "4046e99a99aac6647a5b578921554c5c7fdf89a75b7f538990f26105ef411f0a": 1789698044,
+    "8506cfd8bc2d2001493e84da7e0f3668e60d3be98088a67b4597fd32ce4d5f6b": 1789698045
   }
 }
