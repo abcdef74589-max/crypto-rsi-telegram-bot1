@@ -280,7 +280,7 @@
     "DOGE:15m": "high",
     "TRX:15m": "high",
     "ICP:15m": "high",
-    "BFUSD:15m": "high",
+    "BFUSD:15m": "low",
     "BTC:15m": "high",
     "BCH:15m": "high",
     "MSTRB:15m": "high",
@@ -391,10 +391,13 @@
     "FF:15m": "low",
     "THE:1h": "high",
     "STRK:1h": "high",
-    "AR:15m": "high"
+    "AR:15m": "high",
+    "TRX:1h": "high",
+    "BFUSD:1h": "low",
+    "AR:1h": "high"
   },
   "sent_messages": {
-    "043ea80d0d6ed72311e6117da0ea53815ea675f40b87247090e7348acd7d4d79": 1789724084,
-    "acdbbd269a5404cd31e137b1cfeb3d2cad4dc12981ba4c0b1507e10f64719c0d": 1789724085
+    "80276f61fa5fe171003fee8ab61e7fc442371d303bd3782b2293087d6818e0bd": 1789725036,
+    "033488407cabfafcd04e3b84dd36ee7ab94a9cd9545cf7d329b4807348970020": 1789725036
   }
 }
