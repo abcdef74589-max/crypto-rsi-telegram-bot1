@@ -335,10 +335,11 @@
     "WBTC:1h": "high",
     "GOOGLB:1h": "high",
     "PENDLE:1h": "high",
-    "ZRO:1h": "high"
+    "ZRO:1h": "high",
+    "TUT:15m": "high"
   },
   "sent_messages": {
-    "30cb02fa43aeb69a1bd6029c49ed956f39cb702070f62a64d2436041c6de716d": 1789707095,
-    "b33a3546cd518a3090a838f364aa5a39db4404f1715c991acaa81a2ee0617b16": 1789707096
+    "0b18f348865e7b98dd1eaba31e94bce750a51f1dbd8bb093a33e33fbb3bf44ed": 1789709688,
+    "75d6191d1c788acf245ce18d6ede284dc543a0f4e902da6cf2ece44c1fca399b": 1789709689
   }
 }
