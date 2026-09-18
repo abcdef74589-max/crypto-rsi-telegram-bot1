@@ -298,10 +298,19 @@
     "CHIP:1h": "high",
     "THE:15m": "high",
     "HBAR:15m": "high",
-    "BNCB:15m": "high"
+    "BNCB:15m": "high",
+    "ETH:15m": "high",
+    "XRP:15m": "high",
+    "CRCLB:15m": "high",
+    "XLM:15m": "high",
+    "GRAM:15m": "high",
+    "WBTC:15m": "high",
+    "GOOGLB:15m": "high",
+    "NVDAB:15m": "high",
+    "PENDLE:15m": "high"
   },
   "sent_messages": {
-    "dd28ab6c452036be9697435f4edd0f557a323f0cb02c64c20e589374094cf1b0": 1789700747,
-    "3f600e5cafcbdcca43cc77330ba65eab80434ae572c16191c8316a2a62114b03": 1789700748
+    "bcfac7b3f781f97b0299a6adbb3b9cd548f09e9611cc6fb2e1724f55648b3ffe": 1789701698,
+    "4075602ea989de79ab19914a45497f4bfe7c852bdfe106939150dbf9bdec9ff5": 1789701699
   }
 }
