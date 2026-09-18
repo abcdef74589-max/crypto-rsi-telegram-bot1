@@ -336,10 +336,15 @@
     "GOOGLB:1h": "high",
     "PENDLE:1h": "high",
     "ZRO:1h": "high",
-    "TUT:15m": "high"
+    "TUT:15m": "high",
+    "PAXG:15m": "high",
+    "XAUT:15m": "high",
+    "SPCXB:15m": "high",
+    "G:15m": "high",
+    "SPYB:15m": "high"
   },
   "sent_messages": {
-    "0b18f348865e7b98dd1eaba31e94bce750a51f1dbd8bb093a33e33fbb3bf44ed": 1789709688,
-    "75d6191d1c788acf245ce18d6ede284dc543a0f4e902da6cf2ece44c1fca399b": 1789709689
+    "7b8fffec1cf5e3b2516cd4a74536980124240df2f49587322b6f1939544b6f39": 1789715190,
+    "d31ad461df6d47e195dae6082f37fb3e3703952f028cf31c62b35a7686feed22": 1789715191
   }
 }
