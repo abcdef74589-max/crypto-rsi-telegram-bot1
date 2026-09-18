@@ -281,10 +281,26 @@
     "TRX:15m": "high",
     "ICP:15m": "high",
     "BFUSD:15m": "high",
-    "BTC:15m": "high"
+    "BTC:15m": "high",
+    "BCH:15m": "high",
+    "MSTRB:15m": "high",
+    "ENA:1h": "high",
+    "PUMP:1h": "high",
+    "PEPE:1h": "high",
+    "AVAX:1h": "high",
+    "AAVE:1h": "high",
+    "TRUMP:1h": "high",
+    "CAKE:1h": "high",
+    "ETHFI:1h": "high",
+    "SHIB:1h": "high",
+    "AERO:1h": "high",
+    "MUB:1h": "high",
+    "CHIP:1h": "high"
   },
   "sent_messages": {
     "c77d1d09f064f988b6b6c0e07f4ed18d96480433b0d32170cc45ccdfbac0a355": 1789699038,
-    "86079968a3546bf02ffa9adcfa1af45df6a06add7cf554dc607554fa1c0e38b1": 1789699038
+    "86079968a3546bf02ffa9adcfa1af45df6a06add7cf554dc607554fa1c0e38b1": 1789699038,
+    "8da7886d4bc4c14743be681bf52cb14e9264ecaadbba9583a97cd0c932840cf8": 1789699833,
+    "3a419da2b3857eb5e9e2c467f5b2ff992a29ada574165cc84a7bbec8f062b0ae": 1789699834
   }
 }
