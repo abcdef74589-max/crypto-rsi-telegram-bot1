@@ -271,10 +271,17 @@
     "VIRTUAL:1h": "high",
     "A:1h": "high",
     "BABY:1h": "high",
-    "CFG:1h": "high"
+    "CFG:1h": "high",
+    "UNI:15m": "high",
+    "REZ:15m": "high",
+    "AVAX:15m": "high",
+    "AAVE:15m": "high",
+    "SHIB:15m": "high"
   },
   "sent_messages": {
     "4aed7df21ba5e7f9beebc7ad04874798f499077f2f91efc90cd23a4dc84b9489": 1789696282,
-    "0eb964f312ea2226c490b42e3d91c7a67d22a97a5735b2c9f933f61829973e69": 1789696283
+    "0eb964f312ea2226c490b42e3d91c7a67d22a97a5735b2c9f933f61829973e69": 1789696283,
+    "6e33a46a993a4f73f53c1f22551308e172e0e2a7a237ce3f3de22deb16b869b6": 1789697118,
+    "61a8478db91e5ebba9ce77e6fac60cee5c5b22e98ed5176144c9e47d78e4ade1": 1789697118
   }
 }
