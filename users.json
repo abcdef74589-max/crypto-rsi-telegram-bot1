@@ -390,10 +390,11 @@
     "STRK:15m": "high",
     "FF:15m": "low",
     "THE:1h": "high",
-    "STRK:1h": "high"
+    "STRK:1h": "high",
+    "AR:15m": "high"
   },
   "sent_messages": {
-    "6d119c24cc2d79daa9f4f843dd3b851f0fe2439787f3c2da00d92fc25cae3a4c": 1789721464,
-    "26ad5a31f2144b9c032650d707ce6ec3dbe87e44f6d5ddf75e57739cb48b3034": 1789721464
+    "043ea80d0d6ed72311e6117da0ea53815ea675f40b87247090e7348acd7d4d79": 1789724084,
+    "acdbbd269a5404cd31e137b1cfeb3d2cad4dc12981ba4c0b1507e10f64719c0d": 1789724085
   }
 }
