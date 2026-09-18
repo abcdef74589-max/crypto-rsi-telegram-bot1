@@ -396,7 +396,7 @@
     "BFUSD:1h": "low",
     "AR:1h": "high",
     "PEPE:15m": "high",
-    "ZEN:15m": "low",
+    "ZEN:15m": "high",
     "SAGA:15m": "high",
     "EIGEN:15m": "high",
     "EIGEN:1h": "high",
@@ -449,7 +449,7 @@
     "C:1h": "high"
   },
   "sent_messages": {
-    "e8507ac67edaf9d04ddd417bc2d925d437fdcbc1dce06f88e7604debfb44398d": 1789753850,
-    "8c96d395c28e1a636889250eddb8376a9302579c7af8dcbdb03bd3d98f75f307": 1789753850
+    "4ff42f342964bb40ff1ca16d87e3337d3e239c1443ed5118f0f3bb8d1350ff78": 1789755694,
+    "7be5ad19b699767928e47f50331d370584f275757ae8581d851617385ff679e7": 1789755694
   }
 }
