@@ -397,7 +397,7 @@
     "AR:1h": "high",
     "PEPE:15m": "high",
     "ZEN:15m": "low",
-    "SAGA:15m": "low",
+    "SAGA:15m": "high",
     "EIGEN:15m": "high",
     "EIGEN:1h": "high",
     "SKY:1h": "high",
@@ -447,7 +447,7 @@
     "LDO:1h": "high"
   },
   "sent_messages": {
-    "5a1df296c99f99d1a270fdef8c0f374976bca63ae959b75a4e6796c11aa0f141": 1789750255,
-    "663fc37c10a985f26f2a48af3eab06e1f361602cd4b1f917770a8e0fd9d21386": 1789750256
+    "c724d5be840670f066b3bc8cd1f8286f54ba2074f7897bf26430dcd8cee4fd3f": 1789752070,
+    "8d332a7d0c6f91e42712058d98bbd7df4229a9ea35dd3551764a6f32b698c53a": 1789752071
   }
 }
