@@ -394,10 +394,13 @@
     "AR:15m": "high",
     "TRX:1h": "high",
     "BFUSD:1h": "low",
-    "AR:1h": "high"
+    "AR:1h": "high",
+    "PEPE:15m": "high"
   },
   "sent_messages": {
     "80276f61fa5fe171003fee8ab61e7fc442371d303bd3782b2293087d6818e0bd": 1789725036,
-    "033488407cabfafcd04e3b84dd36ee7ab94a9cd9545cf7d329b4807348970020": 1789725036
+    "033488407cabfafcd04e3b84dd36ee7ab94a9cd9545cf7d329b4807348970020": 1789725036,
+    "ae83830da0b5c5caadbb79925a5852c55b88cf3236daefda8f83e8e07359aa53": 1789725930,
+    "92056a5ed11610e06c85c55f2063577f61b083dff28752823df73d3b720e40ed": 1789725930
   }
 }
