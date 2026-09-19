@@ -227,7 +227,7 @@
     "WLD:15m": "high",
     "ADA:15m": "high",
     "LTC:15m": "high",
-    "FET:15m": "high",
+    "FET:15m": "low",
     "MORPHO:15m": "high",
     "OP:15m": "high",
     "CHIP:15m": "high",
@@ -282,7 +282,7 @@
     "ICP:15m": "high",
     "BFUSD:15m": "low",
     "BTC:15m": "high",
-    "BCH:15m": "high",
+    "BCH:15m": "low",
     "MSTRB:15m": "high",
     "ENA:1h": "high",
     "PUMP:1h": "high",
@@ -494,7 +494,7 @@
     "JST:15m": "high"
   },
   "sent_messages": {
-    "672ad3166683a0fa3dc86e3123910c2eb89403808cd67997b1fc85ff0e41eddb": 1789787204,
-    "553c078ebce633946e60e4fa8065614648d267541ac808659c4245f1ee3afea5": 1789787204
+    "a565f0bdeea13d0144d829121a64b9d88350fd0bfb68bebb209bc9e177b18c06": 1789792580,
+    "59e63f6902b93dea3ea48cb72f1016c0371bc0473c8ae78b66b3dab497ace9f8": 1789792580
   }
 }
