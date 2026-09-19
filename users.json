@@ -494,10 +494,13 @@
     "JST:15m": "high",
     "PUMP:15m": "low",
     "XTZ:1h": "high",
-    "MARSCOIN:15m": "low"
+    "MARSCOIN:15m": "low",
+    "ESP:1h": "high"
   },
   "sent_messages": {
     "3cf75e2895ff01f4c943842fe0fcc6efa8488c40b192bc589924bb4ce2f66819": 1789799743,
-    "b03d0f49f10acd2a24dd875b2ddf0936d2cb697b2e763b0ff2cba92588ab74ea": 1789799743
+    "b03d0f49f10acd2a24dd875b2ddf0936d2cb697b2e763b0ff2cba92588ab74ea": 1789799743,
+    "1e11ea95d12d96db2816175d66e5258a41772146cb863aa352aca2ad3890302b": 1789800612,
+    "5c93f0c2885c7aafbd7ef04dc076df3b6458ddaa4f9b9f3d9a3f805e41a1ec75": 1789800612
   }
 }
