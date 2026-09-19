@@ -221,7 +221,7 @@
     "APT:15m": "high",
     "KORUB:15m": "low",
     "SOXLB:15m": "high",
-    "RENDER:15m": "high",
+    "RENDER:15m": "low",
     "A:15m": "high",
     "BNB:15m": "high",
     "WLD:15m": "high",
@@ -272,7 +272,7 @@
     "A:1h": "high",
     "BABY:1h": "high",
     "CFG:1h": "high",
-    "UNI:15m": "high",
+    "UNI:15m": "low",
     "REZ:15m": "high",
     "AVAX:15m": "high",
     "AAVE:15m": "high",
@@ -312,7 +312,7 @@
     "ZAMA:15m": "high",
     "AERO:15m": "high",
     "CRV:15m": "high",
-    "ZRO:15m": "high",
+    "ZRO:15m": "low",
     "SKY:15m": "high",
     "SNDKB:15m": "high",
     "POL:15m": "high",
@@ -338,7 +338,7 @@
     "ZRO:1h": "high",
     "TUT:15m": "high",
     "PAXG:15m": "high",
-    "XAUT:15m": "high",
+    "XAUT:15m": "low",
     "SPCXB:15m": "low",
     "G:15m": "high",
     "SPYB:15m": "low",
@@ -396,7 +396,7 @@
     "BFUSD:1h": "low",
     "AR:1h": "high",
     "PEPE:15m": "low",
-    "ZEN:15m": "high",
+    "ZEN:15m": "low",
     "SAGA:15m": "low",
     "EIGEN:15m": "high",
     "EIGEN:1h": "high",
@@ -467,7 +467,7 @@
     "ASTER:15m": "high",
     "ZK:15m": "high",
     "ZEC:15m": "low",
-    "DASH:15m": "high",
+    "DASH:15m": "low",
     "CAKE:15m": "low",
     "STG:15m": "high",
     "SYN:1h": "high",
@@ -511,7 +511,7 @@
     "USD1:15m": "low"
   },
   "sent_messages": {
-    "816c107eea779caf66c0ff350905c074c8c125f4186c058a04a2fad9c7af3585": 1789851975,
-    "5e35a38e17e4d5e43246215c8cf51d19da1282e513027412a8ae5b324338fcbf": 1789851975
+    "dc346c3a42826b6f4628aa4ee18f9e0bcacd81fa2c4e5732f6e66e2755c6027b": 1789852895,
+    "b6f48228d853b1ad5b1e235d9658c1fc3dc1b3faf4bc4efb55e2e1dabb579132": 1789852895
   }
 }
