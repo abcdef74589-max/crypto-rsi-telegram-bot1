@@ -319,7 +319,7 @@
     "EURI:15m": "high",
     "QQQB:15m": "high",
     "SEI:15m": "high",
-    "DOT:15m": "high",
+    "DOT:15m": "low",
     "INJ:15m": "high",
     "MUB:15m": "high",
     "TIA:15m": "high",
@@ -497,10 +497,17 @@
     "MARSCOIN:15m": "low",
     "ESP:1h": "high",
     "XTZ:15m": "high",
-    "HEI:15m": "high"
+    "HEI:15m": "high",
+    "HEI:1h": "high",
+    "SUPER:1h": "high",
+    "XTZ:4h": "high",
+    "ESP:4h": "high",
+    "HEI:4h": "high",
+    "SUPER:4h": "high",
+    "LPT:4h": "high"
   },
   "sent_messages": {
-    "29c06d8099921ffa1c6dff43201b60aff94610e0e60d80533736c20ca0a7da63": 1789802406,
-    "54e5274d8f5d4dbca64da33471927a93756c06b9b31670177aed768e4e8675bf": 1789802407
+    "0283e3cb784f5f30ad9292462b735d75c12e7050174bfaaacad7319e8fcf2736": 1789804195,
+    "70ade2761fe00afe2f028c8b392c7aca5335deaef83bcc63f9a7f76be6aa10d7": 1789804195
   }
 }
