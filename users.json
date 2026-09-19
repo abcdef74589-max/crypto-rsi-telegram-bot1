@@ -506,12 +506,11 @@
     "SUPER:4h": "high",
     "LPT:4h": "high",
     "BANK:15m": "high",
-    "EPIC:15m": "high"
+    "EPIC:15m": "high",
+    "ALGO:1h": "high"
   },
   "sent_messages": {
-    "3a81e8a9ec1c9c5534d834831769cbdf0ce9782db911f7fe2b2f6015b34a1ede": 1789848380,
-    "95f37dd64fb925a1c78ff2e33e5c4347b299d917913b94eab71edb94855d84e3": 1789848381,
-    "1aea44389d9ae6f88abd8c67d0c0ab9c93451ebcdbb04d503e7ddda295325775": 1789849243,
-    "7ddd78cecc6aa52d2f591609cce28c5819c87bb5124d08dbe84e264c2b9b45aa": 1789849244
+    "df0ecd181ceb931f732370edea8a92ee62abfe657e7cf6fef77b23c4f98aa58e": 1789851031,
+    "0d34ea39a8415987ed9409e045370e29e8c5eb75e7b57eafb764b4b8804e27bc": 1789851032
   }
 }
