@@ -307,7 +307,7 @@
     "WBTC:15m": "high",
     "GOOGLB:15m": "high",
     "NVDAB:15m": "high",
-    "PENDLE:15m": "high",
+    "PENDLE:15m": "low",
     "牛来:15m": "high",
     "ZAMA:15m": "high",
     "AERO:15m": "high",
@@ -507,10 +507,11 @@
     "LPT:4h": "high",
     "BANK:15m": "high",
     "EPIC:15m": "high",
-    "ALGO:1h": "high"
+    "ALGO:1h": "high",
+    "USD1:15m": "low"
   },
   "sent_messages": {
-    "df0ecd181ceb931f732370edea8a92ee62abfe657e7cf6fef77b23c4f98aa58e": 1789851031,
-    "0d34ea39a8415987ed9409e045370e29e8c5eb75e7b57eafb764b4b8804e27bc": 1789851032
+    "816c107eea779caf66c0ff350905c074c8c125f4186c058a04a2fad9c7af3585": 1789851975,
+    "5e35a38e17e4d5e43246215c8cf51d19da1282e513027412a8ae5b324338fcbf": 1789851975
   }
 }
