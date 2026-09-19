@@ -512,10 +512,29 @@
     "USD1:1h": "low",
     "CELR:15m": "high",
     "CELR:1h": "high",
-    "JTO:15m": "high"
+    "JTO:15m": "high",
+    "ALGO:15m": "high",
+    "CELR:4h": "high",
+    "SKL:4h": "high",
+    "VET:4h": "high",
+    "STX:4h": "high",
+    "ETC:4h": "high",
+    "ALGO:4h": "high",
+    "HOME:4h": "high",
+    "BERA:4h": "high",
+    "ENA:1D": "high",
+    "AVAX:1D": "high",
+    "ZAMA:1D": "high",
+    "INJ:1D": "high",
+    "XTZ:1D": "high",
+    "CELR:1D": "high",
+    "SKL:1D": "high",
+    "VET:1D": "high",
+    "STX:1D": "high",
+    "C:1D": "high"
   },
   "sent_messages": {
-    "a9b31030a9cbe319a6498e0b2096857760a4302bfb225f281a445f3f807be344": 1789860060,
-    "ac768fa202073a556e468b09362c36586c6b0de8070f30d8acbb160e4191cf03": 1789860060
+    "b273608ae1a6a118a1fdf8916af19abcf4adfd55dd795486cd1266470e329cec": 1789861831,
+    "03684a1cfc3ba9353c3d802dc5bcbd5642020644549148274f0e1955645d4b01": 1789861831
   }
 }
