@@ -490,10 +490,11 @@
     "ONE:15m": "high",
     "LSK:15m": "low",
     "S:15m": "high",
-    "ONE:1h": "high"
+    "ONE:1h": "high",
+    "JST:15m": "high"
   },
   "sent_messages": {
-    "4428f83217c897c4b933bdcea1155cee889e6783ed2d5b90d74d67c8c2c50ab1": 1789786277,
-    "b2634b730dfb828c4c73aa854396b8bf95305bef897658787843191f686de94b": 1789786277
+    "672ad3166683a0fa3dc86e3123910c2eb89403808cd67997b1fc85ff0e41eddb": 1789787204,
+    "553c078ebce633946e60e4fa8065614648d267541ac808659c4245f1ee3afea5": 1789787204
   }
 }
