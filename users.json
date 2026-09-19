@@ -510,10 +510,11 @@
     "ALGO:1h": "high",
     "USD1:15m": "low",
     "USD1:1h": "low",
-    "CELR:15m": "high"
+    "CELR:15m": "high",
+    "CELR:1h": "high"
   },
   "sent_messages": {
-    "1f1e6685c5defa02bac09c92f276c992063bc52e5de83e8a9c4dc513a6aa701e": 1789857313,
-    "c61beaffe0b3dcd4cf5d9383832cb78f679fd6c2f3346be3ec06b526b113a427": 1789857313
+    "535e055a81bcef22befc6c46c70edd60b3d2c6e11a9ad6d98eb3a0807815e101": 1789858213,
+    "b472c151e740c74cc3f5414fd4b873bbd65491ce928c484f119fcb3f32f9add1": 1789858213
   }
 }
