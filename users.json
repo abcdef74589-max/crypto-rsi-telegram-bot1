@@ -486,10 +486,13 @@
     "ZEN:1D": "high",
     "AR:1D": "high",
     "PENDLE:1D": "high",
-    "SYN:1D": "high"
+    "SYN:1D": "high",
+    "ONE:15m": "high",
+    "LSK:15m": "low",
+    "S:15m": "high"
   },
   "sent_messages": {
-    "7699dc22e96dabadc82ca87a29d89e87c7624dbc0eef61fa59deff3706f2146f": 1789781754,
-    "92cc326430299dea6402d998f5ebf99bae1b86f8e8bf87478af37625bbb6a27c": 1789781755
+    "a54497f4e7591fe57ba1c546f286b25dd318f790544cc51d4de8d3a3ffd1f8aa": 1789783580,
+    "e2b17b15dd6a6dddaa2f3e34b3fe48f1b743a3eff12eeba3523a3da85f5e0fa8": 1789783580
   }
 }
