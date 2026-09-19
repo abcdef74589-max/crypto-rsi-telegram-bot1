@@ -489,10 +489,11 @@
     "SYN:1D": "high",
     "ONE:15m": "high",
     "LSK:15m": "low",
-    "S:15m": "high"
+    "S:15m": "high",
+    "ONE:1h": "high"
   },
   "sent_messages": {
-    "a54497f4e7591fe57ba1c546f286b25dd318f790544cc51d4de8d3a3ffd1f8aa": 1789783580,
-    "e2b17b15dd6a6dddaa2f3e34b3fe48f1b743a3eff12eeba3523a3da85f5e0fa8": 1789783580
+    "4428f83217c897c4b933bdcea1155cee889e6783ed2d5b90d74d67c8c2c50ab1": 1789786277,
+    "b2634b730dfb828c4c73aa854396b8bf95305bef897658787843191f686de94b": 1789786277
   }
 }
