@@ -508,10 +508,11 @@
     "BANK:15m": "high",
     "EPIC:15m": "high",
     "ALGO:1h": "high",
-    "USD1:15m": "low"
+    "USD1:15m": "low",
+    "USD1:1h": "low"
   },
   "sent_messages": {
-    "dc346c3a42826b6f4628aa4ee18f9e0bcacd81fa2c4e5732f6e66e2755c6027b": 1789852895,
-    "b6f48228d853b1ad5b1e235d9658c1fc3dc1b3faf4bc4efb55e2e1dabb579132": 1789852895
+    "e253412f6be0aa1e2a832d5d6b2f5a4a27308d8eed32611563a22dec4e944457": 1789854591,
+    "c46a61a6f96c7d73209f83c17e64bca6c51d9f0d7a7dad0cbdb70330747edb22": 1789854592
   }
 }
