@@ -341,7 +341,7 @@
     "XAUT:15m": "high",
     "SPCXB:15m": "low",
     "G:15m": "high",
-    "SPYB:15m": "high",
+    "SPYB:15m": "low",
     "ETH:1h": "high",
     "XAUT:1h": "high",
     "G:1h": "high",
@@ -497,7 +497,7 @@
     "MARSCOIN:15m": "low"
   },
   "sent_messages": {
-    "195f24fc6d15b5f53b182207eff36ae514b6f78ce2413fc54e70bce3cd4d1609": 1789798783,
-    "1dcae8e9eccb15524d47bcc9b34d7b3092957d17eafc01b354e7d489b884f489": 1789798783
+    "3cf75e2895ff01f4c943842fe0fcc6efa8488c40b192bc589924bb4ce2f66819": 1789799743,
+    "b03d0f49f10acd2a24dd875b2ddf0936d2cb697b2e763b0ff2cba92588ab74ea": 1789799743
   }
 }
