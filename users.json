@@ -413,7 +413,7 @@
     "XRP:1h": "high",
     "CRCLB:1h": "high",
     "XLM:1h": "high",
-    "XPL:15m": "high",
+    "XPL:15m": "low",
     "F:15m": "high",
     "BANK:1h": "high",
     "F:1h": "high",
@@ -497,9 +497,7 @@
     "MARSCOIN:15m": "low"
   },
   "sent_messages": {
-    "76e79fae08527666f06f4536194b89d1f711bd6610d904a550987857fce42706": 1789793418,
-    "20b4e6079858933a0d5ce57b14b7812836e52bbf0ac9f12adf10c35e7529d743": 1789793419,
-    "afcb2f69505fcc0dbda5faa0af516c150553073728ce57fa90f658bdf495261e": 1789794290,
-    "15c2c4535a9193714abdc3bd27e78bb1bf442e1442882b8e7073dfcca5459db9": 1789794290
+    "195f24fc6d15b5f53b182207eff36ae514b6f78ce2413fc54e70bce3cd4d1609": 1789798783,
+    "1dcae8e9eccb15524d47bcc9b34d7b3092957d17eafc01b354e7d489b884f489": 1789798783
   }
 }
