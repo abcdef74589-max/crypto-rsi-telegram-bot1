@@ -447,7 +447,7 @@
     "LDO:1h": "high",
     "SAGA:1h": "high",
     "C:1h": "high",
-    "FIL:15m": "high",
+    "FIL:15m": "low",
     "POL:1h": "high",
     "ZEN:1h": "high",
     "XUSD:1h": "low",
@@ -509,10 +509,11 @@
     "EPIC:15m": "high",
     "ALGO:1h": "high",
     "USD1:15m": "low",
-    "USD1:1h": "low"
+    "USD1:1h": "low",
+    "CELR:15m": "high"
   },
   "sent_messages": {
-    "e253412f6be0aa1e2a832d5d6b2f5a4a27308d8eed32611563a22dec4e944457": 1789854591,
-    "c46a61a6f96c7d73209f83c17e64bca6c51d9f0d7a7dad0cbdb70330747edb22": 1789854592
+    "1f1e6685c5defa02bac09c92f276c992063bc52e5de83e8a9c4dc513a6aa701e": 1789857313,
+    "c61beaffe0b3dcd4cf5d9383832cb78f679fd6c2f3346be3ec06b526b113a427": 1789857313
   }
 }
