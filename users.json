@@ -534,7 +534,7 @@
     "C:1D": "high",
     "STX:15m": "low",
     "STX:1h": "high",
-    "LDO:15m": "low",
+    "LDO:15m": "high",
     "ZIL:15m": "high",
     "ALLO:4h": "high",
     "ACE:15m": "high",
@@ -562,12 +562,13 @@
     "LUNC:15m": "high",
     "LUNA:1h": "high",
     "LUNC:1h": "high",
-    "BERA:15m": "high"
+    "BERA:15m": "high",
+    "LUNA:15m": "high"
   },
   "sent_messages": {
-    "b90d774bd02b4c9d7c7d74999a4e00356edb24fe4396dc52f438a0adf5ce4ec4": 1789923143,
-    "e77f75492fb649e5f407a37e7b30cc61ae81f62631f2174f48cfde90595b49a4": 1789923144,
     "4c837a7c4a7937f756c4e94e8c2e1d32cef27daf6df76b80bd89a0b7e2a72e2f": 1789924003,
-    "da6862894197d6232cf5d031bc602dd8dfdc40d6f9bb20ccb7189f51059cdd6b": 1789924003
+    "da6862894197d6232cf5d031bc602dd8dfdc40d6f9bb20ccb7189f51059cdd6b": 1789924003,
+    "d856a26d212a581937324be79a94c1b46f15dd7a43db40ad1595bf21f6befa10": 1789924899,
+    "854264cea428d743ee1ecc74d01253410bebafaa20a0ab820735303870f9d7d1": 1789924899
   }
 }
