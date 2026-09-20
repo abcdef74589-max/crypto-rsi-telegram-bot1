@@ -281,7 +281,7 @@
     "TRX:15m": "high",
     "ICP:15m": "high",
     "BFUSD:15m": "low",
-    "BTC:15m": "low",
+    "BTC:15m": "high",
     "BCH:15m": "low",
     "MSTRB:15m": "high",
     "ENA:1h": "high",
@@ -558,10 +558,15 @@
     "HBAR:1h": "high",
     "EPIC:1h": "high",
     "HBAR:4h": "high",
-    "EPIC:4h": "high"
+    "EPIC:4h": "high",
+    "LUNC:15m": "high",
+    "LUNA:1h": "high",
+    "LUNC:1h": "high"
   },
   "sent_messages": {
-    "5c105b9233a11651dc7e54724687b04cbfc0c605cc7c25042d8758a913c7b065": 1789919423,
-    "5c08d20473d65b1c5f31b87570417bc64a9da6fa4ab4a24c7a468fd8f393ff8f": 1789919424
+    "276eb2ee6b5a327d1a9b1891c43c1d94a60c9d1137bae6d2f6f35f038c0dd708": 1789922990,
+    "35087f41c7b4fc9644dfb206fc797acffc0541b0ff13530e333efb9db496fbe3": 1789922991,
+    "b90d774bd02b4c9d7c7d74999a4e00356edb24fe4396dc52f438a0adf5ce4ec4": 1789923143,
+    "e77f75492fb649e5f407a37e7b30cc61ae81f62631f2174f48cfde90595b49a4": 1789923144
   }
 }
