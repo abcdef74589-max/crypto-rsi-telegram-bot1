@@ -497,7 +497,7 @@
     "MARSCOIN:15m": "low",
     "ESP:1h": "high",
     "XTZ:15m": "high",
-    "HEI:15m": "high",
+    "HEI:15m": "low",
     "HEI:1h": "high",
     "SUPER:1h": "high",
     "XTZ:4h": "high",
@@ -554,9 +554,7 @@
     "ALLO:1h": "high"
   },
   "sent_messages": {
-    "f6dfa5b193c11dcefc354795c4356e3785c4cb18324958fd72f22fd9556bb114": 1789900596,
-    "920cd5bb4c90471e520ee70515c704f21548165494bf348e1fcec293ca6b5431": 1789900596,
-    "a8107b018ca9c1f3561fd103a3a357c3bc6c9429a6cbb1c7002d62aaabe1ac0c": 1789901478,
-    "58ad67eca3ad5d10f357a50986b2c3c344e4916ad94a28eb6477f9e68e7d56ab": 1789901478
+    "789250a7d56d44681bdc2bb8258b2e4dad9347aac3e41680eb289586a8d069cd": 1789904180,
+    "59b240db1f8ce21f6c2e3ce1c23bdd02ee2a36c1bf94a41b27793757c0efdc65": 1789904181
   }
 }
