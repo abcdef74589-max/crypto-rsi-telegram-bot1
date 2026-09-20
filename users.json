@@ -221,7 +221,7 @@
     "APT:15m": "high",
     "KORUB:15m": "low",
     "SOXLB:15m": "high",
-    "RENDER:15m": "low",
+    "RENDER:15m": "high",
     "A:15m": "high",
     "BNB:15m": "high",
     "WLD:15m": "high",
@@ -283,7 +283,7 @@
     "BFUSD:15m": "low",
     "BTC:15m": "low",
     "BCH:15m": "low",
-    "MSTRB:15m": "low",
+    "MSTRB:15m": "high",
     "ENA:1h": "high",
     "PUMP:1h": "high",
     "PEPE:1h": "high",
@@ -299,9 +299,9 @@
     "THE:15m": "high",
     "HBAR:15m": "high",
     "BNCB:15m": "high",
-    "ETH:15m": "low",
+    "ETH:15m": "high",
     "XRP:15m": "high",
-    "CRCLB:15m": "low",
+    "CRCLB:15m": "high",
     "XLM:15m": "high",
     "GRAM:15m": "low",
     "WBTC:15m": "high",
@@ -491,7 +491,7 @@
     "LSK:15m": "low",
     "S:15m": "high",
     "ONE:1h": "high",
-    "JST:15m": "low",
+    "JST:15m": "high",
     "PUMP:15m": "low",
     "XTZ:1h": "high",
     "MARSCOIN:15m": "low",
@@ -556,10 +556,12 @@
     "CTSI:4h": "high",
     "JTO:4h": "high",
     "HBAR:1h": "high",
-    "EPIC:1h": "high"
+    "EPIC:1h": "high",
+    "HBAR:4h": "high",
+    "EPIC:4h": "high"
   },
   "sent_messages": {
-    "cf5d1ae63f6ed12b45c6951fa589eb1d110da61073b78222e10eb40e64eae1bf": 1789912195,
-    "0b9cf8bd31c8cc0ebe710779aef25a6f46f9dfff098675ca95844de157f0f178": 1789912195
+    "5c105b9233a11651dc7e54724687b04cbfc0c605cc7c25042d8758a913c7b065": 1789919423,
+    "5c08d20473d65b1c5f31b87570417bc64a9da6fa4ab4a24c7a468fd8f393ff8f": 1789919424
   }
 }
