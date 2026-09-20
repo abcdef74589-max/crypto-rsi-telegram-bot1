@@ -563,12 +563,11 @@
     "LUNA:1h": "high",
     "LUNC:1h": "high",
     "BERA:15m": "high",
-    "LUNA:15m": "high"
+    "LUNA:15m": "high",
+    "FTT:1h": "high"
   },
   "sent_messages": {
-    "4c837a7c4a7937f756c4e94e8c2e1d32cef27daf6df76b80bd89a0b7e2a72e2f": 1789924003,
-    "da6862894197d6232cf5d031bc602dd8dfdc40d6f9bb20ccb7189f51059cdd6b": 1789924003,
-    "d856a26d212a581937324be79a94c1b46f15dd7a43db40ad1595bf21f6befa10": 1789924899,
-    "854264cea428d743ee1ecc74d01253410bebafaa20a0ab820735303870f9d7d1": 1789924899
+    "c6f7b33a9693e584a93af1e014812b796c4979c3cbc29b81471511162fa4dd7a": 1789930257,
+    "186195a8c51ac372ac3e066f3f5bd1ce89fef7787bade65f3109d0e0b7c2a758": 1789930258
   }
 }
