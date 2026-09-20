@@ -388,7 +388,7 @@
     "TIA:4h": "high",
     "A:4h": "high",
     "STRK:15m": "high",
-    "FF:15m": "low",
+    "FF:15m": "high",
     "THE:1h": "high",
     "STRK:1h": "high",
     "AR:15m": "high",
@@ -571,7 +571,7 @@
     "NIL:1h": "high"
   },
   "sent_messages": {
-    "86c0f1005b1e3b95b8bdd2a4e93b836c01a50a3b12da3fbf7945d46b09eebbbc": 1789937480,
-    "30a640347604a835c68c0c53de74bcf653c267c8e859aab1878ab6478cc43c61": 1789937480
+    "74a1bc9bf2da57292567c5c13e5ad1d12e05a044c69ebac6d9b0cfd67a009166": 1789940095,
+    "9605b450d15859ffc35c639c697e582d3292015af19b58495030eb0cd5786642": 1789940096
   }
 }
