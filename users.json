@@ -546,10 +546,11 @@
     "CTSI:1h": "high",
     "SKL:15m": "high",
     "C:15m": "high",
-    "DASH:1h": "low"
+    "DASH:1h": "low",
+    "GUN:15m": "high"
   },
   "sent_messages": {
-    "47a56d1db3309b250271ebc0a3e759dfb73fbdf0e688cf1af9f1dad3eeb2458d": 1789894256,
-    "e41e0627fc636b27e6afffec08f02c67b9162e4f2d5ebe9bc523522a8956c01b": 1789894257
+    "422aa4b975883806ee9dfa80545216c8a3097411c60bb46501fbdb7a103daec7": 1789895989,
+    "a86e89d9cfe3b4e31fbb2f8b6f9995ee2623a9b2a9dd61c31fefdd72f79e1540": 1789895990
   }
 }
