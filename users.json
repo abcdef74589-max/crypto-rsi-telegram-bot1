@@ -539,10 +539,11 @@
     "ALLO:4h": "high",
     "ACE:15m": "high",
     "ZIL:1h": "high",
-    "ZIL:4h": "high"
+    "ZIL:4h": "high",
+    "GENIUS:15m": "high"
   },
   "sent_messages": {
-    "4a8fc20e38293f6908e25c9201a33e29c8fe564caa1c737c74207c42bdd5202b": 1789879853,
-    "11e08b8908dbee46731880313edcf2e72c7ba23190f9c4a429d1e84f6b1170c9": 1789879853
+    "77a6d81a2b8f8319df0a40f8268a0e2ca99303cf904e42fed540c5417efb26c3": 1789880758,
+    "8cd95cc237589a555317d4ad35c80cfd63eef731d05847ec573f4a99dc3733b8": 1789880759
   }
 }
