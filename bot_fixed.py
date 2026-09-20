@@ -16,7 +16,7 @@ import aiohttp
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
 LEGACY_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
 
-TOP_N = int(os.getenv("TOP_N", "100"))
+TOP_N = int(os.getenv("TOP_N", "200"))
 RSI_PERIOD = int(os.getenv("RSI_PERIOD", "14"))
 MARKET = os.getenv("MARKET", "spot").lower()
 ALERT_MODE = os.getenv("ALERT_MODE", "changes").lower()
@@ -736,7 +736,7 @@ async def get_klines(
 
 
 # ============================================================
-# TOP 100 BINANCE
+# TOP 200 BINANCE
 # ============================================================
 
 async def get_top_coins(
@@ -1124,6 +1124,232 @@ def calculate_volume_ratio(
         current_volume
         / average
     )
+
+
+# ============================================================
+# SUPPORT / RESISTANCE
+# ============================================================
+
+def find_support_resistance(
+    klines,
+):
+
+    if len(klines) < 10:
+        return None, None
+
+    try:
+
+        current_close = float(
+            klines[-1][4]
+        )
+
+        pivot_highs = []
+        pivot_lows = []
+
+        start = 2
+        end = len(klines) - 2
+
+        for i in range(
+            start,
+            end,
+        ):
+
+            high = float(
+                klines[i][2]
+            )
+
+            low = float(
+                klines[i][3]
+            )
+
+            left_high_1 = float(
+                klines[i - 1][2]
+            )
+
+            left_high_2 = float(
+                klines[i - 2][2]
+            )
+
+            right_high_1 = float(
+                klines[i + 1][2]
+            )
+
+            right_high_2 = float(
+                klines[i + 2][2]
+            )
+
+            left_low_1 = float(
+                klines[i - 1][3]
+            )
+
+            left_low_2 = float(
+                klines[i - 2][3]
+            )
+
+            right_low_1 = float(
+                klines[i + 1][3]
+            )
+
+            right_low_2 = float(
+                klines[i + 2][3]
+            )
+
+            if (
+                high >= left_high_1
+                and high >= left_high_2
+                and high >= right_high_1
+                and high >= right_high_2
+            ):
+                pivot_highs.append(
+                    high
+                )
+
+            if (
+                low <= left_low_1
+                and low <= left_low_2
+                and low <= right_low_1
+                and low <= right_low_2
+            ):
+                pivot_lows.append(
+                    low
+                )
+
+        resistance_candidates = [
+            x
+            for x in pivot_highs
+            if x > current_close
+        ]
+
+        support_candidates = [
+            x
+            for x in pivot_lows
+            if x < current_close
+        ]
+
+        if resistance_candidates:
+
+            resistance = min(
+                resistance_candidates
+            )
+
+        else:
+
+            highs = [
+                float(x[2])
+                for x in klines[:-1]
+            ]
+
+            resistance = max(
+                highs
+            ) if highs else None
+
+        if support_candidates:
+
+            support = max(
+                support_candidates
+            )
+
+        else:
+
+            lows = [
+                float(x[3])
+                for x in klines[:-1]
+            ]
+
+            support = min(
+                lows
+            ) if lows else None
+
+        return (
+            support,
+            resistance,
+        )
+
+    except Exception:
+
+        return None, None
+
+
+# ============================================================
+# SUPPORT / RESISTANCE STATUS
+# ============================================================
+
+def get_level_status(
+    klines,
+    level,
+    level_type,
+):
+
+    if level is None or not klines:
+        return "💢"
+
+    try:
+
+        current = klines[-1]
+
+        high = float(
+            current[2]
+        )
+
+        low = float(
+            current[3]
+        )
+
+        close = float(
+            current[4]
+        )
+
+        # ----------------------------------------------------
+        # RESISTANCE
+        # ----------------------------------------------------
+        #
+        # 📌 = current candle touched resistance with wick,
+        #      but closed back below resistance.
+        #
+        # 💢 = current candle has not reached resistance.
+        #
+        # 🔐 = current candle closed above resistance.
+        #
+        # ----------------------------------------------------
+
+        if level_type == "resistance":
+
+            if close > level:
+                return "🔐"
+
+            if high >= level and close < level:
+                return "📌"
+
+            return "💢"
+
+        # ----------------------------------------------------
+        # SUPPORT
+        # ----------------------------------------------------
+        #
+        # 📌 = current candle touched support with wick,
+        #      but closed back above support.
+        #
+        # 💢 = current candle has not reached support.
+        #
+        # 🔐 = current candle closed below support.
+        #
+        # ----------------------------------------------------
+
+        if level_type == "support":
+
+            if close < level:
+                return "🔐"
+
+            if low <= level and close > level:
+                return "📌"
+
+            return "💢"
+
+    except Exception:
+
+        return "💢"
+
+    return "💢"
 
 
 # ============================================================
@@ -1853,6 +2079,10 @@ def format_signal(
     volume_ratio,
     close_dt,
     prediction,
+    support,
+    resistance,
+    support_status,
+    resistance_status,
 ):
 
     rsi_icon = get_rsi_icon(
@@ -1899,6 +2129,22 @@ def format_signal(
         symbol
     )
 
+    if support is None:
+        support_text = "—"
+    else:
+        support_text = format_number(
+            support,
+            2,
+        )
+
+    if resistance is None:
+        resistance_text = "—"
+    else:
+        resistance_text = format_number(
+            resistance,
+            2,
+        )
+
     return (
         f"{badge} {symbol}\n\n"
 
@@ -1913,6 +2159,14 @@ def format_signal(
 
         f"close                  "
         f"{close_text}\n"
+
+        f"🛡 Resistance          "
+        f"{resistance_text}    "
+        f"{resistance_status}\n"
+
+        f"🛡 Support             "
+        f"{support_text}    "
+        f"{support_status}\n"
 
         f"📈 <a href=\"{tv_url}\">TV</a>"
     )
@@ -1989,6 +2243,28 @@ async def scan_symbol(
         )
     )
 
+    support, resistance = (
+        find_support_resistance(
+            klines
+        )
+    )
+
+    support_status = (
+        get_level_status(
+            klines,
+            support,
+            "support",
+        )
+    )
+
+    resistance_status = (
+        get_level_status(
+            klines,
+            resistance,
+            "resistance",
+        )
+    )
+
     close_dt = candle_close_datetime(
         timeframe
     )
@@ -2001,6 +2277,10 @@ async def scan_symbol(
         "volume_ratio": volume_ratio,
         "close_dt": close_dt,
         "prediction": prediction,
+        "support": support,
+        "resistance": resistance,
+        "support_status": support_status,
+        "resistance_status": resistance_status,
     }
 
 
@@ -2137,6 +2417,10 @@ def build_message(
                 signal["volume_ratio"],
                 signal["close_dt"],
                 signal["prediction"],
+                signal["support"],
+                signal["resistance"],
+                signal["support_status"],
+                signal["resistance_status"],
             )
         )
 
