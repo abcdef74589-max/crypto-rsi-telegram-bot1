@@ -531,10 +531,12 @@
     "SKL:1D": "high",
     "VET:1D": "high",
     "STX:1D": "high",
-    "C:1D": "high"
+    "C:1D": "high",
+    "STX:15m": "high",
+    "STX:1h": "high"
   },
   "sent_messages": {
-    "4c0e491afda042df48e8840e646bd9fc15233d02203ea89367cc674e11b8a5d5": 1789866343,
-    "8db927a0b300379c4cd33c59d34eb71f65ff7ee353fc3d46a980cfde1c3bc891": 1789866344
+    "6504ea5d70d4cb818e7d9d8bddf5b761247374a85b78386fbc42b50016d02e46": 1789869022,
+    "9e39803cac523313eab216391933cd9edd944e1a2df5bdc900c4ce75a03cbe22": 1789869023
   }
 }
