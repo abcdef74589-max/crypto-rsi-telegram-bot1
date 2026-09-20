@@ -337,7 +337,7 @@
     "PENDLE:1h": "high",
     "ZRO:1h": "high",
     "TUT:15m": "high",
-    "PAXG:15m": "high",
+    "PAXG:15m": "low",
     "XAUT:15m": "low",
     "SPCXB:15m": "low",
     "G:15m": "high",
@@ -508,7 +508,7 @@
     "BANK:15m": "high",
     "EPIC:15m": "high",
     "ALGO:1h": "high",
-    "USD1:15m": "low",
+    "USD1:15m": "high",
     "USD1:1h": "low",
     "CELR:15m": "high",
     "CELR:1h": "high",
@@ -536,7 +536,7 @@
     "STX:1h": "high"
   },
   "sent_messages": {
-    "6504ea5d70d4cb818e7d9d8bddf5b761247374a85b78386fbc42b50016d02e46": 1789869022,
-    "9e39803cac523313eab216391933cd9edd944e1a2df5bdc900c4ce75a03cbe22": 1789869023
+    "dc77bde26cd89c033b1228abfd378283118466f38890ffe1929a2ec451111dc8": 1789869942,
+    "671ee2c21843d89f8e170112fd2f07ff758cf3bfd9b8cb7145461653c118742f": 1789869943
   }
 }
