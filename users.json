@@ -231,7 +231,7 @@
     "MORPHO:15m": "low",
     "OP:15m": "high",
     "CHIP:15m": "high",
-    "VIRTUAL:15m": "high",
+    "VIRTUAL:15m": "low",
     "BABY:15m": "high",
     "NEAR:15m": "high",
     "SOL:15m": "high",
@@ -340,7 +340,7 @@
     "PAXG:15m": "low",
     "XAUT:15m": "low",
     "SPCXB:15m": "low",
-    "G:15m": "high",
+    "G:15m": "low",
     "SPYB:15m": "low",
     "ETH:1h": "high",
     "XAUT:1h": "high",
@@ -548,7 +548,7 @@
     "C:15m": "high"
   },
   "sent_messages": {
-    "aaa403fdf1a73f9ed0af888bace0a27bd79092c4e87cd68a6d69934afb574e0e": 1789887056,
-    "1cdb107afd8fbce7955395bbf60e9c0f4e8cf9d43a530bb4aecb4035e00a3772": 1789887056
+    "7f1defa93967385253ea7226d7c876389bbe3ab1f523086cbf55169ab3439be2": 1789889771,
+    "5ae3a8c4c7f751898c316fb0ae0538596453af733392a98b4e1e3547c8c31b8e": 1789889772
   }
 }
