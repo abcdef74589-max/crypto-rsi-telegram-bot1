@@ -548,10 +548,11 @@
     "C:15m": "high",
     "DASH:1h": "low",
     "GUN:15m": "high",
-    "HOME:15m": "low"
+    "HOME:15m": "low",
+    "ALLO:15m": "high"
   },
   "sent_messages": {
-    "9945c23839530b0012dc417bf256e4fdf3c95766a49c87234aa571667a64401d": 1789899686,
-    "9526755599b3fe7a80e2f88345fcad99750974b623ebf8366d35b0d09bbd8d64": 1789899686
+    "f6dfa5b193c11dcefc354795c4356e3785c4cb18324958fd72f22fd9556bb114": 1789900596,
+    "920cd5bb4c90471e520ee70515c704f21548165494bf348e1fcec293ca6b5431": 1789900596
   }
 }
