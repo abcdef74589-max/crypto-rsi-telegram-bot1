@@ -257,7 +257,7 @@
     "LTC:1h": "high",
     "BCH:1h": "high",
     "DOT:1h": "high",
-    "FET:1h": "high",
+    "FET:1h": "low",
     "FIL:1h": "high",
     "XPL:1h": "high",
     "PENGU:1h": "high",
@@ -544,10 +544,11 @@
     "CTSI:15m": "high",
     "GENIUS:1h": "high",
     "CTSI:1h": "high",
-    "SKL:15m": "high"
+    "SKL:15m": "high",
+    "C:15m": "high"
   },
   "sent_messages": {
-    "d05febc91ca9ec95fa3bb91a860e738dda9bb5410e7974a2158657413ab6fac4": 1789884380,
-    "5ec7a0330678493815ea860b2effb30d066a2fb8a05986bc48b3ab996e7c1044": 1789884380
+    "aaa403fdf1a73f9ed0af888bace0a27bd79092c4e87cd68a6d69934afb574e0e": 1789887056,
+    "1cdb107afd8fbce7955395bbf60e9c0f4e8cf9d43a530bb4aecb4035e00a3772": 1789887056
   }
 }
