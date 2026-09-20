@@ -543,10 +543,11 @@
     "GENIUS:15m": "high",
     "CTSI:15m": "high",
     "GENIUS:1h": "high",
-    "CTSI:1h": "high"
+    "CTSI:1h": "high",
+    "SKL:15m": "high"
   },
   "sent_messages": {
-    "c8aa88035df76d4f643096f4601e9ea25b3fe8649e03d73c0c35ebeaaa3b5c23": 1789883463,
-    "f636d5fc6a6b68d9376cc4d7da1342b5d6871ea1728548b17630df7785ac2f4d": 1789883463
+    "d05febc91ca9ec95fa3bb91a860e738dda9bb5410e7974a2158657413ab6fac4": 1789884380,
+    "5ec7a0330678493815ea860b2effb30d066a2fb8a05986bc48b3ab996e7c1044": 1789884380
   }
 }
