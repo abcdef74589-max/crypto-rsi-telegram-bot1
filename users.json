@@ -508,7 +508,7 @@
     "BANK:15m": "high",
     "EPIC:15m": "high",
     "ALGO:1h": "high",
-    "USD1:15m": "high",
+    "USD1:15m": "low",
     "USD1:1h": "low",
     "CELR:15m": "high",
     "CELR:1h": "high",
@@ -551,10 +551,15 @@
     "HOME:15m": "low",
     "ALLO:15m": "high",
     "COTI:1h": "low",
-    "ALLO:1h": "high"
+    "ALLO:1h": "high",
+    "TRX:4h": "high",
+    "CTSI:4h": "high",
+    "JTO:4h": "high"
   },
   "sent_messages": {
     "789250a7d56d44681bdc2bb8258b2e4dad9347aac3e41680eb289586a8d069cd": 1789904180,
-    "59b240db1f8ce21f6c2e3ce1c23bdd02ee2a36c1bf94a41b27793757c0efdc65": 1789904181
+    "59b240db1f8ce21f6c2e3ce1c23bdd02ee2a36c1bf94a41b27793757c0efdc65": 1789904181,
+    "e93e8069690d00ede3d40e957a110ea72d35941daa7aefc1696ff8170ab7a79b": 1789905029,
+    "1199f5a18094c4d8e62f2299bbdecee48df140479af98dcaf9b4711112d9bbb2": 1789905029
   }
 }
