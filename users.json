@@ -466,7 +466,7 @@
     "BONK:1h": "high",
     "ASTER:15m": "high",
     "ZK:15m": "low",
-    "ZEC:15m": "low",
+    "ZEC:15m": "high",
     "DASH:15m": "low",
     "CAKE:15m": "low",
     "STG:15m": "high",
@@ -567,7 +567,7 @@
     "FTT:1h": "high"
   },
   "sent_messages": {
-    "c6f7b33a9693e584a93af1e014812b796c4979c3cbc29b81471511162fa4dd7a": 1789930257,
-    "186195a8c51ac372ac3e066f3f5bd1ce89fef7787bade65f3109d0e0b7c2a758": 1789930258
+    "c39edccd900133e8cfc7f3d41be6dbb9df46264e813a0a6535693c6d358a111a": 1789932899,
+    "e1de6564c6a722591fbba5d8cd5d30a2d9da7687fbbb72fd853722a8014a37f8": 1789932899
   }
 }
