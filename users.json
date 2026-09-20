@@ -569,10 +569,20 @@
     "LUNA:4h": "high",
     "FTT:4h": "high",
     "NIL:1h": "high",
-    "FF:1h": "high"
+    "FF:1h": "high",
+    "NIL:4h": "high",
+    "SAGA:1D": "high",
+    "LTC:1D": "high",
+    "CAKE:1D": "high",
+    "RENDER:1D": "high",
+    "LUNA:1D": "high",
+    "S:1D": "high",
+    "EPIC:1D": "high",
+    "FTT:1D": "high",
+    "NIL:1D": "high"
   },
   "sent_messages": {
-    "56114adcad6b92f15a1d482a4e307c0c48606c2e02c8baa0e59631f354fffdcd": 1789943798,
-    "650866e791e22d5392112e731a32d972ea3135a8138f9298ae96de063fbadcd0": 1789943798
+    "c04dcbca8f908435348e6097ce98b1c65ecbce8334efeea8dee069b9d2c99dbf": 1789948249,
+    "5f24aee729eb36df41ba0915622ca8f0b38095cc8fc8e4c50190978ed87ae75d": 1789948249
   }
 }
