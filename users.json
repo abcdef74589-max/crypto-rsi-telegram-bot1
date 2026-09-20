@@ -396,7 +396,7 @@
     "BFUSD:1h": "low",
     "AR:1h": "high",
     "PEPE:15m": "low",
-    "ZEN:15m": "low",
+    "ZEN:15m": "high",
     "SAGA:15m": "high",
     "EIGEN:15m": "high",
     "EIGEN:1h": "high",
@@ -467,7 +467,7 @@
     "ASTER:15m": "high",
     "ZK:15m": "low",
     "ZEC:15m": "high",
-    "DASH:15m": "low",
+    "DASH:15m": "high",
     "CAKE:15m": "low",
     "STG:15m": "high",
     "SYN:1h": "high",
@@ -492,7 +492,7 @@
     "S:15m": "high",
     "ONE:1h": "high",
     "JST:15m": "high",
-    "PUMP:15m": "low",
+    "PUMP:15m": "high",
     "XTZ:1h": "high",
     "MARSCOIN:15m": "low",
     "ESP:1h": "high",
@@ -564,10 +564,13 @@
     "LUNC:1h": "high",
     "BERA:15m": "high",
     "LUNA:15m": "high",
-    "FTT:1h": "high"
+    "FTT:1h": "high",
+    "FTT:15m": "high",
+    "LUNA:4h": "high",
+    "FTT:4h": "high"
   },
   "sent_messages": {
-    "c39edccd900133e8cfc7f3d41be6dbb9df46264e813a0a6535693c6d358a111a": 1789932899,
-    "e1de6564c6a722591fbba5d8cd5d30a2d9da7687fbbb72fd853722a8014a37f8": 1789932899
+    "f4e3a794827d8c056bd4fd04bf8f4a83ab0f4f3d303079e16725e25944e3e6b8": 1789933873,
+    "23cee8cf38b657cc84a9688e07c650a209c0c61606c8926322277e92a9cda1f2": 1789933873
   }
 }
