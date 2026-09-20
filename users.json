@@ -468,7 +468,7 @@
     "ZK:15m": "low",
     "ZEC:15m": "high",
     "DASH:15m": "high",
-    "CAKE:15m": "low",
+    "CAKE:15m": "high",
     "STG:15m": "high",
     "SYN:1h": "high",
     "SYN:4h": "high",
@@ -567,10 +567,11 @@
     "FTT:1h": "high",
     "FTT:15m": "high",
     "LUNA:4h": "high",
-    "FTT:4h": "high"
+    "FTT:4h": "high",
+    "NIL:1h": "high"
   },
   "sent_messages": {
-    "f4e3a794827d8c056bd4fd04bf8f4a83ab0f4f3d303079e16725e25944e3e6b8": 1789933873,
-    "23cee8cf38b657cc84a9688e07c650a209c0c61606c8926322277e92a9cda1f2": 1789933873
+    "86c0f1005b1e3b95b8bdd2a4e93b836c01a50a3b12da3fbf7945d46b09eebbbc": 1789937480,
+    "30a640347604a835c68c0c53de74bcf653c267c8e859aab1878ab6478cc43c61": 1789937480
   }
 }
