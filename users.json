@@ -233,7 +233,7 @@
     "CHIP:15m": "high",
     "VIRTUAL:15m": "low",
     "BABY:15m": "high",
-    "NEAR:15m": "high",
+    "NEAR:15m": "low",
     "SOL:15m": "high",
     "ARB:15m": "high",
     "ENA:15m": "high",
@@ -595,10 +595,11 @@
     "MUBARAK:15m": "high",
     "PHA:1h": "high",
     "MUBARAK:1h": "high",
-    "WIF:1h": "high"
+    "WIF:1h": "high",
+    "WIF:15m": "high"
   },
   "sent_messages": {
-    "b4c0bc00af5367bac4d4438f560a800acbc749f71080625dfd2e79ba4c174f91": 1790002182,
-    "bf1635546b66019726ca4f0104007be95fe946c59432caae44cf84e12ff3e1a4": 1790002183
+    "42739327a901d585c9bc4ea6e1ec2fad79721aa809696dc640a1be3553dcc0ad": 1790004949,
+    "4b8c5897deaab62e05d6e05a40d0a3071357b430bbab4d6006a11a3abed502eb": 1790004949
   }
 }
