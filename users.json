@@ -288,7 +288,7 @@
     "PUMP:1h": "high",
     "PEPE:1h": "high",
     "AVAX:1h": "high",
-    "AAVE:1h": "low",
+    "AAVE:1h": "high",
     "TRUMP:1h": "high",
     "CAKE:1h": "low",
     "ETHFI:1h": "high",
@@ -325,7 +325,7 @@
     "TIA:15m": "high",
     "BTC:1h": "high",
     "ZEC:1h": "high",
-    "DOGE:1h": "low",
+    "DOGE:1h": "high",
     "SNDKB:1h": "high",
     "MSTRB:1h": "high",
     "SPCXB:1h": "low",
@@ -488,7 +488,7 @@
     "PENDLE:1D": "high",
     "SYN:1D": "high",
     "ONE:15m": "high",
-    "LSK:15m": "low",
+    "LSK:15m": "high",
     "S:15m": "high",
     "ONE:1h": "high",
     "JST:15m": "high",
@@ -590,10 +590,14 @@
     "MINA:1h": "high",
     "SOXLB:4h": "high",
     "OPG:4h": "high",
-    "MINA:4h": "high"
+    "MINA:4h": "high",
+    "PHA:15m": "high",
+    "MUBARAK:15m": "high",
+    "PHA:1h": "high",
+    "MUBARAK:1h": "high"
   },
   "sent_messages": {
-    "31a7481cf1aa9dd6b0eb50737e0c9c6ad22cfc53c1127d5cff94b7a70578666d": 1789977048,
-    "4796e3901a9d2f8ecb8c9e7390fd98b79b9be0bb3339f9a873a8379d852d2057": 1789977048
+    "8c739924f8d57dfe054050ca2593a72c82339ddb8ec90e0b1ecdd946754a76a3": 1789987855,
+    "178aea31c812e9b441764ef3f95174fe385ab197093224625d2509ec03c4e312": 1789987856
   }
 }
