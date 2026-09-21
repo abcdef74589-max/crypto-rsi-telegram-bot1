@@ -597,10 +597,11 @@
     "MUBARAK:1h": "high",
     "WIF:1h": "high",
     "WIF:15m": "high",
-    "FLOKI:15m": "high"
+    "FLOKI:15m": "high",
+    "FORM:15m": "high"
   },
   "sent_messages": {
-    "663c6ccc01c4b5c348cb258f2deaaef8092236ed41150ab7b507c4b8126d2cd2": 1790006686,
-    "1bc271f9b12365c4e1b4470ab76dc3780ce2f4145e3b3b88156d0d2fada10aa8": 1790006687
+    "a36e9c1a8b29331ad42dba699edd4bf502b61c1ac0b6b797106b73fc2205e76b": 1790008514,
+    "9740c8bd8fc6a88362869723022f14c1580b80da31287bda50f1612f966dce4c": 1790008515
   }
 }
