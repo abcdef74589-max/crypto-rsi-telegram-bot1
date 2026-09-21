@@ -584,10 +584,11 @@
     "KMNO:1h": "high",
     "ICP:4h": "high",
     "KMNO:4h": "high",
-    "MITO:1h": "high"
+    "MITO:1h": "high",
+    "NIL:15m": "high"
   },
   "sent_messages": {
-    "d298e2ad70c9e49726c7912bcc951610c7af805ebcaea290dd679240c4728ed8": 1789966286,
-    "775e92c6071084031990a9e2460b35c4b84a1466693bac1d4a9b0be67ec63e8c": 1789966287
+    "af8885049b951c1284e96e29721b3eba836f41e41df00587cf2c91cb7c332f54": 1789971623,
+    "235ece92b9629b56226f6fc1d7f23235585dd5677077c55eca77cd7ae1b32035": 1789971624
   }
 }
