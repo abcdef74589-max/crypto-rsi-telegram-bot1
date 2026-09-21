@@ -308,7 +308,7 @@
     "GOOGLB:15m": "high",
     "NVDAB:15m": "high",
     "PENDLE:15m": "high",
-    "牛来:15m": "low",
+    "牛来:15m": "high",
     "ZAMA:15m": "high",
     "AERO:15m": "high",
     "CRV:15m": "high",
@@ -413,7 +413,7 @@
     "XRP:1h": "high",
     "CRCLB:1h": "high",
     "XLM:1h": "high",
-    "XPL:15m": "low",
+    "XPL:15m": "high",
     "F:15m": "low",
     "BANK:1h": "high",
     "F:1h": "high",
@@ -494,7 +494,7 @@
     "JST:15m": "high",
     "PUMP:15m": "high",
     "XTZ:1h": "high",
-    "MARSCOIN:15m": "low",
+    "MARSCOIN:15m": "high",
     "ESP:1h": "high",
     "XTZ:15m": "high",
     "HEI:15m": "low",
@@ -582,7 +582,7 @@
     "NIL:1D": "high"
   },
   "sent_messages": {
-    "c04dcbca8f908435348e6097ce98b1c65ecbce8334efeea8dee069b9d2c99dbf": 1789948249,
-    "5f24aee729eb36df41ba0915622ca8f0b38095cc8fc8e4c50190978ed87ae75d": 1789948249
+    "aced9a0935650e3f3b85d65548961fc64f3a6a55ba1cde97f8eec09ffffe5a2b": 1789954607,
+    "4f13c04a2027cec5a09a17a4adf55501bd2701800904d74b94d746df5dd78d53": 1789954607
   }
 }
