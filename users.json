@@ -328,7 +328,7 @@
     "DOGE:1h": "high",
     "SNDKB:1h": "high",
     "MSTRB:1h": "high",
-    "SPCXB:1h": "low",
+    "SPCXB:1h": "high",
     "INJ:1h": "high",
     "GRAM:1h": "high",
     "RAY:1h": "high",
@@ -594,10 +594,11 @@
     "PHA:15m": "high",
     "MUBARAK:15m": "high",
     "PHA:1h": "high",
-    "MUBARAK:1h": "high"
+    "MUBARAK:1h": "high",
+    "WIF:1h": "high"
   },
   "sent_messages": {
-    "0bab59807ae9634707ea90af31ee2390d27ed0a7f18a4167497db973e06d9d62": 1789998690,
-    "4fb1964309911971bd7048a5f948b9b2e9bd0e8ea9eca5d4f53bcfe7d9e2f292": 1789998690
+    "b4c0bc00af5367bac4d4438f560a800acbc749f71080625dfd2e79ba4c174f91": 1790002182,
+    "bf1635546b66019726ca4f0104007be95fe946c59432caae44cf84e12ff3e1a4": 1790002183
   }
 }
