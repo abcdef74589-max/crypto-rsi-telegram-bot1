@@ -600,10 +600,13 @@
     "FLOKI:15m": "high",
     "FORM:15m": "high",
     "FORM:1h": "high",
-    "INTCB:1h": "high"
+    "INTCB:1h": "high",
+    "XRP:4h": "high"
   },
   "sent_messages": {
     "9e0208338608c2088fb85be396262a0b9b14d2a5674e84a8e4bd08d7667a27bd": 1790019392,
-    "42d6b5f9e092d06ce58998c87701a6c59e011a0938b822082c17df2f59dfd1c2": 1790019392
+    "42d6b5f9e092d06ce58998c87701a6c59e011a0938b822082c17df2f59dfd1c2": 1790019392,
+    "981f21d6df4c21a9385b716b6987cd3074a0a4b7bcc632e988256ba61f55ae3c": 1790020287,
+    "64fecc11f268cd0e064da1063edc723618292df10714c54412ce00d2be2d1f39": 1790020288
   }
 }
