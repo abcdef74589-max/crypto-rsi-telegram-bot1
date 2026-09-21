@@ -579,10 +579,11 @@
     "S:1D": "high",
     "EPIC:1D": "high",
     "FTT:1D": "high",
-    "NIL:1D": "high"
+    "NIL:1D": "high",
+    "KMNO:15m": "high"
   },
   "sent_messages": {
-    "b80d8b74b82ac308a071d029ce14291b65f535dc78fad25f59bfb4f602f4aa58": 1789958171,
-    "c371d61a398d0190fd0e2417fc4cd8cab660191b8a8d1ab694939821e0910be1": 1789958172
+    "4b04289e8014100da2dfc099cedfa58bf4342bd1cebf3dfdc689fe1d1e5dec69": 1789961783,
+    "7fcf1fd12c60a4544e4a0ef3eb6f5c2935085f75075fa5bb191ea9cd31f2474f": 1789961783
   }
 }
