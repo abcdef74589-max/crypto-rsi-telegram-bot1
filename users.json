@@ -395,7 +395,7 @@
     "TRX:1h": "high",
     "BFUSD:1h": "low",
     "AR:1h": "high",
-    "PEPE:15m": "low",
+    "PEPE:15m": "high",
     "ZEN:15m": "high",
     "SAGA:15m": "high",
     "EIGEN:15m": "high",
@@ -597,7 +597,7 @@
     "MUBARAK:1h": "high"
   },
   "sent_messages": {
-    "8c739924f8d57dfe054050ca2593a72c82339ddb8ec90e0b1ecdd946754a76a3": 1789987855,
-    "178aea31c812e9b441764ef3f95174fe385ab197093224625d2509ec03c4e312": 1789987856
+    "52f9bb69887a277e7b7a52b352ffcea8e0d70ee1b406ac08b342c3007c3571f7": 1789990579,
+    "a7efc23754282b795873760d0ca5f2e7123fafeda1ffc499e863ed946a59a484": 1789990580
   }
 }
