@@ -161,10 +161,7 @@ COIN_BADGES = {
 
 
 def coin_badge(symbol):
-    return COIN_BADGES.get(
-        symbol,
-        "⚪"
-    )
+    return COIN_BADGES.get(symbol, "⚪")
 
 
 # ============================================================
@@ -176,9 +173,7 @@ logging.basicConfig(
     format="%(asctime)s | %(levelname)s | %(message)s",
 )
 
-logger = logging.getLogger(
-    "rsi-scanner"
-)
+logger = logging.getLogger("rsi-scanner")
 
 
 # ============================================================
@@ -192,23 +187,16 @@ BOLD_DIGITS = str.maketrans(
 
 
 def bold_numbers(value):
-    return str(value).translate(
-        BOLD_DIGITS
-    )
+    return str(value).translate(BOLD_DIGITS)
 
 
-def format_number(
-    value,
-    decimals=2,
-):
+def format_number(value, decimals=2):
     try:
         return bold_numbers(
             f"{float(value):.{decimals}f}"
         )
     except Exception:
-        return bold_numbers(
-            str(value)
-        )
+        return bold_numbers(str(value))
 
 
 # ============================================================
@@ -237,31 +225,13 @@ def load_state():
 
             data = json.load(f)
 
-        if not isinstance(
-            data,
-            dict,
-        ):
+        if not isinstance(data, dict):
             return DEFAULT_USERS.copy()
 
-        data.setdefault(
-            "users",
-            [],
-        )
-
-        data.setdefault(
-            "offset",
-            0,
-        )
-
-        data.setdefault(
-            "states",
-            {},
-        )
-
-        data.setdefault(
-            "sent_messages",
-            {},
-        )
+        data.setdefault("users", [])
+        data.setdefault("offset", 0)
+        data.setdefault("states", {})
+        data.setdefault("sent_messages", {})
 
         return data
 
@@ -277,9 +247,7 @@ def load_state():
 
 def save_state(state):
 
-    tmp = USERS_FILE.with_suffix(
-        ".tmp"
-    )
+    tmp = USERS_FILE.with_suffix(".tmp")
 
     try:
 
@@ -295,9 +263,7 @@ def save_state(state):
                 indent=2,
             )
 
-        tmp.replace(
-            USERS_FILE
-        )
+        tmp.replace(USERS_FILE)
 
     except Exception as e:
 
@@ -330,9 +296,7 @@ async def telegram_request(
         async with session.post(
             url,
             data=params or {},
-            timeout=aiohttp.ClientTimeout(
-                total=20
-            ),
+            timeout=aiohttp.ClientTimeout(total=20),
         ) as response:
 
             if response.status != 200:
@@ -405,14 +369,10 @@ async def send_long_message(
     parts = []
     current = ""
 
-    for block in text.split(
-        "\n\n"
-    ):
+    for block in text.split("\n\n"):
 
         candidate = (
-            current
-            + "\n\n"
-            + block
+            current + "\n\n" + block
             if current
             else block
         )
@@ -420,9 +380,7 @@ async def send_long_message(
         if len(candidate) > MAX_LENGTH:
 
             if current:
-                parts.append(
-                    current
-                )
+                parts.append(current)
 
             current = block
 
@@ -430,9 +388,7 @@ async def send_long_message(
             current = candidate
 
     if current:
-        parts.append(
-            current
-        )
+        parts.append(current)
 
     success = True
 
@@ -461,13 +417,9 @@ def message_hash(
 
     raw = (
         f"{chat_id}|{text}"
-    ).encode(
-        "utf-8"
-    )
+    ).encode("utf-8")
 
-    return hashlib.sha256(
-        raw
-    ).hexdigest()
+    return hashlib.sha256(raw).hexdigest()
 
 
 def already_sent(
@@ -546,67 +498,39 @@ async def process_updates(
         },
     )
 
-    if not result or not result.get(
-        "ok"
-    ):
+    if not result or not result.get("ok"):
         return
 
     updates = result.get(
         "result",
-        []
+        [],
     )
 
     for update in updates:
 
-        update_id = update.get(
-            "update_id"
-        )
+        update_id = update.get("update_id")
 
         if update_id is not None:
 
-            state["offset"] = (
-                update_id + 1
-            )
+            state["offset"] = update_id + 1
 
-        message = (
-            update.get(
-                "message"
-            )
-            or {}
-        )
+        message = update.get("message") or {}
+        chat = message.get("chat") or {}
 
-        chat = (
-            message.get(
-                "chat"
-            )
-            or {}
-        )
-
-        chat_id = chat.get(
-            "id"
-        )
+        chat_id = chat.get("id")
 
         text = (
-            message.get(
-                "text"
-            )
-            or ""
+            message.get("text") or ""
         ).strip()
 
         if not chat_id or not text:
             continue
 
-        if text.startswith(
-            "/start"
-        ):
+        if text.startswith("/start"):
 
-            if chat_id not in state[
-                "users"
-            ]:
+            if chat_id not in state["users"]:
 
-                state["users"].append(
-                    chat_id
-                )
+                state["users"].append(chat_id)
 
             await send_message(
                 session,
@@ -620,17 +544,11 @@ async def process_updates(
                 ),
             )
 
-        elif text.startswith(
-            "/stop"
-        ):
+        elif text.startswith("/stop"):
 
-            if chat_id in state[
-                "users"
-            ]:
+            if chat_id in state["users"]:
 
-                state["users"].remove(
-                    chat_id
-                )
+                state["users"].remove(chat_id)
 
             await send_message(
                 session,
@@ -638,9 +556,7 @@ async def process_updates(
                 "⛔ ربات برای شما متوقف شد.",
             )
 
-        elif text.startswith(
-            "/status"
-        ):
+        elif text.startswith("/status"):
 
             active = (
                 chat_id
@@ -657,9 +573,7 @@ async def process_updates(
                 ),
             )
 
-    save_state(
-        state
-    )
+    save_state(state)
 
 
 # ============================================================
@@ -681,9 +595,7 @@ async def binance_get(
             async with session.get(
                 url,
                 params=params or {},
-                timeout=aiohttp.ClientTimeout(
-                    total=20
-                ),
+                timeout=aiohttp.ClientTimeout(total=20),
             ) as response:
 
                 if response.status != 200:
@@ -697,9 +609,7 @@ async def binance_get(
     return None
 
 
-async def get_binance_exchange_info(
-    session,
-):
+async def get_binance_exchange_info(session):
 
     return await binance_get(
         session,
@@ -707,9 +617,7 @@ async def get_binance_exchange_info(
     )
 
 
-async def get_binance_tickers(
-    session,
-):
+async def get_binance_tickers(session):
 
     return await binance_get(
         session,
@@ -739,38 +647,22 @@ async def get_klines(
 # TOP 200 BINANCE
 # ============================================================
 
-async def get_top_coins(
-    session,
-):
+async def get_top_coins(session):
 
-    info = await get_binance_exchange_info(
-        session
-    )
-
-    tickers = await get_binance_tickers(
-        session
-    )
+    info = await get_binance_exchange_info(session)
+    tickers = await get_binance_tickers(session)
 
     if not info or not tickers:
         return []
 
     valid_symbols = {}
 
-    for item in info.get(
-        "symbols",
-        [],
-    ):
+    for item in info.get("symbols", []):
 
-        if (
-            item.get("status")
-            != "TRADING"
-        ):
+        if item.get("status") != "TRADING":
             continue
 
-        if (
-            item.get("quoteAsset")
-            != "USDT"
-        ):
+        if item.get("quoteAsset") != "USDT":
             continue
 
         if not item.get(
@@ -795,14 +687,10 @@ async def get_top_coins(
         if base in EXCLUDED_BASE_ASSETS:
             continue
 
-        if base.endswith(
-            LEVERAGED_SUFFIXES
-        ):
+        if base.endswith(LEVERAGED_SUFFIXES):
             continue
 
-        valid_symbols[
-            symbol
-        ] = base
+        valid_symbols[symbol] = base
 
     ranked = []
 
@@ -812,8 +700,7 @@ async def get_top_coins(
             ticker.get(
                 "symbol",
                 "",
-            )
-            .upper()
+            ).upper()
         )
 
         if symbol not in valid_symbols:
@@ -837,9 +724,7 @@ async def get_top_coins(
         ranked.append(
             (
                 quote_volume,
-                valid_symbols[
-                    symbol
-                ],
+                valid_symbols[symbol],
             )
         )
 
@@ -857,10 +742,7 @@ async def get_top_coins(
             continue
 
         seen.add(base)
-
-        result.append(
-            base
-        )
+        result.append(base)
 
         if len(result) >= TOP_N:
             break
@@ -873,29 +755,20 @@ async def get_top_coins(
     return result
 
 
-async def get_valid_usdt_symbols(
-    session,
-):
+async def get_valid_usdt_symbols(session):
 
-    info = await get_binance_exchange_info(
-        session
-    )
+    info = await get_binance_exchange_info(session)
 
     if not info:
         return set()
 
     symbols = set()
 
-    for item in info.get(
-        "symbols",
-        [],
-    ):
+    for item in info.get("symbols", []):
 
         if (
-            item.get("status")
-            == "TRADING"
-            and item.get("quoteAsset")
-            == "USDT"
+            item.get("status") == "TRADING"
+            and item.get("quoteAsset") == "USDT"
             and item.get(
                 "isSpotTradingAllowed",
                 True,
@@ -908,9 +781,7 @@ async def get_valid_usdt_symbols(
             ).upper()
 
             if base:
-                symbols.add(
-                    base
-                )
+                symbols.add(base)
 
     return symbols
 
@@ -942,23 +813,13 @@ def calculate_rsi(
 
         if change > 0:
 
-            gains.append(
-                change
-            )
-
-            losses.append(
-                0.0
-            )
+            gains.append(change)
+            losses.append(0.0)
 
         else:
 
-            gains.append(
-                0.0
-            )
-
-            losses.append(
-                abs(change)
-            )
+            gains.append(0.0)
+            losses.append(abs(change))
 
     avg_gain = (
         sum(gains[:period])
@@ -994,10 +855,7 @@ def calculate_rsi(
     if avg_loss == 0:
         return 100.0
 
-    rs = (
-        avg_gain
-        / avg_loss
-    )
+    rs = avg_gain / avg_loss
 
     return 100.0 - (
         100.0 / (1.0 + rs)
@@ -1080,22 +938,16 @@ def iran_time_string(dt):
         )
     )
 
-    local = dt.astimezone(
-        iran_tz
-    )
+    local = dt.astimezone(iran_tz)
 
-    return local.strftime(
-        "%H:%M"
-    )
+    return local.strftime("%H:%M")
 
 
 # ============================================================
 # VOLUME
 # ============================================================
 
-def calculate_volume_ratio(
-    klines,
-):
+def calculate_volume_ratio(klines):
 
     if len(klines) < 5:
         return None
@@ -1130,9 +982,7 @@ def calculate_volume_ratio(
 # SUPPORT / RESISTANCE
 # ============================================================
 
-def find_support_resistance(
-    klines,
-):
+def find_support_resistance(klines):
 
     if len(klines) < 10:
         return None, None
@@ -1200,9 +1050,7 @@ def find_support_resistance(
                 and high >= right_high_1
                 and high >= right_high_2
             ):
-                pivot_highs.append(
-                    high
-                )
+                pivot_highs.append(high)
 
             if (
                 low <= left_low_1
@@ -1210,9 +1058,7 @@ def find_support_resistance(
                 and low <= right_low_1
                 and low <= right_low_2
             ):
-                pivot_lows.append(
-                    low
-                )
+                pivot_lows.append(low)
 
         resistance_candidates = [
             x
@@ -1239,9 +1085,11 @@ def find_support_resistance(
                 for x in klines[:-1]
             ]
 
-            resistance = max(
-                highs
-            ) if highs else None
+            resistance = (
+                max(highs)
+                if highs
+                else None
+            )
 
         if support_candidates:
 
@@ -1256,9 +1104,11 @@ def find_support_resistance(
                 for x in klines[:-1]
             ]
 
-            support = min(
-                lows
-            ) if lows else None
+            support = (
+                min(lows)
+                if lows
+                else None
+            )
 
         return (
             support,
@@ -1299,48 +1149,46 @@ def get_level_status(
             current[4]
         )
 
-        # ----------------------------------------------------
-        # RESISTANCE
-        # ----------------------------------------------------
+        # Resistance:
         #
-        # 📌 = current candle touched resistance with wick,
-        #      but closed back below resistance.
+        # 📌 = current candle touched resistance
+        #      with its wick and then closed below it.
         #
         # 💢 = current candle has not reached resistance.
         #
         # 🔐 = current candle closed above resistance.
-        #
-        # ----------------------------------------------------
 
         if level_type == "resistance":
 
             if close > level:
                 return "🔐"
 
-            if high >= level and close < level:
+            if (
+                high >= level
+                and close < level
+            ):
                 return "📌"
 
             return "💢"
 
-        # ----------------------------------------------------
-        # SUPPORT
-        # ----------------------------------------------------
+        # Support:
         #
-        # 📌 = current candle touched support with wick,
-        #      but closed back above support.
+        # 📌 = current candle touched support
+        #      with its wick and then closed above it.
         #
         # 💢 = current candle has not reached support.
         #
         # 🔐 = current candle closed below support.
-        #
-        # ----------------------------------------------------
 
         if level_type == "support":
 
             if close < level:
                 return "🔐"
 
-            if low <= level and close > level:
+            if (
+                low <= level
+                and close > level
+            ):
                 return "📌"
 
             return "💢"
@@ -1356,9 +1204,7 @@ def get_level_status(
 # RSI SIGNAL
 # ============================================================
 
-def get_rsi_zone(
-    rsi,
-):
+def get_rsi_zone(rsi):
 
     if rsi is None:
         return None
@@ -1372,9 +1218,7 @@ def get_rsi_zone(
     return None
 
 
-def get_rsi_icon(
-    zone,
-):
+def get_rsi_icon(zone):
 
     if zone == "high":
         return "🟢"
@@ -1385,9 +1229,7 @@ def get_rsi_icon(
     return "⚪"
 
 
-def get_direction(
-    zone,
-):
+def get_direction(zone):
 
     if zone == "high":
         return "↑"
@@ -1423,29 +1265,20 @@ def tradingview_url(
 # POLYMARKET
 # ============================================================
 
-def parse_json_string(
-    value,
-):
+def parse_json_string(value):
 
-    if isinstance(
-        value,
-        list,
-    ):
+    if isinstance(value, list):
         return value
 
-    if not isinstance(
-        value,
-        str,
-    ):
+    if not isinstance(value, str):
         return None
 
     try:
 
-        return json.loads(
-            value
-        )
+        return json.loads(value)
 
     except Exception:
+
         return None
 
 
@@ -1483,9 +1316,7 @@ async def get_polymarket_probability(
 
             markets = await response.json()
 
-        symbol_lower = (
-            symbol.lower()
-        )
+        symbol_lower = symbol.lower()
 
         candidates = []
 
@@ -1513,8 +1344,7 @@ async def get_polymarket_probability(
 
                 if (
                     "1h" not in question
-                    and "1 hour"
-                    not in question
+                    and "1 hour" not in question
                 ):
                     continue
 
@@ -1522,14 +1352,11 @@ async def get_polymarket_probability(
 
                 if (
                     "4h" not in question
-                    and "4 hour"
-                    not in question
+                    and "4 hour" not in question
                 ):
                     continue
 
-            candidates.append(
-                market
-            )
+            candidates.append(market)
 
         if not candidates:
             return None
@@ -1545,15 +1372,11 @@ async def get_polymarket_probability(
         for market in candidates:
 
             outcomes = parse_json_string(
-                market.get(
-                    "outcomes"
-                )
+                market.get("outcomes")
             )
 
             prices = parse_json_string(
-                market.get(
-                    "outcomePrices"
-                )
+                market.get("outcomePrices")
             )
 
             if not outcomes or not prices:
@@ -1566,10 +1389,7 @@ async def get_polymarket_probability(
 
                 if (
                     str(outcome).lower()
-                    in (
-                        "yes",
-                        "up",
-                    )
+                    in ("yes", "up")
                 ):
 
                     probability = (
@@ -1652,10 +1472,7 @@ async def get_prism_probability(
 
         for candle in candles:
 
-            if (
-                candle.get("kind")
-                != "future"
-            ):
+            if candle.get("kind") != "future":
                 continue
 
             probability = candle.get(
@@ -1741,8 +1558,7 @@ async def get_degen_probability(
             r"Confidence\s*"
             r"(\d{1,3})%",
             text,
-            re.IGNORECASE
-            | re.DOTALL,
+            re.IGNORECASE | re.DOTALL,
         )
 
         if not match:
@@ -1753,8 +1569,7 @@ async def get_degen_probability(
                 r"Confidence\s*"
                 r"(\d{1,3})%",
                 text,
-                re.IGNORECASE
-                | re.DOTALL,
+                re.IGNORECASE | re.DOTALL,
             )
 
         if not match:
@@ -1772,10 +1587,7 @@ async def get_degen_probability(
         if direction == "UP":
             return confidence
 
-        return (
-            100.0
-            - confidence
-        )
+        return 100.0 - confidence
 
     except Exception as e:
 
@@ -1805,13 +1617,11 @@ async def get_prediction_values(
             symbol,
             timeframe,
         ),
-
         get_polymarket_probability(
             session,
             symbol,
             timeframe,
         ),
-
         get_degen_probability(
             session,
             symbol,
@@ -1839,19 +1649,14 @@ async def get_prediction_values(
 
         try:
 
-            value = float(
-                value
-            )
+            value = float(value)
 
             if (
                 0
                 <= value
                 <= 100
             ):
-
-                values.append(
-                    value
-                )
+                values.append(value)
 
         except Exception:
             continue
@@ -1915,9 +1720,7 @@ def technical_score(
     )
 
 
-def momentum_score(
-    klines,
-):
+def momentum_score(klines):
 
     if len(klines) < 6:
         return None
@@ -2027,9 +1830,7 @@ def state_key(
     timeframe,
 ):
 
-    return (
-        f"{symbol}:{timeframe}"
-    )
+    return f"{symbol}:{timeframe}"
 
 
 def should_alert(
@@ -2049,9 +1850,7 @@ def should_alert(
         {},
     )
 
-    previous = states.get(
-        key
-    )
+    previous = states.get(key)
 
     if previous is None:
 
@@ -2085,13 +1884,8 @@ def format_signal(
     resistance_status,
 ):
 
-    rsi_icon = get_rsi_icon(
-        zone
-    )
-
-    direction = get_direction(
-        zone
-    )
+    rsi_icon = get_rsi_icon(zone)
+    direction = get_direction(zone)
 
     rsi_text = format_number(
         rsi,
@@ -2104,20 +1898,15 @@ def format_signal(
     )
 
     if volume_ratio is None:
-
         volume_text = "—"
-
     else:
-
         volume_text = format_number(
             volume_ratio,
             2,
         )
 
     close_text = bold_numbers(
-        iran_time_string(
-            close_dt
-        )
+        iran_time_string(close_dt)
     )
 
     tv_url = tradingview_url(
@@ -2125,9 +1914,7 @@ def format_signal(
         timeframe,
     )
 
-    badge = coin_badge(
-        symbol
-    )
+    badge = coin_badge(symbol)
 
     if support is None:
         support_text = "—"
@@ -2182,9 +1969,7 @@ async def scan_symbol(
     timeframe,
 ):
 
-    config = TIMEFRAMES[
-        timeframe
-    ]
+    config = TIMEFRAMES[timeframe]
 
     klines = await get_klines(
         session,
@@ -2211,12 +1996,18 @@ async def scan_symbol(
     if rsi is None:
         return None
 
-    zone = get_rsi_zone(
-        rsi
-    )
+    # ========================================================
+    # ONLY RSI ABOVE 70 OR BELOW 30
+    # ========================================================
+
+    zone = get_rsi_zone(rsi)
 
     if zone is None:
         return None
+
+    # ========================================================
+    # ONLY AROUND 10 MINUTES BEFORE CANDLE CLOSE
+    # ========================================================
 
     remaining = minutes_until_close(
         timeframe
@@ -2339,9 +2130,7 @@ async def scan_all(
                 ):
                     continue
 
-                signals.append(
-                    signal
-                )
+                signals.append(signal)
 
             except Exception as e:
 
@@ -2359,18 +2148,14 @@ async def scan_all(
 # MESSAGE
 # ============================================================
 
-def timeframe_header(
-    timeframe,
-):
+def timeframe_header(timeframe):
 
     return (
         f"━━━━━━━━ {timeframe} ━━━━━━━━"
     )
 
 
-def build_message(
-    signals,
-):
+def build_message(signals):
 
     if not signals:
         return None
@@ -2383,8 +2168,7 @@ def build_message(
             [
                 s
                 for s in signals
-                if s["timeframe"]
-                == timeframe
+                if s["timeframe"] == timeframe
             ]
         )
 
@@ -2394,16 +2178,12 @@ def build_message(
 
     for signal in ordered:
 
-        tf = signal[
-            "timeframe"
-        ]
+        tf = signal["timeframe"]
 
         if tf != current_tf:
 
             blocks.append(
-                timeframe_header(
-                    tf
-                )
+                timeframe_header(tf)
             )
 
             current_tf = tf
@@ -2456,9 +2236,7 @@ async def send_alert_once(
 
         return False
 
-    save_state(
-        state
-    )
+    save_state(state)
 
     return await send_long_message(
         session,
@@ -2532,9 +2310,7 @@ async def main():
                 "No active Telegram users."
             )
 
-            save_state(
-                state
-            )
+            save_state(state)
 
             return
 
@@ -2595,9 +2371,7 @@ async def main():
                             if ok:
                                 sent_any = True
 
-                save_state(
-                    state
-                )
+                save_state(state)
 
             except Exception as e:
 
@@ -2610,9 +2384,7 @@ async def main():
                 SCAN_INTERVAL
             )
 
-        save_state(
-            state
-        )
+        save_state(state)
 
         logger.info(
             "Scanner finished. sent=%s",
@@ -2628,9 +2400,7 @@ if __name__ == "__main__":
 
     try:
 
-        asyncio.run(
-            main()
-        )
+        asyncio.run(main())
 
     except KeyboardInterrupt:
         pass
