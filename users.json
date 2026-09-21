@@ -598,10 +598,11 @@
     "WIF:1h": "high",
     "WIF:15m": "high",
     "FLOKI:15m": "high",
-    "FORM:15m": "high"
+    "FORM:15m": "high",
+    "FORM:1h": "high"
   },
   "sent_messages": {
-    "a36e9c1a8b29331ad42dba699edd4bf502b61c1ac0b6b797106b73fc2205e76b": 1790008514,
-    "9740c8bd8fc6a88362869723022f14c1580b80da31287bda50f1612f966dce4c": 1790008515
+    "f6855e133c4b6876bd3fa70c81eea90715add890d3b01871c01ff7a7fced89c7": 1790009419,
+    "3490bced0eba4a904203b1fd3c60925464cd473ed5e36601a1d0b109c2db4569": 1790009420
   }
 }
