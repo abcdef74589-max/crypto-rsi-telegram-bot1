@@ -307,7 +307,7 @@
     "WBTC:15m": "high",
     "GOOGLB:15m": "high",
     "NVDAB:15m": "high",
-    "PENDLE:15m": "high",
+    "PENDLE:15m": "low",
     "牛来:15m": "high",
     "ZAMA:15m": "high",
     "AERO:15m": "high",
@@ -596,10 +596,11 @@
     "PHA:1h": "high",
     "MUBARAK:1h": "high",
     "WIF:1h": "high",
-    "WIF:15m": "high"
+    "WIF:15m": "high",
+    "FLOKI:15m": "high"
   },
   "sent_messages": {
-    "42739327a901d585c9bc4ea6e1ec2fad79721aa809696dc640a1be3553dcc0ad": 1790004949,
-    "4b8c5897deaab62e05d6e05a40d0a3071357b430bbab4d6006a11a3abed502eb": 1790004949
+    "663c6ccc01c4b5c348cb258f2deaaef8092236ed41150ab7b507c4b8126d2cd2": 1790006686,
+    "1bc271f9b12365c4e1b4470ab76dc3780ce2f4145e3b3b88156d0d2fada10aa8": 1790006687
   }
 }
