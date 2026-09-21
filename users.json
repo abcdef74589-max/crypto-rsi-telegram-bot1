@@ -487,7 +487,7 @@
     "AR:1D": "high",
     "PENDLE:1D": "high",
     "SYN:1D": "high",
-    "ONE:15m": "low",
+    "ONE:15m": "high",
     "LSK:15m": "low",
     "S:15m": "high",
     "ONE:1h": "high",
@@ -585,10 +585,15 @@
     "ICP:4h": "high",
     "KMNO:4h": "high",
     "MITO:1h": "high",
-    "NIL:15m": "high"
+    "NIL:15m": "high",
+    "OPG:1h": "high",
+    "MINA:1h": "high",
+    "SOXLB:4h": "high",
+    "OPG:4h": "high",
+    "MINA:4h": "high"
   },
   "sent_messages": {
-    "af8885049b951c1284e96e29721b3eba836f41e41df00587cf2c91cb7c332f54": 1789971623,
-    "235ece92b9629b56226f6fc1d7f23235585dd5677077c55eca77cd7ae1b32035": 1789971624
+    "31a7481cf1aa9dd6b0eb50737e0c9c6ad22cfc53c1127d5cff94b7a70578666d": 1789977048,
+    "4796e3901a9d2f8ecb8c9e7390fd98b79b9be0bb3339f9a873a8379d852d2057": 1789977048
   }
 }
