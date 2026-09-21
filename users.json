@@ -387,7 +387,7 @@
     "MUB:4h": "high",
     "TIA:4h": "high",
     "A:4h": "high",
-    "STRK:15m": "high",
+    "STRK:15m": "low",
     "FF:15m": "high",
     "THE:1h": "high",
     "STRK:1h": "high",
@@ -597,7 +597,7 @@
     "MUBARAK:1h": "high"
   },
   "sent_messages": {
-    "3f893e6cfd871ecc6c15dba75847f081c23b6ef28010b6efc148172b1376e1dd": 1789995058,
-    "a36c4fdff2f20a77486dbebcc03ad41acb0d3af7c389414800b7322c3628674c": 1789995058
+    "0bab59807ae9634707ea90af31ee2390d27ed0a7f18a4167497db973e06d9d62": 1789998690,
+    "4fb1964309911971bd7048a5f948b9b2e9bd0e8ea9eca5d4f53bcfe7d9e2f292": 1789998690
   }
 }
