@@ -462,7 +462,7 @@
     "GALA:4h": "high",
     "LDO:4h": "high",
     "BONK:15m": "high",
-    "SYN:15m": "low",
+    "SYN:15m": "high",
     "BONK:1h": "high",
     "ASTER:15m": "high",
     "ZK:15m": "low",
@@ -603,7 +603,7 @@
     "INTCB:1h": "high"
   },
   "sent_messages": {
-    "3250c908bb756187bb64692beedf4d768081cfc1f4bc9461eb7e65e6676031e1": 1790013038,
-    "0878b568e1b2ea1ee61d8222ed4b55c011a970ae1463ab9da8ab1f7bcf274671": 1790013038
+    "9e0208338608c2088fb85be396262a0b9b14d2a5674e84a8e4bd08d7667a27bd": 1790019392,
+    "42d6b5f9e092d06ce58998c87701a6c59e011a0938b822082c17df2f59dfd1c2": 1790019392
   }
 }
