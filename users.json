@@ -257,7 +257,7 @@
     "LTC:1h": "high",
     "BCH:1h": "high",
     "DOT:1h": "high",
-    "FET:1h": "low",
+    "FET:1h": "high",
     "FIL:1h": "high",
     "XPL:1h": "high",
     "PENGU:1h": "high",
@@ -597,7 +597,7 @@
     "MUBARAK:1h": "high"
   },
   "sent_messages": {
-    "52f9bb69887a277e7b7a52b352ffcea8e0d70ee1b406ac08b342c3007c3571f7": 1789990579,
-    "a7efc23754282b795873760d0ca5f2e7123fafeda1ffc499e863ed946a59a484": 1789990580
+    "3f893e6cfd871ecc6c15dba75847f081c23b6ef28010b6efc148172b1376e1dd": 1789995058,
+    "a36c4fdff2f20a77486dbebcc03ad41acb0d3af7c389414800b7322c3628674c": 1789995058
   }
 }
