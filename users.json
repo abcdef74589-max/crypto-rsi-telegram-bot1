@@ -314,7 +314,7 @@
     "CRV:15m": "high",
     "ZRO:15m": "high",
     "SKY:15m": "high",
-    "SNDKB:15m": "high",
+    "SNDKB:15m": "low",
     "POL:15m": "high",
     "EURI:15m": "high",
     "QQQB:15m": "high",
@@ -408,7 +408,7 @@
     "BFUSD:4h": "low",
     "EIGEN:4h": "high",
     "PROM:15m": "low",
-    "SNXXB:15m": "high",
+    "SNXXB:15m": "low",
     "XUSD:15m": "low",
     "XRP:1h": "high",
     "CRCLB:1h": "high",
@@ -488,7 +488,7 @@
     "PENDLE:1D": "high",
     "SYN:1D": "high",
     "ONE:15m": "high",
-    "LSK:15m": "high",
+    "LSK:15m": "low",
     "S:15m": "high",
     "ONE:1h": "high",
     "JST:15m": "high",
@@ -602,7 +602,7 @@
     "FORM:1h": "high"
   },
   "sent_messages": {
-    "f6855e133c4b6876bd3fa70c81eea90715add890d3b01871c01ff7a7fced89c7": 1790009419,
-    "3490bced0eba4a904203b1fd3c60925464cd473ed5e36601a1d0b109c2db4569": 1790009420
+    "094a56b26e98bbb5dc17852022916c71028f8f394936d615b885d7552e616537": 1790011298,
+    "0e5b703f08e88ba71d62e886fafcb8ec2bc85d9e5346111c6a3e3fd0e09f97ff": 1790011298
   }
 }
