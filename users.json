@@ -487,7 +487,7 @@
     "AR:1D": "high",
     "PENDLE:1D": "high",
     "SYN:1D": "high",
-    "ONE:15m": "high",
+    "ONE:15m": "low",
     "LSK:15m": "low",
     "S:15m": "high",
     "ONE:1h": "high",
@@ -619,7 +619,7 @@
     "ORDI:4h": "high"
   },
   "sent_messages": {
-    "d4adbd80fb66963f9022bdda5ef8f021c720e0f966e227ed86896760676ea9c7": 1790059886,
-    "91bfd47cd0c9b8eedf657446cefd47ca7040b55dd3156ba8e659f8ddac47e829": 1790059886
+    "580d63bc4313367012c47b219e10dc0502db83c3a1657cc34aee2351ddca8b4f": 1790070662,
+    "86d7081527ef9025c7db1d34025fed76ff104805f228aba22369582fd9cac615": 1790070662
   }
 }
