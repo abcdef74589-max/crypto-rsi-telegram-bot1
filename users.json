@@ -505,7 +505,7 @@
     "HEI:4h": "high",
     "SUPER:4h": "high",
     "LPT:4h": "high",
-    "BANK:15m": "high",
+    "BANK:15m": "low",
     "EPIC:15m": "high",
     "ALGO:1h": "high",
     "USD1:15m": "low",
@@ -624,7 +624,7 @@
     "BROCCOLI714:1h": "high"
   },
   "sent_messages": {
-    "5e266bf16b53855a4132ddeaaa3349c99b977661028c34a8cc0454b38b190254": 1790085087,
-    "963af40a073736894c2b36d25d5f8290264995fdf36ee9ca05779f929dd942f5": 1790085087
+    "8d1fb7deea3f4875d1ccf73e54336437c42e36fad2bf15f58693f29fe0cd47c5": 1790087815,
+    "cc12bdbdd6c3d48d69c1cfae0886e88f0f04c712be80d66642de464db7a43b86": 1790087815
   }
 }
