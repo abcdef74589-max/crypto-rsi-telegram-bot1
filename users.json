@@ -283,7 +283,7 @@
     "BFUSD:15m": "low",
     "BTC:15m": "high",
     "BCH:15m": "high",
-    "MSTRB:15m": "low",
+    "MSTRB:15m": "high",
     "ENA:1h": "high",
     "PUMP:1h": "high",
     "PEPE:1h": "high",
@@ -306,7 +306,7 @@
     "GRAM:15m": "high",
     "WBTC:15m": "high",
     "GOOGLB:15m": "high",
-    "NVDAB:15m": "low",
+    "NVDAB:15m": "high",
     "PENDLE:15m": "low",
     "牛来:15m": "high",
     "ZAMA:15m": "low",
@@ -314,7 +314,7 @@
     "CRV:15m": "high",
     "ZRO:15m": "high",
     "SKY:15m": "high",
-    "SNDKB:15m": "low",
+    "SNDKB:15m": "high",
     "POL:15m": "high",
     "EURI:15m": "high",
     "QQQB:15m": "high",
@@ -623,7 +623,7 @@
     "ETC:15m": "high"
   },
   "sent_messages": {
-    "313e2409507afc9fefad59e5b223ac24e109332fce72c3e458c17aff12fe9836": 1790082334,
-    "f25338a76efe39ca1557ee928aa9a62fd149f79cc54b3f231421d1c08c0e4c63": 1790082334
+    "e4d8f898ccb8758c819ebc2bb7aa8cd1827a90f2c8bf0277a8084893b073716a": 1790084122,
+    "f9f506e05b55c5e0b83e2976382f52f3200797dcd413661d321c9feab7a39da7": 1790084123
   }
 }
