@@ -616,10 +616,11 @@
     "WBTC:4h": "high",
     "QQQB:4h": "high",
     "MEGA:4h": "high",
-    "ORDI:4h": "high"
+    "ORDI:4h": "high",
+    "MARSCOIN:1h": "high"
   },
   "sent_messages": {
-    "580d63bc4313367012c47b219e10dc0502db83c3a1657cc34aee2351ddca8b4f": 1790070662,
-    "86d7081527ef9025c7db1d34025fed76ff104805f228aba22369582fd9cac615": 1790070662
+    "88b1a9103454e6a8fe01ccb6353e25b9d952e3a5a71fffcae2381eda192ce787": 1790074270,
+    "19397cb81eabaeab6bab949aeb589847b7058ef374e41ea2a23768982ab0df3d": 1790074270
   }
 }
