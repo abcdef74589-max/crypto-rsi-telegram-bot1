@@ -321,7 +321,7 @@
     "SEI:15m": "high",
     "DOT:15m": "high",
     "INJ:15m": "high",
-    "MUB:15m": "low",
+    "MUB:15m": "high",
     "TIA:15m": "high",
     "BTC:1h": "high",
     "ZEC:1h": "high",
@@ -408,7 +408,7 @@
     "BFUSD:4h": "low",
     "EIGEN:4h": "high",
     "PROM:15m": "low",
-    "SNXXB:15m": "low",
+    "SNXXB:15m": "high",
     "XUSD:15m": "low",
     "XRP:1h": "high",
     "CRCLB:1h": "high",
@@ -620,10 +620,11 @@
     "MARSCOIN:1h": "high",
     "MARSCOIN:4h": "high",
     "BABY:4h": "high",
-    "ETC:15m": "high"
+    "ETC:15m": "high",
+    "BROCCOLI714:1h": "high"
   },
   "sent_messages": {
-    "e4d8f898ccb8758c819ebc2bb7aa8cd1827a90f2c8bf0277a8084893b073716a": 1790084122,
-    "f9f506e05b55c5e0b83e2976382f52f3200797dcd413661d321c9feab7a39da7": 1790084123
+    "5e266bf16b53855a4132ddeaaa3349c99b977661028c34a8cc0454b38b190254": 1790085087,
+    "963af40a073736894c2b36d25d5f8290264995fdf36ee9ca05779f929dd942f5": 1790085087
   }
 }
