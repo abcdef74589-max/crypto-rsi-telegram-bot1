@@ -334,7 +334,7 @@
     "RAY:1h": "high",
     "WBTC:1h": "high",
     "GOOGLB:1h": "high",
-    "PENDLE:1h": "high",
+    "PENDLE:1h": "low",
     "ZRO:1h": "high",
     "TUT:15m": "high",
     "PAXG:15m": "low",
@@ -605,10 +605,21 @@
     "MINA:15m": "high",
     "BNSOL:1h": "high",
     "KERNEL:15m": "high",
-    "KERNEL:1h": "high"
+    "KERNEL:1h": "high",
+    "XLM:4h": "high",
+    "PHA:4h": "high",
+    "MUBARAK:4h": "high",
+    "SHIB:4h": "high",
+    "WIF:4h": "high",
+    "KERNEL:4h": "high",
+    "FLOKI:4h": "high",
+    "WBTC:4h": "high",
+    "QQQB:4h": "high",
+    "MEGA:4h": "high",
+    "ORDI:4h": "high"
   },
   "sent_messages": {
-    "d4110314e872cd8ae8d1d311f78cf760d674528b21eea56bfe62b77a6bc510cb": 1790048131,
-    "fe301fe20ac3539d5f2fa0b545f8cfe1652f864cfc7676688c502f61085f4987": 1790048131
+    "3b18381b5d8a94263fd127f20bc4b79164bb6c45086b5788d1714ea6929e624c": 1790049066,
+    "2ea591365c368382c903c96d89acc66521f265ee10d3021c11aca3bcb1145940": 1790049067
   }
 }
