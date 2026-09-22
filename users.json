@@ -591,7 +591,7 @@
     "SOXLB:4h": "high",
     "OPG:4h": "high",
     "MINA:4h": "high",
-    "PHA:15m": "high",
+    "PHA:15m": "low",
     "MUBARAK:15m": "high",
     "PHA:1h": "high",
     "MUBARAK:1h": "high",
@@ -619,7 +619,7 @@
     "ORDI:4h": "high"
   },
   "sent_messages": {
-    "667f7c8cf22d5f5e23217f610626e7696d9bacc9d2950a5935b3d9374835d1c0": 1790054425,
-    "f8b1f926ef574686953cdf367b91dd23cb4db96fa6f2c54d15a7a5f7012fcc62": 1790054426
+    "d4adbd80fb66963f9022bdda5ef8f021c720e0f966e227ed86896760676ea9c7": 1790059886,
+    "91bfd47cd0c9b8eedf657446cefd47ca7040b55dd3156ba8e659f8ddac47e829": 1790059886
   }
 }
