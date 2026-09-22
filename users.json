@@ -220,7 +220,7 @@
     "ONDO:15m": "low",
     "APT:15m": "high",
     "KORUB:15m": "low",
-    "SOXLB:15m": "low",
+    "SOXLB:15m": "high",
     "RENDER:15m": "high",
     "A:15m": "high",
     "BNB:15m": "high",
@@ -635,9 +635,7 @@
     "CHR:15m": "high"
   },
   "sent_messages": {
-    "b0d4a3e80b3b3949ae1b4a26389c055aa7962429d047b6009c8f6eb164a23f3b": 1790099368,
-    "7a7b0e8dbc32ed5069a343b6b652cd01037c892583e9aa09859f175b0a0e4e2c": 1790099368,
-    "fe4f268e41ffc33986c03092318563edab186d200576993b9d0c6c6f6f0fc07b": 1790099477,
-    "0ee836b222d846ae6b35d322d23d5a4a28c02d4effdec48d4287b75fd56a15f5": 1790099478
+    "fffefe19707b1c473271da34c9c440dbdad553a72ebeec1da2a93803927b310e": 1790105779,
+    "b06976cab3e8880baa3ec7d352042a7d410e1a14d928ae31f5987c0045d695a0": 1790105780
   }
 }
