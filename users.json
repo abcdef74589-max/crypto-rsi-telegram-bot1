@@ -604,7 +604,7 @@
     "XRP:4h": "high",
     "MINA:15m": "high",
     "BNSOL:1h": "high",
-    "KERNEL:15m": "high",
+    "KERNEL:15m": "low",
     "KERNEL:1h": "high",
     "XLM:4h": "high",
     "PHA:4h": "high",
@@ -622,14 +622,14 @@
     "BABY:4h": "high",
     "ETC:15m": "high",
     "BROCCOLI714:1h": "high",
-    "BROCCOLI714:15m": "high"
+    "BROCCOLI714:15m": "high",
+    "BROCCOLI714:4h": "high",
+    "ZRO:4h": "high",
+    "GIGGLE:4h": "high",
+    "TST:4h": "high"
   },
   "sent_messages": {
-    "8d1fb7deea3f4875d1ccf73e54336437c42e36fad2bf15f58693f29fe0cd47c5": 1790087815,
-    "cc12bdbdd6c3d48d69c1cfae0886e88f0f04c712be80d66642de464db7a43b86": 1790087815,
-    "006dacc40866ac1b34f5bed8c4fbf00cbf3d78bd4b3a4c6b64e6ff60c14c6e74": 1790088573,
-    "04e0a88ba0021cb3260b74e4b4037db56abdb16d66b086eb172508631a7dc42f": 1790088573,
-    "0da21dcbc06917d45ce9da680b87704d4558476d771ecf949ffd674a991f2af5": 1790088682,
-    "eb414a083f83fdf627870f19d3dffe5ce04277fa977c1d4a5c6fec115382f0a9": 1790088683
+    "d4134ffadafba2909b919817075d58e2dbc36e6cb8dafc4b2c9c59012e3765b7": 1790092244,
+    "74e1ae89b735fa83f3d6b99987af4c36f0a09e87c1476b46b2d583b1c6149fe1": 1790092245
   }
 }
