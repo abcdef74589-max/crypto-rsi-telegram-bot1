@@ -462,7 +462,7 @@
     "GALA:4h": "high",
     "LDO:4h": "high",
     "BONK:15m": "high",
-    "SYN:15m": "high",
+    "SYN:15m": "low",
     "BONK:1h": "high",
     "ASTER:15m": "high",
     "ZK:15m": "low",
@@ -604,10 +604,11 @@
     "XRP:4h": "high",
     "MINA:15m": "high",
     "BNSOL:1h": "high",
-    "KERNEL:15m": "high"
+    "KERNEL:15m": "high",
+    "KERNEL:1h": "high"
   },
   "sent_messages": {
-    "e34778effb1f8177cc8a6fced1fd809c291a4e527f14780302b4c860ca715fe5": 1790040983,
-    "cce42d0ce531240a5d7cf865fb6a8643f135b78bd6c9ac2b38fa5938725020b3": 1790040983
+    "8772cb418df7474292e3f6c206f7c40e9d55e6ca26241bcf34c961a390889e5b": 1790045412,
+    "810909336a0efdcf583f2b1107b2a5e593246e369f6516d4009263ef8661bc4c": 1790045413
   }
 }
