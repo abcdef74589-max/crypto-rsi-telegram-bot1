@@ -626,10 +626,13 @@
     "BROCCOLI714:4h": "high",
     "ZRO:4h": "high",
     "GIGGLE:4h": "high",
-    "TST:4h": "high"
+    "TST:4h": "high",
+    "GIGGLE:15m": "high",
+    "GIGGLE:1h": "high",
+    "TST:1h": "high"
   },
   "sent_messages": {
-    "d4134ffadafba2909b919817075d58e2dbc36e6cb8dafc4b2c9c59012e3765b7": 1790092244,
-    "74e1ae89b735fa83f3d6b99987af4c36f0a09e87c1476b46b2d583b1c6149fe1": 1790092245
+    "c64cd54e88792baae81ec174f0143ca1a69b0710873549b632fd2373a6cd1b5a": 1790095830,
+    "710022b0b4b404bf96160eb6dad357d45d2bb141c80f68786ee6ade32ec98971": 1790095831
   }
 }
