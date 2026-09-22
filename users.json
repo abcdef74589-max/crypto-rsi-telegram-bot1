@@ -217,7 +217,7 @@
   },
   "states": {
     "SUI:15m": "high",
-    "ONDO:15m": "high",
+    "ONDO:15m": "low",
     "APT:15m": "high",
     "KORUB:15m": "low",
     "SOXLB:15m": "low",
@@ -283,7 +283,7 @@
     "BFUSD:15m": "low",
     "BTC:15m": "high",
     "BCH:15m": "high",
-    "MSTRB:15m": "high",
+    "MSTRB:15m": "low",
     "ENA:1h": "high",
     "PUMP:1h": "high",
     "PEPE:1h": "high",
@@ -299,14 +299,14 @@
     "THE:15m": "high",
     "HBAR:15m": "high",
     "BNCB:15m": "low",
-    "ETH:15m": "high",
+    "ETH:15m": "low",
     "XRP:15m": "high",
     "CRCLB:15m": "low",
     "XLM:15m": "high",
     "GRAM:15m": "high",
     "WBTC:15m": "high",
     "GOOGLB:15m": "high",
-    "NVDAB:15m": "high",
+    "NVDAB:15m": "low",
     "PENDLE:15m": "low",
     "牛来:15m": "high",
     "ZAMA:15m": "low",
@@ -321,7 +321,7 @@
     "SEI:15m": "high",
     "DOT:15m": "high",
     "INJ:15m": "high",
-    "MUB:15m": "high",
+    "MUB:15m": "low",
     "TIA:15m": "high",
     "BTC:1h": "high",
     "ZEC:1h": "high",
@@ -619,7 +619,7 @@
     "ORDI:4h": "high"
   },
   "sent_messages": {
-    "fa474b428efb29912571ff993cd35cf82514faf8d1f539eb031498a4f452bfd1": 1790053491,
-    "43b0647c54bdf6de55448eb3f077ebbddc0c8c2e609d2d3bcff7095448fb1dd3": 1790053491
+    "667f7c8cf22d5f5e23217f610626e7696d9bacc9d2950a5935b3d9374835d1c0": 1790054425,
+    "f8b1f926ef574686953cdf367b91dd23cb4db96fa6f2c54d15a7a5f7012fcc62": 1790054426
   }
 }
