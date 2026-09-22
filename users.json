@@ -231,7 +231,7 @@
     "MORPHO:15m": "low",
     "OP:15m": "high",
     "CHIP:15m": "high",
-    "VIRTUAL:15m": "low",
+    "VIRTUAL:15m": "high",
     "BABY:15m": "high",
     "NEAR:15m": "low",
     "SOL:15m": "high",
@@ -602,10 +602,11 @@
     "FORM:1h": "high",
     "INTCB:1h": "high",
     "XRP:4h": "high",
-    "MINA:15m": "high"
+    "MINA:15m": "high",
+    "BNSOL:1h": "high"
   },
   "sent_messages": {
-    "20ebdfcf2c02c01e17e669281ee512d4d54961544e2c93da13ee1719c5b33c68": 1790036447,
-    "081fdcdc248d0b641f068670025564e7edaa48d36d5b721d7f972695572ddbd3": 1790036448
+    "6f47e21e5c75ffa88cd8c905bb1713938f8863fe749925021f5802a83d1949a6": 1790038276,
+    "cf38a977a476f7bbfc8274235b0fda292e187a02986fad376e559a2addb046a6": 1790038277
   }
 }
