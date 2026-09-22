@@ -233,7 +233,7 @@
     "CHIP:15m": "high",
     "VIRTUAL:15m": "high",
     "BABY:15m": "high",
-    "NEAR:15m": "low",
+    "NEAR:15m": "high",
     "SOL:15m": "high",
     "ARB:15m": "high",
     "ENA:15m": "high",
@@ -298,10 +298,10 @@
     "CHIP:1h": "high",
     "THE:15m": "high",
     "HBAR:15m": "high",
-    "BNCB:15m": "high",
+    "BNCB:15m": "low",
     "ETH:15m": "high",
     "XRP:15m": "high",
-    "CRCLB:15m": "high",
+    "CRCLB:15m": "low",
     "XLM:15m": "high",
     "GRAM:15m": "high",
     "WBTC:15m": "high",
@@ -603,10 +603,11 @@
     "INTCB:1h": "high",
     "XRP:4h": "high",
     "MINA:15m": "high",
-    "BNSOL:1h": "high"
+    "BNSOL:1h": "high",
+    "KERNEL:15m": "high"
   },
   "sent_messages": {
-    "6f47e21e5c75ffa88cd8c905bb1713938f8863fe749925021f5802a83d1949a6": 1790038276,
-    "cf38a977a476f7bbfc8274235b0fda292e187a02986fad376e559a2addb046a6": 1790038277
+    "e34778effb1f8177cc8a6fced1fd809c291a4e527f14780302b4c860ca715fe5": 1790040983,
+    "cce42d0ce531240a5d7cf865fb6a8643f135b78bd6c9ac2b38fa5938725020b3": 1790040983
   }
 }
