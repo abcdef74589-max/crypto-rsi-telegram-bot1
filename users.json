@@ -629,10 +629,15 @@
     "TST:4h": "high",
     "GIGGLE:15m": "high",
     "GIGGLE:1h": "high",
-    "TST:1h": "high"
+    "TST:1h": "high",
+    "LSK:1h": "low",
+    "CHR:1h": "high",
+    "CHR:15m": "high"
   },
   "sent_messages": {
-    "c64cd54e88792baae81ec174f0143ca1a69b0710873549b632fd2373a6cd1b5a": 1790095830,
-    "710022b0b4b404bf96160eb6dad357d45d2bb141c80f68786ee6ade32ec98971": 1790095831
+    "b0d4a3e80b3b3949ae1b4a26389c055aa7962429d047b6009c8f6eb164a23f3b": 1790099368,
+    "7a7b0e8dbc32ed5069a343b6b652cd01037c892583e9aa09859f175b0a0e4e2c": 1790099368,
+    "fe4f268e41ffc33986c03092318563edab186d200576993b9d0c6c6f6f0fc07b": 1790099477,
+    "0ee836b222d846ae6b35d322d23d5a4a28c02d4effdec48d4287b75fd56a15f5": 1790099478
   }
 }
