@@ -598,7 +598,7 @@
     "WIF:1h": "high",
     "WIF:15m": "high",
     "FLOKI:15m": "high",
-    "FORM:15m": "high",
+    "FORM:15m": "low",
     "FORM:1h": "high",
     "INTCB:1h": "high",
     "XRP:4h": "high",
@@ -608,7 +608,7 @@
     "KERNEL:1h": "high"
   },
   "sent_messages": {
-    "8772cb418df7474292e3f6c206f7c40e9d55e6ca26241bcf34c961a390889e5b": 1790045412,
-    "810909336a0efdcf583f2b1107b2a5e593246e369f6516d4009263ef8661bc4c": 1790045413
+    "d4110314e872cd8ae8d1d311f78cf760d674528b21eea56bfe62b77a6bc510cb": 1790048131,
+    "fe301fe20ac3539d5f2fa0b545f8cfe1652f864cfc7676688c502f61085f4987": 1790048131
   }
 }
