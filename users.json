@@ -617,10 +617,14 @@
     "QQQB:4h": "high",
     "MEGA:4h": "high",
     "ORDI:4h": "high",
-    "MARSCOIN:1h": "high"
+    "MARSCOIN:1h": "high",
+    "MARSCOIN:4h": "high",
+    "BABY:4h": "high"
   },
   "sent_messages": {
     "fd3ed07f19e45671555b47c0a534dfdeb96b37b7b9fbc3ee9b10de839cb927d5": 1790076966,
-    "a8eeca48d3d67254996aec276d273e8a064eae4e70ecb8a45058f1bf14d120f1": 1790076966
+    "a8eeca48d3d67254996aec276d273e8a064eae4e70ecb8a45058f1bf14d120f1": 1790076966,
+    "23b7da5c52d8e753d5b34c73e94ae2d44e375de30fb753be291313bdeb8d27c6": 1790077859,
+    "a4962b115c7ab3ef2cf77f640e13753da405bd0a736422872aa6a521ebc3606f": 1790077859
   }
 }
