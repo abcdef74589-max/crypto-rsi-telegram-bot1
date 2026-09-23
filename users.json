@@ -328,7 +328,7 @@
     "DOGE:1h": "low",
     "SNDKB:1h": "high",
     "MSTRB:1h": "high",
-    "SPCXB:1h": "high",
+    "SPCXB:1h": "low",
     "INJ:1h": "high",
     "GRAM:1h": "low",
     "RAY:1h": "high",
@@ -655,7 +655,7 @@
     "FLOKI:1h": "low"
   },
   "sent_messages": {
-    "fca427f68bff8ca007251816d3c824480ec1522f74ef1a12706011254afb7eb3": 1790184066,
-    "ec9669972ea04ca95d8725689f57ee58d4583ae7cb9e395a12a1d51750b460e7": 1790184067
+    "52c6cb7a628f9bdd10c705cd4cf108c82ea819a9c393ee509065f0972510e02f": 1790185895,
+    "89c79a077c0917eda82312290d72eeb43f1a446f912a217592f8d59a953b32f8": 1790185895
   }
 }
