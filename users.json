@@ -278,7 +278,7 @@
     "AAVE:15m": "high",
     "SHIB:15m": "high",
     "DOGE:15m": "high",
-    "TRX:15m": "low",
+    "TRX:15m": "high",
     "ICP:15m": "high",
     "BFUSD:15m": "low",
     "BTC:15m": "high",
@@ -637,7 +637,7 @@
     "ETC:1h": "high"
   },
   "sent_messages": {
-    "b30f8ad7a0ff20f9f4c4c288f6e426627c0ffdca803218b53d5e5af6bde167a1": 1790124653,
-    "d25bc7aa2722773436014c076008658e4c6b9031bdd26a10b1681e5ad25c6348": 1790124653
+    "9e7969a31ed953439663bd63561f29ade996774a91bfae0a293c830a707d4870": 1790127305,
+    "e2a69892cb4ed4837795810f0f2e1a5abd58934d0583953d587b016ef44337c9": 1790127306
   }
 }
