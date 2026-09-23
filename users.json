@@ -290,7 +290,7 @@
     "AVAX:1h": "high",
     "AAVE:1h": "high",
     "TRUMP:1h": "high",
-    "CAKE:1h": "low",
+    "CAKE:1h": "high",
     "ETHFI:1h": "high",
     "SHIB:1h": "high",
     "AERO:1h": "high",
@@ -634,10 +634,16 @@
     "CHR:1h": "high",
     "CHR:15m": "high",
     "SKHYB:15m": "high",
-    "ETC:1h": "high"
+    "ETC:1h": "high",
+    "CHR:4h": "high",
+    "KITE:4h": "high",
+    "TRUMP:4h": "high",
+    "TUT:4h": "high"
   },
   "sent_messages": {
-    "9e7969a31ed953439663bd63561f29ade996774a91bfae0a293c830a707d4870": 1790127305,
-    "e2a69892cb4ed4837795810f0f2e1a5abd58934d0583953d587b016ef44337c9": 1790127306
+    "ebd9e9bc9d45745a538960fa25435ec554828c20677621885f4294c73b167c32": 1790135353,
+    "c5a9e56c7e5c98611740deb9f9a01a9b33d186ed1b947dd721e2f6da2d062dfe": 1790135354,
+    "ed43bd30c9d0d766a8652abec6d7ed83b6c63f660a8db290b6d142c99058c19d": 1790135463,
+    "80761ce53c4ef23366275ebecbef424f5eadfcbd6562ee142c97a57240428ab1": 1790135463
   }
 }
