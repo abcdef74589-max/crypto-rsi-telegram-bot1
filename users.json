@@ -298,7 +298,7 @@
     "CHIP:1h": "high",
     "THE:15m": "high",
     "HBAR:15m": "high",
-    "BNCB:15m": "low",
+    "BNCB:15m": "high",
     "ETH:15m": "low",
     "XRP:15m": "high",
     "CRCLB:15m": "high",
@@ -641,9 +641,7 @@
     "TUT:4h": "high"
   },
   "sent_messages": {
-    "ebd9e9bc9d45745a538960fa25435ec554828c20677621885f4294c73b167c32": 1790135353,
-    "c5a9e56c7e5c98611740deb9f9a01a9b33d186ed1b947dd721e2f6da2d062dfe": 1790135354,
-    "ed43bd30c9d0d766a8652abec6d7ed83b6c63f660a8db290b6d142c99058c19d": 1790135463,
-    "80761ce53c4ef23366275ebecbef424f5eadfcbd6562ee142c97a57240428ab1": 1790135463
+    "7e546c73f2f481649e8e3f5de01f76d924f7ad04cf9109ea71568880d5b8ad1f": 1790138172,
+    "9f31b815fab47db26bf4dd959208d32c21d6254873314796bdf536a6e219a7ce": 1790138172
   }
 }
