@@ -270,7 +270,7 @@
     "OP:1h": "high",
     "VIRTUAL:1h": "high",
     "A:1h": "high",
-    "BABY:1h": "high",
+    "BABY:1h": "low",
     "CFG:1h": "high",
     "UNI:15m": "low",
     "REZ:15m": "high",
@@ -655,10 +655,11 @@
     "FLOKI:1h": "low",
     "WLFI:1h": "low",
     "CRV:1h": "low",
-    "WLFI:4h": "low"
+    "WLFI:4h": "low",
+    "NOM:1h": "high"
   },
   "sent_messages": {
-    "eb71947af3ed2a7324829c45ed035b00c5391d8967ea91c6c5f0416f7622348b": 1790200253,
-    "33041bb4b4ce0ec34920acf3d515755f05765d36e8b77ab61b66f864eae91857": 1790200254
+    "c8a1d491e8c5caa0e593743895b1488a82ad55100af7a38d33452c1367bc53fc": 1790203809,
+    "e27c1fac760d70e863264f5dbe307f7f43a82a88d9751865bd2593eac4373cf4": 1790203809
   }
 }
