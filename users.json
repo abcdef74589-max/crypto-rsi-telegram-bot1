@@ -550,7 +550,7 @@
     "GUN:15m": "high",
     "HOME:15m": "low",
     "ALLO:15m": "high",
-    "COTI:1h": "low",
+    "COTI:1h": "high",
     "ALLO:1h": "high",
     "TRX:4h": "high",
     "CTSI:4h": "high",
@@ -592,7 +592,7 @@
     "OPG:4h": "high",
     "MINA:4h": "high",
     "PHA:15m": "high",
-    "MUBARAK:15m": "high",
+    "MUBARAK:15m": "low",
     "PHA:1h": "high",
     "MUBARAK:1h": "high",
     "WIF:1h": "high",
@@ -648,6 +648,8 @@
   },
   "sent_messages": {
     "d0463576787e075d36623f873e97150a7c55c600e3ca00b3abaec203c805306b": 1790156169,
-    "736f9e9553203be4178ec66d6de765b21a008e7c5eaa506d385a8f26d1d84c9f": 1790156169
+    "736f9e9553203be4178ec66d6de765b21a008e7c5eaa506d385a8f26d1d84c9f": 1790156169,
+    "37e346aca389ca7c8d0ff512593d9c7940c9234dc39ea52aa4890cabec81e11a": 1790156986,
+    "2d1b5173f3cafcf53cbf0da73e11cac19dd853354f1195450840083669b3af4b": 1790156986
   }
 }
