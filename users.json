@@ -656,10 +656,17 @@
     "WLFI:1h": "low",
     "CRV:1h": "low",
     "WLFI:4h": "low",
-    "NOM:1h": "high"
+    "NOM:1h": "high",
+    "NOM:4h": "high",
+    "BCH:1D": "high",
+    "ZRO:1D": "high",
+    "MET:1D": "high",
+    "SUPER:1D": "high",
+    "MINA:1D": "high",
+    "INTCB:1D": "high"
   },
   "sent_messages": {
-    "c8a1d491e8c5caa0e593743895b1488a82ad55100af7a38d33452c1367bc53fc": 1790203809,
-    "e27c1fac760d70e863264f5dbe307f7f43a82a88d9751865bd2593eac4373cf4": 1790203809
+    "f07242d5368301af6f907ae675ac11bb27b4c244e0894986fcf3df1f0192f921": 1790207364,
+    "121cd45834d347333ea10dc38c363c8f085c913760a8bd2cc45c0ca6a005a3d6": 1790207365
   }
 }
