@@ -343,7 +343,7 @@
     "G:15m": "low",
     "SPYB:15m": "low",
     "ETH:1h": "high",
-    "XAUT:1h": "high",
+    "XAUT:1h": "low",
     "G:1h": "high",
     "ZAMA:1h": "high",
     "SOXLB:1h": "high",
@@ -645,10 +645,11 @@
     "MET:4h": "high",
     "APE:4h": "high",
     "U:15m": "low",
-    "PLUME:4h": "high"
+    "PLUME:4h": "high",
+    "PAXG:1h": "low"
   },
   "sent_messages": {
-    "96d76f5819ef9b72bbd9f76d06d6b9409b8267e18863fbdb3b2a259e9c19c6d0": 1790170540,
-    "6f894fc5c03446a23cd81a13b7d0946add2af70fbdfbb2eccab05d47149678bb": 1790170540
+    "cf5b3b44321835495fe6a343836ccd138ec80d5a2cc4cedf85ce3e49d28ad73c": 1790171450,
+    "6d4dc41b2571bdc4fc6b37df3e90d8737ee8abeb0329322a7743f48167ecaf6f": 1790171451
   }
 }
