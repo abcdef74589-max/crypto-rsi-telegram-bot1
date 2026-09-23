@@ -313,7 +313,7 @@
     "AERO:15m": "high",
     "CRV:15m": "high",
     "ZRO:15m": "high",
-    "SKY:15m": "high",
+    "SKY:15m": "low",
     "SNDKB:15m": "low",
     "POL:15m": "low",
     "EURI:15m": "high",
@@ -534,7 +534,7 @@
     "C:1D": "high",
     "STX:15m": "low",
     "STX:1h": "high",
-    "LDO:15m": "high",
+    "LDO:15m": "low",
     "ZIL:15m": "high",
     "ALLO:4h": "high",
     "ACE:15m": "high",
@@ -658,9 +658,7 @@
     "WLFI:4h": "low"
   },
   "sent_messages": {
-    "5ecc88c9e21f4782ad2882c9cb06e0577152abf1f5ea4f1e1f202a55478bb568": 1790192193,
-    "92ec814ba0a6299bc861d0cd3d1911b3bc9c035a7ffc246294474c1050549310": 1790192193,
-    "420d8b382384f97bfbe6705c522f839cd11c59cdb3ff639bdcb1a4f553368076": 1790193070,
-    "754b45cf031783c648b5382457393f4af016f380e0568bbc80946a9b428d5cae": 1790193070
+    "4b9decf9b1c8c13b26da41e6bb2a6661d4282e39d18db7e2fcc5e0eabdbd499a": 1790195733,
+    "ea313ea991ae45965c785b8d0ebfd7693916adc96603810a03c5b5a102a9874b": 1790195734
   }
 }
