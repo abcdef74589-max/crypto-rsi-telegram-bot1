@@ -272,7 +272,7 @@
     "A:1h": "high",
     "BABY:1h": "high",
     "CFG:1h": "high",
-    "UNI:15m": "high",
+    "UNI:15m": "low",
     "REZ:15m": "high",
     "AVAX:15m": "high",
     "AAVE:15m": "high",
@@ -647,9 +647,7 @@
     "U:15m": "low"
   },
   "sent_messages": {
-    "d0463576787e075d36623f873e97150a7c55c600e3ca00b3abaec203c805306b": 1790156169,
-    "736f9e9553203be4178ec66d6de765b21a008e7c5eaa506d385a8f26d1d84c9f": 1790156169,
-    "37e346aca389ca7c8d0ff512593d9c7940c9234dc39ea52aa4890cabec81e11a": 1790156986,
-    "2d1b5173f3cafcf53cbf0da73e11cac19dd853354f1195450840083669b3af4b": 1790156986
+    "dbcecc0266a05037bfe6f871916fec1ec2eac2695bc8567558665bd5355dc1b3": 1790159719,
+    "968909a13fedd150403278e63efc3502c734619cbe9a18e3f66b72757567c178": 1790159720
   }
 }
