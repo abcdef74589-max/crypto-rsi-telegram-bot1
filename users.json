@@ -633,10 +633,11 @@
     "LSK:1h": "low",
     "CHR:1h": "high",
     "CHR:15m": "high",
-    "SKHYB:15m": "high"
+    "SKHYB:15m": "high",
+    "ETC:1h": "high"
   },
   "sent_messages": {
-    "8027a5de74874c1abfb6a797463e3c63cc846090e293c006e9e7901df7c07283": 1790123735,
-    "5f14dd85e5106a191cf48ca437ba0d817502ec77836f3e840406ce0fcd15bc71": 1790123736
+    "b30f8ad7a0ff20f9f4c4c288f6e426627c0ffdca803218b53d5e5af6bde167a1": 1790124653,
+    "d25bc7aa2722773436014c076008658e4c6b9031bdd26a10b1681e5ad25c6348": 1790124653
   }
 }
