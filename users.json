@@ -232,7 +232,7 @@
     "OP:15m": "low",
     "CHIP:15m": "high",
     "VIRTUAL:15m": "low",
-    "BABY:15m": "high",
+    "BABY:15m": "low",
     "NEAR:15m": "high",
     "SOL:15m": "high",
     "ARB:15m": "low",
@@ -488,7 +488,7 @@
     "PENDLE:1D": "high",
     "SYN:1D": "high",
     "ONE:15m": "low",
-    "LSK:15m": "low",
+    "LSK:15m": "high",
     "S:15m": "high",
     "ONE:1h": "high",
     "JST:15m": "high",
@@ -655,7 +655,7 @@
     "FLOKI:1h": "low"
   },
   "sent_messages": {
-    "52c6cb7a628f9bdd10c705cd4cf108c82ea819a9c393ee509065f0972510e02f": 1790185895,
-    "89c79a077c0917eda82312290d72eeb43f1a446f912a217592f8d59a953b32f8": 1790185895
+    "5ecc88c9e21f4782ad2882c9cb06e0577152abf1f5ea4f1e1f202a55478bb568": 1790192193,
+    "92ec814ba0a6299bc861d0cd3d1911b3bc9c035a7ffc246294474c1050549310": 1790192193
   }
 }
