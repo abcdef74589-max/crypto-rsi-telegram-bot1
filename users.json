@@ -235,7 +235,7 @@
     "BABY:15m": "high",
     "NEAR:15m": "high",
     "SOL:15m": "high",
-    "ARB:15m": "high",
+    "ARB:15m": "low",
     "ENA:15m": "high",
     "LINK:15m": "high",
     "TAO:15m": "high",
@@ -274,11 +274,11 @@
     "CFG:1h": "high",
     "UNI:15m": "low",
     "REZ:15m": "high",
-    "AVAX:15m": "high",
+    "AVAX:15m": "low",
     "AAVE:15m": "high",
     "SHIB:15m": "high",
     "DOGE:15m": "high",
-    "TRX:15m": "high",
+    "TRX:15m": "low",
     "ICP:15m": "high",
     "BFUSD:15m": "low",
     "BTC:15m": "low",
@@ -648,7 +648,7 @@
     "PLUME:4h": "high"
   },
   "sent_messages": {
-    "e8281b56b66623247b6720267b1a99d5370fbf11fe8996f5451a6637fa2daf43": 1790165160,
-    "71891b872964f67d1298ee686926867d7abb13f6877984a3d00168cbfca5cfab": 1790165160
+    "96d76f5819ef9b72bbd9f76d06d6b9409b8267e18863fbdb3b2a259e9c19c6d0": 1790170540,
+    "6f894fc5c03446a23cd81a13b7d0946add2af70fbdfbb2eccab05d47149678bb": 1790170540
   }
 }
