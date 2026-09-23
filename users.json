@@ -638,10 +638,11 @@
     "CHR:4h": "high",
     "KITE:4h": "high",
     "TRUMP:4h": "high",
-    "TUT:4h": "high"
+    "TUT:4h": "high",
+    "MET:15m": "high"
   },
   "sent_messages": {
-    "5689a485ff4d2189f05a8fac34d4ca1ccc43ef95976a32bc0059ee11bc2e235d": 1790140857,
-    "95271889cd8abb52c66fa43dcdf350b58c58cd497d14d2333c9c9882fbbcc983": 1790140857
+    "5de7c1e8562ddea377ffc372549918880f49df5934d775cc2360cfe7e469d587": 1790147143,
+    "4775214499ba8471ce8df2376781ed936276415bb6bf1525212378245aa93fd9": 1790147143
   }
 }
