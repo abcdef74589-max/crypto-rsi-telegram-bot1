@@ -407,7 +407,7 @@
     "AR:4h": "high",
     "BFUSD:4h": "low",
     "EIGEN:4h": "high",
-    "PROM:15m": "low",
+    "PROM:15m": "high",
     "SNXXB:15m": "high",
     "XUSD:15m": "low",
     "XRP:1h": "high",
@@ -643,6 +643,8 @@
   },
   "sent_messages": {
     "5de7c1e8562ddea377ffc372549918880f49df5934d775cc2360cfe7e469d587": 1790147143,
-    "4775214499ba8471ce8df2376781ed936276415bb6bf1525212378245aa93fd9": 1790147143
+    "4775214499ba8471ce8df2376781ed936276415bb6bf1525212378245aa93fd9": 1790147143,
+    "7d07d0fe1e1a2e240589c554be26640a3ed2ce97b2c833c2172d5c54078775ff": 1790147999,
+    "cf388ef57125aaee68adc50db04173782b49888894ad03e9ff0b30e0c4d60e6e": 1790148000
   }
 }
