@@ -639,12 +639,14 @@
     "KITE:4h": "high",
     "TRUMP:4h": "high",
     "TUT:4h": "high",
-    "MET:15m": "high"
+    "MET:15m": "high",
+    "MET:1h": "high",
+    "U:4h": "low",
+    "MET:4h": "high",
+    "APE:4h": "high"
   },
   "sent_messages": {
-    "5de7c1e8562ddea377ffc372549918880f49df5934d775cc2360cfe7e469d587": 1790147143,
-    "4775214499ba8471ce8df2376781ed936276415bb6bf1525212378245aa93fd9": 1790147143,
-    "7d07d0fe1e1a2e240589c554be26640a3ed2ce97b2c833c2172d5c54078775ff": 1790147999,
-    "cf388ef57125aaee68adc50db04173782b49888894ad03e9ff0b30e0c4d60e6e": 1790148000
+    "49491c1c1cdccaa861422773e59bde1ecb53f882e14d9e331c62c0a3914c3e7b": 1790149832,
+    "8ce644637ad88cd8d22dd78abfb9ba5ce9e1e2c33fa91a4538d6b0eeb7d22b33": 1790149833
   }
 }
