@@ -440,7 +440,7 @@
     "STG:4h": "low",
     "COTI:15m": "low",
     "RLUSD:15m": "low",
-    "PROVE:15m": "low",
+    "PROVE:15m": "high",
     "AVA:15m": "high",
     "RLUSD:1h": "low",
     "PROVE:1h": "high",
@@ -641,7 +641,7 @@
     "TUT:4h": "high"
   },
   "sent_messages": {
-    "7e546c73f2f481649e8e3f5de01f76d924f7ad04cf9109ea71568880d5b8ad1f": 1790138172,
-    "9f31b815fab47db26bf4dd959208d32c21d6254873314796bdf536a6e219a7ce": 1790138172
+    "5689a485ff4d2189f05a8fac34d4ca1ccc43ef95976a32bc0059ee11bc2e235d": 1790140857,
+    "95271889cd8abb52c66fa43dcdf350b58c58cd497d14d2333c9c9882fbbcc983": 1790140857
   }
 }
