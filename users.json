@@ -643,10 +643,11 @@
     "MET:1h": "high",
     "U:4h": "low",
     "MET:4h": "high",
-    "APE:4h": "high"
+    "APE:4h": "high",
+    "U:15m": "low"
   },
   "sent_messages": {
-    "49491c1c1cdccaa861422773e59bde1ecb53f882e14d9e331c62c0a3914c3e7b": 1790149832,
-    "8ce644637ad88cd8d22dd78abfb9ba5ce9e1e2c33fa91a4538d6b0eeb7d22b33": 1790149833
+    "35b957c18d8420e52ba66ffff0a2b83b923db38bdc678cace3c8e249431480dd": 1790150788,
+    "d9919e3b197f040056316b587b8a7d760f4596a702479f0bd48b2a0da48a367c": 1790150788
   }
 }
