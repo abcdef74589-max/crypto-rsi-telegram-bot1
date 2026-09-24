@@ -262,7 +262,7 @@
     "XPL:1h": "low",
     "PENGU:1h": "high",
     "APT:1h": "high",
-    "NVDAB:1h": "high",
+    "NVDAB:1h": "low",
     "MORPHO:1h": "high",
     "RENDER:1h": "low",
     "BNCB:1h": "high",
@@ -278,7 +278,7 @@
     "AAVE:15m": "low",
     "SHIB:15m": "low",
     "DOGE:15m": "low",
-    "TRX:15m": "high",
+    "TRX:15m": "low",
     "ICP:15m": "high",
     "BFUSD:15m": "low",
     "BTC:15m": "low",
@@ -294,7 +294,7 @@
     "ETHFI:1h": "high",
     "SHIB:1h": "low",
     "AERO:1h": "high",
-    "MUB:1h": "high",
+    "MUB:1h": "low",
     "CHIP:1h": "high",
     "THE:15m": "high",
     "HBAR:15m": "low",
@@ -326,7 +326,7 @@
     "BTC:1h": "low",
     "ZEC:1h": "high",
     "DOGE:1h": "low",
-    "SNDKB:1h": "high",
+    "SNDKB:1h": "low",
     "MSTRB:1h": "high",
     "SPCXB:1h": "low",
     "INJ:1h": "high",
@@ -348,7 +348,7 @@
     "ZAMA:1h": "high",
     "SOXLB:1h": "high",
     "SEI:1h": "high",
-    "QQQB:1h": "high",
+    "QQQB:1h": "low",
     "TIA:1h": "high",
     "TUT:1h": "high",
     "ZEC:4h": "high",
@@ -665,10 +665,11 @@
     "MINA:1D": "high",
     "INTCB:1D": "high",
     "NOM:15m": "high",
-    "BOME:15m": "high"
+    "BOME:15m": "high",
+    "PLUME:15m": "high"
   },
   "sent_messages": {
-    "2b64dc91e0b9b1ff3b05d6f1a16a585dd4c81679547dcf0b107d91d92dfd7dd0": 1790229974,
-    "ca5a56ef6f9ded2d5c46952152046e564f0ebc743d29be253d4a2e8a851d51ca": 1790229975
+    "ce621b8cfdae3264e800a153cb660f20c6491ff745f767f207238252dc84d0a6": 1790239892,
+    "bd05ee4248219622e6cf8847c6783c8e98e5f0b74f898258f2c51ac1ba911e22": 1790239893
   }
 }
