@@ -663,10 +663,11 @@
     "MET:1D": "high",
     "SUPER:1D": "high",
     "MINA:1D": "high",
-    "INTCB:1D": "high"
+    "INTCB:1D": "high",
+    "NOM:15m": "high"
   },
   "sent_messages": {
-    "aad85c65875b67f7423912d89a21c4e1e5bbb5a5142c3ec84bda2dd069e267ff": 1790209273,
-    "a3336ba4b3ed2f149af44aad7ffcf03afeb1eef142b095da339c5e98c9088c07": 1790209273
+    "5ce505d7214ff3028a9eb2bf79082bcc8423cd39f4bc5c78828a499bdd0cc6df": 1790211908,
+    "286c611a93f30aca5b1429501f3d3f6484ff2d9da9767f60bfd0e7fb76a6b600": 1790211908
   }
 }
