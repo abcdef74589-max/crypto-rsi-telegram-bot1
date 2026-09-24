@@ -252,19 +252,19 @@
     "ONDO:1h": "high",
     "WLD:1h": "low",
     "ADA:1h": "low",
-    "LINK:1h": "low",
+    "LINK:1h": "high",
     "TAO:1h": "low",
     "LTC:1h": "high",
     "BCH:1h": "high",
     "DOT:1h": "low",
     "FET:1h": "high",
     "FIL:1h": "low",
-    "XPL:1h": "low",
+    "XPL:1h": "high",
     "PENGU:1h": "high",
     "APT:1h": "high",
     "NVDAB:1h": "low",
     "MORPHO:1h": "high",
-    "RENDER:1h": "low",
+    "RENDER:1h": "high",
     "BNCB:1h": "high",
     "ICP:1h": "high",
     "OP:1h": "high",
@@ -669,10 +669,11 @@
     "PLUME:15m": "high",
     "TST:15m": "high",
     "PLUME:1h": "high",
-    "XAI:15m": "high"
+    "XAI:15m": "high",
+    "XAI:1h": "high"
   },
   "sent_messages": {
-    "fa44582823c7c8897ee1c52c9acdc741d47b209e4c5148d2ae9027ba11696c2d": 1790273105,
-    "f7d70bd6dc746bd97eae64a102bb5267b452eefda58ac4823f01087825524b65": 1790273106
+    "c3f83b85b96700ce8e8eec9faf15397654d6ba09f64f84c109b7fe3f2e8e8745": 1790275836,
+    "91b5692ac5bbd4b96ff9a1b1c271643869b4257f8efdb2383e93d79a464e371d": 1790275836
   }
 }
