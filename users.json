@@ -308,7 +308,7 @@
     "GOOGLB:15m": "high",
     "NVDAB:15m": "low",
     "PENDLE:15m": "low",
-    "牛来:15m": "high",
+    "牛来:15m": "low",
     "ZAMA:15m": "low",
     "AERO:15m": "high",
     "CRV:15m": "high",
@@ -438,7 +438,7 @@
     "VIRTUAL:4h": "high",
     "S:4h": "high",
     "STG:4h": "low",
-    "COTI:15m": "high",
+    "COTI:15m": "low",
     "RLUSD:15m": "low",
     "PROVE:15m": "high",
     "AVA:15m": "high",
@@ -669,7 +669,7 @@
     "PLUME:15m": "high"
   },
   "sent_messages": {
-    "ce621b8cfdae3264e800a153cb660f20c6491ff745f767f207238252dc84d0a6": 1790239892,
-    "bd05ee4248219622e6cf8847c6783c8e98e5f0b74f898258f2c51ac1ba911e22": 1790239893
+    "18808eec618ad64de40f1491a438bbbc80c3e28b1b428ee3e06b4ac169192f3a": 1790247936,
+    "cad531fea115da769e19598feb9d8d64f2737cedeed8f52fa1e8f6f96fa58f82": 1790247936
   }
 }
