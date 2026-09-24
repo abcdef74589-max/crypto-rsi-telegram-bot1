@@ -490,7 +490,7 @@
     "ONE:15m": "low",
     "LSK:15m": "high",
     "S:15m": "high",
-    "ONE:1h": "high",
+    "ONE:1h": "low",
     "JST:15m": "high",
     "PUMP:15m": "low",
     "XTZ:1h": "high",
@@ -596,7 +596,7 @@
     "PHA:1h": "high",
     "MUBARAK:1h": "high",
     "WIF:1h": "high",
-    "WIF:15m": "low",
+    "WIF:15m": "high",
     "FLOKI:15m": "low",
     "FORM:15m": "low",
     "FORM:1h": "high",
@@ -627,7 +627,7 @@
     "ZRO:4h": "high",
     "GIGGLE:4h": "high",
     "TST:4h": "high",
-    "GIGGLE:15m": "low",
+    "GIGGLE:15m": "high",
     "GIGGLE:1h": "low",
     "TST:1h": "high",
     "LSK:1h": "high",
@@ -667,7 +667,7 @@
     "NOM:15m": "high"
   },
   "sent_messages": {
-    "0d1266670e998d31076a62fafc62eeb2bc14582d6a4c5c6c03bbb493963a8127": 1790214656,
-    "f983ddaf75d46ee3c464ae7b3d763938eab467ecbd86740b9a3a653f8305eb57": 1790214656
+    "e5ce1aa497199634c6f2cb182ed7fd5b0191524245a4eb02efa2ee95c65c8495": 1790218209,
+    "994161ea370946481dbda7a9b5ad1663cbe30fc959b4d5e3ffc3d35079783538": 1790218210
   }
 }
