@@ -231,7 +231,7 @@
     "MORPHO:15m": "high",
     "OP:15m": "high",
     "CHIP:15m": "high",
-    "VIRTUAL:15m": "low",
+    "VIRTUAL:15m": "high",
     "BABY:15m": "low",
     "NEAR:15m": "high",
     "SOL:15m": "high",
@@ -667,10 +667,13 @@
     "NOM:15m": "high",
     "BOME:15m": "low",
     "PLUME:15m": "high",
-    "TST:15m": "high"
+    "TST:15m": "high",
+    "PLUME:1h": "high"
   },
   "sent_messages": {
     "623c4b58ccb088c13cae24bda3f82f5ac88f176ce5278db5b6886bf0f35554a2": 1790264169,
-    "1aa2bb911a12300a08b5292f37e21b2c5c1c059af0286f0a87dc591939a7adc6": 1790264169
+    "1aa2bb911a12300a08b5292f37e21b2c5c1c059af0286f0a87dc591939a7adc6": 1790264169,
+    "eb8889e12dabe74bcdcfab22e40b9700ec457c321d334855ca64b02327c8251c": 1790265016,
+    "48667821183520dd00952036ee0fb6d134c26523899e9c595cdbb06cd587c0f1": 1790265016
   }
 }
