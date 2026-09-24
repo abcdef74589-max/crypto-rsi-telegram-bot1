@@ -666,10 +666,13 @@
     "INTCB:1D": "high",
     "NOM:15m": "high",
     "BOME:15m": "low",
-    "PLUME:15m": "high"
+    "PLUME:15m": "high",
+    "TST:15m": "high"
   },
   "sent_messages": {
     "f36c69a55c3eadb0af9df3cb5b9211dd11d38bf28120c9d6cb3d104c88fe43db": 1790255172,
-    "3de21e515b9e39cf390320970c05c120e99b3560db015c43cfdf3452e9bf6cf9": 1790255173
+    "3de21e515b9e39cf390320970c05c120e99b3560db015c43cfdf3452e9bf6cf9": 1790255173,
+    "028d908cdadcf241c02848718b86c08e0f42dcea89fddf061dd508e7e5d13b5e": 1790255999,
+    "6ea506879a26ef3d1d8b92d0d338422f6da20105c5bda586964757b5ae5920f6": 1790256000
   }
 }
