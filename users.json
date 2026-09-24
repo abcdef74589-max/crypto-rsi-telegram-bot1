@@ -444,7 +444,7 @@
     "AVA:15m": "high",
     "RLUSD:1h": "low",
     "PROVE:1h": "high",
-    "LDO:1h": "low",
+    "LDO:1h": "high",
     "SAGA:1h": "high",
     "C:1h": "high",
     "FIL:15m": "high",
@@ -673,7 +673,7 @@
     "XAI:1h": "high"
   },
   "sent_messages": {
-    "4d2ca22eec0c10a51e19bb773fc772bdee583cd42e27a901bd83f7bbfd325081": 1790278539,
-    "66f6af915570b9ef200952c73ddec28252b716d725f97cb9f02a7196a454ec8d": 1790278540
+    "67355fc1650d1864266481b3b25a1843db59a919496a179da50840d8e2409c4b": 1790286574,
+    "48a19d9a81a012a1eeaf681ee82c585eba651c92f354057ce5cf2d0a824fec6f": 1790286574
   }
 }
