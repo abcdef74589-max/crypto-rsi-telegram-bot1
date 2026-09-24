@@ -620,7 +620,7 @@
     "MARSCOIN:1h": "high",
     "MARSCOIN:4h": "high",
     "BABY:4h": "high",
-    "ETC:15m": "low",
+    "ETC:15m": "high",
     "BROCCOLI714:1h": "high",
     "BROCCOLI714:15m": "high",
     "BROCCOLI714:4h": "high",
@@ -667,7 +667,7 @@
     "NOM:15m": "high"
   },
   "sent_messages": {
-    "e5ce1aa497199634c6f2cb182ed7fd5b0191524245a4eb02efa2ee95c65c8495": 1790218209,
-    "994161ea370946481dbda7a9b5ad1663cbe30fc959b4d5e3ffc3d35079783538": 1790218210
+    "cb6f43f7cf0a71c58e34d7d8907b6ad10fad9aa6c80d17f906d152444733f0b5": 1790221810,
+    "6721e9ed9890611f5ed9e4698265bb4a0d5c4808d5ee3344d5cfd2e32a423260": 1790221810
   }
 }
