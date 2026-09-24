@@ -494,7 +494,7 @@
     "JST:15m": "high",
     "PUMP:15m": "low",
     "XTZ:1h": "high",
-    "MARSCOIN:15m": "high",
+    "MARSCOIN:15m": "low",
     "ESP:1h": "high",
     "XTZ:15m": "high",
     "HEI:15m": "low",
@@ -664,12 +664,11 @@
     "SUPER:1D": "high",
     "MINA:1D": "high",
     "INTCB:1D": "high",
-    "NOM:15m": "high"
+    "NOM:15m": "high",
+    "BOME:15m": "high"
   },
   "sent_messages": {
-    "14fe4c523076a0662787c3f64e441a20ec068067c65af187eb4aac642568e8e3": 1790227304,
-    "e733287fdb41e92bd96bd76f207dc377849ae3a166e81d0ed3004320e3c107e2": 1790227304,
-    "89ffb90a6e35c3ed3f5a994268e86ca6517f2bac6fa923249f2f38b43b76afb7": 1790228138,
-    "ede0c3df49278402749b2fe14206586d6b1ff0b69b8ed7aeaade61b633103965": 1790228139
+    "2b64dc91e0b9b1ff3b05d6f1a16a585dd4c81679547dcf0b107d91d92dfd7dd0": 1790229974,
+    "ca5a56ef6f9ded2d5c46952152046e564f0ebc743d29be253d4a2e8a851d51ca": 1790229975
   }
 }
