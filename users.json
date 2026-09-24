@@ -665,11 +665,11 @@
     "MINA:1D": "high",
     "INTCB:1D": "high",
     "NOM:15m": "high",
-    "BOME:15m": "high",
+    "BOME:15m": "low",
     "PLUME:15m": "high"
   },
   "sent_messages": {
-    "18808eec618ad64de40f1491a438bbbc80c3e28b1b428ee3e06b4ac169192f3a": 1790247936,
-    "cad531fea115da769e19598feb9d8d64f2737cedeed8f52fa1e8f6f96fa58f82": 1790247936
+    "a3c3c95cb5b6817c67ac6f8d0a6d8535ba28a40bae23260073cfb36bcb66c52f": 1790252441,
+    "e99906ffb6ef0686b6a9b56fcb2c62f89ceeeafbb974d2a08889846608b38d08": 1790252441
   }
 }
