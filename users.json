@@ -594,7 +594,7 @@
     "PHA:15m": "high",
     "MUBARAK:15m": "low",
     "PHA:1h": "high",
-    "MUBARAK:1h": "high",
+    "MUBARAK:1h": "low",
     "WIF:1h": "high",
     "WIF:15m": "high",
     "FLOKI:15m": "low",
@@ -670,10 +670,13 @@
     "TST:15m": "high",
     "PLUME:1h": "high",
     "XAI:15m": "high",
-    "XAI:1h": "high"
+    "XAI:1h": "high",
+    "ONDO:1D": "high",
+    "NOM:1D": "high",
+    "BROCCOLI714:1D": "high"
   },
   "sent_messages": {
-    "67355fc1650d1864266481b3b25a1843db59a919496a179da50840d8e2409c4b": 1790286574,
-    "48a19d9a81a012a1eeaf681ee82c585eba651c92f354057ce5cf2d0a824fec6f": 1790286574
+    "721d398f465f043b95b7157c45075791d69e2f185bddfdd038427f69d3b3fa81": 1790293867,
+    "fe98e0f13f319a38b6afcc72e9fca4682475c93a188c66fe6aad600a3799bcc3": 1790293868
   }
 }
