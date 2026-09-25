@@ -664,7 +664,7 @@
     "SUPER:1D": "high",
     "MINA:1D": "high",
     "INTCB:1D": "high",
-    "NOM:15m": "high",
+    "NOM:15m": "low",
     "BOME:15m": "low",
     "PLUME:15m": "high",
     "TST:15m": "high",
@@ -677,7 +677,7 @@
     "QNT:1h": "high"
   },
   "sent_messages": {
-    "6a1981c92b09bdd55a44fcf5417b81ebffda3cf28b01483de3f16b47fc105a48": 1790303725,
-    "317ae64e6dcd5139506d19e0364b12e3afd185919d30b814bf235850ebb1fd82": 1790303725
+    "97928758c7317bbdafecb488baa65fafa7da2f0a2663463b74999dca648c3f4f": 1790305496,
+    "58699c949c98d847f014c77513767fcafcdd021da0ad52ceb0b2fb910671d376": 1790305496
   }
 }
