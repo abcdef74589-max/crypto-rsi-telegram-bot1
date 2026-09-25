@@ -508,7 +508,7 @@
     "BANK:15m": "high",
     "EPIC:15m": "high",
     "ALGO:1h": "high",
-    "USD1:15m": "low",
+    "USD1:15m": "high",
     "USD1:1h": "low",
     "CELR:15m": "low",
     "CELR:1h": "high",
@@ -690,7 +690,7 @@
     "PYTH:1h": "high"
   },
   "sent_messages": {
-    "4e59581e2abbe1d8e5f9579eaa0b6027b4fc94913c563fcd0284111261f47fc2": 1790351385,
-    "e4d092eee7867bfa06174709159ad65cc7cc0eeec541e555de813936ef0c6e36": 1790351385
+    "f4c8f27aaecad20c9b1aae3dd2436d85fb112ac7026ee59d205ad2884e0a1031": 1790354174,
+    "6f72f4e903b40d631944956faa1dcee99f022c89857a4f784e228f4cda758f23": 1790354175
   }
 }
