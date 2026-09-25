@@ -248,7 +248,7 @@
     "UNI:1h": "high",
     "BNB:1h": "low",
     "ARB:1h": "high",
-    "SUI:1h": "low",
+    "SUI:1h": "high",
     "ONDO:1h": "high",
     "WLD:1h": "low",
     "ADA:1h": "low",
@@ -689,10 +689,11 @@
     "MOVR:15m": "high",
     "PYTH:1h": "high",
     "RARE:1h": "high",
-    "JTO:1h": "high"
+    "JTO:1h": "high",
+    "VTHO:1h": "high"
   },
   "sent_messages": {
-    "49ad13ecdb3d14c2cca77553514729391da104209e9e1324ee9d841d68bf4845": 1790362227,
-    "30dc2b96085985b3348c81b63a7f581507a58ae569ce82bfa81a4b4d3e4274c8": 1790362228
+    "d720589067bb5e3f31c3e4259259e7a2d617c2f3773427d990dbaf2d4b599d4e": 1790373023,
+    "a65f167a82b5e3ff31a3d35d052bd4f93025f291e89adaa77ed1875988f4b1e4": 1790373023
   }
 }
