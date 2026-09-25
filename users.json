@@ -336,7 +336,7 @@
     "GOOGLB:1h": "high",
     "PENDLE:1h": "low",
     "ZRO:1h": "high",
-    "TUT:15m": "high",
+    "TUT:15m": "low",
     "PAXG:15m": "low",
     "XAUT:15m": "low",
     "SPCXB:15m": "low",
@@ -677,7 +677,7 @@
     "QNT:1h": "high"
   },
   "sent_messages": {
-    "dc08e4c85f2813d480c2c7ff109092f183a396d28d40446875bb2186737e4424": 1790300985,
-    "5214d9e5cabc0ef41d5d7e3893794b626dd0fc7ac1ddf01550e95469b33fca76": 1790300986
+    "6a1981c92b09bdd55a44fcf5417b81ebffda3cf28b01483de3f16b47fc105a48": 1790303725,
+    "317ae64e6dcd5139506d19e0364b12e3afd185919d30b814bf235850ebb1fd82": 1790303725
   }
 }
