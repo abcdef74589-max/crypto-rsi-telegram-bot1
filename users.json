@@ -228,7 +228,7 @@
     "ADA:15m": "high",
     "LTC:15m": "high",
     "FET:15m": "high",
-    "MORPHO:15m": "high",
+    "MORPHO:15m": "low",
     "OP:15m": "high",
     "CHIP:15m": "high",
     "VIRTUAL:15m": "high",
@@ -692,9 +692,7 @@
     "JTO:1h": "high"
   },
   "sent_messages": {
-    "f4c8f27aaecad20c9b1aae3dd2436d85fb112ac7026ee59d205ad2884e0a1031": 1790354174,
-    "6f72f4e903b40d631944956faa1dcee99f022c89857a4f784e228f4cda758f23": 1790354175,
-    "e6cb9260c6bd06c7a62a4344d45e4abdb08a002e958c4d667d1c1b989a2ac221": 1790354978,
-    "c1e5add0b502b5c2c6dac37de768b465bc66ce973e74c6ab238905621eaf3c4d": 1790354978
+    "e1f6bfbbccbbf9308225a06c23c4164af2223e6450b0c31450e34ebf8f3c6c18": 1790357696,
+    "7881e5a844acdf33a7f3b6facb1dce4d4cfbc08604551191779c7b618e5c5f4b": 1790357696
   }
 }
