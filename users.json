@@ -488,7 +488,7 @@
     "PENDLE:1D": "high",
     "SYN:1D": "high",
     "ONE:15m": "low",
-    "LSK:15m": "high",
+    "LSK:15m": "low",
     "S:15m": "high",
     "ONE:1h": "low",
     "JST:15m": "high",
@@ -676,7 +676,7 @@
     "BROCCOLI714:1D": "high"
   },
   "sent_messages": {
-    "721d398f465f043b95b7157c45075791d69e2f185bddfdd038427f69d3b3fa81": 1790293867,
-    "fe98e0f13f319a38b6afcc72e9fca4682475c93a188c66fe6aad600a3799bcc3": 1790293868
+    "7adda53cfb359470eb8a1d4f709e8989c10ee0e143f2eb4c5c9519712054e7b7": 1790299270,
+    "fc2ecce8cdf19cb72d0a51db4767199550fb824c849b586a5e215139301bfad1": 1790299271
   }
 }
