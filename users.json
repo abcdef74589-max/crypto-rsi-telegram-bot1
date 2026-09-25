@@ -397,7 +397,7 @@
     "AR:1h": "high",
     "PEPE:15m": "low",
     "ZEN:15m": "low",
-    "SAGA:15m": "high",
+    "SAGA:15m": "low",
     "EIGEN:15m": "high",
     "EIGEN:1h": "high",
     "SKY:1h": "high",
@@ -487,7 +487,7 @@
     "AR:1D": "high",
     "PENDLE:1D": "high",
     "SYN:1D": "high",
-    "ONE:15m": "low",
+    "ONE:15m": "high",
     "LSK:15m": "low",
     "S:15m": "high",
     "ONE:1h": "low",
@@ -674,10 +674,14 @@
     "ONDO:1D": "high",
     "NOM:1D": "high",
     "BROCCOLI714:1D": "high",
-    "QNT:1h": "high"
+    "QNT:1h": "high",
+    "QI:1h": "high",
+    "ARK:4h": "high",
+    "QI:4h": "high",
+    "QNT:4h": "high"
   },
   "sent_messages": {
-    "97928758c7317bbdafecb488baa65fafa7da2f0a2663463b74999dca648c3f4f": 1790305496,
-    "58699c949c98d847f014c77513767fcafcdd021da0ad52ceb0b2fb910671d376": 1790305496
+    "3c4319c9a7ad0b6da9c9b868f63f050c73dba7f1af59430253db879b38d83d52": 1790308268,
+    "3bae2817236fec08dad455a4347d08ed202b2dca7b8663c6164462dedb0d6b13": 1790308268
   }
 }
