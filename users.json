@@ -690,10 +690,29 @@
     "PYTH:1h": "high",
     "RARE:1h": "high",
     "JTO:1h": "high",
-    "VTHO:1h": "high"
+    "VTHO:1h": "high",
+    "JST:1h": "high",
+    "RARE:4h": "high",
+    "JST:4h": "high",
+    "SUI:1D": "high",
+    "VTHO:1D": "high",
+    "PHA:1D": "high",
+    "QI:1D": "high",
+    "FET:1D": "high",
+    "SEI:1D": "high",
+    "PENGU:1D": "high",
+    "QNT:1D": "high",
+    "ARK:1D": "high",
+    "APT:1D": "high",
+    "AERO:1D": "high",
+    "RARE:1D": "high",
+    "OP:1D": "high",
+    "PLUME:1D": "high",
+    "RUNE:1D": "high",
+    "PYTH:1D": "high"
   },
   "sent_messages": {
-    "265077a53e05ce73e48b26179817a624bbbb778246c03885607f2961248693be": 1790376626,
-    "e501796d0c8ac4dc58476ac5eb32e06889a6a231e611bf07ab92056c69dd9ada": 1790376626
+    "4e632da68de20736676c0967e26e4944c753ffbf2b6d563df99fecd5de25f035": 1790380259,
+    "6234070c1bc8b312c6457465e0a1ce5d2eb563a7d78416be137a5c3c16937cbe": 1790380260
   }
 }
