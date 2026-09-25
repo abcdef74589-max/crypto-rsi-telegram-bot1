@@ -250,10 +250,10 @@
     "ARB:1h": "high",
     "SUI:1h": "high",
     "ONDO:1h": "high",
-    "WLD:1h": "low",
+    "WLD:1h": "high",
     "ADA:1h": "low",
     "LINK:1h": "high",
-    "TAO:1h": "low",
+    "TAO:1h": "high",
     "LTC:1h": "high",
     "BCH:1h": "high",
     "DOT:1h": "low",
@@ -693,7 +693,7 @@
     "VTHO:1h": "high"
   },
   "sent_messages": {
-    "d720589067bb5e3f31c3e4259259e7a2d617c2f3773427d990dbaf2d4b599d4e": 1790373023,
-    "a65f167a82b5e3ff31a3d35d052bd4f93025f291e89adaa77ed1875988f4b1e4": 1790373023
+    "265077a53e05ce73e48b26179817a624bbbb778246c03885607f2961248693be": 1790376626,
+    "e501796d0c8ac4dc58476ac5eb32e06889a6a231e611bf07ab92056c69dd9ada": 1790376626
   }
 }
