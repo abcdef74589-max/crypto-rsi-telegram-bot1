@@ -684,10 +684,11 @@
     "AXS:15m": "high",
     "ARK:1h": "high",
     "AXS:1h": "high",
-    "ARK:15m": "high"
+    "ARK:15m": "high",
+    "PIXEL:15m": "high"
   },
   "sent_messages": {
-    "d094bc7cf26925b9da0f4a8aaf429de26baf2d191707f2e0d1d9ce34891df160": 1790336149,
-    "c4b6c5d45867c00275a66fd4e091af2331e79312ea150a9b3882bfa8801afe58": 1790336150
+    "194ae5192965b21d5505e0a5506b3b3b63a2ab9ab4e7cadaf2e4be98d10232c1": 1790341514,
+    "e2d66f87c64ed22e463707efcdf4c0e1b15e5399055915180443928a71d29471": 1790341515
   }
 }
