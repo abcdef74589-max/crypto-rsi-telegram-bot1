@@ -306,7 +306,7 @@
     "GRAM:15m": "high",
     "WBTC:15m": "high",
     "GOOGLB:15m": "high",
-    "NVDAB:15m": "low",
+    "NVDAB:15m": "high",
     "PENDLE:15m": "high",
     "牛来:15m": "low",
     "ZAMA:15m": "low",
@@ -339,7 +339,7 @@
     "TUT:15m": "low",
     "PAXG:15m": "low",
     "XAUT:15m": "low",
-    "SPCXB:15m": "low",
+    "SPCXB:15m": "high",
     "G:15m": "low",
     "SPYB:15m": "low",
     "ETH:1h": "low",
@@ -505,7 +505,7 @@
     "HEI:4h": "high",
     "SUPER:4h": "high",
     "LPT:4h": "high",
-    "BANK:15m": "low",
+    "BANK:15m": "high",
     "EPIC:15m": "high",
     "ALGO:1h": "high",
     "USD1:15m": "low",
@@ -683,7 +683,7 @@
     "QNT:15m": "high"
   },
   "sent_messages": {
-    "d480dfec29d965c5d12680b4615e2d0554d257ffb921022170db7b5de97d99ec": 1790312732,
-    "1175fe2982edca06a6e378a371029039b5d4e95199e4c2a1b896006b659f2d48": 1790312732
+    "385298f533e5709b48f068843f35e95fbd61c319196c9d3598029d6bb93db363": 1790318119,
+    "dec37a2e640cf92b65fa2e5c12a720b3c5c305ad87006cd5c88853b570d09fdd": 1790318120
   }
 }
