@@ -687,10 +687,14 @@
     "ARK:15m": "high",
     "PIXEL:15m": "high",
     "MOVR:15m": "high",
-    "PYTH:1h": "high"
+    "PYTH:1h": "high",
+    "RARE:1h": "high",
+    "JTO:1h": "high"
   },
   "sent_messages": {
     "f4c8f27aaecad20c9b1aae3dd2436d85fb112ac7026ee59d205ad2884e0a1031": 1790354174,
-    "6f72f4e903b40d631944956faa1dcee99f022c89857a4f784e228f4cda758f23": 1790354175
+    "6f72f4e903b40d631944956faa1dcee99f022c89857a4f784e228f4cda758f23": 1790354175,
+    "e6cb9260c6bd06c7a62a4344d45e4abdb08a002e958c4d667d1c1b989a2ac221": 1790354978,
+    "c1e5add0b502b5c2c6dac37de768b465bc66ce973e74c6ab238905621eaf3c4d": 1790354978
   }
 }
