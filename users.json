@@ -301,7 +301,7 @@
     "BNCB:15m": "high",
     "ETH:15m": "low",
     "XRP:15m": "high",
-    "CRCLB:15m": "high",
+    "CRCLB:15m": "low",
     "XLM:15m": "high",
     "GRAM:15m": "high",
     "WBTC:15m": "high",
@@ -339,7 +339,7 @@
     "TUT:15m": "low",
     "PAXG:15m": "high",
     "XAUT:15m": "high",
-    "SPCXB:15m": "high",
+    "SPCXB:15m": "low",
     "G:15m": "low",
     "SPYB:15m": "low",
     "ETH:1h": "low",
@@ -688,7 +688,7 @@
     "PIXEL:15m": "high"
   },
   "sent_messages": {
-    "194ae5192965b21d5505e0a5506b3b3b63a2ab9ab4e7cadaf2e4be98d10232c1": 1790341514,
-    "e2d66f87c64ed22e463707efcdf4c0e1b15e5399055915180443928a71d29471": 1790341515
+    "62ee50501dcf5c34c9f99ba0e8f1a09f32c432c9fbd1ab0bb25db561dddd6971": 1790343346,
+    "07dc73cb19c6adec2dfc09460d39933efbf80eab2aff7b3a3c5aac222b774821": 1790343347
   }
 }
