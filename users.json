@@ -272,12 +272,12 @@
     "A:1h": "high",
     "BABY:1h": "low",
     "CFG:1h": "high",
-    "UNI:15m": "low",
+    "UNI:15m": "high",
     "REZ:15m": "high",
-    "AVAX:15m": "low",
+    "AVAX:15m": "high",
     "AAVE:15m": "high",
-    "SHIB:15m": "low",
-    "DOGE:15m": "low",
+    "SHIB:15m": "high",
+    "DOGE:15m": "high",
     "TRX:15m": "low",
     "ICP:15m": "high",
     "BFUSD:15m": "low",
@@ -687,7 +687,7 @@
     "ARK:15m": "high"
   },
   "sent_messages": {
-    "64126c487c70e30d26512370462098636a835261a167df46b351dda3431d051f": 1790334374,
-    "0c48a756725d1b478f8c0e492a921ee2de47d3e1e2bc40ba6e900c406a2b3c91": 1790334375
+    "d094bc7cf26925b9da0f4a8aaf429de26baf2d191707f2e0d1d9ce34891df160": 1790336149,
+    "c4b6c5d45867c00275a66fd4e091af2331e79312ea150a9b3882bfa8801afe58": 1790336150
   }
 }
