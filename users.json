@@ -244,7 +244,7 @@
     "RAY:15m": "high",
     "ETHFI:15m": "high",
     "NEAR:1h": "high",
-    "SOL:1h": "low",
+    "SOL:1h": "high",
     "UNI:1h": "high",
     "BNB:1h": "low",
     "ARB:1h": "high",
@@ -270,7 +270,7 @@
     "OP:1h": "high",
     "VIRTUAL:1h": "high",
     "A:1h": "high",
-    "BABY:1h": "low",
+    "BABY:1h": "high",
     "CFG:1h": "high",
     "UNI:15m": "high",
     "REZ:15m": "high",
@@ -692,7 +692,7 @@
     "JTO:1h": "high"
   },
   "sent_messages": {
-    "e1f6bfbbccbbf9308225a06c23c4164af2223e6450b0c31450e34ebf8f3c6c18": 1790357696,
-    "7881e5a844acdf33a7f3b6facb1dce4d4cfbc08604551191779c7b618e5c5f4b": 1790357696
+    "49ad13ecdb3d14c2cca77553514729391da104209e9e1324ee9d841d68bf4845": 1790362227,
+    "30dc2b96085985b3348c81b63a7f581507a58ae569ce82bfa81a4b4d3e4274c8": 1790362228
   }
 }
