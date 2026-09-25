@@ -678,10 +678,12 @@
     "QI:1h": "high",
     "ARK:4h": "high",
     "QI:4h": "high",
-    "QNT:4h": "high"
+    "QNT:4h": "high",
+    "QI:15m": "high",
+    "QNT:15m": "high"
   },
   "sent_messages": {
-    "3c4319c9a7ad0b6da9c9b868f63f050c73dba7f1af59430253db879b38d83d52": 1790308268,
-    "3bae2817236fec08dad455a4347d08ed202b2dca7b8663c6164462dedb0d6b13": 1790308268
+    "d480dfec29d965c5d12680b4615e2d0554d257ffb921022170db7b5de97d99ec": 1790312732,
+    "1175fe2982edca06a6e378a371029039b5d4e95199e4c2a1b896006b659f2d48": 1790312732
   }
 }
