@@ -681,12 +681,12 @@
     "QNT:4h": "high",
     "QI:15m": "high",
     "QNT:15m": "high",
-    "AXS:15m": "high"
+    "AXS:15m": "high",
+    "ARK:1h": "high",
+    "AXS:1h": "high"
   },
   "sent_messages": {
-    "8954919a96900b2213d13754be7495169abe3218b7339c9201ea6b46dfb58a37": 1790319999,
-    "824664b869899e585981cb1cb85c26fe6645c3ce580b1210a8500d1d96febeca": 1790319999,
-    "65c8e4ed76921a78ccffa6eb5a139a8c4cbe952801cd8ce70ae48b1b8fa1e618": 1790320890,
-    "2888e7fbaf4f62694f84cbed7ffe4d74700c3ce30fc9982af06b5eb36bd6addd": 1790320890
+    "9b3ab24c682fe029f816327f240ca717dafe2f27c78e4e82b218ddfde0e1b294": 1790322664,
+    "1c213ebd08bbfa77a953c070fd775099ce6196f67416a6b67e131b0f1e08451c": 1790322664
   }
 }
