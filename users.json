@@ -337,8 +337,8 @@
     "PENDLE:1h": "low",
     "ZRO:1h": "high",
     "TUT:15m": "low",
-    "PAXG:15m": "low",
-    "XAUT:15m": "low",
+    "PAXG:15m": "high",
+    "XAUT:15m": "high",
     "SPCXB:15m": "high",
     "G:15m": "low",
     "SPYB:15m": "low",
@@ -395,7 +395,7 @@
     "TRX:1h": "low",
     "BFUSD:1h": "low",
     "AR:1h": "high",
-    "PEPE:15m": "low",
+    "PEPE:15m": "high",
     "ZEN:15m": "low",
     "SAGA:15m": "low",
     "EIGEN:15m": "high",
@@ -468,7 +468,7 @@
     "ZK:15m": "low",
     "ZEC:15m": "high",
     "DASH:15m": "high",
-    "CAKE:15m": "high",
+    "CAKE:15m": "low",
     "STG:15m": "high",
     "SYN:1h": "high",
     "SYN:4h": "high",
@@ -492,7 +492,7 @@
     "S:15m": "high",
     "ONE:1h": "low",
     "JST:15m": "high",
-    "PUMP:15m": "low",
+    "PUMP:15m": "high",
     "XTZ:1h": "high",
     "MARSCOIN:15m": "low",
     "ESP:1h": "high",
@@ -687,7 +687,7 @@
     "ARK:15m": "high"
   },
   "sent_messages": {
-    "96ba000832a228f98bdde2fe3e9940611415970b7c61a380528207fbaf829d19": 1790326203,
-    "36306c5f5f46ac60ec3632fd2a13fa7bc62ede3f55003b87996ace0eccde6e31": 1790326203
+    "64126c487c70e30d26512370462098636a835261a167df46b351dda3431d051f": 1790334374,
+    "0c48a756725d1b478f8c0e492a921ee2de47d3e1e2bc40ba6e900c406a2b3c91": 1790334375
   }
 }
