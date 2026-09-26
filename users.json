@@ -232,7 +232,7 @@
     "OP:15m": "high",
     "CHIP:15m": "high",
     "VIRTUAL:15m": "high",
-    "BABY:15m": "low",
+    "BABY:15m": "high",
     "NEAR:15m": "high",
     "SOL:15m": "high",
     "ARB:15m": "low",
@@ -585,7 +585,7 @@
     "ICP:4h": "high",
     "KMNO:4h": "high",
     "MITO:1h": "high",
-    "NIL:15m": "high",
+    "NIL:15m": "low",
     "OPG:1h": "high",
     "MINA:1h": "high",
     "SOXLB:4h": "high",
@@ -714,7 +714,7 @@
     "RUNE:15m": "high"
   },
   "sent_messages": {
-    "525a3aaff98db1c6f21fb31becf17c7991f4365c7c1c1335ef31946a3c55d8b9": 1790400955,
-    "750abc31366d8db7eee35b222a7a1477b0e660e3aca016c26ab59483ceccbcee": 1790400955
+    "28febbe078cc6e091f8a638f9045131747ffb053e6e2089941d4173c7125c552": 1790403610,
+    "3028d9b9d26031626f8820d6b0b9ae4becea0af69a8c9c2ed846db2a2bc60e15": 1790403611
   }
 }
