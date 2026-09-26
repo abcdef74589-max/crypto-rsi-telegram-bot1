@@ -709,10 +709,11 @@
     "OP:1D": "high",
     "PLUME:1D": "high",
     "RUNE:1D": "high",
-    "PYTH:1D": "high"
+    "PYTH:1D": "high",
+    "VTHO:15m": "high"
   },
   "sent_messages": {
-    "4e632da68de20736676c0967e26e4944c753ffbf2b6d563df99fecd5de25f035": 1790380259,
-    "6234070c1bc8b312c6457465e0a1ce5d2eb563a7d78416be137a5c3c16937cbe": 1790380260
+    "6bf5d45ff0e820b254947c8da3989cdf15192f4752112690ac5ac17a1292af22": 1790381192,
+    "1f8273baffc8c138ef1345f9d0c15bc6ee802349633dc8d54dd8964dbf02e05f": 1790381193
   }
 }
