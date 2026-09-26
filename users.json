@@ -391,7 +391,7 @@
     "FF:15m": "high",
     "THE:1h": "high",
     "STRK:1h": "low",
-    "AR:15m": "low",
+    "AR:15m": "high",
     "TRX:1h": "low",
     "BFUSD:1h": "low",
     "AR:1h": "high",
@@ -727,10 +727,11 @@
     "AMP:15m": "high",
     "AMP:1h": "high",
     "SPELL:1h": "high",
-    "AVNT:1h": "high"
+    "AVNT:1h": "high",
+    "ATOM:15m": "high"
   },
   "sent_messages": {
-    "cc25872d670e89f45d37e60bf85eac774c10176d2b8788d47a1232f73fb55acf": 1790434190,
-    "2e269661321ffdf74b66f0cf33ce3922f8051d132ee94727545ca151e4b3b436": 1790434191
+    "dc5525fb099cecbf90a50ca0fb80ffca6d19fc2f5bb5680fca1957954ef5ab10": 1790436974,
+    "05647e5cf1238fe45fe97b4c645d76a7e73b3a668849e655d5dd7ec7d2cf0d57": 1790436974
   }
 }
