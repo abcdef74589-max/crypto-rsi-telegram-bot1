@@ -258,7 +258,7 @@
     "BCH:1h": "high",
     "DOT:1h": "high",
     "FET:1h": "high",
-    "FIL:1h": "low",
+    "FIL:1h": "high",
     "XPL:1h": "high",
     "PENGU:1h": "high",
     "APT:1h": "high",
@@ -712,12 +712,13 @@
     "PYTH:1D": "high",
     "VTHO:15m": "high",
     "RUNE:15m": "high",
-    "RARE:15m": "high"
+    "RARE:15m": "high",
+    "RUNE:1h": "high"
   },
   "sent_messages": {
-    "28febbe078cc6e091f8a638f9045131747ffb053e6e2089941d4173c7125c552": 1790403610,
-    "3028d9b9d26031626f8820d6b0b9ae4becea0af69a8c9c2ed846db2a2bc60e15": 1790403611,
     "3918ac17fea83e9bc5c54ce7802e90845f318350345254201233d854f9a8c874": 1790404503,
-    "6f5d29c68de27788085e6cd034e0b19d5be297d9f6bce4a13a30995e2525350c": 1790404503
+    "6f5d29c68de27788085e6cd034e0b19d5be297d9f6bce4a13a30995e2525350c": 1790404503,
+    "93780acf80a7f4de396fd9a11e3dae665ebcb8f2596fa1f20566777b86e5a110": 1790405403,
+    "293c64ae0a355b579b148da99c4e872f0eaedcb5e6d7b781176297eb6753e9a7": 1790405403
   }
 }
