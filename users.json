@@ -330,7 +330,7 @@
     "MSTRB:1h": "high",
     "SPCXB:1h": "low",
     "INJ:1h": "high",
-    "GRAM:1h": "low",
+    "GRAM:1h": "high",
     "RAY:1h": "high",
     "WBTC:1h": "high",
     "GOOGLB:1h": "high",
@@ -738,7 +738,7 @@
     "REZ:4h": "high"
   },
   "sent_messages": {
-    "436a33ad400922f7390c872ee0622ecd5170c4c1648bed09403b1c0b54bff96d": 1790442315,
-    "3dfaf0bfafa9b77a9e064816265c30dd121d1a3b7b83fdf0653e14be8694bfdd": 1790442315
+    "940dea0fc44ec177bea1d92933fba68e3a0230377a168786bb41be86fed56891": 1790445041,
+    "5f551d873e1ca4dd792e2188260a6b97beab69d5d8196826a162a28528faab96": 1790445041
   }
 }
