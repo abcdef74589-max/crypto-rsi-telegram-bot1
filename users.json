@@ -449,7 +449,7 @@
     "C:1h": "high",
     "FIL:15m": "high",
     "POL:1h": "high",
-    "ZEN:1h": "low",
+    "ZEN:1h": "high",
     "XUSD:1h": "low",
     "ZK:1h": "high",
     "ADA:4h": "high",
@@ -728,10 +728,19 @@
     "AMP:1h": "high",
     "SPELL:1h": "high",
     "AVNT:1h": "high",
-    "ATOM:15m": "high"
+    "ATOM:15m": "high",
+    "DASH:4h": "high",
+    "FIL:4h": "high",
+    "ACE:4h": "high",
+    "AMP:4h": "high",
+    "SPELL:4h": "high",
+    "AVNT:4h": "high",
+    "REZ:4h": "high"
   },
   "sent_messages": {
     "dc5525fb099cecbf90a50ca0fb80ffca6d19fc2f5bb5680fca1957954ef5ab10": 1790436974,
-    "05647e5cf1238fe45fe97b4c645d76a7e73b3a668849e655d5dd7ec7d2cf0d57": 1790436974
+    "05647e5cf1238fe45fe97b4c645d76a7e73b3a668849e655d5dd7ec7d2cf0d57": 1790436974,
+    "32080514206391146206f4a071051baac3852c691914c108d7594d2ebe5f7ec5": 1790437767,
+    "420c8b7aad4fb194924a6db02b93e93def3075ade55dcd6199aafbcea45c680d": 1790437768
   }
 }
