@@ -724,10 +724,12 @@
     "SPK:4h": "high",
     "PYTH:4h": "high",
     "TNSR:4h": "high",
-    "AMP:15m": "high"
+    "AMP:15m": "high",
+    "AMP:1h": "high",
+    "SPELL:1h": "high"
   },
   "sent_messages": {
-    "817b713abf9849d785ebfed60ea03bd861ab15e5e715e0252d2ef8f1ced24150": 1790427963,
-    "034a221c75d0c2413cd18e493ef6b0d661db64968db6bb6bda104cc2124004cf": 1790427963
+    "faab6426f0f9155ca4816f2667d432325fc94ca585def3fc4b4e274978fb6bc7": 1790430578,
+    "9d3289456fc1bb4444c938722bf8efb92a45bf903517701b5865ce2ff0e23eaa": 1790430579
   }
 }
