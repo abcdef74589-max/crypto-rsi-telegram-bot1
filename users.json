@@ -736,10 +736,17 @@
     "SPELL:4h": "high",
     "AVNT:4h": "high",
     "REZ:4h": "high",
-    "GRAM:4h": "high"
+    "GRAM:4h": "high",
+    "KITE:1h": "high",
+    "GRAM:1D": "high",
+    "AMP:1D": "high",
+    "2Z:1D": "high",
+    "SPELL:1D": "high",
+    "KMNO:1D": "high",
+    "KITE:1D": "high"
   },
   "sent_messages": {
-    "3e23974a3beab17d9b08386940cf7b30c653c285f99e75824f7439a4a227d90f": 1790455899,
-    "e489f7346be3d7f79954a53ff0078ead594e25f67049ebab40e5cbd26d873aa5": 1790455900
+    "a669e9cc49bbae9bb1ccd3b36d03f875ab73637fedadf9f73e1e8844839dca69": 1790466620,
+    "cf000e641bd1ac49d96bf93f8cc05127965c55946622c136f7d99d0f929de959": 1790466620
   }
 }
