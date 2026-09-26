@@ -711,10 +711,13 @@
     "RUNE:1D": "high",
     "PYTH:1D": "high",
     "VTHO:15m": "high",
-    "RUNE:15m": "high"
+    "RUNE:15m": "high",
+    "RARE:15m": "high"
   },
   "sent_messages": {
     "28febbe078cc6e091f8a638f9045131747ffb053e6e2089941d4173c7125c552": 1790403610,
-    "3028d9b9d26031626f8820d6b0b9ae4becea0af69a8c9c2ed846db2a2bc60e15": 1790403611
+    "3028d9b9d26031626f8820d6b0b9ae4becea0af69a8c9c2ed846db2a2bc60e15": 1790403611,
+    "3918ac17fea83e9bc5c54ce7802e90845f318350345254201233d854f9a8c874": 1790404503,
+    "6f5d29c68de27788085e6cd034e0b19d5be297d9f6bce4a13a30995e2525350c": 1790404503
   }
 }
