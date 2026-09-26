@@ -546,7 +546,7 @@
     "CTSI:1h": "high",
     "SKL:15m": "high",
     "C:15m": "high",
-    "DASH:1h": "low",
+    "DASH:1h": "high",
     "GUN:15m": "high",
     "HOME:15m": "low",
     "ALLO:15m": "low",
@@ -715,12 +715,20 @@
     "RARE:15m": "high",
     "RUNE:1h": "high",
     "2Z:15m": "high",
-    "2Z:1h": "high"
+    "2Z:1h": "high",
+    "TNSR:1h": "high",
+    "VTHO:4h": "high",
+    "RUNE:4h": "high",
+    "2Z:4h": "high",
+    "PROM:4h": "high",
+    "SPK:4h": "high",
+    "PYTH:4h": "high",
+    "TNSR:4h": "high"
   },
   "sent_messages": {
-    "8281ac5b12e7c958245cdd6dfc5efcd7a5d47bc84e6c7037b33c1fde4db56556": 1790421676,
-    "255cef900df9a391b8f483d7bfbfaa7ca3784611997e3996ba9ec5981e9bc2f7": 1790421677,
     "9212799923912085b06848f00f928ee00e3517b86bb9657c24f2a4f3c1d676b2": 1790422497,
-    "fa0310552732ddf563cf315c2f09dc2156404b02cbf5cea905cd375ba7cb9c28": 1790422498
+    "fa0310552732ddf563cf315c2f09dc2156404b02cbf5cea905cd375ba7cb9c28": 1790422498,
+    "8d8452f4ff3a29053b3d00733ac90be23d202c474e34f6a0978e1688853816da": 1790423380,
+    "f30b05bbbdb5852497968a27a33f0203963f7edaff060cce93f09008b542b323": 1790423381
   }
 }
