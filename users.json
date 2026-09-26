@@ -322,7 +322,7 @@
     "DOT:15m": "high",
     "INJ:15m": "high",
     "MUB:15m": "high",
-    "TIA:15m": "low",
+    "TIA:15m": "high",
     "BTC:1h": "low",
     "ZEC:1h": "high",
     "DOGE:1h": "low",
@@ -719,6 +719,8 @@
   },
   "sent_messages": {
     "8281ac5b12e7c958245cdd6dfc5efcd7a5d47bc84e6c7037b33c1fde4db56556": 1790421676,
-    "255cef900df9a391b8f483d7bfbfaa7ca3784611997e3996ba9ec5981e9bc2f7": 1790421677
+    "255cef900df9a391b8f483d7bfbfaa7ca3784611997e3996ba9ec5981e9bc2f7": 1790421677,
+    "9212799923912085b06848f00f928ee00e3517b86bb9657c24f2a4f3c1d676b2": 1790422497,
+    "fa0310552732ddf563cf315c2f09dc2156404b02cbf5cea905cd375ba7cb9c28": 1790422498
   }
 }
