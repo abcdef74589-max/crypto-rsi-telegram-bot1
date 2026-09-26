@@ -285,7 +285,7 @@
     "BCH:15m": "high",
     "MSTRB:15m": "low",
     "ENA:1h": "high",
-    "PUMP:1h": "low",
+    "PUMP:1h": "high",
     "PEPE:1h": "low",
     "AVAX:1h": "low",
     "AAVE:1h": "high",
@@ -419,7 +419,7 @@
     "F:1h": "high",
     "SNXXB:1h": "high",
     "S:1h": "high",
-    "PROM:1h": "low",
+    "PROM:1h": "high",
     "BTC:4h": "high",
     "ETH:4h": "high",
     "DOGE:4h": "high",
@@ -714,7 +714,7 @@
     "RUNE:15m": "high"
   },
   "sent_messages": {
-    "535f84ec5ca2a4139f35fa99542c6d7183d77012cb726c17a41b4429f71d9423": 1790394688,
-    "e74fdb4ad50d6e557740080fdd31cdc61cd12745361805cf76ee19c8fb10b512": 1790394689
+    "9ec7da52505d6c7e29e5cc553fb2dc9851fcd717adda25016869dc4c3f38a3b5": 1790398233,
+    "2245a7a8999c4238ec627ca946c752251e326a56bd1b770362b27be7d3116f30": 1790398234
   }
 }
