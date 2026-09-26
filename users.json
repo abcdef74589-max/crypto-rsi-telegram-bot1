@@ -300,7 +300,7 @@
     "HBAR:15m": "high",
     "BNCB:15m": "high",
     "ETH:15m": "low",
-    "XRP:15m": "high",
+    "XRP:15m": "low",
     "CRCLB:15m": "high",
     "XLM:15m": "high",
     "GRAM:15m": "high",
@@ -337,7 +337,7 @@
     "PENDLE:1h": "low",
     "ZRO:1h": "high",
     "TUT:15m": "low",
-    "PAXG:15m": "high",
+    "PAXG:15m": "low",
     "XAUT:15m": "low",
     "SPCXB:15m": "low",
     "G:15m": "low",
@@ -738,7 +738,7 @@
     "REZ:4h": "high"
   },
   "sent_messages": {
-    "940dea0fc44ec177bea1d92933fba68e3a0230377a168786bb41be86fed56891": 1790445041,
-    "5f551d873e1ca4dd792e2188260a6b97beab69d5d8196826a162a28528faab96": 1790445041
+    "d91d5d441fa5e19c118fcc560a9aa6da1d7aa90e028becf3b926e8d7ad68fd59": 1790448688,
+    "589dbe5f52bc6f3d16207cde5c949779a4799aa329590018d108e155e4f41f81": 1790448689
   }
 }
