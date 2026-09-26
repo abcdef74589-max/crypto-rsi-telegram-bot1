@@ -308,7 +308,7 @@
     "GOOGLB:15m": "high",
     "NVDAB:15m": "high",
     "PENDLE:15m": "high",
-    "牛来:15m": "low",
+    "牛来:15m": "high",
     "ZAMA:15m": "low",
     "AERO:15m": "high",
     "CRV:15m": "high",
@@ -508,7 +508,7 @@
     "BANK:15m": "high",
     "EPIC:15m": "high",
     "ALGO:1h": "high",
-    "USD1:15m": "low",
+    "USD1:15m": "high",
     "USD1:1h": "low",
     "CELR:15m": "low",
     "CELR:1h": "high",
@@ -729,7 +729,7 @@
     "SPELL:1h": "high"
   },
   "sent_messages": {
-    "faab6426f0f9155ca4816f2667d432325fc94ca585def3fc4b4e274978fb6bc7": 1790430578,
-    "9d3289456fc1bb4444c938722bf8efb92a45bf903517701b5865ce2ff0e23eaa": 1790430579
+    "a5dac8f940be68aac81312560d6d1a749e81acb9d76aa5b4f0c09142f35eec15": 1790431569,
+    "b5b2daae798cac6c760bf549ad50c3756c159d0fbcfd6fdf05d5141d4b56bc45": 1790431570
   }
 }
