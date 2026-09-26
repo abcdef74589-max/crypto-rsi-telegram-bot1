@@ -251,12 +251,12 @@
     "SUI:1h": "high",
     "ONDO:1h": "high",
     "WLD:1h": "high",
-    "ADA:1h": "low",
+    "ADA:1h": "high",
     "LINK:1h": "high",
     "TAO:1h": "high",
     "LTC:1h": "high",
     "BCH:1h": "high",
-    "DOT:1h": "low",
+    "DOT:1h": "high",
     "FET:1h": "high",
     "FIL:1h": "low",
     "XPL:1h": "high",
@@ -594,7 +594,7 @@
     "PHA:15m": "high",
     "MUBARAK:15m": "high",
     "PHA:1h": "high",
-    "MUBARAK:1h": "low",
+    "MUBARAK:1h": "high",
     "WIF:1h": "high",
     "WIF:15m": "high",
     "FLOKI:15m": "low",
@@ -713,7 +713,7 @@
     "VTHO:15m": "high"
   },
   "sent_messages": {
-    "6bf5d45ff0e820b254947c8da3989cdf15192f4752112690ac5ac17a1292af22": 1790381192,
-    "1f8273baffc8c138ef1345f9d0c15bc6ee802349633dc8d54dd8964dbf02e05f": 1790381193
+    "7dabdddf711d7bfaacd49db4f16c5c08b3327616390007f84b1ffa0928bb7e77": 1790387489,
+    "861cd91a5511784a904f73bf5ea122cd8042863ea9b81aa6391cc928e900c02e": 1790387489
   }
 }
