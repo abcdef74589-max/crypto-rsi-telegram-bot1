@@ -494,7 +494,7 @@
     "JST:15m": "high",
     "PUMP:15m": "high",
     "XTZ:1h": "high",
-    "MARSCOIN:15m": "low",
+    "MARSCOIN:15m": "high",
     "ESP:1h": "high",
     "XTZ:15m": "high",
     "HEI:15m": "low",
@@ -726,10 +726,11 @@
     "TNSR:4h": "high",
     "AMP:15m": "high",
     "AMP:1h": "high",
-    "SPELL:1h": "high"
+    "SPELL:1h": "high",
+    "AVNT:1h": "high"
   },
   "sent_messages": {
-    "a5dac8f940be68aac81312560d6d1a749e81acb9d76aa5b4f0c09142f35eec15": 1790431569,
-    "b5b2daae798cac6c760bf549ad50c3756c159d0fbcfd6fdf05d5141d4b56bc45": 1790431570
+    "cc25872d670e89f45d37e60bf85eac774c10176d2b8788d47a1232f73fb55acf": 1790434190,
+    "2e269661321ffdf74b66f0cf33ce3922f8051d132ee94727545ca151e4b3b436": 1790434191
   }
 }
