@@ -746,10 +746,11 @@
     "KITE:1D": "high",
     "HYPE:15m": "high",
     "COW:15m": "high",
-    "W:15m": "high"
+    "W:15m": "high",
+    "W:1h": "high"
   },
   "sent_messages": {
-    "703bc687609a239ff2d855de0e9f2c6ccf039cb92ffab973e6dece6ba72d2f5f": 1790485490,
-    "41afc0f30366326c01e4ad2921c9bd33dc2e6bfd53ddf54c619859b60a88b03f": 1790485490
+    "811302823ed6d44262833df33962bf3e169c0640a431e882c6c896bac40f8af0": 1790488269,
+    "695c162d80d261af4f4b8d690819cf5254103ab2608df084f166a033fd9a4faa": 1790488270
   }
 }
