@@ -488,7 +488,7 @@
     "PENDLE:1D": "high",
     "SYN:1D": "high",
     "ONE:15m": "high",
-    "LSK:15m": "high",
+    "LSK:15m": "low",
     "S:15m": "high",
     "ONE:1h": "low",
     "JST:15m": "high",
@@ -630,7 +630,7 @@
     "GIGGLE:15m": "high",
     "GIGGLE:1h": "low",
     "TST:1h": "high",
-    "LSK:1h": "high",
+    "LSK:1h": "low",
     "CHR:1h": "high",
     "CHR:15m": "high",
     "SKHYB:15m": "high",
@@ -679,7 +679,7 @@
     "ARK:4h": "high",
     "QI:4h": "high",
     "QNT:4h": "high",
-    "QI:15m": "high",
+    "QI:15m": "low",
     "QNT:15m": "high",
     "AXS:15m": "high",
     "ARK:1h": "high",
@@ -764,10 +764,11 @@
     "XVG:4h": "high",
     "GRT:1h": "high",
     "APE:1h": "high",
-    "GRT:15m": "high"
+    "GRT:15m": "high",
+    "SUPER:15m": "low"
   },
   "sent_messages": {
-    "c199fc733c7e6a23cddb3cb3decbaf6e647e7755767f82506f918f98955fe966": 1790544080,
-    "ac1e5f613f0c6ef197dba550735fb9fe4feec29005ba56a3676c754b5c45b567": 1790544080
+    "488d5d6e641badb8264751daad85a589f5fbcb5bb658211e9bd722b2e9e54ff1": 1790545838,
+    "08127338f71f70bafff07321c0e7634875c1ba0496d04eb0a847f09fc7ac5b8c": 1790545838
   }
 }
