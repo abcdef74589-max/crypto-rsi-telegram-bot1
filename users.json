@@ -585,7 +585,7 @@
     "ICP:4h": "high",
     "KMNO:4h": "high",
     "MITO:1h": "high",
-    "NIL:15m": "high",
+    "NIL:15m": "low",
     "OPG:1h": "high",
     "MINA:1h": "high",
     "SOXLB:4h": "high",
@@ -767,9 +767,7 @@
     "GRT:15m": "high"
   },
   "sent_messages": {
-    "c061b52f941160678ca6b8ebf6fa9382fb1d6dcd702174488c66cb3c8ee5da2d": 1790542223,
-    "172302544bb020ff706ce3753744e7dd848eb885e20a2ac7c98d2d0ee17e3709": 1790542224,
-    "0a87c9aee45cc075dd2b58682cd5d409b8697595c558e92ad3290c5ee4383b95": 1790543121,
-    "5dfbf298c7b47414000f8e38c97eda6ad5599c515c4740e367fd7677141d7f11": 1790543121
+    "c199fc733c7e6a23cddb3cb3decbaf6e647e7755767f82506f918f98955fe966": 1790544080,
+    "ac1e5f613f0c6ef197dba550735fb9fe4feec29005ba56a3676c754b5c45b567": 1790544080
   }
 }
