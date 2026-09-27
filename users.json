@@ -761,10 +761,12 @@
     "AUDIO:4h": "high",
     "MAGIC:4h": "high",
     "JASMY:4h": "high",
-    "XVG:4h": "high"
+    "XVG:4h": "high",
+    "GRT:1h": "high",
+    "APE:1h": "high"
   },
   "sent_messages": {
-    "55b7f6a4c34c269ea1b978b368521e52f411c34a5c620ed791695e4d6739feb9": 1790535061,
-    "ac51dbee1c813c712abd9e8e6bcf3c1498f092f6299ceab4ce2afda2717465ab": 1790535061
+    "c061b52f941160678ca6b8ebf6fa9382fb1d6dcd702174488c66cb3c8ee5da2d": 1790542223,
+    "172302544bb020ff706ce3753744e7dd848eb885e20a2ac7c98d2d0ee17e3709": 1790542224
   }
 }
