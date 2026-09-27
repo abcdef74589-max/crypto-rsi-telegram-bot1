@@ -236,7 +236,7 @@
     "NEAR:15m": "high",
     "SOL:15m": "high",
     "ARB:15m": "high",
-    "ENA:15m": "low",
+    "ENA:15m": "high",
     "LINK:15m": "high",
     "TAO:15m": "high",
     "TRUMP:15m": "high",
@@ -764,7 +764,7 @@
     "XVG:4h": "high"
   },
   "sent_messages": {
-    "cae8da0e99df62a7c3c9a77ad730d3a3e7f57d7644960154661f42e423d9af91": 1790528697,
-    "d7462e291ca6fb9d51cd14e98754ad1cc1d40a406355ada6921f12c409dd99a2": 1790528698
+    "55b7f6a4c34c269ea1b978b368521e52f411c34a5c620ed791695e4d6739feb9": 1790535061,
+    "ac51dbee1c813c712abd9e8e6bcf3c1498f092f6299ceab4ce2afda2717465ab": 1790535061
   }
 }
