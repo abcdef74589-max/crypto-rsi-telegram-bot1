@@ -238,7 +238,7 @@
     "ARB:15m": "high",
     "ENA:15m": "low",
     "LINK:15m": "high",
-    "TAO:15m": "low",
+    "TAO:15m": "high",
     "TRUMP:15m": "high",
     "PENGU:15m": "high",
     "RAY:15m": "high",
@@ -755,7 +755,7 @@
     "COW:4h": "high"
   },
   "sent_messages": {
-    "47593eca26debb35265dabaaa00b5b5c23a361c3a15154d28c70154b9a88375b": 1790496338,
-    "c66c739204410ebb923174e963b321d5daa9aa1718a54ee8ba7a6d8491b6e0a0": 1790496338
+    "6e4ce0464627dfb167e0c38df7088e67fb0c12f0893188fb5dc6ec12f73a0ea6": 1790497279,
+    "1842dfbd933e79850737996ef3427d9a9771b2640611256d23072be095cf9b6c": 1790497280
   }
 }
