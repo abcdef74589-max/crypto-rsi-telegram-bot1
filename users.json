@@ -743,10 +743,14 @@
     "2Z:1D": "high",
     "SPELL:1D": "high",
     "KMNO:1D": "high",
-    "KITE:1D": "high"
+    "KITE:1D": "high",
+    "HYPE:15m": "high",
+    "COW:15m": "high"
   },
   "sent_messages": {
     "283008952d93b94d317b0ef40941bd01dbdd9e81d9cad7600439454e2c60682b": 1790471125,
-    "5fedb3d2608b37f77ce0dd7412b2dbbcb1c4b915deef79410b62c78c5d24198d": 1790471125
+    "5fedb3d2608b37f77ce0dd7412b2dbbcb1c4b915deef79410b62c78c5d24198d": 1790471125,
+    "04b1f8ed35cad1740d8dc64211e3ac5559aaf423a5ff60a24031a751e2c7f722": 1790472011,
+    "49238a4f4c847d5ca21c43ec840ffe5b9c8442dcf0611daa8222d484a84bc667": 1790472012
   }
 }
