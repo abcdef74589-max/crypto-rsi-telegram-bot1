@@ -765,10 +765,21 @@
     "GRT:1h": "high",
     "APE:1h": "high",
     "GRT:15m": "high",
-    "SUPER:15m": "low"
+    "SUPER:15m": "low",
+    "GRT:4h": "high",
+    "ORCA:4h": "high",
+    "W:1D": "high",
+    "AUDIO:1D": "high",
+    "GRT:1D": "high",
+    "EIGEN:1D": "high",
+    "ORCA:1D": "high",
+    "SKY:1D": "high",
+    "ORCA:15m": "high"
   },
   "sent_messages": {
-    "6b35edbb300628b355d1202875762c248c0034a1e1185eb706057ed3697a7830": 1790549431,
-    "0cebfd15cc8473105362268b62043497763fb5a8cc361fe6168efc348e816b8e": 1790549431
+    "5397d503e26942267b8ef6325a38ec00a65fce12f23aec4d6d31f479e0a48183": 1790552980,
+    "50a56954914c6eab7987accde3f25290cd3b1be22be6eb7008861c3ad954ceaf": 1790552980,
+    "b5fc8afa3af676ad3b2a6bb4e09b3e1cac5d3a2eb75f0c78536bd98166d7c9fa": 1790553099,
+    "128cfaff2876cea928b16e411b8522f6d03fbd8ab01493b0f5a9c355568eeaae": 1790553099
   }
 }
