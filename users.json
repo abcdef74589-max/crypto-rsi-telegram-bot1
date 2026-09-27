@@ -445,7 +445,7 @@
     "RLUSD:1h": "low",
     "PROVE:1h": "high",
     "LDO:1h": "high",
-    "SAGA:1h": "high",
+    "SAGA:1h": "low",
     "C:1h": "high",
     "FIL:15m": "high",
     "POL:1h": "high",
@@ -754,12 +754,11 @@
     "GLMR:4h": "high",
     "COW:4h": "high",
     "GLMR:1h": "high",
-    "AUDIO:15m": "high"
+    "AUDIO:15m": "high",
+    "AUDIO:1h": "high"
   },
   "sent_messages": {
-    "329b48ecc356e7697bc3d246495c5806654633167c35c8d678523201e69f231e": 1790513498,
-    "723dfee66c4a39f05004fdf67ed7bc53781c9cf411ed25f5c970fdc047313bf7": 1790513498,
-    "31a38183b9778ee67166203c19dfac0f4619acb8825f92c940c9385376ea5ef4": 1790514297,
-    "3d5a535480f1b21fb5c40c7c6f11417eacb77a71687c394c4b002c126a5d2faa": 1790514297
+    "b3539982fcd16ed5ef39e0ee9219ae55b97bbac3873e61f234cf014a3ba07d9e": 1790516989,
+    "c33f290023c5d4d6513416e4d07bf1d3945818e536e44f8a4643ca5d80a68515": 1790516989
   }
 }
