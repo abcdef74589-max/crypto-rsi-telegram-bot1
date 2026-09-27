@@ -345,7 +345,7 @@
     "ETH:1h": "low",
     "XAUT:1h": "low",
     "G:1h": "high",
-    "ZAMA:1h": "high",
+    "ZAMA:1h": "low",
     "SOXLB:1h": "high",
     "SEI:1h": "high",
     "QQQB:1h": "low",
@@ -755,10 +755,18 @@
     "COW:4h": "high",
     "GLMR:1h": "high",
     "AUDIO:15m": "high",
-    "AUDIO:1h": "high"
+    "AUDIO:1h": "high",
+    "MAGIC:1h": "high",
+    "JASMY:1h": "high",
+    "AUDIO:4h": "high",
+    "MAGIC:4h": "high",
+    "JASMY:4h": "high",
+    "XVG:4h": "high"
   },
   "sent_messages": {
     "e7385292dd921fe6a702dd438ddbae3d79ac0d5e4cd8ceab47e02c2e57de57b0": 1790523400,
-    "5d979c99216c34e18f6bdd08394bc977cbdea46faa51e3afc6c4b1881c99484c": 1790523400
+    "5d979c99216c34e18f6bdd08394bc977cbdea46faa51e3afc6c4b1881c99484c": 1790523400,
+    "c1f2bdc5e4507429aa11cde83d8c4db42e016464833c340ade4c90ec5274d8c5": 1790524216,
+    "afe8c28e75884ab22ee21d7ef8bb180d6587b6ef8471224db1f314fed0b32340": 1790524217
   }
 }
