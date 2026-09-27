@@ -310,7 +310,7 @@
     "PENDLE:15m": "high",
     "牛来:15m": "high",
     "ZAMA:15m": "low",
-    "AERO:15m": "high",
+    "AERO:15m": "low",
     "CRV:15m": "high",
     "ZRO:15m": "high",
     "SKY:15m": "high",
@@ -758,7 +758,7 @@
     "AUDIO:1h": "high"
   },
   "sent_messages": {
-    "b3539982fcd16ed5ef39e0ee9219ae55b97bbac3873e61f234cf014a3ba07d9e": 1790516989,
-    "c33f290023c5d4d6513416e4d07bf1d3945818e536e44f8a4643ca5d80a68515": 1790516989
+    "64c36d4f93f9357482be9f0c7a0b68ed31c482f797afeffec3be6eacf455bda0": 1790517922,
+    "7cf7f0716f23b695169cd6b799c1769d88dd0157fba2fde5944b8e692ec5c652": 1790517922
   }
 }
