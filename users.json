@@ -745,10 +745,11 @@
     "KMNO:1D": "high",
     "KITE:1D": "high",
     "HYPE:15m": "high",
-    "COW:15m": "high"
+    "COW:15m": "high",
+    "W:15m": "high"
   },
   "sent_messages": {
-    "b98f3098d4d828ef11f27a95d2765e62bac057d76d12f2bfb41cd26cc65bf528": 1790481892,
-    "b159cd45c45a15c8c5f7728789e229a624a5f7d432a4287034418492b95ac0f2": 1790481892
+    "703bc687609a239ff2d855de0e9f2c6ccf039cb92ffab973e6dece6ba72d2f5f": 1790485490,
+    "41afc0f30366326c01e4ad2921c9bd33dc2e6bfd53ddf54c619859b60a88b03f": 1790485490
   }
 }
