@@ -242,7 +242,7 @@
     "TRUMP:15m": "high",
     "PENGU:15m": "high",
     "RAY:15m": "high",
-    "ETHFI:15m": "high",
+    "ETHFI:15m": "low",
     "NEAR:1h": "high",
     "SOL:1h": "high",
     "UNI:1h": "high",
@@ -466,7 +466,7 @@
     "BONK:1h": "high",
     "ASTER:15m": "high",
     "ZK:15m": "low",
-    "ZEC:15m": "high",
+    "ZEC:15m": "low",
     "DASH:15m": "low",
     "CAKE:15m": "high",
     "STG:15m": "high",
@@ -758,7 +758,7 @@
     "AUDIO:1h": "high"
   },
   "sent_messages": {
-    "64c36d4f93f9357482be9f0c7a0b68ed31c482f797afeffec3be6eacf455bda0": 1790517922,
-    "7cf7f0716f23b695169cd6b799c1769d88dd0157fba2fde5944b8e692ec5c652": 1790517922
+    "e7385292dd921fe6a702dd438ddbae3d79ac0d5e4cd8ceab47e02c2e57de57b0": 1790523400,
+    "5d979c99216c34e18f6bdd08394bc977cbdea46faa51e3afc6c4b1881c99484c": 1790523400
   }
 }
