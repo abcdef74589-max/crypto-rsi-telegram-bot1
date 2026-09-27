@@ -690,7 +690,7 @@
     "PYTH:1h": "high",
     "RARE:1h": "high",
     "JTO:1h": "high",
-    "VTHO:1h": "high",
+    "VTHO:1h": "low",
     "JST:1h": "high",
     "RARE:4h": "high",
     "JST:4h": "high",
@@ -768,7 +768,7 @@
     "SUPER:15m": "low"
   },
   "sent_messages": {
-    "488d5d6e641badb8264751daad85a589f5fbcb5bb658211e9bd722b2e9e54ff1": 1790545838,
-    "08127338f71f70bafff07321c0e7634875c1ba0496d04eb0a847f09fc7ac5b8c": 1790545838
+    "6b35edbb300628b355d1202875762c248c0034a1e1185eb706057ed3697a7830": 1790549431,
+    "0cebfd15cc8473105362268b62043497763fb5a8cc361fe6168efc348e816b8e": 1790549431
   }
 }
