@@ -710,7 +710,7 @@
     "PLUME:1D": "high",
     "RUNE:1D": "high",
     "PYTH:1D": "high",
-    "VTHO:15m": "high",
+    "VTHO:15m": "low",
     "RUNE:15m": "high",
     "RARE:15m": "high",
     "RUNE:1h": "high",
@@ -756,7 +756,7 @@
     "GLMR:1h": "high"
   },
   "sent_messages": {
-    "5f9efaa99724aceffdcbe5b294fcc03d4091ffe4a24b139935aa5f60a44e8187": 1790507151,
-    "0f563c92baf9ec3996724fea718c6a7c191aab5d44c54806aa1005c81bab3ed3": 1790507152
+    "329b48ecc356e7697bc3d246495c5806654633167c35c8d678523201e69f231e": 1790513498,
+    "723dfee66c4a39f05004fdf67ed7bc53781c9cf411ed25f5c970fdc047313bf7": 1790513498
   }
 }
