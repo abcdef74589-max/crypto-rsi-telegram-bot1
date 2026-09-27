@@ -467,7 +467,7 @@
     "ASTER:15m": "high",
     "ZK:15m": "low",
     "ZEC:15m": "high",
-    "DASH:15m": "high",
+    "DASH:15m": "low",
     "CAKE:15m": "high",
     "STG:15m": "high",
     "SYN:1h": "high",
@@ -756,7 +756,7 @@
     "GLMR:1h": "high"
   },
   "sent_messages": {
-    "b0d450e7d7712817f34de4023dfbf4a0eea6afc25de88470cff3c5a76c98efb9": 1790506227,
-    "4eacf3afc93f8fdeafba45c2d9e0442cb403c08d4e829a66f5990ebfab4cd7f3": 1790506228
+    "5f9efaa99724aceffdcbe5b294fcc03d4091ffe4a24b139935aa5f60a44e8187": 1790507151,
+    "0f563c92baf9ec3996724fea718c6a7c191aab5d44c54806aa1005c81bab3ed3": 1790507152
   }
 }
