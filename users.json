@@ -338,7 +338,7 @@
     "ZRO:1h": "high",
     "TUT:15m": "low",
     "PAXG:15m": "low",
-    "XAUT:15m": "high",
+    "XAUT:15m": "low",
     "SPCXB:15m": "low",
     "G:15m": "low",
     "SPYB:15m": "low",
@@ -748,7 +748,7 @@
     "COW:15m": "high"
   },
   "sent_messages": {
-    "5822e4d37a111845ca43079b32a1a84e5d98469d074349ece1f7f3a8caf9be64": 1790478308,
-    "17d3dc812f43683462a9794af21e5bd737ea63158e43c0f1019f3c17b80f455a": 1790478309
+    "b98f3098d4d828ef11f27a95d2765e62bac057d76d12f2bfb41cd26cc65bf528": 1790481892,
+    "b159cd45c45a15c8c5f7728789e229a624a5f7d432a4287034418492b95ac0f2": 1790481892
   }
 }
