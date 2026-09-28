@@ -600,7 +600,7 @@
     "FLOKI:15m": "low",
     "FORM:15m": "low",
     "FORM:1h": "high",
-    "INTCB:1h": "high",
+    "INTCB:1h": "low",
     "XRP:4h": "high",
     "MINA:15m": "low",
     "BNSOL:1h": "high",
@@ -786,7 +786,7 @@
     "NMR:4h": "high"
   },
   "sent_messages": {
-    "cfc8bdb28b1fa4485e8c82e9896a290c35d1ee6ee2aec6cae58e7899a8d3631a": 1790616919,
-    "053284ce024f4efb59218897c5008b6ddfcb2a6701a0f9cb3b2186d82061c7f7": 1790616919
+    "db4a12f73d108b000a6d5eecb49f68a94bd584a75a6f110c8d264b2b9cbf2322": 1790617865,
+    "60784a9f8de6a65af3342623faeaf7f88dde2aeecf1faae21c54f2630fa8143f": 1790617865
   }
 }
