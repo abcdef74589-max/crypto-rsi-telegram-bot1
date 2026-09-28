@@ -537,7 +537,7 @@
     "LDO:15m": "high",
     "ZIL:15m": "high",
     "ALLO:4h": "high",
-    "ACE:15m": "high",
+    "ACE:15m": "low",
     "ZIL:1h": "high",
     "ZIL:4h": "high",
     "GENIUS:15m": "high",
@@ -781,7 +781,7 @@
     "OPN:15m": "low"
   },
   "sent_messages": {
-    "4b6e13b6181fed5e52b670787562cfbc068692e5412b9b7a2cec7d16a8e94597": 1790586333,
-    "e0c9302cfa2c40b4119583e4aa3fbe5d4ed6dcc9c10f76fa529cd9903b288882": 1790586333
+    "6f3ff2057718d48b45b26379334f1f815145c2ffccc272226cb76affada626f0": 1790590870,
+    "5c4b7b8fb1ea8b1df88e3d50fedc956e9797004fd08ba5ce7e27f2f46da94054": 1790590870
   }
 }
