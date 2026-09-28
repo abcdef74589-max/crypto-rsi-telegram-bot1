@@ -308,7 +308,7 @@
     "GOOGLB:15m": "high",
     "NVDAB:15m": "high",
     "PENDLE:15m": "low",
-    "牛来:15m": "low",
+    "牛来:15m": "high",
     "ZAMA:15m": "low",
     "AERO:15m": "low",
     "CRV:15m": "high",
@@ -494,7 +494,7 @@
     "JST:15m": "high",
     "PUMP:15m": "high",
     "XTZ:1h": "high",
-    "MARSCOIN:15m": "low",
+    "MARSCOIN:15m": "high",
     "ESP:1h": "high",
     "XTZ:15m": "high",
     "HEI:15m": "low",
@@ -781,7 +781,7 @@
     "OPN:15m": "low"
   },
   "sent_messages": {
-    "8df92d4155784a7785b5e2758bb9fc506350216e7ffc4031ccdd37c0ebcc789f": 1790568400,
-    "c3633f38bbf05bfd21701c16e9a6fa2e340690bfaf510259eb3a97038f307032": 1790568401
+    "302b69fd7005a9e50357536c6795ecdb68ba983d5f61a49021b813ae0d9945dc": 1790572829,
+    "ff92116c405c9a10dc20693947fc3bc350c950bf833f8a6f61b8c2446836e4fb": 1790572829
   }
 }
