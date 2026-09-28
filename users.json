@@ -290,7 +290,7 @@
     "AVAX:1h": "low",
     "AAVE:1h": "high",
     "TRUMP:1h": "low",
-    "CAKE:1h": "high",
+    "CAKE:1h": "low",
     "ETHFI:1h": "high",
     "SHIB:1h": "low",
     "AERO:1h": "low",
@@ -555,7 +555,7 @@
     "TRX:4h": "high",
     "CTSI:4h": "high",
     "JTO:4h": "high",
-    "HBAR:1h": "low",
+    "HBAR:1h": "high",
     "EPIC:1h": "high",
     "HBAR:4h": "high",
     "EPIC:4h": "high",
@@ -651,7 +651,7 @@
     "APE:15m": "low",
     "PYTH:15m": "high",
     "ASTER:1h": "high",
-    "ACE:1h": "high",
+    "ACE:1h": "low",
     "FLOKI:1h": "low",
     "WLFI:1h": "high",
     "CRV:1h": "low",
@@ -781,7 +781,7 @@
     "OPN:15m": "low"
   },
   "sent_messages": {
-    "6f3ff2057718d48b45b26379334f1f815145c2ffccc272226cb76affada626f0": 1790590870,
-    "5c4b7b8fb1ea8b1df88e3d50fedc956e9797004fd08ba5ce7e27f2f46da94054": 1790590870
+    "3226dd297ab410c6af1e9846892e0887a50e8d2b09c09984597e11726f96f8c7": 1790592628,
+    "b3b7d88a8eacac85bd27aaa73fe28942c286636d5b343a4e275b2e9b27f8f321": 1790592629
   }
 }
