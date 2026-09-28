@@ -238,7 +238,7 @@
     "ARB:15m": "high",
     "ENA:15m": "high",
     "LINK:15m": "high",
-    "TAO:15m": "high",
+    "TAO:15m": "low",
     "TRUMP:15m": "high",
     "PENGU:15m": "high",
     "RAY:15m": "high",
@@ -255,7 +255,7 @@
     "LINK:1h": "high",
     "TAO:1h": "high",
     "LTC:1h": "high",
-    "BCH:1h": "high",
+    "BCH:1h": "low",
     "DOT:1h": "high",
     "FET:1h": "high",
     "FIL:1h": "high",
@@ -282,7 +282,7 @@
     "ICP:15m": "high",
     "BFUSD:15m": "low",
     "BTC:15m": "high",
-    "BCH:15m": "high",
+    "BCH:15m": "low",
     "MSTRB:15m": "low",
     "ENA:1h": "high",
     "PUMP:1h": "high",
@@ -327,7 +327,7 @@
     "ZEC:1h": "high",
     "DOGE:1h": "low",
     "SNDKB:1h": "low",
-    "MSTRB:1h": "high",
+    "MSTRB:1h": "low",
     "SPCXB:1h": "low",
     "INJ:1h": "high",
     "GRAM:1h": "high",
@@ -593,7 +593,7 @@
     "MINA:4h": "high",
     "PHA:15m": "low",
     "MUBARAK:15m": "low",
-    "PHA:1h": "high",
+    "PHA:1h": "low",
     "MUBARAK:1h": "high",
     "WIF:1h": "high",
     "WIF:15m": "high",
@@ -774,10 +774,13 @@
     "EIGEN:1D": "high",
     "ORCA:1D": "high",
     "SKY:1D": "high",
-    "ORCA:15m": "high"
+    "ORCA:15m": "high",
+    "HYPE:1h": "low"
   },
   "sent_messages": {
     "54f7f37c2d33f40010c781cd7dd729165a2d06a678a35435d84b7838df0049d1": 1790562978,
-    "4672c5eef166747bc35a930c43278df04b7c825d960df55de6fc2ab30e364ed8": 1790562978
+    "4672c5eef166747bc35a930c43278df04b7c825d960df55de6fc2ab30e364ed8": 1790562978,
+    "6ca42e6d3fea08daf1f8adff39b208013fdb472be99badd3bf3599dbcfd17482": 1790563813,
+    "d38c6efa9b419de6ecf09ab942a781fb0a18072ca43b302963d60478f3583d8f": 1790563813
   }
 }
