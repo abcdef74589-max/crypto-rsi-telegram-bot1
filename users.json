@@ -778,10 +778,11 @@
     "HYPE:1h": "low",
     "MAGIC:15m": "low",
     "XVG:15m": "low",
-    "OPN:15m": "low"
+    "OPN:15m": "low",
+    "NMR:15m": "high"
   },
   "sent_messages": {
-    "3226dd297ab410c6af1e9846892e0887a50e8d2b09c09984597e11726f96f8c7": 1790592628,
-    "b3b7d88a8eacac85bd27aaa73fe28942c286636d5b343a4e275b2e9b27f8f321": 1790592629
+    "e2cfdc7583b9a853dbbf9b02dc6ccb9c4960b4767f5cff8e9a567475e2d3343b": 1790595349,
+    "d5bdccc2d507d9dada84232d93c202a0bf63210e171165221197f74867ef520f": 1790595350
   }
 }
