@@ -784,10 +784,11 @@
     "XAUT:4h": "low",
     "PAXG:4h": "low",
     "NMR:4h": "high",
-    "IOTA:4h": "high"
+    "IOTA:4h": "high",
+    "TSLAB:1h": "low"
   },
   "sent_messages": {
-    "59604ede468a999c8fce215fc794a4bf66048b11f2f0010a7351cee3edf06e81": 1790625019,
-    "6a55245f73a895d547ac894077f7fd57aa22bb7773e5a4508884f44133180d57": 1790625020
+    "23a501777c19c49d1fe3d92b2d6aa7c23e1553e20241c7e91748bbf1a7154f4d": 1790635835,
+    "43fedfe7fbafb3dc9b70ddaffa304aaa82858901e33347fd789d26273f4caeb1": 1790635835
   }
 }
