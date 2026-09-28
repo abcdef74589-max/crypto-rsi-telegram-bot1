@@ -391,7 +391,7 @@
     "FF:15m": "high",
     "THE:1h": "high",
     "STRK:1h": "low",
-    "AR:15m": "high",
+    "AR:15m": "low",
     "TRX:1h": "low",
     "BFUSD:1h": "low",
     "AR:1h": "high",
@@ -777,7 +777,7 @@
     "ORCA:15m": "high"
   },
   "sent_messages": {
-    "e4ffeacc37e25fd462af79d71c37869fef4080128dbd7d7fabd3629e39027526": 1790557612,
-    "244d10a50602fc13f5bf232f48a4a020554b767352c840f335147a18750c5f30": 1790557612
+    "70240b602081d56f78b94b94504a58817c8e9d8208910e1d0f417a4e1aa8ebdd": 1790559368,
+    "2a18e378eda1952b793f14c7474129b3210ba6f6363a5b39b5419bd1ce8b336e": 1790559368
   }
 }
