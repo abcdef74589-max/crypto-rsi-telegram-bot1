@@ -258,11 +258,11 @@
     "BCH:1h": "low",
     "DOT:1h": "high",
     "FET:1h": "high",
-    "FIL:1h": "high",
+    "FIL:1h": "low",
     "XPL:1h": "high",
     "PENGU:1h": "high",
     "APT:1h": "high",
-    "NVDAB:1h": "low",
+    "NVDAB:1h": "high",
     "MORPHO:1h": "high",
     "RENDER:1h": "high",
     "BNCB:1h": "high",
@@ -712,7 +712,7 @@
     "PYTH:1D": "high",
     "VTHO:15m": "low",
     "RUNE:15m": "low",
-    "RARE:15m": "high",
+    "RARE:15m": "low",
     "RUNE:1h": "high",
     "2Z:15m": "high",
     "2Z:1h": "high",
@@ -779,10 +779,16 @@
     "MAGIC:15m": "low",
     "XVG:15m": "low",
     "OPN:15m": "low",
-    "NMR:15m": "high"
+    "NMR:15m": "high",
+    "NMR:1h": "high",
+    "XAUT:4h": "low",
+    "PAXG:4h": "low",
+    "NMR:4h": "high"
   },
   "sent_messages": {
-    "e2cfdc7583b9a853dbbf9b02dc6ccb9c4960b4767f5cff8e9a567475e2d3343b": 1790595349,
-    "d5bdccc2d507d9dada84232d93c202a0bf63210e171165221197f74867ef520f": 1790595350
+    "e6c65049051462cb1f08cf774725ca76f2d7b8cc733e3cc807b3c6fb410c2bf0": 1790596180,
+    "6432ddb5d2d60b151bcb0332ee99ac4982d49a9d4c0738d77f167ee63479b94a": 1790596180,
+    "e437fe3a0746832952d0c03ab4561da170dde3b97ed7f7fbfbb85a25241dcc8c": 1790596301,
+    "1f0a15916945eca8e9c63346b253be732682ce30136039781e5dd9384d2e7477": 1790596301
   }
 }
