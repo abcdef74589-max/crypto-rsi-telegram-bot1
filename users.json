@@ -233,7 +233,7 @@
     "CHIP:15m": "high",
     "VIRTUAL:15m": "high",
     "BABY:15m": "low",
-    "NEAR:15m": "high",
+    "NEAR:15m": "low",
     "SOL:15m": "low",
     "ARB:15m": "low",
     "ENA:15m": "high",
@@ -241,7 +241,7 @@
     "TAO:15m": "low",
     "TRUMP:15m": "high",
     "PENGU:15m": "low",
-    "RAY:15m": "high",
+    "RAY:15m": "low",
     "ETHFI:15m": "low",
     "NEAR:1h": "high",
     "SOL:1h": "high",
@@ -324,14 +324,14 @@
     "MUB:15m": "high",
     "TIA:15m": "low",
     "BTC:1h": "low",
-    "ZEC:1h": "high",
+    "ZEC:1h": "low",
     "DOGE:1h": "low",
     "SNDKB:1h": "low",
     "MSTRB:1h": "low",
     "SPCXB:1h": "low",
     "INJ:1h": "high",
     "GRAM:1h": "high",
-    "RAY:1h": "high",
+    "RAY:1h": "low",
     "WBTC:1h": "high",
     "GOOGLB:1h": "high",
     "PENDLE:1h": "low",
@@ -444,7 +444,7 @@
     "AVA:15m": "high",
     "RLUSD:1h": "low",
     "PROVE:1h": "high",
-    "LDO:1h": "high",
+    "LDO:1h": "low",
     "SAGA:1h": "low",
     "C:1h": "high",
     "FIL:15m": "low",
@@ -783,10 +783,11 @@
     "NMR:1h": "high",
     "XAUT:4h": "low",
     "PAXG:4h": "low",
-    "NMR:4h": "high"
+    "NMR:4h": "high",
+    "IOTA:4h": "high"
   },
   "sent_messages": {
-    "db4a12f73d108b000a6d5eecb49f68a94bd584a75a6f110c8d264b2b9cbf2322": 1790617865,
-    "60784a9f8de6a65af3342623faeaf7f88dde2aeecf1faae21c54f2630fa8143f": 1790617865
+    "59604ede468a999c8fce215fc794a4bf66048b11f2f0010a7351cee3edf06e81": 1790625019,
+    "6a55245f73a895d547ac894077f7fd57aa22bb7773e5a4508884f44133180d57": 1790625020
   }
 }
