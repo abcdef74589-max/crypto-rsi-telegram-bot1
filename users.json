@@ -245,7 +245,7 @@
     "ETHFI:15m": "low",
     "NEAR:1h": "high",
     "SOL:1h": "high",
-    "UNI:1h": "high",
+    "UNI:1h": "low",
     "BNB:1h": "low",
     "ARB:1h": "high",
     "SUI:1h": "high",
@@ -293,7 +293,7 @@
     "CAKE:1h": "high",
     "ETHFI:1h": "high",
     "SHIB:1h": "low",
-    "AERO:1h": "high",
+    "AERO:1h": "low",
     "MUB:1h": "high",
     "CHIP:1h": "high",
     "THE:15m": "high",
@@ -449,7 +449,7 @@
     "C:1h": "high",
     "FIL:15m": "low",
     "POL:1h": "high",
-    "ZEN:1h": "high",
+    "ZEN:1h": "low",
     "XUSD:1h": "low",
     "ZK:1h": "high",
     "ADA:4h": "high",
@@ -463,7 +463,7 @@
     "LDO:4h": "high",
     "BONK:15m": "low",
     "SYN:15m": "low",
-    "BONK:1h": "high",
+    "BONK:1h": "low",
     "ASTER:15m": "high",
     "ZK:15m": "low",
     "ZEC:15m": "low",
@@ -782,6 +782,8 @@
   },
   "sent_messages": {
     "d81003886657c56594d7ba19a6d8a85afee550b363a646003d6cff98f254f004": 1790573797,
-    "38ab28c636aea23b9f10e672151ab8989143334d909cd1974d8c7e843b4697fb": 1790573797
+    "38ab28c636aea23b9f10e672151ab8989143334d909cd1974d8c7e843b4697fb": 1790573797,
+    "bd2e7fd561d597b94da792600834d9e4c6e6029cfb87d5061029af28022a8f05": 1790574655,
+    "4526912cf26cef8facab526c72974cbb512da61b6480d2da8a8dbbac47ad1120": 1790574655
   }
 }
