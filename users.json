@@ -279,7 +279,7 @@
     "SHIB:15m": "low",
     "DOGE:15m": "low",
     "TRX:15m": "high",
-    "ICP:15m": "low",
+    "ICP:15m": "high",
     "BFUSD:15m": "low",
     "BTC:15m": "low",
     "BCH:15m": "low",
@@ -654,7 +654,7 @@
     "ACE:1h": "low",
     "FLOKI:1h": "low",
     "WLFI:1h": "high",
-    "CRV:1h": "low",
+    "CRV:1h": "high",
     "WLFI:4h": "low",
     "NOM:1h": "high",
     "NOM:4h": "high",
@@ -786,10 +786,23 @@
     "NMR:4h": "high",
     "IOTA:4h": "high",
     "TSLAB:1h": "low",
-    "0G:15m": "high"
+    "0G:15m": "high",
+    "0G:1h": "high",
+    "TSLAB:4h": "low",
+    "HBAR:1D": "high",
+    "LINK:1D": "high",
+    "XAUT:1D": "low",
+    "ALGO:1D": "high",
+    "PAXG:1D": "low",
+    "NMR:1D": "high",
+    "IOTA:1D": "high",
+    "JST:1D": "high",
+    "0G:1D": "high"
   },
   "sent_messages": {
     "d602034736d9f9e127569b5bccbe6ef0828c1fe24de6afbfca54f0af0d60bdcd": 1790638583,
-    "a50481114acbe909fd3e7afd212b3bf10c21960d4a98f0747a08739605277937": 1790638583
+    "a50481114acbe909fd3e7afd212b3bf10c21960d4a98f0747a08739605277937": 1790638583,
+    "81666f72e5a65a09d610839a5f2a328ce4194c47537834af95bcf94cd132fa5d": 1790639404,
+    "d2a43ebe37d390e06d0fc48fcef6d42100735202daccae49e9a1430712d87a23": 1790639405
   }
 }
