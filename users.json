@@ -803,12 +803,11 @@
     "CELO:1h": "high",
     "NIGHT:15m": "high",
     "CELO:15m": "low",
-    "NIGHT:4h": "high"
+    "NIGHT:4h": "high",
+    "MOVR:1h": "high"
   },
   "sent_messages": {
-    "9fe7b9d5a902b2b9efadd8eab3709e6fb43dd9165e889d8e7923cb94839eb003": 1790711357,
-    "8c29bc76a42cbba226e87b892aab3874aa12096a5b6e9728d78d747c6cc76cab": 1790711357,
-    "f98e9f0a237dfc68843bb8a0072edf1b34b587587ab4a101755249db712d542e": 1790711466,
-    "67e08fc2b7e777a39a3d2c20d9601cdfd37ab915a2b82bd17691bcd58d3418c2": 1790711467
+    "75e64ac4d74a8c646d28cde14371c1787dc6b1d749428b1d4bbcde71d5994778": 1790718687,
+    "8febf51b0fcbfe9571f6cd7b5164b4938f5eb4d61750028e2791cbf22feb4be4": 1790718687
   }
 }
