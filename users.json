@@ -224,14 +224,14 @@
     "RENDER:15m": "high",
     "A:15m": "high",
     "BNB:15m": "low",
-    "WLD:15m": "high",
+    "WLD:15m": "low",
     "ADA:15m": "low",
     "LTC:15m": "low",
     "FET:15m": "low",
     "MORPHO:15m": "low",
     "OP:15m": "low",
     "CHIP:15m": "high",
-    "VIRTUAL:15m": "high",
+    "VIRTUAL:15m": "low",
     "BABY:15m": "low",
     "NEAR:15m": "low",
     "SOL:15m": "low",
@@ -319,7 +319,7 @@
     "EURI:15m": "high",
     "QQQB:15m": "low",
     "SEI:15m": "low",
-    "DOT:15m": "high",
+    "DOT:15m": "low",
     "INJ:15m": "low",
     "MUB:15m": "high",
     "TIA:15m": "low",
@@ -534,7 +534,7 @@
     "C:1D": "high",
     "STX:15m": "low",
     "STX:1h": "high",
-    "LDO:15m": "high",
+    "LDO:15m": "low",
     "ZIL:15m": "high",
     "ALLO:4h": "high",
     "ACE:15m": "low",
@@ -802,6 +802,8 @@
   },
   "sent_messages": {
     "cab99f7de525f137bef739e48e7b4fed63ba4b6c7fa1f82e91b9b6903b745943": 1790648489,
-    "e47c8d0b5b9d95fdaf38f94325a5245e1592275f3e6e9748daa25af355b303e9": 1790648490
+    "e47c8d0b5b9d95fdaf38f94325a5245e1592275f3e6e9748daa25af355b303e9": 1790648490,
+    "1f1639d9866e2e1d01553cb968de51e37fdbe67ec6a7d66a835b1e511a7f8804": 1790649355,
+    "9e286ab4798f112f678ef54a36cf53ee8b8e7d16d0cffdbdfcb6cf896dec7acf": 1790649355
   }
 }
