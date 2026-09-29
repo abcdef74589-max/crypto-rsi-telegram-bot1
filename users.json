@@ -216,7 +216,7 @@
     }
   },
   "states": {
-    "SUI:15m": "low",
+    "SUI:15m": "high",
     "ONDO:15m": "low",
     "APT:15m": "high",
     "KORUB:15m": "low",
@@ -287,7 +287,7 @@
     "ENA:1h": "high",
     "PUMP:1h": "high",
     "PEPE:1h": "low",
-    "AVAX:1h": "low",
+    "AVAX:1h": "high",
     "AAVE:1h": "high",
     "TRUMP:1h": "low",
     "CAKE:1h": "low",
@@ -307,7 +307,7 @@
     "WBTC:15m": "high",
     "GOOGLB:15m": "high",
     "NVDAB:15m": "high",
-    "PENDLE:15m": "low",
+    "PENDLE:15m": "high",
     "牛来:15m": "high",
     "ZAMA:15m": "low",
     "AERO:15m": "low",
@@ -391,7 +391,7 @@
     "FF:15m": "high",
     "THE:1h": "high",
     "STRK:1h": "low",
-    "AR:15m": "low",
+    "AR:15m": "high",
     "TRX:1h": "low",
     "BFUSD:1h": "low",
     "AR:1h": "high",
@@ -802,6 +802,8 @@
   },
   "sent_messages": {
     "950390fa4aa5d5fcb4579ec21f4fb17ae3f94e07aafd06fed2bb83c1e120b07e": 1790674524,
-    "799cd3bcf8c8493aa127723bf9b0323e1e8e5c381a3a5e98537b19ff03a1cbbc": 1790674525
+    "799cd3bcf8c8493aa127723bf9b0323e1e8e5c381a3a5e98537b19ff03a1cbbc": 1790674525,
+    "9d5f7c0660b46df08840e5d7e8aa414831bf782b0d3b28ee21afd822d492c341": 1790675416,
+    "d15094c3ec19153a07f874209adeeb802f53166e7a365f31fc0a83558a0044a2": 1790675417
   }
 }
