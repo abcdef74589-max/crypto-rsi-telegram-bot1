@@ -278,7 +278,7 @@
     "AAVE:15m": "low",
     "SHIB:15m": "low",
     "DOGE:15m": "low",
-    "TRX:15m": "high",
+    "TRX:15m": "low",
     "ICP:15m": "high",
     "BFUSD:15m": "low",
     "BTC:15m": "low",
@@ -303,7 +303,7 @@
     "XRP:15m": "high",
     "CRCLB:15m": "low",
     "XLM:15m": "high",
-    "GRAM:15m": "high",
+    "GRAM:15m": "low",
     "WBTC:15m": "high",
     "GOOGLB:15m": "high",
     "NVDAB:15m": "high",
@@ -744,7 +744,7 @@
     "SPELL:1D": "high",
     "KMNO:1D": "high",
     "KITE:1D": "high",
-    "HYPE:15m": "high",
+    "HYPE:15m": "low",
     "COW:15m": "high",
     "W:15m": "low",
     "W:1h": "high",
@@ -802,6 +802,8 @@
   },
   "sent_messages": {
     "b47f783ff6257fc2ab56b0f4e29e0c15a2ec856c9a4fae98f4d3bd60ed65efd5": 1790644871,
-    "c869a36bbcaf53ad090889600f9cf6bd1b3603cb4ab5b8d2089e639751dc0015": 1790644872
+    "c869a36bbcaf53ad090889600f9cf6bd1b3603cb4ab5b8d2089e639751dc0015": 1790644872,
+    "075169d9725c97880970b81eefeb0eeedbee63fe6afc9489f87aa87498e5bdea": 1790645755,
+    "1c2aff77cf3720e2bdead7338a214c6d8f37af10823d0cca2f8b2e6320bf480f": 1790645756
   }
 }
