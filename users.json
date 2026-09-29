@@ -237,7 +237,7 @@
     "SOL:15m": "high",
     "ARB:15m": "high",
     "ENA:15m": "low",
-    "LINK:15m": "high",
+    "LINK:15m": "low",
     "TAO:15m": "high",
     "TRUMP:15m": "high",
     "PENGU:15m": "high",
@@ -283,7 +283,7 @@
     "BFUSD:15m": "low",
     "BTC:15m": "high",
     "BCH:15m": "low",
-    "MSTRB:15m": "high",
+    "MSTRB:15m": "low",
     "ENA:1h": "high",
     "PUMP:1h": "high",
     "PEPE:1h": "low",
@@ -297,7 +297,7 @@
     "MUB:1h": "high",
     "CHIP:1h": "high",
     "THE:15m": "high",
-    "HBAR:15m": "high",
+    "HBAR:15m": "low",
     "BNCB:15m": "high",
     "ETH:15m": "high",
     "XRP:15m": "high",
@@ -491,7 +491,7 @@
     "LSK:15m": "low",
     "S:15m": "high",
     "ONE:1h": "low",
-    "JST:15m": "high",
+    "JST:15m": "low",
     "PUMP:15m": "high",
     "XTZ:1h": "high",
     "MARSCOIN:15m": "high",
@@ -805,7 +805,7 @@
     "CELO:15m": "high"
   },
   "sent_messages": {
-    "8b230189b9cbd99bda6ad3188eb22c17c478c9a1449b3b5cecdd57ccdad4e51c": 1790687210,
-    "fa6a98f80eb4092188eb451df11f399da14e23c046050b9b772325a6e639d13d": 1790687210
+    "6d6b7a2b8deabfe2856750b4d192af2e78b71db3647b8a492fdfc92eeadb1106": 1790699694,
+    "0abf0a02a4288c8b4df937ad3414220024810de2241bcbbaaf2bdf93cbc90b8e": 1790699694
   }
 }
