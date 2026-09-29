@@ -232,7 +232,7 @@
     "OP:15m": "low",
     "CHIP:15m": "high",
     "VIRTUAL:15m": "low",
-    "BABY:15m": "low",
+    "BABY:15m": "high",
     "NEAR:15m": "low",
     "SOL:15m": "low",
     "ARB:15m": "high",
@@ -798,12 +798,16 @@
     "IOTA:1D": "high",
     "JST:1D": "high",
     "0G:1D": "high",
-    "INTCB:15m": "low"
+    "INTCB:15m": "low",
+    "NIGHT:1h": "high",
+    "CELO:1h": "high",
+    "NIGHT:15m": "high",
+    "CELO:15m": "high"
   },
   "sent_messages": {
-    "950390fa4aa5d5fcb4579ec21f4fb17ae3f94e07aafd06fed2bb83c1e120b07e": 1790674524,
-    "799cd3bcf8c8493aa127723bf9b0323e1e8e5c381a3a5e98537b19ff03a1cbbc": 1790674525,
-    "9d5f7c0660b46df08840e5d7e8aa414831bf782b0d3b28ee21afd822d492c341": 1790675416,
-    "d15094c3ec19153a07f874209adeeb802f53166e7a365f31fc0a83558a0044a2": 1790675417
+    "452ecf9ef2b4f9cb1f29ac0221f099b3892b14e1d9b4c7b7ec1cf539dea5c889": 1790678967,
+    "ae35a70ada92f5698a8f9a7b0c54cc9167b5e605a107d7e9199598b561bf09e6": 1790678967,
+    "ad5fcc0c3fa48997d568b6eb59f03557493f32b250ae5af19936f8de0b0f5d08": 1790679076,
+    "bdde63ccd2199e284daee86fce806783e0f55e3f4d7c58b72bd069291b0f4729": 1790679077
   }
 }
