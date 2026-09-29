@@ -275,7 +275,7 @@
     "UNI:15m": "low",
     "REZ:15m": "high",
     "AVAX:15m": "high",
-    "AAVE:15m": "low",
+    "AAVE:15m": "high",
     "SHIB:15m": "low",
     "DOGE:15m": "low",
     "TRX:15m": "low",
@@ -801,7 +801,7 @@
     "INTCB:15m": "low"
   },
   "sent_messages": {
-    "71d6480679ec0a7a874503ffdd539d8ac18933f52c2d9834414aa3556f979160": 1790654718,
-    "ae4c81ccd37628a305155ec7995ef30f62788159d8ec9ec707223ed12cd4205d": 1790654719
+    "c108626c32f70a496a218a2467a9fe431d24b9026daeb9630205eb8546180b4d": 1790661995,
+    "0a93dd3bdc390453f491e2be3a09d421a5311f2be9b57760e8bb1a6a7fe11d99": 1790661996
   }
 }
