@@ -225,7 +225,7 @@
     "A:15m": "high",
     "BNB:15m": "high",
     "WLD:15m": "high",
-    "ADA:15m": "high",
+    "ADA:15m": "low",
     "LTC:15m": "low",
     "FET:15m": "high",
     "MORPHO:15m": "high",
@@ -300,8 +300,8 @@
     "HBAR:15m": "low",
     "BNCB:15m": "high",
     "ETH:15m": "high",
-    "XRP:15m": "high",
-    "CRCLB:15m": "high",
+    "XRP:15m": "low",
+    "CRCLB:15m": "low",
     "XLM:15m": "high",
     "GRAM:15m": "low",
     "WBTC:15m": "high",
@@ -711,7 +711,7 @@
     "RUNE:1D": "high",
     "PYTH:1D": "high",
     "VTHO:15m": "low",
-    "RUNE:15m": "high",
+    "RUNE:15m": "low",
     "RARE:15m": "low",
     "RUNE:1h": "high",
     "2Z:15m": "high",
@@ -805,7 +805,7 @@
     "CELO:15m": "high"
   },
   "sent_messages": {
-    "6d6b7a2b8deabfe2856750b4d192af2e78b71db3647b8a492fdfc92eeadb1106": 1790699694,
-    "0abf0a02a4288c8b4df937ad3414220024810de2241bcbbaaf2bdf93cbc90b8e": 1790699694
+    "95b9ad1c10a29268e41a062e374dcecf9929b3aeb0312238f200a00a24f6d744": 1790700681,
+    "8d8c0647c2f01d5b16a57867b68c26026f4f1c2f23ba22adcf1f7d899228256b": 1790700681
   }
 }
