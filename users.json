@@ -254,7 +254,7 @@
     "ADA:1h": "high",
     "LINK:1h": "high",
     "TAO:1h": "high",
-    "LTC:1h": "high",
+    "LTC:1h": "low",
     "BCH:1h": "low",
     "DOT:1h": "high",
     "FET:1h": "high",
@@ -801,9 +801,9 @@
     "INTCB:15m": "low"
   },
   "sent_messages": {
-    "b47f783ff6257fc2ab56b0f4e29e0c15a2ec856c9a4fae98f4d3bd60ed65efd5": 1790644871,
-    "c869a36bbcaf53ad090889600f9cf6bd1b3603cb4ab5b8d2089e639751dc0015": 1790644872,
     "075169d9725c97880970b81eefeb0eeedbee63fe6afc9489f87aa87498e5bdea": 1790645755,
-    "1c2aff77cf3720e2bdead7338a214c6d8f37af10823d0cca2f8b2e6320bf480f": 1790645756
+    "1c2aff77cf3720e2bdead7338a214c6d8f37af10823d0cca2f8b2e6320bf480f": 1790645756,
+    "f649462942298e0e7d994cbc59331b19e99d41d9e3def3393700a41c3a0dce74": 1790646632,
+    "20c4f8394288a67c3804db5c7a77f8e36e8108db754f9ceba2c568d302153164": 1790646632
   }
 }
