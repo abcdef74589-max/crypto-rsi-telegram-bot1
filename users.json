@@ -267,7 +267,7 @@
     "RENDER:1h": "high",
     "BNCB:1h": "high",
     "ICP:1h": "high",
-    "OP:1h": "high",
+    "OP:1h": "low",
     "VIRTUAL:1h": "high",
     "A:1h": "high",
     "BABY:1h": "high",
@@ -349,7 +349,7 @@
     "SOXLB:1h": "high",
     "SEI:1h": "high",
     "QQQB:1h": "low",
-    "TIA:1h": "high",
+    "TIA:1h": "low",
     "TUT:1h": "high",
     "ZEC:4h": "high",
     "NEAR:4h": "high",
@@ -546,7 +546,7 @@
     "CTSI:1h": "high",
     "SKL:15m": "high",
     "C:15m": "high",
-    "DASH:1h": "high",
+    "DASH:1h": "low",
     "GUN:15m": "high",
     "HOME:15m": "low",
     "ALLO:15m": "low",
@@ -801,9 +801,9 @@
     "INTCB:15m": "low"
   },
   "sent_messages": {
-    "cab99f7de525f137bef739e48e7b4fed63ba4b6c7fa1f82e91b9b6903b745943": 1790648489,
-    "e47c8d0b5b9d95fdaf38f94325a5245e1592275f3e6e9748daa25af355b303e9": 1790648490,
     "1f1639d9866e2e1d01553cb968de51e37fdbe67ec6a7d66a835b1e511a7f8804": 1790649355,
-    "9e286ab4798f112f678ef54a36cf53ee8b8e7d16d0cffdbdfcb6cf896dec7acf": 1790649355
+    "9e286ab4798f112f678ef54a36cf53ee8b8e7d16d0cffdbdfcb6cf896dec7acf": 1790649355,
+    "30c47566fe4a01065790803f0010c2b492cee451875b469cd22a2d2fd46087f2": 1790650222,
+    "4205ed155a0311aaa418bfc3658d101b40c94ce8f039c97515f754606957dda0": 1790650222
   }
 }
