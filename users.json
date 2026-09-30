@@ -653,7 +653,7 @@
     "ASTER:1h": "high",
     "ACE:1h": "low",
     "FLOKI:1h": "low",
-    "WLFI:1h": "high",
+    "WLFI:1h": "low",
     "CRV:1h": "high",
     "WLFI:4h": "low",
     "NOM:1h": "high",
@@ -816,7 +816,7 @@
     "TRB:15m": "high"
   },
   "sent_messages": {
-    "d29b27fe6cd461ec09fa931ee6d3da6c6bd609a123b031bc33d657da5473011f": 1790802281,
-    "5064ef42d10b73031064e82e193ec54550af108ec48eaabac23d068b1e030837": 1790802281
+    "e2a4f9cb7271c15bdec2325a7f99e8ecd46735921e2aa59f68af13a6f828b955": 1790805012,
+    "3061bfa958295d975a6c87e89d7a6b51bc115273ec745b66211867385ac94ec6": 1790805012
   }
 }
