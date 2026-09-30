@@ -233,7 +233,7 @@
     "CHIP:15m": "high",
     "VIRTUAL:15m": "low",
     "BABY:15m": "high",
-    "NEAR:15m": "low",
+    "NEAR:15m": "high",
     "SOL:15m": "high",
     "ARB:15m": "high",
     "ENA:15m": "high",
@@ -808,10 +808,11 @@
     "0G:4h": "high",
     "MOVR:4h": "high",
     "INIT:15m": "low",
-    "COINB:15m": "high"
+    "COINB:15m": "high",
+    "TSLAB:15m": "low"
   },
   "sent_messages": {
-    "d6bc61c21a397ecd597c9644a58c98f5f5c2e3f44dc63bda805797217a4ec293": 1790763703,
-    "24170c72e51aa8a4bdf336d67d7ed63609e6e1ff20968e7292c6be607f0e40b1": 1790763703
+    "ed41e7a4a87320b09b965a9550a3576471233d3ec48aebc8c35a4ea27a1de927": 1790766380,
+    "fcd9945b5d7809df7701c20bf0b8017796e4e56490270fd879702e24e19b56c0": 1790766380
   }
 }
