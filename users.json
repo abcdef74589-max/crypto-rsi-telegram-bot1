@@ -392,7 +392,7 @@
     "THE:1h": "high",
     "STRK:1h": "low",
     "AR:15m": "high",
-    "TRX:1h": "low",
+    "TRX:1h": "high",
     "BFUSD:1h": "low",
     "AR:1h": "high",
     "PEPE:15m": "low",
@@ -585,7 +585,7 @@
     "ICP:4h": "high",
     "KMNO:4h": "high",
     "MITO:1h": "high",
-    "NIL:15m": "low",
+    "NIL:15m": "high",
     "OPG:1h": "high",
     "MINA:1h": "high",
     "SOXLB:4h": "high",
@@ -809,7 +809,7 @@
     "MOVR:4h": "high"
   },
   "sent_messages": {
-    "4fddc84fe4d316df2d228a89ad8b5f0fb6bb4a87b597fe2a48c7b25017d1a7c6": 1790742076,
-    "ed547c1dc911b4a4ebf1c017a1d5bd30745cde885489c8c32f6fc19daa9b0bbb": 1790742076
+    "06f5ebbda4a3c229606e71c6de59986512c6bf13683507dfa2726246cbf83a39": 1790747450,
+    "b8015100095c8d73f4040b14305f4eb25b104216b7a79c33d2111537869f1815": 1790747451
   }
 }
