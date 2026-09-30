@@ -328,7 +328,7 @@
     "DOGE:1h": "low",
     "SNDKB:1h": "low",
     "MSTRB:1h": "low",
-    "SPCXB:1h": "low",
+    "SPCXB:1h": "high",
     "INJ:1h": "high",
     "GRAM:1h": "low",
     "RAY:1h": "low",
@@ -532,7 +532,7 @@
     "VET:1D": "high",
     "STX:1D": "high",
     "C:1D": "high",
-    "STX:15m": "low",
+    "STX:15m": "high",
     "STX:1h": "high",
     "LDO:15m": "low",
     "ZIL:15m": "high",
@@ -647,7 +647,7 @@
     "U:15m": "low",
     "PLUME:4h": "high",
     "PAXG:1h": "low",
-    "WLFI:15m": "high",
+    "WLFI:15m": "low",
     "APE:15m": "low",
     "PYTH:15m": "high",
     "ASTER:1h": "high",
@@ -810,10 +810,11 @@
     "INIT:15m": "low",
     "COINB:15m": "high",
     "TSLAB:15m": "low",
-    "HUMA:15m": "high"
+    "HUMA:15m": "high",
+    "HUMA:1h": "high"
   },
   "sent_messages": {
-    "406233f0a4e1ec4ba39d9ce555475636864f10c1b92502046c5c363f01dd67d1": 1790787927,
-    "e436b4730c7eb92b60be3cb24846e8c744d013f1fb6b463714c18f474d4a07fb": 1790787928
+    "633b30d79a4461c37af60dec0c0cb0b8b1ce9a254cf4035b96ee527acc06275d": 1790790596,
+    "96e4a19b143b8dc3c3b631382d37a92c5b04f7443b2fb96953c0ff8676b122b6": 1790790596
   }
 }
