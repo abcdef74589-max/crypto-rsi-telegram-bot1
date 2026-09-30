@@ -229,7 +229,7 @@
     "LTC:15m": "low",
     "FET:15m": "low",
     "MORPHO:15m": "high",
-    "OP:15m": "low",
+    "OP:15m": "high",
     "CHIP:15m": "high",
     "VIRTUAL:15m": "low",
     "BABY:15m": "high",
@@ -711,7 +711,7 @@
     "RUNE:1D": "high",
     "PYTH:1D": "high",
     "VTHO:15m": "low",
-    "RUNE:15m": "low",
+    "RUNE:15m": "high",
     "RARE:15m": "low",
     "RUNE:1h": "high",
     "2Z:15m": "high",
@@ -810,7 +810,9 @@
     "INIT:15m": "low"
   },
   "sent_messages": {
-    "f3162a1c08238acf2a952f0d2c176d83cdbd52fd43fd9ba089e785d939eaa224": 1790760080,
-    "f67d292cc2a221461cfd78ec09230ec5c02988d7ee44a5e1c8fd60f4cb33415f": 1790760080
+    "196672832b9b1e895f5e91ed7d4b69d56849087453474acb131fe58f7ec37e2b": 1790762679,
+    "4360353cd5040cfb266076796031f0edec99c5e6ff7923f5dd916d9f2370622a": 1790762680,
+    "3a9a1103e36ab1aa7805043950232e8d5c9e6447c0bb1fd9fabcd75fc99cd50f": 1790762789,
+    "552f5696d08490419116a876a0454eb908bc6eb33de7d88c9da9022c648d1b49": 1790762789
   }
 }
