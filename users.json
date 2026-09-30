@@ -813,10 +813,15 @@
     "HUMA:15m": "high",
     "HUMA:1h": "high",
     "HUMA:4h": "high",
-    "TRB:15m": "high"
+    "TRB:15m": "high",
+    "CRCLB:4h": "low",
+    "MOVR:1D": "high",
+    "PUMP:1D": "high",
+    "NIGHT:1D": "high",
+    "GLMR:1D": "high"
   },
   "sent_messages": {
-    "e2a4f9cb7271c15bdec2325a7f99e8ecd46735921e2aa59f68af13a6f828b955": 1790805012,
-    "3061bfa958295d975a6c87e89d7a6b51bc115273ec745b66211867385ac94ec6": 1790805012
+    "220db96832a0dfb5dde018c900af814f3831343e0dd5944c5943e57fa098b822": 1790812183,
+    "5ef1aee3e484ef71b090baec25e9992600a6d38b76313bb02b28b708d46336d3": 1790812184
   }
 }
