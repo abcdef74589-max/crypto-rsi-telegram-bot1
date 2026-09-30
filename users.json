@@ -283,7 +283,7 @@
     "BFUSD:15m": "low",
     "BTC:15m": "high",
     "BCH:15m": "low",
-    "MSTRB:15m": "low",
+    "MSTRB:15m": "high",
     "ENA:1h": "high",
     "PUMP:1h": "high",
     "PEPE:1h": "low",
@@ -461,7 +461,7 @@
     "ZK:4h": "high",
     "GALA:4h": "high",
     "LDO:4h": "high",
-    "BONK:15m": "low",
+    "BONK:15m": "high",
     "SYN:15m": "low",
     "BONK:1h": "low",
     "ASTER:15m": "high",
@@ -807,12 +807,11 @@
     "MOVR:1h": "high",
     "0G:4h": "high",
     "MOVR:4h": "high",
-    "INIT:15m": "low"
+    "INIT:15m": "low",
+    "COINB:15m": "high"
   },
   "sent_messages": {
-    "196672832b9b1e895f5e91ed7d4b69d56849087453474acb131fe58f7ec37e2b": 1790762679,
-    "4360353cd5040cfb266076796031f0edec99c5e6ff7923f5dd916d9f2370622a": 1790762680,
-    "3a9a1103e36ab1aa7805043950232e8d5c9e6447c0bb1fd9fabcd75fc99cd50f": 1790762789,
-    "552f5696d08490419116a876a0454eb908bc6eb33de7d88c9da9022c648d1b49": 1790762789
+    "d6bc61c21a397ecd597c9644a58c98f5f5c2e3f44dc63bda805797217a4ec293": 1790763703,
+    "24170c72e51aa8a4bdf336d67d7ed63609e6e1ff20968e7292c6be607f0e40b1": 1790763703
   }
 }
