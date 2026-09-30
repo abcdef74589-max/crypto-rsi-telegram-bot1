@@ -275,7 +275,7 @@
     "UNI:15m": "high",
     "REZ:15m": "high",
     "AVAX:15m": "high",
-    "AAVE:15m": "high",
+    "AAVE:15m": "low",
     "SHIB:15m": "high",
     "DOGE:15m": "low",
     "TRX:15m": "high",
@@ -330,7 +330,7 @@
     "MSTRB:1h": "low",
     "SPCXB:1h": "low",
     "INJ:1h": "high",
-    "GRAM:1h": "high",
+    "GRAM:1h": "low",
     "RAY:1h": "low",
     "WBTC:1h": "high",
     "GOOGLB:1h": "high",
@@ -487,7 +487,7 @@
     "AR:1D": "high",
     "PENDLE:1D": "high",
     "SYN:1D": "high",
-    "ONE:15m": "high",
+    "ONE:15m": "low",
     "LSK:15m": "low",
     "S:15m": "high",
     "ONE:1h": "low",
@@ -555,7 +555,7 @@
     "TRX:4h": "high",
     "CTSI:4h": "high",
     "JTO:4h": "high",
-    "HBAR:1h": "high",
+    "HBAR:1h": "low",
     "EPIC:1h": "high",
     "HBAR:4h": "high",
     "EPIC:4h": "high",
@@ -779,7 +779,7 @@
     "MAGIC:15m": "low",
     "XVG:15m": "low",
     "OPN:15m": "low",
-    "NMR:15m": "high",
+    "NMR:15m": "low",
     "NMR:1h": "high",
     "XAUT:4h": "low",
     "PAXG:4h": "low",
@@ -807,7 +807,7 @@
     "MOVR:1h": "high"
   },
   "sent_messages": {
-    "a47cf10380c7bde04d7f76c394e56df4f720acb64f40cc08da5cbd33eb418716": 1790723189,
-    "d834b56266e0f9411e03013a26e1fa75dd3c8757b73bcfc860f5992b67a06a21": 1790723189
+    "e04cd2142e7700d7a92e9e913f09bc95276ed2f9c4d88c29de077f2f47cd40ca": 1790729415,
+    "b6d9a9044718cab185c96864bcc458aa174bec5c850022c7ab9217bbbed1a155": 1790729416
   }
 }
