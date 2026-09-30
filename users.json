@@ -218,7 +218,7 @@
   "states": {
     "SUI:15m": "high",
     "ONDO:15m": "low",
-    "APT:15m": "high",
+    "APT:15m": "low",
     "KORUB:15m": "low",
     "SOXLB:15m": "high",
     "RENDER:15m": "high",
@@ -811,10 +811,11 @@
     "COINB:15m": "high",
     "TSLAB:15m": "low",
     "HUMA:15m": "high",
-    "HUMA:1h": "high"
+    "HUMA:1h": "high",
+    "HUMA:4h": "high"
   },
   "sent_messages": {
-    "1b85b54498ce320feafcb71e31e4d34a0a14daafa679ee074c58a55cdc14237a": 1790795174,
-    "01a3c6e0214efbf68eca899b30302c09749dc7e72609fff3681ed52b1a92edb2": 1790795174
+    "ada85cfbae27f6eb8e5c36b611b90f3ade4662103db2c37ed85f5da95bc4ff16": 1790797791,
+    "a81ab83aac9a6abbc1e6987e542cffe8e7b78a0dddebaeaa941918a028a42ab7": 1790797792
   }
 }
