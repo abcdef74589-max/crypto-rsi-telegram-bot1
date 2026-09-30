@@ -491,7 +491,7 @@
     "LSK:15m": "low",
     "S:15m": "high",
     "ONE:1h": "low",
-    "JST:15m": "low",
+    "JST:15m": "high",
     "PUMP:15m": "high",
     "XTZ:1h": "high",
     "MARSCOIN:15m": "high",
@@ -684,7 +684,7 @@
     "AXS:15m": "high",
     "ARK:1h": "high",
     "AXS:1h": "high",
-    "ARK:15m": "high",
+    "ARK:15m": "low",
     "PIXEL:15m": "high",
     "MOVR:15m": "high",
     "PYTH:1h": "high",
@@ -744,7 +744,7 @@
     "SPELL:1D": "high",
     "KMNO:1D": "high",
     "KITE:1D": "high",
-    "HYPE:15m": "low",
+    "HYPE:15m": "high",
     "COW:15m": "high",
     "W:15m": "low",
     "W:1h": "high",
@@ -809,10 +809,11 @@
     "MOVR:4h": "high",
     "INIT:15m": "low",
     "COINB:15m": "high",
-    "TSLAB:15m": "low"
+    "TSLAB:15m": "low",
+    "HUMA:15m": "high"
   },
   "sent_messages": {
-    "c10f939f450c5576093a358dc5ce9595efa3902cfaf6a9f9269f4a7e0769817c": 1790784395,
-    "612349e238ab3f6b353303f958d22c87fe0420e23514446ab7ed0a4e22a4aa6e": 1790784396
+    "406233f0a4e1ec4ba39d9ce555475636864f10c1b92502046c5c363f01dd67d1": 1790787927,
+    "e436b4730c7eb92b60be3cb24846e8c744d013f1fb6b463714c18f474d4a07fb": 1790787928
   }
 }
