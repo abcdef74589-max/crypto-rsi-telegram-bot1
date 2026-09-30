@@ -534,7 +534,7 @@
     "C:1D": "high",
     "STX:15m": "low",
     "STX:1h": "high",
-    "LDO:15m": "high",
+    "LDO:15m": "low",
     "ZIL:15m": "high",
     "ALLO:4h": "high",
     "ACE:15m": "low",
@@ -786,7 +786,7 @@
     "NMR:4h": "high",
     "IOTA:4h": "high",
     "TSLAB:1h": "low",
-    "0G:15m": "high",
+    "0G:15m": "low",
     "0G:1h": "high",
     "TSLAB:4h": "low",
     "HBAR:1D": "high",
@@ -812,7 +812,7 @@
     "TSLAB:15m": "low"
   },
   "sent_messages": {
-    "ae00092f88ec2198becebd697e1314b3fbdef6becca6d558d76674fc293c0fcd": 1790777118,
-    "23159bb14e51e46a0ea86060982be549424ae844499140bf99cc5f8f4b29c13f": 1790777118
+    "9b05ec654cc32d03c5a0951f2ba92bc042916d363ebfae6381216190f888449e": 1790781671,
+    "5b6f82047800200a711e708c606dcf63cf45127be0711ebcc7920e49db9f32c5": 1790781671
   }
 }
