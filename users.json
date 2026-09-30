@@ -236,7 +236,7 @@
     "NEAR:15m": "low",
     "SOL:15m": "high",
     "ARB:15m": "high",
-    "ENA:15m": "low",
+    "ENA:15m": "high",
     "LINK:15m": "low",
     "TAO:15m": "high",
     "TRUMP:15m": "high",
@@ -397,7 +397,7 @@
     "AR:1h": "high",
     "PEPE:15m": "low",
     "ZEN:15m": "high",
-    "SAGA:15m": "low",
+    "SAGA:15m": "high",
     "EIGEN:15m": "high",
     "EIGEN:1h": "high",
     "SKY:1h": "high",
@@ -810,7 +810,7 @@
     "INIT:15m": "low"
   },
   "sent_messages": {
-    "5a35657970f746b5e58ab840919c7e1aac191e064171c7e2aafacb06793a94e9": 1790755542,
-    "235624b50c6babfda1aa56a8809531d8c725e2ab35103c889c14579c824b7818": 1790755543
+    "f3162a1c08238acf2a952f0d2c176d83cdbd52fd43fd9ba089e785d939eaa224": 1790760080,
+    "f67d292cc2a221461cfd78ec09230ec5c02988d7ee44a5e1c8fd60f4cb33415f": 1790760080
   }
 }
