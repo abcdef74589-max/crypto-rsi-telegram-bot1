@@ -568,7 +568,7 @@
     "FTT:15m": "high",
     "LUNA:4h": "high",
     "FTT:4h": "high",
-    "NIL:1h": "low",
+    "NIL:1h": "high",
     "FF:1h": "high",
     "NIL:4h": "high",
     "SAGA:1D": "high",
@@ -813,6 +813,8 @@
   },
   "sent_messages": {
     "63568228faec36218467c01d5d04a290387fda32e8714cd7dddfaf875848e28c": 1790768137,
-    "70aece757b96fc56bdf5dbd4f281a663243c3c5782a57ce2393fdcbcc9ea65bc": 1790768137
+    "70aece757b96fc56bdf5dbd4f281a663243c3c5782a57ce2393fdcbcc9ea65bc": 1790768137,
+    "6d0c276a3a851e6b965b86092d9e67ad14a659a30f24c6de096a6230e3b90bc1": 1790768994,
+    "f151310d4112146aaaa989788e06c683c07b163508d33baffe56d5c1f7a47704": 1790768995
   }
 }
