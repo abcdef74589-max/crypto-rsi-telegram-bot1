@@ -397,7 +397,7 @@
     "AR:1h": "high",
     "PEPE:15m": "low",
     "ZEN:15m": "high",
-    "SAGA:15m": "high",
+    "SAGA:15m": "low",
     "EIGEN:15m": "high",
     "EIGEN:1h": "high",
     "SKY:1h": "high",
@@ -812,10 +812,11 @@
     "TSLAB:15m": "low",
     "HUMA:15m": "high",
     "HUMA:1h": "high",
-    "HUMA:4h": "high"
+    "HUMA:4h": "high",
+    "TRB:15m": "high"
   },
   "sent_messages": {
-    "ada85cfbae27f6eb8e5c36b611b90f3ade4662103db2c37ed85f5da95bc4ff16": 1790797791,
-    "a81ab83aac9a6abbc1e6987e542cffe8e7b78a0dddebaeaa941918a028a42ab7": 1790797792
+    "d29b27fe6cd461ec09fa931ee6d3da6c6bd609a123b031bc33d657da5473011f": 1790802281,
+    "5064ef42d10b73031064e82e193ec54550af108ec48eaabac23d068b1e030837": 1790802281
   }
 }
