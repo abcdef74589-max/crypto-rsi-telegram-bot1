@@ -680,7 +680,7 @@
     "QI:4h": "high",
     "QNT:4h": "high",
     "QI:15m": "low",
-    "QNT:15m": "high",
+    "QNT:15m": "low",
     "AXS:15m": "high",
     "ARK:1h": "high",
     "AXS:1h": "high",
@@ -824,10 +824,11 @@
     "MEGA:1h": "high",
     "MOVE:1h": "high",
     "ALICE:4h": "high",
-    "MOVE:4h": "high"
+    "MOVE:4h": "high",
+    "SKHYB:1h": "high"
   },
   "sent_messages": {
-    "62ae0069ea588114e557003623d6c854ca631b77874b25c41c99dc67ed2f8cfc": 1790882473,
-    "7f19cd9f5dbf1b9f61443a142f6cc230bd802a13148ba81191f8618340ade8e3": 1790882473
+    "0618d015f96eef4ef034d9c5282d06b041931926cf18ebac9d6e6a6c7c5c94fa": 1790884241,
+    "4cc0e4659c6b82513225934b8079010575c74ca5fb628567d458fa2a8ef8efa2": 1790884241
   }
 }
