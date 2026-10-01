@@ -310,7 +310,7 @@
     "PENDLE:15m": "high",
     "牛来:15m": "high",
     "ZAMA:15m": "high",
-    "AERO:15m": "low",
+    "AERO:15m": "high",
     "CRV:15m": "high",
     "ZRO:15m": "high",
     "SKY:15m": "high",
@@ -337,7 +337,7 @@
     "PENDLE:1h": "low",
     "ZRO:1h": "high",
     "TUT:15m": "low",
-    "PAXG:15m": "low",
+    "PAXG:15m": "high",
     "XAUT:15m": "low",
     "SPCXB:15m": "low",
     "G:15m": "low",
@@ -821,7 +821,7 @@
     "GLMR:1D": "high"
   },
   "sent_messages": {
-    "9b17fa4ef25c1e9900a218fc92d0825f852e8bd989e0743fa116c697788f7a4c": 1790813214,
-    "20e84d3a5f0bb9a0ca6ac9beb2685f394dd1c6b8dd99b192b9460217e43f86a1": 1790813214
+    "ec81d748038aa31e557d738a658fea11b24919c178c6c20180844b2b70594447": 1790834683,
+    "04561a55015f8d10fda7f6a7b827074f78a5eb7e7b4afcb1a6cf8afba02c0a1a": 1790834683
   }
 }
