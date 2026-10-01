@@ -491,7 +491,7 @@
     "LSK:15m": "low",
     "S:15m": "high",
     "ONE:1h": "low",
-    "JST:15m": "high",
+    "JST:15m": "low",
     "PUMP:15m": "low",
     "XTZ:1h": "high",
     "MARSCOIN:15m": "high",
@@ -765,7 +765,7 @@
     "GRT:1h": "high",
     "APE:1h": "high",
     "GRT:15m": "high",
-    "SUPER:15m": "low",
+    "SUPER:15m": "high",
     "GRT:4h": "high",
     "ORCA:4h": "high",
     "W:1D": "high",
@@ -830,9 +830,7 @@
     "GTC:1h": "high"
   },
   "sent_messages": {
-    "56741e5f13b6c868dc979e73bdaebe1225d052687748ad403de5aca15c5f8b0a": 1790890580,
-    "eb5d0caf4414c6cd73775ecc07bb946e935c0295effa107daf2f18d416acd66e": 1790890580,
-    "95ca9622cbeeb6c4c14fc873dffca8b154e76882204ee6aaeb158a9114baa005": 1790891457,
-    "93ffb0f6c13ec2cb7a524ee4d983694a120eeb079c0d162471df3a3c9fc68e01": 1790891458
+    "d65465630632497f931e9bd505852fe76ff20233c7f83ba60b79f92e2ccddaf7": 1790897730,
+    "4f2c0f05392c1b0e97480fd4382cca2c97ac97eb074e90d6af423b7ee0a4e42c": 1790897731
   }
 }
