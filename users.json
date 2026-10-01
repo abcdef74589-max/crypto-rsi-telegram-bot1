@@ -497,7 +497,7 @@
     "MARSCOIN:15m": "high",
     "ESP:1h": "high",
     "XTZ:15m": "high",
-    "HEI:15m": "low",
+    "HEI:15m": "high",
     "HEI:1h": "high",
     "SUPER:1h": "high",
     "XTZ:4h": "high",
@@ -821,7 +821,7 @@
     "GLMR:1D": "high"
   },
   "sent_messages": {
-    "60c6b714ce97a42e79fd1b64ca16c721950b3e4bd499a6ee1a45d6a5669263c1": 1790855479,
-    "46b8c145c99f50cc25b4b287d36f2e43863491e8cc3459e89d7ef89d72e2447b": 1790855479
+    "94ae53b3566aca48da9a3a6bccd17974389fc485cc3b0336ac05fcd44489e8cf": 1790859096,
+    "589f8ed209390b521e6fab403aaad79ff853836e65fdbae878d843301299f9ec": 1790859096
   }
 }
