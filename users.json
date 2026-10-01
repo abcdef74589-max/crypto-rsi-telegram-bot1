@@ -227,7 +227,7 @@
     "WLD:15m": "high",
     "ADA:15m": "low",
     "LTC:15m": "low",
-    "FET:15m": "low",
+    "FET:15m": "high",
     "MORPHO:15m": "high",
     "OP:15m": "high",
     "CHIP:15m": "high",
@@ -821,7 +821,7 @@
     "GLMR:1D": "high"
   },
   "sent_messages": {
-    "dd7813fa177138d9732da806712c2866a5bad6c243e734cc225974dca6ee227f": 1790837396,
-    "f61b52bae64d2bc1d7bcb49e8b41bc93a73593caf9182a53962a935643f2afba": 1790837396
+    "946989cc09893022f13709d0f0baeeb6e8f3185ebb56658902d13e9e3687a4c6": 1790838365,
+    "c194bfc48e819dc7cafb105d1949e886a36fd689b1f8ecbd5a2f07570d7db943": 1790838366
   }
 }
