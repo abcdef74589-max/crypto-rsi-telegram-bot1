@@ -297,7 +297,7 @@
     "MUB:1h": "high",
     "CHIP:1h": "high",
     "THE:15m": "high",
-    "HBAR:15m": "high",
+    "HBAR:15m": "low",
     "BNCB:15m": "high",
     "ETH:15m": "high",
     "XRP:15m": "low",
@@ -821,7 +821,7 @@
     "GLMR:1D": "high"
   },
   "sent_messages": {
-    "220db96832a0dfb5dde018c900af814f3831343e0dd5944c5943e57fa098b822": 1790812183,
-    "5ef1aee3e484ef71b090baec25e9992600a6d38b76313bb02b28b708d46336d3": 1790812184
+    "9b17fa4ef25c1e9900a218fc92d0825f852e8bd989e0743fa116c697788f7a4c": 1790813214,
+    "20e84d3a5f0bb9a0ca6ac9beb2685f394dd1c6b8dd99b192b9460217e43f86a1": 1790813214
   }
 }
