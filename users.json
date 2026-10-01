@@ -827,10 +827,15 @@
     "MOVE:4h": "high",
     "SKHYB:1h": "high",
     "GTC:15m": "high",
-    "GTC:1h": "high"
+    "GTC:1h": "high",
+    "GTC:4h": "high",
+    "ALICE:1D": "high",
+    "GTC:1D": "high"
   },
   "sent_messages": {
     "d65465630632497f931e9bd505852fe76ff20233c7f83ba60b79f92e2ccddaf7": 1790897730,
-    "4f2c0f05392c1b0e97480fd4382cca2c97ac97eb074e90d6af423b7ee0a4e42c": 1790897731
+    "4f2c0f05392c1b0e97480fd4382cca2c97ac97eb074e90d6af423b7ee0a4e42c": 1790897731,
+    "83af54e9202246f31cdeb6b7be603b65044547400612aaa4b0239a574b1885ec": 1790898599,
+    "5c8b2aab3b3dade9e0ed4c9787df6f24643a71c0163d4fae28586eeadb722757": 1790898599
   }
 }
