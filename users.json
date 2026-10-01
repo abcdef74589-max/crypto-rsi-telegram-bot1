@@ -224,7 +224,7 @@
     "RENDER:15m": "high",
     "A:15m": "high",
     "BNB:15m": "high",
-    "WLD:15m": "high",
+    "WLD:15m": "low",
     "ADA:15m": "low",
     "LTC:15m": "low",
     "FET:15m": "high",
@@ -250,7 +250,7 @@
     "ARB:1h": "high",
     "SUI:1h": "high",
     "ONDO:1h": "high",
-    "WLD:1h": "high",
+    "WLD:1h": "low",
     "ADA:1h": "high",
     "LINK:1h": "high",
     "TAO:1h": "high",
@@ -305,7 +305,7 @@
     "XLM:15m": "low",
     "GRAM:15m": "low",
     "WBTC:15m": "high",
-    "GOOGLB:15m": "high",
+    "GOOGLB:15m": "low",
     "NVDAB:15m": "high",
     "PENDLE:15m": "high",
     "牛来:15m": "high",
@@ -818,12 +818,16 @@
     "MOVR:1D": "high",
     "PUMP:1D": "high",
     "NIGHT:1D": "high",
-    "GLMR:1D": "high"
+    "GLMR:1D": "high",
+    "MEGA:15m": "high",
+    "ALICE:1h": "high",
+    "MEGA:1h": "high",
+    "MOVE:1h": "high",
+    "ALICE:4h": "high",
+    "MOVE:4h": "high"
   },
   "sent_messages": {
-    "94ae53b3566aca48da9a3a6bccd17974389fc485cc3b0336ac05fcd44489e8cf": 1790859096,
-    "589f8ed209390b521e6fab403aaad79ff853836e65fdbae878d843301299f9ec": 1790859096,
-    "064fee08a1673c165430e24fe80aac733f649a3673ce548c2bba4046bc4eef20": 1790859887,
-    "937ae643db3b8fe24840b20966e04188d4f48067534916ddca7290f4aef4d96e": 1790859888
+    "189581830837ffccfc09e7ae947f6219723f755e2ceacef7223042c568a705fb": 1790869807,
+    "9895064e9216c2bdfcc74ec5d77b142270015b832436fd2399b7ed5dc3a330d5": 1790869807
   }
 }
