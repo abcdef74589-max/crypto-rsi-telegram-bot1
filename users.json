@@ -315,7 +315,7 @@
     "ZRO:15m": "high",
     "SKY:15m": "high",
     "SNDKB:15m": "high",
-    "POL:15m": "low",
+    "POL:15m": "high",
     "EURI:15m": "high",
     "QQQB:15m": "high",
     "SEI:15m": "low",
@@ -819,7 +819,7 @@
     "PUMP:1D": "high",
     "NIGHT:1D": "high",
     "GLMR:1D": "high",
-    "MEGA:15m": "high",
+    "MEGA:15m": "low",
     "ALICE:1h": "high",
     "MEGA:1h": "high",
     "MOVE:1h": "high",
@@ -834,10 +834,11 @@
     "SCR:15m": "high",
     "SCR:1h": "high",
     "ALICE:15m": "low",
-    "DEXE:15m": "high"
+    "DEXE:15m": "high",
+    "SAND:15m": "high"
   },
   "sent_messages": {
-    "851be60886decb42d1e8c0ad1e4345c34344a3e316e7e44cef9a96d24a756ed9": 1790924733,
-    "a17a213d6bdba9d35cca2068cce5a616646a77a1c8ca4382616633237965c34e": 1790924734
+    "d8fde85131d74bf738137de2fe422c07f0ff2bb2918739b7966d945e28d1cdd9": 1790928305,
+    "21d998d58e6036ac9d39a55f91c54f83600900823a8cc812e19965212de4ec47": 1790928305
   }
 }
