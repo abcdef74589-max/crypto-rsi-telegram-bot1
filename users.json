@@ -839,12 +839,11 @@
     "MANA:15m": "high",
     "SAND:1h": "high",
     "MANA:1h": "high",
-    "GALA:1h": "high"
+    "GALA:1h": "high",
+    "U:1h": "low"
   },
   "sent_messages": {
-    "5f55a4e9210f37d14236b9ea67ff5c1ba8985e5d1ce013a585fe51c7046eb33e": 1790931082,
-    "803e1b9ef64d9030807ee6537d84406062df2f79adad719c81160929eb0cd55e": 1790931083,
-    "c434494c483c0533c8e467cf3bce2e4cf0b62abe87cd69b0e6096f4bcfbd4280": 1790931975,
-    "55c75c71a2c403a9a9b78be81f15dd939b323b51d694d9001bc49ae0e2c2e497": 1790931976
+    "d003c7af02fa8ec057161cb1efe48785709794eb4bd16f6adfe76a03d192ab87": 1790938229,
+    "09a80eaec7be83318115a09abc68dd93c5202d9f5b30473a52f211dd0a91405d": 1790938230
   }
 }
