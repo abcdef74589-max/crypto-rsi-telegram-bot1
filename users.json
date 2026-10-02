@@ -281,7 +281,7 @@
     "TRX:15m": "low",
     "ICP:15m": "high",
     "BFUSD:15m": "low",
-    "BTC:15m": "high",
+    "BTC:15m": "low",
     "BCH:15m": "high",
     "MSTRB:15m": "high",
     "ENA:1h": "high",
@@ -846,7 +846,7 @@
     "KORUB:1h": "high"
   },
   "sent_messages": {
-    "7efcbe320ecae14f09b598c35c395b2b3f40678d76fc40c58dfa8d8c82dac138": 1790949970,
-    "e2fb28440949af76ab1f6dea550005fe25595a2e3e54a13fad1ea07359afa32e": 1790949970
+    "d82741d4a4fe874c7cbf7e4ef027173d3049b6c5a847c706d737fc9662d208a0": 1790960828,
+    "d3fca4ca2e6cd8dc98007caaefabcd5f20867332bb2e20805236fca9f4c574b5": 1790960828
   }
 }
