@@ -226,7 +226,7 @@
     "BNB:15m": "high",
     "WLD:15m": "low",
     "ADA:15m": "low",
-    "LTC:15m": "low",
+    "LTC:15m": "high",
     "FET:15m": "high",
     "MORPHO:15m": "high",
     "OP:15m": "high",
@@ -337,7 +337,7 @@
     "PENDLE:1h": "low",
     "ZRO:1h": "high",
     "TUT:15m": "low",
-    "PAXG:15m": "high",
+    "PAXG:15m": "low",
     "XAUT:15m": "low",
     "SPCXB:15m": "low",
     "G:15m": "low",
@@ -833,9 +833,7 @@
     "GTC:1D": "high"
   },
   "sent_messages": {
-    "d65465630632497f931e9bd505852fe76ff20233c7f83ba60b79f92e2ccddaf7": 1790897730,
-    "4f2c0f05392c1b0e97480fd4382cca2c97ac97eb074e90d6af423b7ee0a4e42c": 1790897731,
-    "83af54e9202246f31cdeb6b7be603b65044547400612aaa4b0239a574b1885ec": 1790898599,
-    "5c8b2aab3b3dade9e0ed4c9787df6f24643a71c0163d4fae28586eeadb722757": 1790898599
+    "bf14d0e8117a638641bd284ce3bf38ad17884160fbb12aa025f92a9de83ee9b4": 1790903195,
+    "acd2db2f4d052d673cdd0b41ce4c8dfe0bdfa58f2c49944242330be851f5ce64": 1790903196
   }
 }
