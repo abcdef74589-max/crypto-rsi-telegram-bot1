@@ -719,7 +719,7 @@
     "TNSR:1h": "high",
     "VTHO:4h": "high",
     "RUNE:4h": "high",
-    "2Z:4h": "high",
+    "2Z:4h": "low",
     "PROM:4h": "high",
     "SPK:4h": "high",
     "PYTH:4h": "high",
@@ -844,10 +844,19 @@
     "ENJ:15m": "high",
     "ENJ:1h": "high",
     "KORUB:1h": "high",
-    "牛来:1h": "low"
+    "牛来:1h": "low",
+    "SAND:4h": "high",
+    "ENJ:4h": "high",
+    "牛来:4h": "low",
+    "SAND:1D": "high",
+    "AAVE:1D": "high",
+    "ENJ:1D": "high",
+    "GALA:1D": "high",
+    "MANA:1D": "high",
+    "MAGIC:1D": "high"
   },
   "sent_messages": {
-    "e79e1eaed9ee31826a6cb204703200b1d2ed62ca8945c7d1325aa328694f9ab3": 1790977834,
-    "c3b1bf4728b5f933371682501cb284f444444cb63c9dfff5c1149f46542fcef5": 1790977835
+    "ca4f7833c41a4ad1507ed7087a72372839305e48ced5e2985785948b3bb118cb": 1790984981,
+    "06a35a4b46f29464ce266824cfec3517817a15cf8597a79d001fcdc5185abdc5": 1790984981
   }
 }
