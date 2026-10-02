@@ -216,7 +216,7 @@
     }
   },
   "states": {
-    "SUI:15m": "high",
+    "SUI:15m": "low",
     "ONDO:15m": "low",
     "APT:15m": "low",
     "KORUB:15m": "high",
@@ -494,7 +494,7 @@
     "JST:15m": "low",
     "PUMP:15m": "low",
     "XTZ:1h": "high",
-    "MARSCOIN:15m": "high",
+    "MARSCOIN:15m": "low",
     "ESP:1h": "high",
     "XTZ:15m": "high",
     "HEI:15m": "low",
@@ -744,7 +744,7 @@
     "SPELL:1D": "high",
     "KMNO:1D": "high",
     "KITE:1D": "high",
-    "HYPE:15m": "high",
+    "HYPE:15m": "low",
     "COW:15m": "high",
     "W:15m": "low",
     "W:1h": "high",
@@ -846,7 +846,7 @@
     "KORUB:1h": "high"
   },
   "sent_messages": {
-    "2f1f1677600a061688b8d63985218c032c7f9537c49485c1cdfb9b507c093225": 1790968932,
-    "62b9edda0267e8a4f5c15d065b0736ed0b675d1da698c8764ade4ea5987c10ad": 1790968932
+    "b4dacd32543076fc110beeebec7477671147e1e71a9a5dc78b8cdfb490bf3ba2": 1790970699,
+    "75888db57bf4f224ba61a3f3a918bd64a4ed1ca4c5b2da1ce703d2c93a5a23c3": 1790970700
   }
 }
