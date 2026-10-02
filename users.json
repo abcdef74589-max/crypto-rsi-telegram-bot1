@@ -447,7 +447,7 @@
     "LDO:1h": "low",
     "SAGA:1h": "low",
     "C:1h": "high",
-    "FIL:15m": "low",
+    "FIL:15m": "high",
     "POL:1h": "high",
     "ZEN:1h": "low",
     "XUSD:1h": "low",
@@ -648,7 +648,7 @@
     "PLUME:4h": "high",
     "PAXG:1h": "low",
     "WLFI:15m": "low",
-    "APE:15m": "low",
+    "APE:15m": "high",
     "PYTH:15m": "high",
     "ASTER:1h": "high",
     "ACE:1h": "low",
@@ -846,7 +846,7 @@
     "KORUB:1h": "high"
   },
   "sent_messages": {
-    "093f5b98724a5f5cbe8fcfe996713d4b2ea0b0ce3ef30c7da45122c551bdc045": 1790946372,
-    "e3c8cd3b92ba6fca97508d73d576540c9d633408955c00e9d976e77f79ad81b0": 1790946373
+    "7efcbe320ecae14f09b598c35c395b2b3f40678d76fc40c58dfa8d8c82dac138": 1790949970,
+    "e2fb28440949af76ab1f6dea550005fe25595a2e3e54a13fad1ea07359afa32e": 1790949970
   }
 }
