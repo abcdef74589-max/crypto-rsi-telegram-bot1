@@ -218,7 +218,7 @@
   "states": {
     "SUI:15m": "high",
     "ONDO:15m": "low",
-    "APT:15m": "low",
+    "APT:15m": "high",
     "KORUB:15m": "low",
     "SOXLB:15m": "high",
     "RENDER:15m": "high",
@@ -233,7 +233,7 @@
     "CHIP:15m": "high",
     "VIRTUAL:15m": "high",
     "BABY:15m": "high",
-    "NEAR:15m": "low",
+    "NEAR:15m": "high",
     "SOL:15m": "high",
     "ARB:15m": "low",
     "ENA:15m": "low",
@@ -835,7 +835,7 @@
     "SCR:1h": "high"
   },
   "sent_messages": {
-    "ba25e3ed31bae9c214adb99921246d88fb8e14caaff2e314a7b16c117ecb8d54": 1790905866,
-    "4e611e149b6a254cc5f90be505515ee9275def209168737baa9b76d4c520069e": 1790905866
+    "14c4f99648b10fdad23b8736c45b9dc2ac7ae9c99c1b2f7fe57a4b936eecee77": 1790910351,
+    "dd1aa4470c51d5590e02ff2486a1afa0d299283597383404d4aaf7cc5e937839": 1790910352
   }
 }
