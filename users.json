@@ -497,7 +497,7 @@
     "MARSCOIN:15m": "high",
     "ESP:1h": "high",
     "XTZ:15m": "high",
-    "HEI:15m": "high",
+    "HEI:15m": "low",
     "HEI:1h": "high",
     "SUPER:1h": "high",
     "XTZ:4h": "high",
@@ -664,7 +664,7 @@
     "SUPER:1D": "high",
     "MINA:1D": "high",
     "INTCB:1D": "high",
-    "NOM:15m": "high",
+    "NOM:15m": "low",
     "BOME:15m": "low",
     "PLUME:15m": "high",
     "TST:15m": "high",
@@ -837,7 +837,7 @@
     "DEXE:15m": "high"
   },
   "sent_messages": {
-    "79d21e4da985a617101546a5f221839cd5cc43ff5d60fd5a20790b42bdbf18bf": 1790922945,
-    "780d1212b962829bfaf0cb5a0a7e8d1eeba70e1fdb91f19918928adb045b3c5d": 1790922946
+    "851be60886decb42d1e8c0ad1e4345c34344a3e316e7e44cef9a96d24a756ed9": 1790924733,
+    "a17a213d6bdba9d35cca2068cce5a616646a77a1c8ca4382616633237965c34e": 1790924734
   }
 }
