@@ -830,10 +830,12 @@
     "GTC:1h": "high",
     "GTC:4h": "high",
     "ALICE:1D": "high",
-    "GTC:1D": "high"
+    "GTC:1D": "high",
+    "SCR:15m": "high",
+    "SCR:1h": "high"
   },
   "sent_messages": {
-    "2fb3b3af038f026f62305bea9987fbf5399c23ce6662ff3f9aae5c013994bad7": 1790904951,
-    "0b9b1d5fb16a1ef0a30bc888c7e54bf25b3205b97ef677b5813922d51e166e38": 1790904951
+    "ba25e3ed31bae9c214adb99921246d88fb8e14caaff2e314a7b16c117ecb8d54": 1790905866,
+    "4e611e149b6a254cc5f90be505515ee9275def209168737baa9b76d4c520069e": 1790905866
   }
 }
