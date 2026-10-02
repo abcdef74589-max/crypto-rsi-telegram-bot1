@@ -302,10 +302,10 @@
     "ETH:15m": "high",
     "XRP:15m": "high",
     "CRCLB:15m": "high",
-    "XLM:15m": "low",
+    "XLM:15m": "high",
     "GRAM:15m": "low",
     "WBTC:15m": "high",
-    "GOOGLB:15m": "low",
+    "GOOGLB:15m": "high",
     "NVDAB:15m": "high",
     "PENDLE:15m": "high",
     "牛来:15m": "high",
@@ -835,10 +835,14 @@
     "SCR:1h": "high",
     "ALICE:15m": "low",
     "DEXE:15m": "high",
-    "SAND:15m": "high"
+    "SAND:15m": "high",
+    "MANA:15m": "high",
+    "SAND:1h": "high",
+    "MANA:1h": "high",
+    "GALA:1h": "high"
   },
   "sent_messages": {
-    "d8fde85131d74bf738137de2fe422c07f0ff2bb2918739b7966d945e28d1cdd9": 1790928305,
-    "21d998d58e6036ac9d39a55f91c54f83600900823a8cc812e19965212de4ec47": 1790928305
+    "5f55a4e9210f37d14236b9ea67ff5c1ba8985e5d1ce013a585fe51c7046eb33e": 1790931082,
+    "803e1b9ef64d9030807ee6537d84406062df2f79adad719c81160929eb0cd55e": 1790931083
   }
 }
