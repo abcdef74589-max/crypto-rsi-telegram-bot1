@@ -776,7 +776,7 @@
     "SKY:1D": "high",
     "ORCA:15m": "high",
     "HYPE:1h": "low",
-    "MAGIC:15m": "low",
+    "MAGIC:15m": "high",
     "XVG:15m": "low",
     "OPN:15m": "low",
     "NMR:15m": "low",
@@ -843,6 +843,8 @@
   },
   "sent_messages": {
     "5f55a4e9210f37d14236b9ea67ff5c1ba8985e5d1ce013a585fe51c7046eb33e": 1790931082,
-    "803e1b9ef64d9030807ee6537d84406062df2f79adad719c81160929eb0cd55e": 1790931083
+    "803e1b9ef64d9030807ee6537d84406062df2f79adad719c81160929eb0cd55e": 1790931083,
+    "c434494c483c0533c8e467cf3bce2e4cf0b62abe87cd69b0e6096f4bcfbd4280": 1790931975,
+    "55c75c71a2c403a9a9b78be81f15dd939b323b51d694d9001bc49ae0e2c2e497": 1790931976
   }
 }
