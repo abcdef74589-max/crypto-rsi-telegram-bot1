@@ -339,7 +339,7 @@
     "TUT:15m": "low",
     "PAXG:15m": "high",
     "XAUT:15m": "high",
-    "SPCXB:15m": "low",
+    "SPCXB:15m": "high",
     "G:15m": "low",
     "SPYB:15m": "low",
     "ETH:1h": "low",
@@ -413,7 +413,7 @@
     "XRP:1h": "high",
     "CRCLB:1h": "low",
     "XLM:1h": "high",
-    "XPL:15m": "low",
+    "XPL:15m": "high",
     "F:15m": "low",
     "BANK:1h": "high",
     "F:1h": "high",
@@ -537,7 +537,7 @@
     "LDO:15m": "low",
     "ZIL:15m": "high",
     "ALLO:4h": "high",
-    "ACE:15m": "low",
+    "ACE:15m": "high",
     "ZIL:1h": "high",
     "ZIL:4h": "high",
     "GENIUS:15m": "high",
@@ -846,7 +846,7 @@
     "KORUB:1h": "high"
   },
   "sent_messages": {
-    "58b8f8478e0ac443c661236578eea4ac19c5a9c7f58125f702b7c5d639930b5b": 1790945426,
-    "3112125d8e8938c38729e808463f6a44d0ed85c53786135db9947db442f6a59e": 1790945427
+    "093f5b98724a5f5cbe8fcfe996713d4b2ea0b0ce3ef30c7da45122c551bdc045": 1790946372,
+    "e3c8cd3b92ba6fca97508d73d576540c9d633408955c00e9d976e77f79ad81b0": 1790946373
   }
 }
