@@ -225,7 +225,7 @@
     "A:15m": "high",
     "BNB:15m": "high",
     "WLD:15m": "low",
-    "ADA:15m": "low",
+    "ADA:15m": "high",
     "LTC:15m": "high",
     "FET:15m": "high",
     "MORPHO:15m": "high",
@@ -282,7 +282,7 @@
     "ICP:15m": "high",
     "BFUSD:15m": "low",
     "BTC:15m": "high",
-    "BCH:15m": "low",
+    "BCH:15m": "high",
     "MSTRB:15m": "high",
     "ENA:1h": "high",
     "PUMP:1h": "high",
@@ -319,7 +319,7 @@
     "EURI:15m": "high",
     "QQQB:15m": "high",
     "SEI:15m": "low",
-    "DOT:15m": "low",
+    "DOT:15m": "high",
     "INJ:15m": "low",
     "MUB:15m": "high",
     "TIA:15m": "low",
@@ -395,7 +395,7 @@
     "TRX:1h": "low",
     "BFUSD:1h": "low",
     "AR:1h": "high",
-    "PEPE:15m": "low",
+    "PEPE:15m": "high",
     "ZEN:15m": "low",
     "SAGA:15m": "low",
     "EIGEN:15m": "high",
@@ -620,7 +620,7 @@
     "MARSCOIN:1h": "high",
     "MARSCOIN:4h": "high",
     "BABY:4h": "high",
-    "ETC:15m": "low",
+    "ETC:15m": "high",
     "BROCCOLI714:1h": "high",
     "BROCCOLI714:15m": "high",
     "BROCCOLI714:4h": "high",
@@ -686,7 +686,7 @@
     "AXS:1h": "high",
     "ARK:15m": "low",
     "PIXEL:15m": "high",
-    "MOVR:15m": "high",
+    "MOVR:15m": "low",
     "PYTH:1h": "high",
     "RARE:1h": "high",
     "JTO:1h": "high",
@@ -836,6 +836,8 @@
   },
   "sent_messages": {
     "1140dabcb239d401598330ff06ba1f32f9e518ab35a407d6e3da1815a9029fbe": 1790916737,
-    "ae0c058d4f42090d02aa06dfa5256d7d4f2e3618420e2d4d87f535e2e5e7bce9": 1790916737
+    "ae0c058d4f42090d02aa06dfa5256d7d4f2e3618420e2d4d87f535e2e5e7bce9": 1790916737,
+    "725f8db0e073fbf0dfaa104fee8c2da35f7792f29414822c900a7652f07c6b81": 1790917558,
+    "692c405c12a9edfa556432e5033c29cef88fdd4eb56a458283da9f685f2d2ade": 1790917559
   }
 }
