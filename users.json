@@ -592,7 +592,7 @@
     "OPG:4h": "high",
     "MINA:4h": "high",
     "PHA:15m": "high",
-    "MUBARAK:15m": "low",
+    "MUBARAK:15m": "high",
     "PHA:1h": "high",
     "MUBARAK:1h": "high",
     "WIF:1h": "high",
@@ -835,9 +835,7 @@
     "SCR:1h": "high"
   },
   "sent_messages": {
-    "1140dabcb239d401598330ff06ba1f32f9e518ab35a407d6e3da1815a9029fbe": 1790916737,
-    "ae0c058d4f42090d02aa06dfa5256d7d4f2e3618420e2d4d87f535e2e5e7bce9": 1790916737,
-    "725f8db0e073fbf0dfaa104fee8c2da35f7792f29414822c900a7652f07c6b81": 1790917558,
-    "692c405c12a9edfa556432e5033c29cef88fdd4eb56a458283da9f685f2d2ade": 1790917559
+    "4feaf02a2de6b21c749bbe0ae92e593829ed542979b4691dd613873378c978fd": 1790919340,
+    "6702406ee12a6f5ae3b27923edff94c3d7aba5dd9b56267b8a8b395276654118": 1790919341
   }
 }
