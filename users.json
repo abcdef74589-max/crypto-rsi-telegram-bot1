@@ -680,7 +680,7 @@
     "QI:4h": "high",
     "QNT:4h": "high",
     "QI:15m": "low",
-    "QNT:15m": "low",
+    "QNT:15m": "high",
     "AXS:15m": "high",
     "ARK:1h": "high",
     "AXS:1h": "high",
@@ -857,6 +857,8 @@
   },
   "sent_messages": {
     "5d7288fddf78c03f392473d5f6be3815bf5069819880630eca94666248b44824": 1790987721,
-    "e3edbb4bb1dec6a0151f1199a32e7bd3eb081f87e50b8540b57128bbd611cc48": 1790987722
+    "e3edbb4bb1dec6a0151f1199a32e7bd3eb081f87e50b8540b57128bbd611cc48": 1790987722,
+    "18ee00b896dccb467d3a365d065457330c35be211718b9a6a8571fbd54fa4074": 1790988611,
+    "ee2611744f127c3ba9b61331d7626f4a055c40081c61361620591032037009a1": 1790988612
   }
 }
