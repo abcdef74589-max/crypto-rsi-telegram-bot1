@@ -216,7 +216,7 @@
     }
   },
   "states": {
-    "SUI:15m": "low",
+    "SUI:15m": "high",
     "ONDO:15m": "low",
     "APT:15m": "low",
     "KORUB:15m": "high",
@@ -282,7 +282,7 @@
     "ICP:15m": "high",
     "BFUSD:15m": "low",
     "BTC:15m": "low",
-    "BCH:15m": "low",
+    "BCH:15m": "high",
     "MSTRB:15m": "high",
     "ENA:1h": "low",
     "PUMP:1h": "high",
@@ -856,7 +856,7 @@
     "MAGIC:1D": "high"
   },
   "sent_messages": {
-    "ca4f7833c41a4ad1507ed7087a72372839305e48ced5e2985785948b3bb118cb": 1790984981,
-    "06a35a4b46f29464ce266824cfec3517817a15cf8597a79d001fcdc5185abdc5": 1790984981
+    "5d7288fddf78c03f392473d5f6be3815bf5069819880630eca94666248b44824": 1790987721,
+    "e3edbb4bb1dec6a0151f1199a32e7bd3eb081f87e50b8540b57128bbd611cc48": 1790987722
   }
 }
