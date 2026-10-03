@@ -331,7 +331,7 @@
     "SPCXB:1h": "high",
     "INJ:1h": "high",
     "GRAM:1h": "low",
-    "RAY:1h": "low",
+    "RAY:1h": "high",
     "WBTC:1h": "high",
     "GOOGLB:1h": "high",
     "PENDLE:1h": "low",
@@ -534,7 +534,7 @@
     "C:1D": "high",
     "STX:15m": "high",
     "STX:1h": "high",
-    "LDO:15m": "low",
+    "LDO:15m": "high",
     "ZIL:15m": "high",
     "ALLO:4h": "high",
     "ACE:15m": "high",
@@ -858,7 +858,7 @@
     "RESOLV:4h": "high"
   },
   "sent_messages": {
-    "f3bd84dc0858d2a7338f416f800fd7fcd06c800eec2cc9b4628a079011267498": 1791017460,
-    "87090983f7f0c98ea62ed8e8a830f9cc4606a8a030a7bc4792e041fd8a10858c": 1791017461
+    "48d1db81d01e8b7b497b2b982cdffd39ad37e930b4d3d582ae24158195683ce9": 1791021019,
+    "e74474b6bdd930103d809ec14e198eca7652c6549c2ffd38dfb257663ec0ac00": 1791021020
   }
 }
