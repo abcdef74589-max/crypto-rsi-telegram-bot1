@@ -241,7 +241,7 @@
     "TAO:15m": "low",
     "TRUMP:15m": "low",
     "PENGU:15m": "low",
-    "RAY:15m": "low",
+    "RAY:15m": "high",
     "ETHFI:15m": "low",
     "NEAR:1h": "high",
     "SOL:1h": "high",
@@ -321,7 +321,7 @@
     "SEI:15m": "low",
     "DOT:15m": "low",
     "INJ:15m": "low",
-    "MUB:15m": "high",
+    "MUB:15m": "low",
     "TIA:15m": "low",
     "BTC:1h": "high",
     "ZEC:1h": "low",
@@ -856,9 +856,7 @@
     "MAGIC:1D": "high"
   },
   "sent_messages": {
-    "5d7288fddf78c03f392473d5f6be3815bf5069819880630eca94666248b44824": 1790987721,
-    "e3edbb4bb1dec6a0151f1199a32e7bd3eb081f87e50b8540b57128bbd611cc48": 1790987722,
-    "18ee00b896dccb467d3a365d065457330c35be211718b9a6a8571fbd54fa4074": 1790988611,
-    "ee2611744f127c3ba9b61331d7626f4a055c40081c61361620591032037009a1": 1790988612
+    "49612619d33a7cec7f4e97d12bf863f9b1ee5410e41e1408b51e98dbaf62b039": 1790990431,
+    "764321e28ac79e0253412ac3db0b6d6ae8f6316d8bfe2966653c605a2b700963": 1790990432
   }
 }
