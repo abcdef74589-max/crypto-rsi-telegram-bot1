@@ -650,7 +650,7 @@
     "WLFI:15m": "low",
     "APE:15m": "high",
     "PYTH:15m": "high",
-    "ASTER:1h": "high",
+    "ASTER:1h": "low",
     "ACE:1h": "low",
     "FLOKI:1h": "low",
     "WLFI:1h": "low",
@@ -853,12 +853,12 @@
     "ENJ:1D": "high",
     "GALA:1D": "high",
     "MANA:1D": "high",
-    "MAGIC:1D": "high"
+    "MAGIC:1D": "high",
+    "RESOLV:1h": "high",
+    "RESOLV:4h": "high"
   },
   "sent_messages": {
-    "09009fa12458dc6957227b12f5e3ea6b4fe6f8e56cbcc555189deb4c7ffe1174": 1791012098,
-    "28bb9d83e776d0183aaa1fc9086096f9886094b8dadcc7b3cd8b76e0bdcd338c": 1791012098,
-    "5370e71d6d0f30ad06b93d7d817b605a637aaccf03134bbb782987e56ee2af12": 1791012957,
-    "f6bab28d78e24ddab0dba9d04f176a116cbc6633ebdaa75c5e80fbfcb2caf08e": 1791012958
+    "c797eca6289eb5cf3980b965c85a8859172ea5829c2a4d0959a7ffa47807d09f": 1791013864,
+    "f4a8595c301780eae147cb2c65c425461f335828ebce60d364314264daf066fb": 1791013864
   }
 }
