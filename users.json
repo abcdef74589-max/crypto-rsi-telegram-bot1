@@ -487,7 +487,7 @@
     "AR:1D": "high",
     "PENDLE:1D": "high",
     "SYN:1D": "high",
-    "ONE:15m": "low",
+    "ONE:15m": "high",
     "LSK:15m": "low",
     "S:15m": "high",
     "ONE:1h": "low",
@@ -858,9 +858,7 @@
     "RESOLV:4h": "high"
   },
   "sent_messages": {
-    "c797eca6289eb5cf3980b965c85a8859172ea5829c2a4d0959a7ffa47807d09f": 1791013864,
-    "f4a8595c301780eae147cb2c65c425461f335828ebce60d364314264daf066fb": 1791013864,
-    "88417edecdd21e2df936fe6d934e87f3bf9bab13b737bc473e38352f65187ed2": 1791014734,
-    "6c3bd377972561b94ea77650975e510b03563aa7e3843cd73c33c6a8ce2a2ed0": 1791014734
+    "1bc1eb6cd2828942c8390d160da07a5be0e37a3139c02e68c1024056323e8e9a": 1791015702,
+    "d1ccb57014363ffe6b1433a687a2e5da5f177dc6d460e6ec563453d5d8f150d3": 1791015703
   }
 }
