@@ -490,7 +490,7 @@
     "ONE:15m": "high",
     "LSK:15m": "low",
     "S:15m": "high",
-    "ONE:1h": "low",
+    "ONE:1h": "high",
     "JST:15m": "high",
     "PUMP:15m": "low",
     "XTZ:1h": "high",
@@ -858,7 +858,7 @@
     "RESOLV:4h": "high"
   },
   "sent_messages": {
-    "1bc1eb6cd2828942c8390d160da07a5be0e37a3139c02e68c1024056323e8e9a": 1791015702,
-    "d1ccb57014363ffe6b1433a687a2e5da5f177dc6d460e6ec563453d5d8f150d3": 1791015703
+    "f3bd84dc0858d2a7338f416f800fd7fcd06c800eec2cc9b4628a079011267498": 1791017460,
+    "87090983f7f0c98ea62ed8e8a830f9cc4606a8a030a7bc4792e041fd8a10858c": 1791017461
   }
 }
