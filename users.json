@@ -858,12 +858,13 @@
     "RESOLV:4h": "high",
     "BEAMX:15m": "high",
     "BEAMX:1h": "high",
-    "IOTA:1h": "high"
+    "IOTA:1h": "high",
+    "BEAMX:1D": "high",
+    "AXS:1D": "high",
+    "BAT:1D": "high"
   },
   "sent_messages": {
-    "3e000edf6bb9358c1d3da7f189e781a6fd3fd20d79181ee7188d94cd19783e5e": 1791153374,
-    "c7b6bd33d19b256df26f394e0649392d01bd08e144f90d1882b7eda960b448f3": 1791153375,
-    "d5ab48916f17818b8c17b9d48959fb7b0f6f4e25741c9da80dc1032342163a95": 1791154261,
-    "112091ca08e6b6ce5270adcb5085870ec8132ccb4fd6f40febab1f20835d1a7c": 1791154261
+    "ba49a90cb09ffd6c0ba8bed3daed65021a9334806351bf7ed2ac15247d370012": 1791157777,
+    "132388ce4f4902c76029de95e54defd9b63e235863a0b2575231e7110a63ccbd": 1791157777
   }
 }
