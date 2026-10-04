@@ -227,7 +227,7 @@
     "WLD:15m": "high",
     "ADA:15m": "low",
     "LTC:15m": "high",
-    "FET:15m": "low",
+    "FET:15m": "high",
     "MORPHO:15m": "high",
     "OP:15m": "high",
     "CHIP:15m": "high",
@@ -246,7 +246,7 @@
     "NEAR:1h": "high",
     "SOL:1h": "high",
     "UNI:1h": "low",
-    "BNB:1h": "low",
+    "BNB:1h": "high",
     "ARB:1h": "high",
     "SUI:1h": "high",
     "ONDO:1h": "high",
@@ -281,7 +281,7 @@
     "TRX:15m": "low",
     "ICP:15m": "high",
     "BFUSD:15m": "low",
-    "BTC:15m": "low",
+    "BTC:15m": "high",
     "BCH:15m": "high",
     "MSTRB:15m": "high",
     "ENA:1h": "low",
@@ -293,7 +293,7 @@
     "CAKE:1h": "low",
     "ETHFI:1h": "low",
     "SHIB:1h": "low",
-    "AERO:1h": "low",
+    "AERO:1h": "high",
     "MUB:1h": "high",
     "CHIP:1h": "high",
     "THE:15m": "high",
@@ -855,10 +855,13 @@
     "MANA:1D": "high",
     "MAGIC:1D": "high",
     "RESOLV:1h": "high",
-    "RESOLV:4h": "high"
+    "RESOLV:4h": "high",
+    "BEAMX:15m": "high",
+    "BEAMX:1h": "high",
+    "IOTA:1h": "high"
   },
   "sent_messages": {
-    "66f3a53000bafd073130227eff3aa4f92f7e1b56c70a03b1186283e9d031650e": 1791086762,
-    "a0701692b47fd700d50341164a9004ccf03479dd0ac4205d6ac57825c8f035fe": 1791086763
+    "d4c75535981dcf09c64d75fc920597282edd303a6511752950961aafd1bd8fe5": 1791107454,
+    "e11e04835a72ac88ecd2b2d2b39d6961d794235eed1548e4e18646b9c88aea86": 1791107454
   }
 }
