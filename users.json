@@ -4,7 +4,7 @@
     "1413646760",
     5952888026
   ],
-  "offset": 988370776,
+  "offset": 988370777,
   "signals": {
     "COTIUSDT|15m": {
       "zone": "neutral",
@@ -221,7 +221,7 @@
     "APT:15m": "low",
     "KORUB:15m": "high",
     "SOXLB:15m": "high",
-    "RENDER:15m": "high",
+    "RENDER:15m": "low",
     "A:15m": "high",
     "BNB:15m": "high",
     "WLD:15m": "high",
@@ -303,7 +303,7 @@
     "XRP:15m": "low",
     "CRCLB:15m": "low",
     "XLM:15m": "low",
-    "GRAM:15m": "low",
+    "GRAM:15m": "high",
     "WBTC:15m": "high",
     "GOOGLB:15m": "high",
     "NVDAB:15m": "high",
@@ -508,7 +508,7 @@
     "BANK:15m": "high",
     "EPIC:15m": "high",
     "ALGO:1h": "high",
-    "USD1:15m": "high",
+    "USD1:15m": "low",
     "USD1:1h": "low",
     "CELR:15m": "low",
     "CELR:1h": "high",
@@ -858,7 +858,7 @@
     "RESOLV:4h": "high"
   },
   "sent_messages": {
-    "6eb44a08195ca884230cf768ceab32f56ab4ed266504d6d784d13b32ef4f7eba": 1791077794,
-    "3fdfb7928e132c5d166feade6df1130969b0c6a55662b678ef1dde23ae518732": 1791077794
+    "66f3a53000bafd073130227eff3aa4f92f7e1b56c70a03b1186283e9d031650e": 1791086762,
+    "a0701692b47fd700d50341164a9004ccf03479dd0ac4205d6ac57825c8f035fe": 1791086763
   }
 }
