@@ -318,7 +318,7 @@
     "POL:15m": "low",
     "EURI:15m": "high",
     "QQQB:15m": "high",
-    "SEI:15m": "low",
+    "SEI:15m": "high",
     "DOT:15m": "high",
     "INJ:15m": "low",
     "MUB:15m": "low",
@@ -861,7 +861,7 @@
     "IOTA:1h": "high"
   },
   "sent_messages": {
-    "d4c75535981dcf09c64d75fc920597282edd303a6511752950961aafd1bd8fe5": 1791107454,
-    "e11e04835a72ac88ecd2b2d2b39d6961d794235eed1548e4e18646b9c88aea86": 1791107454
+    "d3b6d92bf90c53ded136c52f1807c78d667ae16d755f723d8c436cdb3a9ecbff": 1791112814,
+    "869b21fbff53526e774e036231b1a68035c60f9ebdcc3b8dc200950f0e7ebdb1": 1791112814
   }
 }
