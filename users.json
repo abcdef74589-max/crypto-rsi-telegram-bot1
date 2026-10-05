@@ -309,7 +309,7 @@
     "NVDAB:15m": "high",
     "PENDLE:15m": "high",
     "牛来:15m": "low",
-    "ZAMA:15m": "high",
+    "ZAMA:15m": "low",
     "AERO:15m": "high",
     "CRV:15m": "low",
     "ZRO:15m": "high",
@@ -864,7 +864,7 @@
     "BAT:1D": "high"
   },
   "sent_messages": {
-    "692e6a999c134d94e6d3872748e04941ba941da224f1e7d11da53d98af699632": 1791174979,
-    "6e9230c8516ad736f8021ab60d660289b5f983e1f967b0fc4c509154cfd3b102": 1791174979
+    "9b6e9e9b490a61a06dea1b146f89d8f949cfb170c04de96fc208a8eb5b47cb09": 1791179507,
+    "357b3e9d63b2394af62fa74d6cb34cbc4e97cff7498f8ba81273ad7c0a185306": 1791179507
   }
 }
