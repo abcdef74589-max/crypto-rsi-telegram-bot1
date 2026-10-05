@@ -229,7 +229,7 @@
     "LTC:15m": "high",
     "FET:15m": "high",
     "MORPHO:15m": "high",
-    "OP:15m": "high",
+    "OP:15m": "low",
     "CHIP:15m": "high",
     "VIRTUAL:15m": "high",
     "BABY:15m": "high",
@@ -274,12 +274,12 @@
     "CFG:1h": "high",
     "UNI:15m": "high",
     "REZ:15m": "high",
-    "AVAX:15m": "high",
+    "AVAX:15m": "low",
     "AAVE:15m": "high",
     "SHIB:15m": "high",
     "DOGE:15m": "low",
     "TRX:15m": "low",
-    "ICP:15m": "high",
+    "ICP:15m": "low",
     "BFUSD:15m": "low",
     "BTC:15m": "high",
     "BCH:15m": "high",
@@ -301,7 +301,7 @@
     "BNCB:15m": "high",
     "ETH:15m": "high",
     "XRP:15m": "high",
-    "CRCLB:15m": "high",
+    "CRCLB:15m": "low",
     "XLM:15m": "high",
     "GRAM:15m": "high",
     "WBTC:15m": "high",
@@ -711,7 +711,7 @@
     "RUNE:1D": "high",
     "PYTH:1D": "high",
     "VTHO:15m": "low",
-    "RUNE:15m": "high",
+    "RUNE:15m": "low",
     "RARE:15m": "low",
     "RUNE:1h": "high",
     "2Z:15m": "low",
@@ -864,7 +864,7 @@
     "BAT:1D": "high"
   },
   "sent_messages": {
-    "458f16c17803dd511ffb8eef3cf63a8250b941e369f4c6788ec1c3461ed93d18": 1791160502,
-    "7b10a59dd916479cc957e732419d6a03adc04381bc025fe03edae2284f9f9afc": 1791160502
+    "692e6a999c134d94e6d3872748e04941ba941da224f1e7d11da53d98af699632": 1791174979,
+    "6e9230c8516ad736f8021ab60d660289b5f983e1f967b0fc4c509154cfd3b102": 1791174979
   }
 }
