@@ -464,10 +464,10 @@
     "BONK:15m": "low",
     "SYN:15m": "low",
     "BONK:1h": "high",
-    "ASTER:15m": "low",
+    "ASTER:15m": "high",
     "ZK:15m": "low",
     "ZEC:15m": "low",
-    "DASH:15m": "low",
+    "DASH:15m": "high",
     "CAKE:15m": "low",
     "STG:15m": "high",
     "SYN:1h": "high",
@@ -866,7 +866,9 @@
     "ZKP:4h": "high"
   },
   "sent_messages": {
-    "84e31968e42b91b51de8ecf3c32f3117aba2d76170830dbc05790206e7645913": 1791186662,
-    "8048f03313b5065a3d3b24e083bf2457311524b31029f7f3793a7d8911f5b374": 1791186662
+    "91aeb8a2f01689cf93cbdad363f0a17682f72de4e11ed71bf082b6a6697f9627": 1791187484,
+    "281b19deca3cc784c6d4c99b096afcd47b613afc4337982100a294ad05b67adb": 1791187484,
+    "acc204f33821d59baa28ee09f4c020dc5362225c98adb8bebea6deee398206b5": 1791187599,
+    "00bcbcc2ff9af8655574e77fdd435a4c68213380efe131ea63311f5e5da77341": 1791187600
   }
 }
