@@ -314,7 +314,7 @@
     "CRV:15m": "low",
     "ZRO:15m": "high",
     "SKY:15m": "high",
-    "SNDKB:15m": "low",
+    "SNDKB:15m": "high",
     "POL:15m": "low",
     "EURI:15m": "high",
     "QQQB:15m": "high",
@@ -864,7 +864,7 @@
     "BAT:1D": "high"
   },
   "sent_messages": {
-    "ba49a90cb09ffd6c0ba8bed3daed65021a9334806351bf7ed2ac15247d370012": 1791157777,
-    "132388ce4f4902c76029de95e54defd9b63e235863a0b2575231e7110a63ccbd": 1791157777
+    "458f16c17803dd511ffb8eef3cf63a8250b941e369f4c6788ec1c3461ed93d18": 1791160502,
+    "7b10a59dd916479cc957e732419d6a03adc04381bc025fe03edae2284f9f9afc": 1791160502
   }
 }
