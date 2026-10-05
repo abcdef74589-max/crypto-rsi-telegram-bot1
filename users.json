@@ -749,7 +749,7 @@
     "W:15m": "low",
     "W:1h": "high",
     "GALA:15m": "high",
-    "GLMR:15m": "low",
+    "GLMR:15m": "high",
     "W:4h": "high",
     "GLMR:4h": "high",
     "COW:4h": "high",
@@ -866,9 +866,7 @@
     "ZKP:4h": "high"
   },
   "sent_messages": {
-    "91aeb8a2f01689cf93cbdad363f0a17682f72de4e11ed71bf082b6a6697f9627": 1791187484,
-    "281b19deca3cc784c6d4c99b096afcd47b613afc4337982100a294ad05b67adb": 1791187484,
-    "acc204f33821d59baa28ee09f4c020dc5362225c98adb8bebea6deee398206b5": 1791187599,
-    "00bcbcc2ff9af8655574e77fdd435a4c68213380efe131ea63311f5e5da77341": 1791187600
+    "6e43752232efb790c4e4d471ed41d1030b066cae757bd4384a9059492894e488": 1791192976,
+    "c265efd399adf4bbd5d2ab95889c523f927cc3acccef13b8e438b2e82f70c33d": 1791192977
   }
 }
