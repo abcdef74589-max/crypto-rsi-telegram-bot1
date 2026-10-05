@@ -279,7 +279,7 @@
     "SHIB:15m": "high",
     "DOGE:15m": "low",
     "TRX:15m": "high",
-    "ICP:15m": "low",
+    "ICP:15m": "high",
     "BFUSD:15m": "low",
     "BTC:15m": "high",
     "BCH:15m": "high",
@@ -387,7 +387,7 @@
     "MUB:4h": "high",
     "TIA:4h": "high",
     "A:4h": "high",
-    "STRK:15m": "high",
+    "STRK:15m": "low",
     "FF:15m": "high",
     "THE:1h": "high",
     "STRK:1h": "low",
@@ -863,10 +863,11 @@
     "AXS:1D": "high",
     "BAT:1D": "high",
     "OPEN:15m": "high",
-    "ZKP:4h": "high"
+    "ZKP:4h": "high",
+    "RLC:15m": "high"
   },
   "sent_messages": {
-    "e39e7bf4149ed58cf7d4023f45d0d3e0f70b77f6728af0be67807fcd10794f59": 1791198350,
-    "0e792f8a59cd8ce0f40807800af420b17e1099d9ecdecd4e73f80aebbcc4acde": 1791198350
+    "4c4cb356f4ac7ec985b4a7e59d003041df12af68807503da611e5545fd0b03ec": 1791203745,
+    "655dc4b8db4ff1653ef6f6407369947206766b94b5b733b72dbdbb7a3315e0ee": 1791203745
   }
 }
