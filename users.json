@@ -339,7 +339,7 @@
     "TUT:15m": "low",
     "PAXG:15m": "high",
     "XAUT:15m": "high",
-    "SPCXB:15m": "high",
+    "SPCXB:15m": "low",
     "G:15m": "low",
     "SPYB:15m": "low",
     "ETH:1h": "high",
@@ -866,7 +866,7 @@
     "ZKP:4h": "high"
   },
   "sent_messages": {
-    "f1c48cde8e0ae599e716041ac1c5fa6bd2c2be85b2879c965669f2a6504d9a96": 1791194770,
-    "756df3edce7f3327adbb830f31714bb25ec500e987caf5a3d88ce122fbe08d26": 1791194771
+    "e39e7bf4149ed58cf7d4023f45d0d3e0f70b77f6728af0be67807fcd10794f59": 1791198350,
+    "0e792f8a59cd8ce0f40807800af420b17e1099d9ecdecd4e73f80aebbcc4acde": 1791198350
   }
 }
