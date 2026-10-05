@@ -339,7 +339,7 @@
     "TUT:15m": "low",
     "PAXG:15m": "high",
     "XAUT:15m": "high",
-    "SPCXB:15m": "low",
+    "SPCXB:15m": "high",
     "G:15m": "low",
     "SPYB:15m": "low",
     "ETH:1h": "high",
@@ -491,7 +491,7 @@
     "LSK:15m": "low",
     "S:15m": "high",
     "ONE:1h": "high",
-    "JST:15m": "high",
+    "JST:15m": "low",
     "PUMP:15m": "low",
     "XTZ:1h": "high",
     "MARSCOIN:15m": "low",
@@ -864,10 +864,11 @@
     "BAT:1D": "high",
     "OPEN:15m": "high",
     "ZKP:4h": "high",
-    "RLC:15m": "high"
+    "RLC:15m": "high",
+    "RVN:15m": "high"
   },
   "sent_messages": {
-    "4c4cb356f4ac7ec985b4a7e59d003041df12af68807503da611e5545fd0b03ec": 1791203745,
-    "655dc4b8db4ff1653ef6f6407369947206766b94b5b733b72dbdbb7a3315e0ee": 1791203745
+    "c6cb0e1662450057b0cda456c1aa9b0d55af95e269d45bf90c3346c285782e5c": 1791207397,
+    "f01f1801d06238da47c9e879e7b7938091ebbf01d971ab9c6b041d62171b490d": 1791207397
   }
 }
