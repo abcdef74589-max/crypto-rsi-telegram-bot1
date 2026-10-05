@@ -233,7 +233,7 @@
     "CHIP:15m": "high",
     "VIRTUAL:15m": "high",
     "BABY:15m": "high",
-    "NEAR:15m": "low",
+    "NEAR:15m": "high",
     "SOL:15m": "low",
     "ARB:15m": "low",
     "ENA:15m": "high",
@@ -260,7 +260,7 @@
     "FET:1h": "high",
     "FIL:1h": "low",
     "XPL:1h": "high",
-    "PENGU:1h": "low",
+    "PENGU:1h": "high",
     "APT:1h": "high",
     "NVDAB:1h": "high",
     "MORPHO:1h": "high",
@@ -284,7 +284,7 @@
     "BTC:15m": "high",
     "BCH:15m": "high",
     "MSTRB:15m": "high",
-    "ENA:1h": "low",
+    "ENA:1h": "high",
     "PUMP:1h": "high",
     "PEPE:1h": "high",
     "AVAX:1h": "high",
@@ -463,7 +463,7 @@
     "LDO:4h": "high",
     "BONK:15m": "low",
     "SYN:15m": "low",
-    "BONK:1h": "low",
+    "BONK:1h": "high",
     "ASTER:15m": "low",
     "ZK:15m": "low",
     "ZEC:15m": "low",
@@ -744,7 +744,7 @@
     "SPELL:1D": "high",
     "KMNO:1D": "high",
     "KITE:1D": "high",
-    "HYPE:15m": "low",
+    "HYPE:15m": "high",
     "COW:15m": "high",
     "W:15m": "low",
     "W:1h": "high",
@@ -775,7 +775,7 @@
     "ORCA:1D": "high",
     "SKY:1D": "high",
     "ORCA:15m": "high",
-    "HYPE:1h": "low",
+    "HYPE:1h": "high",
     "MAGIC:15m": "low",
     "XVG:15m": "low",
     "OPN:15m": "low",
@@ -861,10 +861,12 @@
     "IOTA:1h": "high",
     "BEAMX:1D": "high",
     "AXS:1D": "high",
-    "BAT:1D": "high"
+    "BAT:1D": "high",
+    "OPEN:15m": "high",
+    "ZKP:4h": "high"
   },
   "sent_messages": {
-    "771c8c0b987d391977f5cddf2574814e74789a6998864b7d3e102c6e3b78f9a9": 1791185758,
-    "887fcd823f61b5e8762d077d76ab8ad5462ee9f4ea06d80c3558314a3e324703": 1791185758
+    "84e31968e42b91b51de8ecf3c32f3117aba2d76170830dbc05790206e7645913": 1791186662,
+    "8048f03313b5065a3d3b24e083bf2457311524b31029f7f3793a7d8911f5b374": 1791186662
   }
 }
