@@ -866,10 +866,13 @@
     "ZKP:4h": "high",
     "RLC:15m": "high",
     "RVN:15m": "high",
-    "RLC:1h": "high"
+    "RLC:1h": "high",
+    "ORCA:1h": "high",
+    "RAD:1h": "high",
+    "API3:1h": "high"
   },
   "sent_messages": {
-    "c0ef7ab57232b0e59d4dc1166a8f05f012463cf628abd536a987eeb22ad1c98a": 1791238007,
-    "3e73ef9c8fec55b31897bd08e0f42594af5ec8edd5e741e0cfe007a230b6d92f": 1791238008
+    "c9d195fc78242d2e8cfe4c029269a2244187b135b9d02938aaadd84e4b9ec7be": 1791240634,
+    "6cabbdc0dd863ef35655f25d2a13ec9408236d945496e2e4522df4f02714f99d": 1791240635
   }
 }
