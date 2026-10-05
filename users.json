@@ -224,7 +224,7 @@
     "RENDER:15m": "low",
     "A:15m": "high",
     "BNB:15m": "high",
-    "WLD:15m": "high",
+    "WLD:15m": "low",
     "ADA:15m": "high",
     "LTC:15m": "high",
     "FET:15m": "high",
@@ -869,9 +869,7 @@
     "RLC:1h": "high"
   },
   "sent_messages": {
-    "a3f374b253166507ae63a750d01c636662feda767a047219ccf431114435e590": 1791211892,
-    "6871fcb1371ed5c190b9f30ccb6530a6f7cd6ab95ad0949274f83a85524d536e": 1791211892,
-    "1053f071d64ad04a508955222cd972656dd94fe72f6fe3c17ad2200074cba1dd": 1791212776,
-    "8b67fd503759931d41060c5df601567a9ba6de9be976d161726477c6b160f0e4": 1791212776
+    "cf348d7adced04d5b86e19bebc68aea964435957f4e6bd4ce08a954bd115a04a": 1791225312,
+    "2f37fec5ccad38bcc943ebd04679c2b4e4b8a79598ce157cb90d098ce2704677": 1791225312
   }
 }
