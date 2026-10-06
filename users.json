@@ -229,7 +229,7 @@
     "LTC:15m": "high",
     "FET:15m": "high",
     "MORPHO:15m": "high",
-    "OP:15m": "high",
+    "OP:15m": "low",
     "CHIP:15m": "high",
     "VIRTUAL:15m": "low",
     "BABY:15m": "high",
@@ -242,7 +242,7 @@
     "TRUMP:15m": "low",
     "PENGU:15m": "high",
     "RAY:15m": "high",
-    "ETHFI:15m": "high",
+    "ETHFI:15m": "low",
     "NEAR:1h": "high",
     "SOL:1h": "high",
     "UNI:1h": "low",
@@ -272,7 +272,7 @@
     "A:1h": "high",
     "BABY:1h": "high",
     "CFG:1h": "high",
-    "UNI:15m": "high",
+    "UNI:15m": "low",
     "REZ:15m": "high",
     "AVAX:15m": "high",
     "AAVE:15m": "high",
@@ -585,7 +585,7 @@
     "ICP:4h": "high",
     "KMNO:4h": "high",
     "MITO:1h": "high",
-    "NIL:15m": "high",
+    "NIL:15m": "low",
     "OPG:1h": "high",
     "MINA:1h": "high",
     "SOXLB:4h": "high",
@@ -856,7 +856,7 @@
     "MAGIC:1D": "high",
     "RESOLV:1h": "high",
     "RESOLV:4h": "high",
-    "BEAMX:15m": "high",
+    "BEAMX:15m": "low",
     "BEAMX:1h": "high",
     "IOTA:1h": "high",
     "BEAMX:1D": "high",
@@ -872,9 +872,7 @@
     "API3:1h": "high"
   },
   "sent_messages": {
-    "272ffb3e96031ab81c650b8b6395f925c1bd4fc45c17145389ad2fc25cbbb92e": 1791250549,
-    "053c875ba59af41563298e61679c9a0f85d5c79e7a450c82faa84bf1a88bfd63": 1791250549,
-    "df4f125a03bf538772b8e3445888df39958d1f833c72a1e1e8f9c67df4492a0c": 1791251423,
-    "502a2ce041be92cbb1bd77a28a56e5ba78ae77cf8a3a3e4de4a7956314be22e3": 1791251423
+    "efda8897bac9a132e8b9c375a852d6714ca0b181f28465af1acf158d948d6316": 1791259576,
+    "575e27daba603b57baa5bc770298743a45bb5c23660a67ffb485f0ca0b5669ac": 1791259576
   }
 }
