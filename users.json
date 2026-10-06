@@ -320,7 +320,7 @@
     "QQQB:15m": "high",
     "SEI:15m": "high",
     "DOT:15m": "high",
-    "INJ:15m": "low",
+    "INJ:15m": "high",
     "MUB:15m": "low",
     "TIA:15m": "high",
     "BTC:1h": "high",
@@ -875,7 +875,7 @@
     "OGN:15m": "high"
   },
   "sent_messages": {
-    "1e64dc501ef53556ba1e96d05ae75593a1dc1a3e0b2fda2cc4e9bc7e8ff31833": 1791270363,
-    "c21fa1700d4ea5aa9f5b9e5e791944df0065fd53bc28588e7b1f8deee12701d2": 1791270364
+    "4d449adf9bb664ec2775b8ac0fd0316e20a0763d877147a7248eb8907440c64c": 1791277575,
+    "a5699fd59e1690434b19430ab70395cbd6029e5cb3932dcc6c73bf187ae6f4e8": 1791277575
   }
 }
