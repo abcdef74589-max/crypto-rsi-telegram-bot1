@@ -647,7 +647,7 @@
     "U:15m": "low",
     "PLUME:4h": "high",
     "PAXG:1h": "low",
-    "WLFI:15m": "low",
+    "WLFI:15m": "high",
     "APE:15m": "high",
     "PYTH:15m": "high",
     "ASTER:1h": "low",
@@ -872,7 +872,7 @@
     "API3:1h": "high"
   },
   "sent_messages": {
-    "da031c9fe3ce895dd24844ca015221d101b8b7334faf8c6e7012e736009b0f71": 1791263122,
-    "860930b4d875d08bb45c6196f43f0c795f17bd94fda4eea74e96e7fc8784000f": 1791263122
+    "922bae50695ffe4d49a2ca13ae9d2c0e02b691606d7b9b5f447425bd9bf9f75c": 1791264078,
+    "564bffda4e2d709c8d27549f875e5c7b80b6c4bf34043f5e530a77f3d19191f9": 1791264078
   }
 }
