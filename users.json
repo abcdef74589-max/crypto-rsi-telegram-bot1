@@ -491,7 +491,7 @@
     "LSK:15m": "low",
     "S:15m": "high",
     "ONE:1h": "high",
-    "JST:15m": "low",
+    "JST:15m": "high",
     "PUMP:15m": "low",
     "XTZ:1h": "high",
     "MARSCOIN:15m": "low",
@@ -710,7 +710,7 @@
     "PLUME:1D": "high",
     "RUNE:1D": "high",
     "PYTH:1D": "high",
-    "VTHO:15m": "low",
+    "VTHO:15m": "high",
     "RUNE:15m": "low",
     "RARE:15m": "low",
     "RUNE:1h": "high",
@@ -875,7 +875,7 @@
     "OGN:15m": "high"
   },
   "sent_messages": {
-    "9b7fd42f103e3e26c74b4735d8ec184ae8a1a572aa126c78d9915c049d96855f": 1791267689,
-    "bc8db3f078f5d02866cc5d23bd0c8467e0b8aaa3d680beb599d00c5911185683": 1791267689
+    "1e64dc501ef53556ba1e96d05ae75593a1dc1a3e0b2fda2cc4e9bc7e8ff31833": 1791270363,
+    "c21fa1700d4ea5aa9f5b9e5e791944df0065fd53bc28588e7b1f8deee12701d2": 1791270364
   }
 }
