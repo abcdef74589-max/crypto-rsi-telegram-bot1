@@ -226,7 +226,7 @@
     "BNB:15m": "low",
     "WLD:15m": "high",
     "ADA:15m": "high",
-    "LTC:15m": "high",
+    "LTC:15m": "low",
     "FET:15m": "high",
     "MORPHO:15m": "high",
     "OP:15m": "low",
@@ -639,7 +639,7 @@
     "KITE:4h": "high",
     "TRUMP:4h": "high",
     "TUT:4h": "high",
-    "MET:15m": "low",
+    "MET:15m": "high",
     "MET:1h": "high",
     "U:4h": "low",
     "MET:4h": "high",
@@ -882,7 +882,7 @@
     "DIA:4h": "high"
   },
   "sent_messages": {
-    "e7b22362ff01cbc5436ad3bc55e13cb53ad6c36e08fe33b5b11e337854cd6ace": 1791295513,
-    "f636cdb1a892fe4fea8881fd02d21c5cb97e76f6edd2b694e4395a883cbafb07": 1791295513
+    "b018eb6da8095cccb6c3372d2d92df46a0246d0c7029d31148099ec1f9c18081": 1791310882,
+    "db624c2ed0497525f8b5284d90cdc8c4f7ed31ba7ae18ed1c729f9e49c921920": 1791310882
   }
 }
