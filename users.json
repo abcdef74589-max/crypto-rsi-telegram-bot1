@@ -240,7 +240,7 @@
     "LINK:15m": "low",
     "TAO:15m": "low",
     "TRUMP:15m": "low",
-    "PENGU:15m": "high",
+    "PENGU:15m": "low",
     "RAY:15m": "high",
     "ETHFI:15m": "high",
     "NEAR:1h": "high",
@@ -268,7 +268,7 @@
     "BNCB:1h": "high",
     "ICP:1h": "high",
     "OP:1h": "low",
-    "VIRTUAL:1h": "high",
+    "VIRTUAL:1h": "low",
     "A:1h": "high",
     "BABY:1h": "high",
     "CFG:1h": "high",
@@ -326,7 +326,7 @@
     "BTC:1h": "high",
     "ZEC:1h": "low",
     "DOGE:1h": "high",
-    "SNDKB:1h": "high",
+    "SNDKB:1h": "low",
     "MSTRB:1h": "high",
     "SPCXB:1h": "high",
     "INJ:1h": "high",
@@ -368,7 +368,7 @@
     "BCH:4h": "high",
     "APT:4h": "high",
     "LTC:4h": "high",
-    "SNDKB:4h": "high",
+    "SNDKB:4h": "low",
     "PROVE:4h": "high",
     "FET:4h": "high",
     "DOT:4h": "high",
@@ -720,7 +720,7 @@
     "VTHO:4h": "high",
     "RUNE:4h": "high",
     "2Z:4h": "low",
-    "PROM:4h": "high",
+    "PROM:4h": "low",
     "SPK:4h": "high",
     "PYTH:4h": "high",
     "TNSR:4h": "high",
@@ -879,10 +879,13 @@
     "EDU:4h": "high",
     "PARTI:4h": "high",
     "CHIP:4h": "high",
-    "DIA:4h": "high"
+    "DIA:4h": "high",
+    "TRB:1h": "high",
+    "TRB:4h": "high",
+    "SENT:4h": "high"
   },
   "sent_messages": {
-    "b018eb6da8095cccb6c3372d2d92df46a0246d0c7029d31148099ec1f9c18081": 1791310882,
-    "db624c2ed0497525f8b5284d90cdc8c4f7ed31ba7ae18ed1c729f9e49c921920": 1791310882
+    "5497e01170d7b8ca0627b47b41fece634c7548c15089ef124f7f1c0b8f2c8693": 1791316243,
+    "f2fec59d87874ce48cd182654f58f1883d6fd87ce16dd0f4287bf9989549838b": 1791316243
   }
 }
