@@ -234,7 +234,7 @@
     "VIRTUAL:15m": "low",
     "BABY:15m": "high",
     "NEAR:15m": "high",
-    "SOL:15m": "high",
+    "SOL:15m": "low",
     "ARB:15m": "low",
     "ENA:15m": "low",
     "LINK:15m": "low",
@@ -396,7 +396,7 @@
     "BFUSD:1h": "low",
     "AR:1h": "high",
     "PEPE:15m": "low",
-    "ZEN:15m": "high",
+    "ZEN:15m": "low",
     "SAGA:15m": "low",
     "EIGEN:15m": "low",
     "EIGEN:1h": "high",
@@ -467,7 +467,7 @@
     "ASTER:15m": "high",
     "ZK:15m": "low",
     "ZEC:15m": "low",
-    "DASH:15m": "high",
+    "DASH:15m": "low",
     "CAKE:15m": "low",
     "STG:15m": "high",
     "SYN:1h": "high",
@@ -686,7 +686,7 @@
     "AXS:1h": "high",
     "ARK:15m": "low",
     "PIXEL:15m": "high",
-    "MOVR:15m": "high",
+    "MOVR:15m": "low",
     "PYTH:1h": "high",
     "RARE:1h": "high",
     "JTO:1h": "high",
@@ -831,7 +831,7 @@
     "GTC:4h": "high",
     "ALICE:1D": "high",
     "GTC:1D": "high",
-    "SCR:15m": "high",
+    "SCR:15m": "low",
     "SCR:1h": "high",
     "ALICE:15m": "high",
     "DEXE:15m": "low",
@@ -869,10 +869,14 @@
     "RLC:1h": "high",
     "ORCA:1h": "high",
     "RAD:1h": "high",
-    "API3:1h": "high"
+    "API3:1h": "high",
+    "RAD:15m": "high",
+    "API3:15m": "high"
   },
   "sent_messages": {
     "b4e08f3b6421cde84c30492957e6a12b8ea2f867d9768c3b2733b17cfb9a3fbb": 1791265860,
-    "ed90575dfbd0b92c33db758e6d116193b96e00e09908eb176e14ce11592a2e25": 1791265861
+    "ed90575dfbd0b92c33db758e6d116193b96e00e09908eb176e14ce11592a2e25": 1791265861,
+    "87560b98853d16e1d8962cf97b3b91062b45c20d1f71cc9830756aa5033cfb44": 1791266713,
+    "4c75bcf236a43b534b329202c3a69a29b41993ce8d3f85ae360dbd99d236b25e": 1791266714
   }
 }
