@@ -826,7 +826,7 @@
     "ALICE:4h": "high",
     "MOVE:4h": "high",
     "SKHYB:1h": "high",
-    "GTC:15m": "high",
+    "GTC:15m": "low",
     "GTC:1h": "high",
     "GTC:4h": "high",
     "ALICE:1D": "high",
@@ -872,10 +872,11 @@
     "API3:1h": "high",
     "RAD:15m": "high",
     "API3:15m": "high",
-    "OGN:15m": "high"
+    "OGN:15m": "high",
+    "DIA:15m": "high"
   },
   "sent_messages": {
-    "54cc283b12233310ebfe8d68b0427b50911ffda4e173a6a5d8150c44106c8198": 1791281166,
-    "34aa19e7cbbe1661ced6c0ffb482b3d214aedb34e4f1e47cae6bca120c48e0e0": 1791281167
+    "b5ef245e42e8459e2b8c3e7292a38441ef0a2e0aca13399d4b59fa7ed514a885": 1791286574,
+    "14ad1f2c0cf7bc63f54c0c9435ccaf5b34130f168f71ea2707e59d80403bbbe8": 1791286574
   }
 }
