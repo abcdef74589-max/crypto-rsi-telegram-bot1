@@ -882,10 +882,20 @@
     "DIA:4h": "high",
     "TRB:1h": "high",
     "TRB:4h": "high",
-    "SENT:4h": "high"
+    "SENT:4h": "high",
+    "RLC:1D": "high",
+    "SPCXB:1D": "high",
+    "API3:1D": "high",
+    "MUBARAK:1D": "high",
+    "EDU:1D": "high",
+    "NVDAB:1D": "high",
+    "PARTI:1D": "high",
+    "QQQB:1D": "high"
   },
   "sent_messages": {
     "c488d2e74bccdc4515576241cf842ca7194a44a16562a1f4cd4b87d69e39a529": 1791329796,
-    "514af035472b6b217cd7e9e90d55bb7188f061a1516472bb5d1d203d7350f329": 1791329796
+    "514af035472b6b217cd7e9e90d55bb7188f061a1516472bb5d1d203d7350f329": 1791329796,
+    "e4b3b339f8313b9a63d6824979305642c3ac79c329c9aba802d54dc2e85ac25b": 1791330577,
+    "e344651769f59cf959839e5575bf6da5a0f6e17bfd3b3741d27fb54bbc0fdb1f": 1791330577
   }
 }
