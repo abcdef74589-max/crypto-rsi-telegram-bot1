@@ -494,7 +494,7 @@
     "JST:15m": "low",
     "PUMP:15m": "low",
     "XTZ:1h": "high",
-    "MARSCOIN:15m": "high",
+    "MARSCOIN:15m": "low",
     "ESP:1h": "high",
     "XTZ:15m": "high",
     "HEI:15m": "low",
@@ -871,12 +871,11 @@
     "RAD:1h": "high",
     "API3:1h": "high",
     "RAD:15m": "high",
-    "API3:15m": "high"
+    "API3:15m": "high",
+    "OGN:15m": "high"
   },
   "sent_messages": {
-    "b4e08f3b6421cde84c30492957e6a12b8ea2f867d9768c3b2733b17cfb9a3fbb": 1791265860,
-    "ed90575dfbd0b92c33db758e6d116193b96e00e09908eb176e14ce11592a2e25": 1791265861,
-    "87560b98853d16e1d8962cf97b3b91062b45c20d1f71cc9830756aa5033cfb44": 1791266713,
-    "4c75bcf236a43b534b329202c3a69a29b41993ce8d3f85ae360dbd99d236b25e": 1791266714
+    "9b7fd42f103e3e26c74b4735d8ec184ae8a1a572aa126c78d9915c049d96855f": 1791267689,
+    "bc8db3f078f5d02866cc5d23bd0c8467e0b8aaa3d680beb599d00c5911185683": 1791267689
   }
 }
