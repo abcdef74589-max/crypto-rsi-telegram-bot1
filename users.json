@@ -242,7 +242,7 @@
     "TRUMP:15m": "low",
     "PENGU:15m": "high",
     "RAY:15m": "high",
-    "ETHFI:15m": "low",
+    "ETHFI:15m": "high",
     "NEAR:1h": "high",
     "SOL:1h": "high",
     "UNI:1h": "low",
@@ -882,9 +882,7 @@
     "DIA:4h": "high"
   },
   "sent_messages": {
-    "b5ef245e42e8459e2b8c3e7292a38441ef0a2e0aca13399d4b59fa7ed514a885": 1791286574,
-    "14ad1f2c0cf7bc63f54c0c9435ccaf5b34130f168f71ea2707e59d80403bbbe8": 1791286574,
-    "e76bd1838fa14ac4d8de1bbe2b609aea755ad9e92588ed48e0efbe0462ae5888": 1791287471,
-    "95a2695ced2393c5a373cc820c4b3d202998e16e864d678f6984f38751b0106b": 1791287471
+    "c0d3f4629613a103a963faee012c6e2d1cb8ecb8974ecc34c05c530ef5f40e16": 1791292788,
+    "b4e5d79323d919e8ddecdc264ae5de87058ddd22e4543bd373af1253e91d0544": 1791292788
   }
 }
