@@ -587,7 +587,7 @@
     "MITO:1h": "high",
     "NIL:15m": "low",
     "OPG:1h": "high",
-    "MINA:1h": "high",
+    "MINA:1h": "low",
     "SOXLB:4h": "high",
     "OPG:4h": "high",
     "MINA:4h": "high",
@@ -653,7 +653,7 @@
     "ASTER:1h": "low",
     "ACE:1h": "low",
     "FLOKI:1h": "high",
-    "WLFI:1h": "low",
+    "WLFI:1h": "high",
     "CRV:1h": "low",
     "WLFI:4h": "low",
     "NOM:1h": "high",
@@ -872,7 +872,7 @@
     "API3:1h": "high"
   },
   "sent_messages": {
-    "922bae50695ffe4d49a2ca13ae9d2c0e02b691606d7b9b5f447425bd9bf9f75c": 1791264078,
-    "564bffda4e2d709c8d27549f875e5c7b80b6c4bf34043f5e530a77f3d19191f9": 1791264078
+    "b4e08f3b6421cde84c30492957e6a12b8ea2f867d9768c3b2733b17cfb9a3fbb": 1791265860,
+    "ed90575dfbd0b92c33db758e6d116193b96e00e09908eb176e14ce11592a2e25": 1791265861
   }
 }
