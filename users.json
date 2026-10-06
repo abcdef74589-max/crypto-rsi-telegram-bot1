@@ -274,7 +274,7 @@
     "CFG:1h": "high",
     "UNI:15m": "high",
     "REZ:15m": "high",
-    "AVAX:15m": "low",
+    "AVAX:15m": "high",
     "AAVE:15m": "high",
     "SHIB:15m": "high",
     "DOGE:15m": "low",
@@ -872,7 +872,7 @@
     "API3:1h": "high"
   },
   "sent_messages": {
-    "c9d195fc78242d2e8cfe4c029269a2244187b135b9d02938aaadd84e4b9ec7be": 1791240634,
-    "6cabbdc0dd863ef35655f25d2a13ec9408236d945496e2e4522df4f02714f99d": 1791240635
+    "673f21177a1b8ebcec0829e9e5973ac3f7efaa3fa94f31f6c78d99e2f7b0109e": 1791248705,
+    "97c691810c2ce5a9ac6bfc4a8d07d5286ec060d1817c75a64538e7f3548c2e01": 1791248705
   }
 }
