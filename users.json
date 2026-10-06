@@ -301,7 +301,7 @@
     "BNCB:15m": "high",
     "ETH:15m": "high",
     "XRP:15m": "high",
-    "CRCLB:15m": "low",
+    "CRCLB:15m": "high",
     "XLM:15m": "low",
     "GRAM:15m": "high",
     "WBTC:15m": "high",
@@ -875,7 +875,7 @@
     "OGN:15m": "high"
   },
   "sent_messages": {
-    "4d449adf9bb664ec2775b8ac0fd0316e20a0763d877147a7248eb8907440c64c": 1791277575,
-    "a5699fd59e1690434b19430ab70395cbd6029e5cb3932dcc6c73bf187ae6f4e8": 1791277575
+    "54cc283b12233310ebfe8d68b0427b50911ffda4e173a6a5d8150c44106c8198": 1791281166,
+    "34aa19e7cbbe1661ced6c0ffb482b3d214aedb34e4f1e47cae6bca120c48e0e0": 1791281167
   }
 }
