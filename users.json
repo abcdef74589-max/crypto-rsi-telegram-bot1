@@ -590,7 +590,7 @@
     "MINA:1h": "low",
     "SOXLB:4h": "high",
     "OPG:4h": "high",
-    "MINA:4h": "high",
+    "MINA:4h": "low",
     "PHA:15m": "high",
     "MUBARAK:15m": "high",
     "PHA:1h": "high",
@@ -779,7 +779,7 @@
     "MAGIC:15m": "low",
     "XVG:15m": "low",
     "OPN:15m": "low",
-    "NMR:15m": "low",
+    "NMR:15m": "high",
     "NMR:1h": "high",
     "XAUT:4h": "low",
     "PAXG:4h": "low",
@@ -873,10 +873,18 @@
     "RAD:15m": "high",
     "API3:15m": "high",
     "OGN:15m": "high",
-    "DIA:15m": "high"
+    "DIA:15m": "high",
+    "RLC:4h": "high",
+    "RAD:4h": "high",
+    "EDU:4h": "high",
+    "PARTI:4h": "high",
+    "CHIP:4h": "high",
+    "DIA:4h": "high"
   },
   "sent_messages": {
     "b5ef245e42e8459e2b8c3e7292a38441ef0a2e0aca13399d4b59fa7ed514a885": 1791286574,
-    "14ad1f2c0cf7bc63f54c0c9435ccaf5b34130f168f71ea2707e59d80403bbbe8": 1791286574
+    "14ad1f2c0cf7bc63f54c0c9435ccaf5b34130f168f71ea2707e59d80403bbbe8": 1791286574,
+    "e76bd1838fa14ac4d8de1bbe2b609aea755ad9e92588ed48e0efbe0462ae5888": 1791287471,
+    "95a2695ced2393c5a373cc820c4b3d202998e16e864d678f6984f38751b0106b": 1791287471
   }
 }
