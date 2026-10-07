@@ -354,7 +354,7 @@
     "ZEC:4h": "high",
     "NEAR:4h": "high",
     "SOL:4h": "high",
-    "UNI:4h": "high",
+    "UNI:4h": "low",
     "BNB:4h": "high",
     "ARB:4h": "high",
     "SUI:4h": "high",
@@ -372,7 +372,7 @@
     "PROVE:4h": "high",
     "FET:4h": "high",
     "DOT:4h": "high",
-    "CAKE:4h": "high",
+    "CAKE:4h": "low",
     "SPCXB:4h": "high",
     "G:4h": "high",
     "RAY:4h": "high",
@@ -421,7 +421,7 @@
     "S:1h": "high",
     "PROM:1h": "high",
     "BTC:4h": "high",
-    "ETH:4h": "high",
+    "ETH:4h": "low",
     "DOGE:4h": "high",
     "LINK:4h": "high",
     "PEPE:4h": "high",
@@ -557,7 +557,7 @@
     "JTO:4h": "high",
     "HBAR:1h": "low",
     "EPIC:1h": "high",
-    "HBAR:4h": "high",
+    "HBAR:4h": "low",
     "EPIC:4h": "high",
     "LUNC:15m": "high",
     "LUNA:1h": "high",
@@ -601,7 +601,7 @@
     "FORM:15m": "low",
     "FORM:1h": "high",
     "INTCB:1h": "low",
-    "XRP:4h": "high",
+    "XRP:4h": "low",
     "MINA:15m": "low",
     "BNSOL:1h": "high",
     "KERNEL:15m": "low",
@@ -654,7 +654,7 @@
     "ACE:1h": "low",
     "FLOKI:1h": "high",
     "WLFI:1h": "high",
-    "CRV:1h": "low",
+    "CRV:1h": "high",
     "WLFI:4h": "low",
     "NOM:1h": "high",
     "NOM:4h": "high",
@@ -898,10 +898,11 @@
     "ORDI:1h": "low",
     "ORDI:15m": "low",
     "HEMI:15m": "high",
-    "HEMI:1h": "high"
+    "HEMI:1h": "high",
+    "LAZIO:1D": "high"
   },
   "sent_messages": {
-    "25602c529af9bfc647be4f9282dbd482248070e275e710c12c484c47391ce7b0": 1791416088,
-    "d703ae3c39ba8da44d8b87f48dd019192c03025b284db1bd87cd7ea3854f4043": 1791416088
+    "55f00361b31b0b29cc94bfe3348cf9aec44d23d4565bf9a1166bae3f66de8df8": 1791417006,
+    "15d447cbc91157ca36dafc9fc6b4130fbe58fc3553767e1ed545360b15f01867": 1791417007
   }
 }
