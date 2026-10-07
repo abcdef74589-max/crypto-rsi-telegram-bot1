@@ -835,7 +835,7 @@
     "SCR:1h": "high",
     "ALICE:15m": "high",
     "DEXE:15m": "low",
-    "SAND:15m": "low",
+    "SAND:15m": "high",
     "MANA:15m": "high",
     "SAND:1h": "high",
     "MANA:1h": "high",
@@ -893,9 +893,7 @@
     "QQQB:1D": "high"
   },
   "sent_messages": {
-    "c488d2e74bccdc4515576241cf842ca7194a44a16562a1f4cd4b87d69e39a529": 1791329796,
-    "514af035472b6b217cd7e9e90d55bb7188f061a1516472bb5d1d203d7350f329": 1791329796,
-    "e4b3b339f8313b9a63d6824979305642c3ac79c329c9aba802d54dc2e85ac25b": 1791330577,
-    "e344651769f59cf959839e5575bf6da5a0f6e17bfd3b3741d27fb54bbc0fdb1f": 1791330577
+    "9085bf1fe5e98e290424b00445ae8db07aaf3a7f771a5b74d03d16ab9fbedc51": 1791335103,
+    "6c86d095e90d5233fef207b20a3bbe4733ee2e1818dc727837bab162c97f43cd": 1791335104
   }
 }
