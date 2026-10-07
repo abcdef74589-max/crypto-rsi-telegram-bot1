@@ -313,7 +313,7 @@
     "AERO:15m": "low",
     "CRV:15m": "low",
     "ZRO:15m": "high",
-    "SKY:15m": "high",
+    "SKY:15m": "low",
     "SNDKB:15m": "high",
     "POL:15m": "low",
     "EURI:15m": "high",
@@ -397,7 +397,7 @@
     "AR:1h": "low",
     "PEPE:15m": "low",
     "ZEN:15m": "low",
-    "SAGA:15m": "low",
+    "SAGA:15m": "high",
     "EIGEN:15m": "low",
     "EIGEN:1h": "high",
     "SKY:1h": "high",
@@ -899,7 +899,7 @@
     "ORDI:15m": "low"
   },
   "sent_messages": {
-    "f0d19d2ec79d9756c27c6e8a1f507dc49a20ee487317652b9aba332118ef3ecc": 1791384695,
-    "91958a07600ca017fa1b08fac7aa52d15435d4917702223a1bb648d82520ffe6": 1791384696
+    "56a804f45ccace332cc92f34ab9b2d00645097754f13c6126c8087784d713e7b": 1791387294,
+    "2aae454d9faabdc986d5a0ee7c99d9566c904478edc79a07374a9155731c45f4": 1791387294
   }
 }
