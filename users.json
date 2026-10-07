@@ -680,7 +680,7 @@
     "QI:4h": "high",
     "QNT:4h": "high",
     "QI:15m": "low",
-    "QNT:15m": "high",
+    "QNT:15m": "low",
     "AXS:15m": "high",
     "ARK:1h": "high",
     "AXS:1h": "high",
@@ -871,7 +871,7 @@
     "RAD:1h": "high",
     "API3:1h": "high",
     "RAD:15m": "high",
-    "API3:15m": "high",
+    "API3:15m": "low",
     "OGN:15m": "low",
     "DIA:15m": "high",
     "RLC:4h": "high",
@@ -895,10 +895,11 @@
     "C98:15m": "low",
     "LPT:15m": "low",
     "PARTI:15m": "high",
-    "ORDI:1h": "low"
+    "ORDI:1h": "low",
+    "ORDI:15m": "low"
   },
   "sent_messages": {
-    "3bea519f77c1679f1fd8431f33b55ef04cea7b66f25085e65c2623388d000b36": 1791371121,
-    "0d157d2a863a755b287edd702233e2c5a03e9bcfb506bde3dcd5b01beedde7c9": 1791371121
+    "b214f7f48e7baa2a28262e977f6c85d75126d4fbbec2a5900d6f65c33eba6d94": 1791374763,
+    "510fdec889e5b610bf7f243aa4c27afd6bc3da029ded20a526d4954eff3fe6fb": 1791374763
   }
 }
