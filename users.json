@@ -391,7 +391,7 @@
     "FF:15m": "high",
     "THE:1h": "high",
     "STRK:1h": "low",
-    "AR:15m": "high",
+    "AR:15m": "low",
     "TRX:1h": "low",
     "BFUSD:1h": "low",
     "AR:1h": "high",
@@ -899,6 +899,8 @@
     "755eda0d078e85bc3440cdce2d991c07e3c5e031da624f7d6830ecaec9f092d7": 1791338692,
     "7bba8d5b2c952acef2a1fa181bb005e84603774876b84d65040216de9dc4fd5b": 1791338693,
     "7ba71911fe69888b16f112d1d0815f603c989cb21d8dc3b0a73032d22e09433c": 1791338832,
-    "d9094d26f9bb8b991bce2eaa70a4bee2ce1a775402416bc457dc2a18c5c8fc2e": 1791338832
+    "d9094d26f9bb8b991bce2eaa70a4bee2ce1a775402416bc457dc2a18c5c8fc2e": 1791338832,
+    "bf0718858fa6fb4308d129f6e6e32daf14aed6e4b66fa579b2ccdbeba06bf4ac": 1791339584,
+    "17e82549f97b93c95b1f1a1838f1d562f77febe71bdd5f7bcb575341e8cb97ba": 1791339584
   }
 }
