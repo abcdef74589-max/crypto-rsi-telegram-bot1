@@ -686,7 +686,7 @@
     "AXS:1h": "high",
     "ARK:15m": "low",
     "PIXEL:15m": "high",
-    "MOVR:15m": "low",
+    "MOVR:15m": "high",
     "PYTH:1h": "high",
     "RARE:1h": "high",
     "JTO:1h": "high",
@@ -896,7 +896,7 @@
     "LPT:15m": "low"
   },
   "sent_messages": {
-    "eb9f43fe4e8f296c7e8346738740d886970bf29aa2f92ff4c3202845a7630707": 1791343289,
-    "9cbf1d61e981925f5fbb1ea46886a56f7839171bce6d1d7e7bb385da41a6b024": 1791343289
+    "8fe060fd0f9a3ef1fe205b83ea28109dbcdd6d11a5cc524cabbeafc754e489dc": 1791345949,
+    "67c6975044efc60e9d4c0a685c71acbccc8bd559a9a44a6497899b5a9b27446e": 1791345950
   }
 }
