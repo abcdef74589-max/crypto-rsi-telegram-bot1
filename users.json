@@ -224,7 +224,7 @@
     "RENDER:15m": "low",
     "A:15m": "high",
     "BNB:15m": "low",
-    "WLD:15m": "high",
+    "WLD:15m": "low",
     "ADA:15m": "low",
     "LTC:15m": "low",
     "FET:15m": "low",
@@ -274,7 +274,7 @@
     "CFG:1h": "high",
     "UNI:15m": "low",
     "REZ:15m": "high",
-    "AVAX:15m": "high",
+    "AVAX:15m": "low",
     "AAVE:15m": "low",
     "SHIB:15m": "low",
     "DOGE:15m": "low",
@@ -299,8 +299,8 @@
     "THE:15m": "high",
     "HBAR:15m": "low",
     "BNCB:15m": "high",
-    "ETH:15m": "high",
-    "XRP:15m": "high",
+    "ETH:15m": "low",
+    "XRP:15m": "low",
     "CRCLB:15m": "low",
     "XLM:15m": "low",
     "GRAM:15m": "low",
@@ -896,11 +896,7 @@
     "LPT:15m": "low"
   },
   "sent_messages": {
-    "755eda0d078e85bc3440cdce2d991c07e3c5e031da624f7d6830ecaec9f092d7": 1791338692,
-    "7bba8d5b2c952acef2a1fa181bb005e84603774876b84d65040216de9dc4fd5b": 1791338693,
-    "7ba71911fe69888b16f112d1d0815f603c989cb21d8dc3b0a73032d22e09433c": 1791338832,
-    "d9094d26f9bb8b991bce2eaa70a4bee2ce1a775402416bc457dc2a18c5c8fc2e": 1791338832,
-    "bf0718858fa6fb4308d129f6e6e32daf14aed6e4b66fa579b2ccdbeba06bf4ac": 1791339584,
-    "17e82549f97b93c95b1f1a1838f1d562f77febe71bdd5f7bcb575341e8cb97ba": 1791339584
+    "eb9f43fe4e8f296c7e8346738740d886970bf29aa2f92ff4c3202845a7630707": 1791343289,
+    "9cbf1d61e981925f5fbb1ea46886a56f7839171bce6d1d7e7bb385da41a6b024": 1791343289
   }
 }
