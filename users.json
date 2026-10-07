@@ -242,7 +242,7 @@
     "TRUMP:15m": "low",
     "PENGU:15m": "low",
     "RAY:15m": "high",
-    "ETHFI:15m": "high",
+    "ETHFI:15m": "low",
     "NEAR:1h": "high",
     "SOL:1h": "high",
     "UNI:1h": "low",
@@ -306,7 +306,7 @@
     "GRAM:15m": "low",
     "WBTC:15m": "high",
     "GOOGLB:15m": "high",
-    "NVDAB:15m": "high",
+    "NVDAB:15m": "low",
     "PENDLE:15m": "high",
     "牛来:15m": "low",
     "ZAMA:15m": "low",
@@ -317,7 +317,7 @@
     "SNDKB:15m": "low",
     "POL:15m": "low",
     "EURI:15m": "high",
-    "QQQB:15m": "high",
+    "QQQB:15m": "low",
     "SEI:15m": "low",
     "DOT:15m": "low",
     "INJ:15m": "low",
@@ -898,7 +898,7 @@
     "ORDI:1h": "low"
   },
   "sent_messages": {
-    "30b48d6228f1b2eea0a997aba7133a744bbde6916c5755178927e78fe5bdc951": 1791355885,
-    "fe8d7c67ddc5ecd95f15cb99d13799e3b9f95f3583a3b3529e02169c51db766f": 1791355886
+    "3bea519f77c1679f1fd8431f33b55ef04cea7b66f25085e65c2623388d000b36": 1791371121,
+    "0d157d2a863a755b287edd702233e2c5a03e9bcfb506bde3dcd5b01beedde7c9": 1791371121
   }
 }
