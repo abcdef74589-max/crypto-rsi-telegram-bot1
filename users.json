@@ -322,7 +322,7 @@
     "DOT:15m": "low",
     "INJ:15m": "low",
     "MUB:15m": "high",
-    "TIA:15m": "low",
+    "TIA:15m": "high",
     "BTC:1h": "low",
     "ZEC:1h": "low",
     "DOGE:1h": "low",
@@ -512,7 +512,7 @@
     "USD1:1h": "high",
     "CELR:15m": "low",
     "CELR:1h": "high",
-    "JTO:15m": "low",
+    "JTO:15m": "high",
     "ALGO:15m": "high",
     "CELR:4h": "high",
     "SKL:4h": "high",
@@ -537,7 +537,7 @@
     "LDO:15m": "low",
     "ZIL:15m": "high",
     "ALLO:4h": "high",
-    "ACE:15m": "low",
+    "ACE:15m": "high",
     "ZIL:1h": "high",
     "ZIL:4h": "high",
     "GENIUS:15m": "high",
@@ -901,7 +901,7 @@
     "HEMI:1h": "high"
   },
   "sent_messages": {
-    "951888332953e0344f0cc200383f80f6461492857cd2e24579fdffae6d687a54": 1791404506,
-    "0749f7ad235189029821b38be87ef0ef68e3dc443196eae875fae81825a49469": 1791404507
+    "5ff611d74f719f301b13cf3b548cb3bafdc67bcaecbf2ae536efe569f274e55d": 1791413428,
+    "f6eea60e43029e5ba7542eefc514631fd5296d8ae7f85b54cfda74f4b84503fa": 1791413428
   }
 }
