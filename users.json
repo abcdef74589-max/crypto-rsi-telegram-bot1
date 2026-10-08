@@ -243,7 +243,7 @@
     "PENGU:15m": "low",
     "RAY:15m": "low",
     "ETHFI:15m": "low",
-    "NEAR:1h": "high",
+    "NEAR:1h": "low",
     "SOL:1h": "low",
     "UNI:1h": "low",
     "BNB:1h": "low",
@@ -426,7 +426,7 @@
     "LINK:4h": "low",
     "PEPE:4h": "low",
     "AAVE:4h": "high",
-    "BNCB:4h": "high",
+    "BNCB:4h": "low",
     "XPL:4h": "low",
     "ETHFI:4h": "high",
     "PENGU:4h": "low",
@@ -641,7 +641,7 @@
     "TUT:4h": "high",
     "MET:15m": "low",
     "MET:1h": "high",
-    "U:4h": "low",
+    "U:4h": "high",
     "MET:4h": "high",
     "APE:4h": "high",
     "U:15m": "low",
@@ -904,10 +904,13 @@
     "ERA:15m": "high",
     "OGN:1h": "high",
     "ERA:1h": "high",
-    "OGN:4h": "high"
+    "OGN:4h": "high",
+    "OGN:1D": "high"
   },
   "sent_messages": {
     "210689afc39319cc61ab55a3ecb97e26c35de3d4894e23837d5c6365799a7022": 1791502595,
-    "46eda101c4655668a981be6731ac4554c258402161f86bfbcbe2ee98178d8b5c": 1791502596
+    "46eda101c4655668a981be6731ac4554c258402161f86bfbcbe2ee98178d8b5c": 1791502596,
+    "a59fb8c7c692bd765fec6018add6ff1ca8b92dc1394b36a1e011dd1cd31046da": 1791503404,
+    "e9b1f418db1f9e0c913c35f5e3ccfa8bfb6db11359db63201697078f2359f2cb": 1791503404
   }
 }
