@@ -779,7 +779,7 @@
     "MAGIC:15m": "low",
     "XVG:15m": "low",
     "OPN:15m": "low",
-    "NMR:15m": "high",
+    "NMR:15m": "low",
     "NMR:1h": "high",
     "XAUT:4h": "low",
     "PAXG:4h": "low",
@@ -902,9 +902,7 @@
     "LAZIO:1D": "high"
   },
   "sent_messages": {
-    "8dffa8dd61c9f63904718dea55d171ae7ee3b23235965dd5cca050c5cdb00c66": 1791426996,
-    "8eff1be248d5d3b9c02a8f9580857d34cf147d73a3654f1c77a329d75b4ac9c9": 1791426996,
-    "77a270b96de02763840e8104c63d5b77bc42ce90da43676a772a4b3bf030f1fe": 1791427852,
-    "b0f7a4d42f9983cb212cbf33d0181aeb41069bfaf27885f77ecf362cd6faf92a": 1791427853
+    "586c14aefbc2a7d9f8cdc69b99bfca5e0091ea3373d0e05446607084c19167b2": 1791429616,
+    "5a275d77bda7f4ddfef44c39db01b0695dd7282af1da785891ac41c063aacc87": 1791429616
   }
 }
