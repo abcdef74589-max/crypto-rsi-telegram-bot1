@@ -508,7 +508,7 @@
     "BANK:15m": "high",
     "EPIC:15m": "high",
     "ALGO:1h": "high",
-    "USD1:15m": "low",
+    "USD1:15m": "high",
     "USD1:1h": "high",
     "CELR:15m": "low",
     "CELR:1h": "high",
@@ -864,7 +864,7 @@
     "BAT:1D": "high",
     "OPEN:15m": "high",
     "ZKP:4h": "high",
-    "RLC:15m": "low",
+    "RLC:15m": "high",
     "RVN:15m": "high",
     "RLC:1h": "high",
     "ORCA:1h": "high",
@@ -906,7 +906,7 @@
     "ERA:1h": "high"
   },
   "sent_messages": {
-    "4ba8ee19b725485541b72d3382d8e6527a5024abd422241da8e1541a35b82352": 1791475599,
-    "9a4560239ef6f6174fa33b3ee739974ebd400c791148c64248b129405ce16fcc": 1791475600
+    "d5f269e9f943c7076fc6b05e475db9430ee9fa1d90332b0f04b284d46f6d0324": 1791483641,
+    "c93a9952264b5db94a3c753014e4174b13711748f7eadfb79d9ee9c58c840979": 1791483641
   }
 }
