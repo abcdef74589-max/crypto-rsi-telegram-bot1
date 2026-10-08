@@ -235,12 +235,12 @@
     "BABY:15m": "high",
     "NEAR:15m": "high",
     "SOL:15m": "low",
-    "ARB:15m": "low",
+    "ARB:15m": "high",
     "ENA:15m": "low",
     "LINK:15m": "low",
     "TAO:15m": "low",
     "TRUMP:15m": "low",
-    "PENGU:15m": "low",
+    "PENGU:15m": "high",
     "RAY:15m": "high",
     "ETHFI:15m": "low",
     "NEAR:1h": "high",
@@ -272,7 +272,7 @@
     "A:1h": "high",
     "BABY:1h": "high",
     "CFG:1h": "high",
-    "UNI:15m": "low",
+    "UNI:15m": "high",
     "REZ:15m": "high",
     "AVAX:15m": "low",
     "AAVE:15m": "low",
@@ -447,7 +447,7 @@
     "LDO:1h": "low",
     "SAGA:1h": "low",
     "C:1h": "high",
-    "FIL:15m": "low",
+    "FIL:15m": "high",
     "POL:1h": "low",
     "ZEN:1h": "low",
     "XUSD:1h": "low",
@@ -468,7 +468,7 @@
     "ZK:15m": "low",
     "ZEC:15m": "low",
     "DASH:15m": "low",
-    "CAKE:15m": "low",
+    "CAKE:15m": "high",
     "STG:15m": "high",
     "SYN:1h": "high",
     "SYN:4h": "high",
@@ -902,7 +902,7 @@
     "LAZIO:1D": "high"
   },
   "sent_messages": {
-    "55f00361b31b0b29cc94bfe3348cf9aec44d23d4565bf9a1166bae3f66de8df8": 1791417006,
-    "15d447cbc91157ca36dafc9fc6b4130fbe58fc3553767e1ed545360b15f01867": 1791417007
+    "11cc7d6b87785eb40c309278c504cf84c064f3bdaf64127f20728496ad8d09c9": 1791422462,
+    "c4f6ccd5067d049457c8c5a3fe5f57cc10068bb4e3588cec6941a132eed68e18": 1791422462
   }
 }
