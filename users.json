@@ -230,7 +230,7 @@
     "FET:15m": "low",
     "MORPHO:15m": "high",
     "OP:15m": "low",
-    "CHIP:15m": "low",
+    "CHIP:15m": "high",
     "VIRTUAL:15m": "low",
     "BABY:15m": "high",
     "NEAR:15m": "high",
@@ -902,7 +902,7 @@
     "LAZIO:1D": "high"
   },
   "sent_messages": {
-    "447c6f1b423426d7e447bc84f8ba0f54ed7034306315bd79336d0911b982bd9f": 1791430575,
-    "33c66370b455be070f78a573d32d5d2914d1122012db2ef3ecb018f3bd6143ca": 1791430575
+    "50f1ddb9be47b3a3c51fff15e597bb91d1e1b1be2babd1400574833424db0108": 1791432275,
+    "38b1d1998401890d5cf4c3ac319c32505da72d6745bbe42f8e6f55c0d23e94a3": 1791432276
   }
 }
