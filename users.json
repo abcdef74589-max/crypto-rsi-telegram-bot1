@@ -279,7 +279,7 @@
     "SHIB:15m": "low",
     "DOGE:15m": "low",
     "TRX:15m": "high",
-    "ICP:15m": "high",
+    "ICP:15m": "low",
     "BFUSD:15m": "high",
     "BTC:15m": "low",
     "BCH:15m": "low",
@@ -897,7 +897,7 @@
     "PARTI:15m": "high",
     "ORDI:1h": "low",
     "ORDI:15m": "low",
-    "HEMI:15m": "high",
+    "HEMI:15m": "low",
     "HEMI:1h": "high",
     "LAZIO:1D": "high",
     "币安人生:15m": "high",
@@ -906,7 +906,7 @@
     "ERA:1h": "high"
   },
   "sent_messages": {
-    "35fbf5ef12a3224023cd89cf50f76b14e868c9153a4276a879f2f48fd9ba1252": 1791456611,
-    "d3e7fa29fa1008cb039f2bad7dfe298614a0dce3e11bef69ab7d277530d00480": 1791456611
+    "b40dde2e89de5602942302ea901140084abb374af62967c5852f7a8b9d947287": 1791458399,
+    "2cec0ec1e9bb893292eb844db17ae511ce2709685c9544bc9b511145dafc579f": 1791458399
   }
 }
