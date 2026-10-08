@@ -233,7 +233,7 @@
     "CHIP:15m": "low",
     "VIRTUAL:15m": "low",
     "BABY:15m": "high",
-    "NEAR:15m": "high",
+    "NEAR:15m": "low",
     "SOL:15m": "low",
     "ARB:15m": "high",
     "ENA:15m": "low",
@@ -241,12 +241,12 @@
     "TAO:15m": "low",
     "TRUMP:15m": "low",
     "PENGU:15m": "high",
-    "RAY:15m": "high",
+    "RAY:15m": "low",
     "ETHFI:15m": "low",
     "NEAR:1h": "high",
     "SOL:1h": "low",
     "UNI:1h": "low",
-    "BNB:1h": "high",
+    "BNB:1h": "low",
     "ARB:1h": "low",
     "SUI:1h": "low",
     "ONDO:1h": "low",
@@ -298,7 +298,7 @@
     "CHIP:1h": "high",
     "THE:15m": "high",
     "HBAR:15m": "low",
-    "BNCB:15m": "high",
+    "BNCB:15m": "low",
     "ETH:15m": "low",
     "XRP:15m": "low",
     "CRCLB:15m": "low",
@@ -906,7 +906,7 @@
     "ERA:1h": "high"
   },
   "sent_messages": {
-    "bd223255112a8dcefe1a72bceacb6912ad2b8292bee6a83e3187a93737818bbd": 1791463904,
-    "7a770019b5fb80b3f37a5fbde3cbf454965f78e3cf5646a1295f5ad2b2b2ac83": 1791463905
+    "677867f836983a6a38046e55798a208cc0b67cc42750dc22a5a90c6a8d59e6cd": 1791467500,
+    "1e809fd725d127900acad21bde7bf4ee46fdb9d5a7d614ed13db6928ea20d8d7": 1791467501
   }
 }
