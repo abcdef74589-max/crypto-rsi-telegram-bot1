@@ -491,7 +491,7 @@
     "LSK:15m": "low",
     "S:15m": "high",
     "ONE:1h": "high",
-    "JST:15m": "high",
+    "JST:15m": "low",
     "PUMP:15m": "low",
     "XTZ:1h": "high",
     "MARSCOIN:15m": "low",
@@ -902,7 +902,7 @@
     "LAZIO:1D": "high"
   },
   "sent_messages": {
-    "586c14aefbc2a7d9f8cdc69b99bfca5e0091ea3373d0e05446607084c19167b2": 1791429616,
-    "5a275d77bda7f4ddfef44c39db01b0695dd7282af1da785891ac41c063aacc87": 1791429616
+    "447c6f1b423426d7e447bc84f8ba0f54ed7034306315bd79336d0911b982bd9f": 1791430575,
+    "33c66370b455be070f78a573d32d5d2914d1122012db2ef3ecb018f3bd6143ca": 1791430575
   }
 }
