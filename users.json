@@ -319,7 +319,7 @@
     "EURI:15m": "high",
     "QQQB:15m": "low",
     "SEI:15m": "low",
-    "DOT:15m": "low",
+    "DOT:15m": "high",
     "INJ:15m": "low",
     "MUB:15m": "low",
     "TIA:15m": "low",
@@ -907,7 +907,7 @@
     "OGN:4h": "high"
   },
   "sent_messages": {
-    "41994ae89c5837a24d85492f773648f7bb3adbd6196164168f55a73c4c1b1584": 1791489044,
-    "2db9fb8cd7bafe896867be40d6820912fcb86c2e7a78fef818e45e59a48de8e7": 1791489045
+    "d0ca6dfd96e6e0c2428c0a82cf64fd27148da988048d587f03e814e9be13ad91": 1791500767,
+    "256e1492c047d7e8e539210beec90b1f550b715d290eed46edee8112756f316b": 1791500768
   }
 }
