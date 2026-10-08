@@ -387,7 +387,7 @@
     "MUB:4h": "high",
     "TIA:4h": "high",
     "A:4h": "high",
-    "STRK:15m": "low",
+    "STRK:15m": "high",
     "FF:15m": "high",
     "THE:1h": "high",
     "STRK:1h": "low",
@@ -647,7 +647,7 @@
     "U:15m": "low",
     "PLUME:4h": "high",
     "PAXG:1h": "low",
-    "WLFI:15m": "low",
+    "WLFI:15m": "high",
     "APE:15m": "high",
     "PYTH:15m": "low",
     "ASTER:1h": "low",
@@ -903,7 +903,7 @@
     "币安人生:15m": "high"
   },
   "sent_messages": {
-    "cbea16bc9b294473fe8a1726307de388d807d7f7ecab1b6f85f3fe164768f9c8": 1791448576,
-    "e1afd282966afe5c3b085a18f6cf5426d2113100e4203c2793ecc782d94fe2b6": 1791448576
+    "636695be8586f6f3044f35734089a2050cb110e9d8dd7a280f756a2e32552bac": 1791450299,
+    "f7d61d4a858d2b83e9eee5fc5ae03c989fe7f0f12b984430fa9b8949dd1dda92": 1791450299
   }
 }
