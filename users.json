@@ -337,7 +337,7 @@
     "PENDLE:1h": "low",
     "ZRO:1h": "high",
     "TUT:15m": "low",
-    "PAXG:15m": "low",
+    "PAXG:15m": "high",
     "XAUT:15m": "low",
     "SPCXB:15m": "high",
     "G:15m": "low",
@@ -746,7 +746,7 @@
     "KITE:1D": "high",
     "HYPE:15m": "low",
     "COW:15m": "high",
-    "W:15m": "low",
+    "W:15m": "high",
     "W:1h": "high",
     "GALA:15m": "high",
     "GLMR:15m": "high",
@@ -902,7 +902,7 @@
     "LAZIO:1D": "high"
   },
   "sent_messages": {
-    "11cc7d6b87785eb40c309278c504cf84c064f3bdaf64127f20728496ad8d09c9": 1791422462,
-    "c4f6ccd5067d049457c8c5a3fe5f57cc10068bb4e3588cec6941a132eed68e18": 1791422462
+    "483b5bf8a2a8ee5baa99695bc431183d53e6a91f79fb36a8e9b3679aadfbdffe": 1791423389,
+    "7bfcb421f7aec0430f3e3d27c595cf8b69fcc6824bad791cfb2604f243dc1e48": 1791423389
   }
 }
