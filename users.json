@@ -230,7 +230,7 @@
     "FET:15m": "low",
     "MORPHO:15m": "high",
     "OP:15m": "low",
-    "CHIP:15m": "high",
+    "CHIP:15m": "low",
     "VIRTUAL:15m": "low",
     "BABY:15m": "high",
     "NEAR:15m": "high",
@@ -906,7 +906,7 @@
     "ERA:1h": "high"
   },
   "sent_messages": {
-    "b40dde2e89de5602942302ea901140084abb374af62967c5852f7a8b9d947287": 1791458399,
-    "2cec0ec1e9bb893292eb844db17ae511ce2709685c9544bc9b511145dafc579f": 1791458399
+    "f692d3c45e3a8d8363242377c23d308289a3615935e2469563bebebf5732f1a1": 1791459377,
+    "6461b756acac7e9b2c4f234d45ab71e5d7a8dcb1674f1dfbd020eb3c99c688ce": 1791459377
   }
 }
