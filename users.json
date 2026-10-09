@@ -871,7 +871,7 @@
     "RAD:1h": "high",
     "API3:1h": "high",
     "RAD:15m": "high",
-    "API3:15m": "low",
+    "API3:15m": "high",
     "OGN:15m": "high",
     "DIA:15m": "high",
     "RLC:4h": "high",
@@ -912,7 +912,7 @@
     "KAIA:1h": "high"
   },
   "sent_messages": {
-    "278dd30ae01a66b23445361dec1ada4b7f2c0950ba4503f51a2275d8ff80446c": 1791554705,
-    "753f411ece3ef3c912b84d1926d2f16376bcfa48d1fe8177532721ae55523586": 1791554705
+    "5dc873afb4d7228f4f9a69cedbd258218b2fef8366510392bf508dec3339d621": 1791555668,
+    "a587eeaaf405749a52a99fbb3864768c562a42afcf38ef253827e86b29eaab26": 1791555669
   }
 }
