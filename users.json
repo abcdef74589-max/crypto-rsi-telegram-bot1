@@ -411,7 +411,7 @@
     "SNXXB:15m": "low",
     "XUSD:15m": "low",
     "XRP:1h": "low",
-    "CRCLB:1h": "low",
+    "CRCLB:1h": "high",
     "XLM:1h": "low",
     "XPL:15m": "low",
     "F:15m": "low",
@@ -814,7 +814,7 @@
     "HUMA:1h": "high",
     "HUMA:4h": "high",
     "TRB:15m": "low",
-    "CRCLB:4h": "low",
+    "CRCLB:4h": "high",
     "MOVR:1D": "high",
     "PUMP:1D": "high",
     "NIGHT:1D": "high",
@@ -909,10 +909,11 @@
     "RLUSD:4h": "high",
     "ATOM:1h": "high",
     "KAIA:15m": "high",
-    "KAIA:1h": "high"
+    "KAIA:1h": "high",
+    "INTCB:4h": "low"
   },
   "sent_messages": {
-    "5dc873afb4d7228f4f9a69cedbd258218b2fef8366510392bf508dec3339d621": 1791555668,
-    "a587eeaaf405749a52a99fbb3864768c562a42afcf38ef253827e86b29eaab26": 1791555669
+    "0cdb55f99bf15196e9eff360e7e128ee2e3a69f91ec99514d23548a3a8857dce": 1791561019,
+    "876848e91c55e4bcb9f6701aa84c0fa1a56bd15e41c60ad6d8a49d25cc74c396": 1791561019
   }
 }
