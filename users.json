@@ -911,10 +911,13 @@
     "KAIA:15m": "high",
     "KAIA:1h": "high",
     "INTCB:4h": "low",
-    "BAT:15m": "high"
+    "BAT:15m": "high",
+    "GMT:15m": "high"
   },
   "sent_messages": {
     "d392f051ffa7a454472c0698636ca9737a1db29b995853bd6383cb35fc6aa723": 1791584496,
-    "65285f03e4f413474cf87d6a7953b7ed02b31e03486f92cacfa30c0c52331357": 1791584496
+    "65285f03e4f413474cf87d6a7953b7ed02b31e03486f92cacfa30c0c52331357": 1791584496,
+    "a4e555d79a563084fdc3ac0b20647b9e9689c7b3cb8f7ebc0afe6b63bf7e7e5c": 1791585359,
+    "4cc46d8d806bb366ba3bc0965ecf1fe6e389d03e0b6ccef642ff9a4377a5d243": 1791585359
   }
 }
