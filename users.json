@@ -239,7 +239,7 @@
     "ENA:15m": "low",
     "LINK:15m": "low",
     "TAO:15m": "low",
-    "TRUMP:15m": "low",
+    "TRUMP:15m": "high",
     "PENGU:15m": "low",
     "RAY:15m": "high",
     "ETHFI:15m": "low",
@@ -914,7 +914,7 @@
     "BAT:15m": "high"
   },
   "sent_messages": {
-    "4ca015f86cf99282d43be7fa6ab440855cc41bdfd3af909fd730da1ec4d98da4": 1791579898,
-    "cfc3285c13b2f5b35d522864951ebaa36307c86355e5f1166ce0346f588c892b": 1791579899
+    "d392f051ffa7a454472c0698636ca9737a1db29b995853bd6383cb35fc6aa723": 1791584496,
+    "65285f03e4f413474cf87d6a7953b7ed02b31e03486f92cacfa30c0c52331357": 1791584496
   }
 }
