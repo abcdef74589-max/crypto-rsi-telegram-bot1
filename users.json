@@ -312,7 +312,7 @@
     "ZAMA:15m": "low",
     "AERO:15m": "low",
     "CRV:15m": "low",
-    "ZRO:15m": "high",
+    "ZRO:15m": "low",
     "SKY:15m": "low",
     "SNDKB:15m": "low",
     "POL:15m": "low",
@@ -914,7 +914,7 @@
     "BAT:15m": "high"
   },
   "sent_messages": {
-    "e1e8ab705970cd1195e4fbf33f89fb5843c09ce7f6e7b853cda34dd8a4588d93": 1791569154,
-    "0677164a383f20f19d759ecf8f7f47a20c57b3a1d0571705566a70aa35957182": 1791569154
+    "b2d1c5f47254bb4e4b5cadaaddabfebd9e10ccb835dd22bd0e732a3c34f752ad": 1791576399,
+    "79312961b21ff365efebe463817d301b95fdeab575a4c53580d27efdabda331f": 1791576399
   }
 }
