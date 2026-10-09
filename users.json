@@ -233,7 +233,7 @@
     "CHIP:15m": "low",
     "VIRTUAL:15m": "low",
     "BABY:15m": "high",
-    "NEAR:15m": "low",
+    "NEAR:15m": "high",
     "SOL:15m": "low",
     "ARB:15m": "low",
     "ENA:15m": "low",
@@ -279,7 +279,7 @@
     "SHIB:15m": "low",
     "DOGE:15m": "low",
     "TRX:15m": "low",
-    "ICP:15m": "low",
+    "ICP:15m": "high",
     "BFUSD:15m": "high",
     "BTC:15m": "low",
     "BCH:15m": "low",
@@ -301,7 +301,7 @@
     "BNCB:15m": "high",
     "ETH:15m": "low",
     "XRP:15m": "low",
-    "CRCLB:15m": "low",
+    "CRCLB:15m": "high",
     "XLM:15m": "low",
     "GRAM:15m": "low",
     "WBTC:15m": "high",
@@ -439,7 +439,7 @@
     "S:4h": "high",
     "STG:4h": "low",
     "COTI:15m": "low",
-    "RLUSD:15m": "low",
+    "RLUSD:15m": "high",
     "PROVE:15m": "high",
     "AVA:15m": "high",
     "RLUSD:1h": "low",
@@ -646,7 +646,7 @@
     "APE:4h": "high",
     "U:15m": "low",
     "PLUME:4h": "high",
-    "PAXG:1h": "low",
+    "PAXG:1h": "high",
     "WLFI:15m": "low",
     "APE:15m": "high",
     "PYTH:15m": "low",
@@ -905,10 +905,11 @@
     "OGN:1h": "high",
     "ERA:1h": "high",
     "OGN:4h": "high",
-    "OGN:1D": "high"
+    "OGN:1D": "high",
+    "RLUSD:4h": "high"
   },
   "sent_messages": {
-    "697da02eb952cf235a94ff3e80d3270750aed117875b89033a6c744ff979185f": 1791516915,
-    "6a5a0c9c8ce00a5973a971a5b67eeb2ab4f681f17a61508694da9f0606f4e05e": 1791516915
+    "72458d64bfce97e4a081449b9d2563696c6aafa008519ec60bdf1ac19deda5e3": 1791517837,
+    "3e354ef70011933c1c487e6548e5bf887fa8cf3f87a3ece065d1af1c3bc19030": 1791517838
   }
 }
