@@ -218,7 +218,7 @@
   "states": {
     "SUI:15m": "low",
     "ONDO:15m": "low",
-    "APT:15m": "low",
+    "APT:15m": "high",
     "KORUB:15m": "high",
     "SOXLB:15m": "low",
     "RENDER:15m": "high",
@@ -909,9 +909,7 @@
     "RLUSD:4h": "high"
   },
   "sent_messages": {
-    "72458d64bfce97e4a081449b9d2563696c6aafa008519ec60bdf1ac19deda5e3": 1791517837,
-    "3e354ef70011933c1c487e6548e5bf887fa8cf3f87a3ece065d1af1c3bc19030": 1791517838,
-    "532ea589195d1fb2e3ec1bbb7bb9f9c50ae4b6599c70c19e9e723969e7be3f33": 1791518690,
-    "70d46416636c8bb187b78b2bf946565bd14d0b4ceaa4577bfd5b97f8d634b50a": 1791518690
+    "86fbda17efedbb2d8931dd0d775138b6b20bf6c8ac32845ddf4fc0cb331dfe8f": 1791522343,
+    "01f227065e50c888e35e1323e98a72b41c78209be343d48571fd2af9b5483626": 1791522344
   }
 }
