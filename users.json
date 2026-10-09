@@ -835,7 +835,7 @@
     "SCR:1h": "high",
     "ALICE:15m": "high",
     "DEXE:15m": "low",
-    "SAND:15m": "low",
+    "SAND:15m": "high",
     "MANA:15m": "high",
     "SAND:1h": "high",
     "MANA:1h": "high",
@@ -908,7 +908,7 @@
     "OGN:1D": "high"
   },
   "sent_messages": {
-    "88af62758bf2737d3a78497394d3d6d735e4235d812d475e100e2cf27bbfa620": 1791514202,
-    "ac56e88edbf8b21f076412a1d71bf19fc4486d5623bc6ecf1a27bf942288002c": 1791514203
+    "697da02eb952cf235a94ff3e80d3270750aed117875b89033a6c744ff979185f": 1791516915,
+    "6a5a0c9c8ce00a5973a971a5b67eeb2ab4f681f17a61508694da9f0606f4e05e": 1791516915
   }
 }
