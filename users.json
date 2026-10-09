@@ -417,7 +417,7 @@
     "F:15m": "low",
     "BANK:1h": "high",
     "F:1h": "high",
-    "SNXXB:1h": "high",
+    "SNXXB:1h": "low",
     "S:1h": "high",
     "PROM:1h": "high",
     "BTC:4h": "high",
@@ -912,12 +912,13 @@
     "KAIA:1h": "high",
     "INTCB:4h": "low",
     "BAT:15m": "high",
-    "GMT:15m": "high"
+    "GMT:15m": "high",
+    "BAT:1h": "high",
+    "PIXEL:1h": "high",
+    "GMT:1h": "high"
   },
   "sent_messages": {
-    "d392f051ffa7a454472c0698636ca9737a1db29b995853bd6383cb35fc6aa723": 1791584496,
-    "65285f03e4f413474cf87d6a7953b7ed02b31e03486f92cacfa30c0c52331357": 1791584496,
-    "a4e555d79a563084fdc3ac0b20647b9e9689c7b3cb8f7ebc0afe6b63bf7e7e5c": 1791585359,
-    "4cc46d8d806bb366ba3bc0965ecf1fe6e389d03e0b6ccef642ff9a4377a5d243": 1791585359
+    "306e079d8f70c552629ef4d5ee941fc69b865df5ec2a3843e20084d5530ab265": 1791586271,
+    "da57d73ca887fe628ea773eedfdd81b5502ebb2284729d5bd93e3f87220a9774": 1791586271
   }
 }
