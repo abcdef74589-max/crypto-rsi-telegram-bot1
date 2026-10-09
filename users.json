@@ -303,7 +303,7 @@
     "XRP:15m": "low",
     "CRCLB:15m": "high",
     "XLM:15m": "low",
-    "GRAM:15m": "low",
+    "GRAM:15m": "high",
     "WBTC:15m": "high",
     "GOOGLB:15m": "high",
     "NVDAB:15m": "high",
@@ -776,7 +776,7 @@
     "SKY:1D": "high",
     "ORCA:15m": "low",
     "HYPE:1h": "low",
-    "MAGIC:15m": "low",
+    "MAGIC:15m": "high",
     "XVG:15m": "low",
     "OPN:15m": "low",
     "NMR:15m": "low",
@@ -907,10 +907,12 @@
     "OGN:4h": "high",
     "OGN:1D": "high",
     "RLUSD:4h": "high",
-    "ATOM:1h": "high"
+    "ATOM:1h": "high",
+    "KAIA:15m": "high",
+    "KAIA:1h": "high"
   },
   "sent_messages": {
-    "d4b09022c2e159243391e4f9c2c39b456e3a18fe70f9ef7a36e8008944b255e4": 1791532238,
-    "31cf39010cdf832d15be673a2bf7e815c857fe423258a548ad9b7bd4dbf4bf81": 1791532239
+    "c41f1ce5b8d0c8be269dc02c8a4747056cc1adbd25bd0dc993eae7037966ad59": 1791539472,
+    "80bbd227b209b091224dbf1647da635ce8c3b6732203b09972b4036f0203d32e": 1791539472
   }
 }
