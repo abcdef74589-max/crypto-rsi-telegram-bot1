@@ -225,7 +225,7 @@
     "A:15m": "high",
     "BNB:15m": "high",
     "WLD:15m": "high",
-    "ADA:15m": "high",
+    "ADA:15m": "low",
     "LTC:15m": "low",
     "FET:15m": "high",
     "MORPHO:15m": "high",
@@ -927,7 +927,7 @@
     "CFX:4h": "high"
   },
   "sent_messages": {
-    "9d40dc394c41d4eafdcd5ac4a9ff2400796f25e5b389b39d938079cbd6485cf1": 1791671766,
-    "9a03b4e329e6af705df5f8de80adb1850a86a3ee804b20b178246e783480aefc": 1791671767
+    "fb75adfbacd0b74a89fe94003b180463eed8f32af5bab8582b6d4c8cf5856326": 1791672681,
+    "142af10e48cbb6e4a88dc7b8882a412d9243ef73e57c5fa73e2b2ce3357f119a": 1791672682
   }
 }
