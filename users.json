@@ -282,7 +282,7 @@
     "ICP:15m": "high",
     "BFUSD:15m": "low",
     "BTC:15m": "high",
-    "BCH:15m": "low",
+    "BCH:15m": "high",
     "MSTRB:15m": "high",
     "ENA:1h": "high",
     "PUMP:1h": "high",
@@ -918,9 +918,7 @@
     "GMT:1h": "high"
   },
   "sent_messages": {
-    "d049aeccbf2e624e35701346c6b5ea265af07ac934ae7fa97371d477cdb39aa6": 1791597951,
-    "ea5bccd9a3060b053a656ed608a0e7c6d25429ec25f61487c63e1c3bac800fbb": 1791597952,
-    "18a8a13fe24fe819e467d6a794397207b74fdda44a045c472171e228da3cf3d4": 1791598829,
-    "79a3ff539d9204d70e89258f489b28a916dd4c59f12e2176c5a8c06721d14615": 1791598829
+    "2e97f0b149b4a3f3b7ceef6618566c362bbd17d133ecb4eccc0a0122a7416f39": 1791600690,
+    "b737ccf547de721e202e0ea7ce6cb5b6ff604a5d714caa0551901a9c0b2f8e5d": 1791600691
   }
 }
