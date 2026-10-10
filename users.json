@@ -216,7 +216,7 @@
     }
   },
   "states": {
-    "SUI:15m": "low",
+    "SUI:15m": "high",
     "ONDO:15m": "low",
     "APT:15m": "high",
     "KORUB:15m": "high",
@@ -231,7 +231,7 @@
     "MORPHO:15m": "high",
     "OP:15m": "high",
     "CHIP:15m": "low",
-    "VIRTUAL:15m": "low",
+    "VIRTUAL:15m": "high",
     "BABY:15m": "high",
     "NEAR:15m": "high",
     "SOL:15m": "low",
@@ -242,7 +242,7 @@
     "TRUMP:15m": "high",
     "PENGU:15m": "high",
     "RAY:15m": "high",
-    "ETHFI:15m": "low",
+    "ETHFI:15m": "high",
     "NEAR:1h": "low",
     "SOL:1h": "low",
     "UNI:1h": "low",
@@ -277,7 +277,7 @@
     "AVAX:15m": "low",
     "AAVE:15m": "low",
     "SHIB:15m": "low",
-    "DOGE:15m": "low",
+    "DOGE:15m": "high",
     "TRX:15m": "low",
     "ICP:15m": "high",
     "BFUSD:15m": "high",
@@ -300,7 +300,7 @@
     "HBAR:15m": "low",
     "BNCB:15m": "high",
     "ETH:15m": "low",
-    "XRP:15m": "low",
+    "XRP:15m": "high",
     "CRCLB:15m": "high",
     "XLM:15m": "low",
     "GRAM:15m": "high",
@@ -395,7 +395,7 @@
     "TRX:1h": "low",
     "BFUSD:1h": "low",
     "AR:1h": "low",
-    "PEPE:15m": "low",
+    "PEPE:15m": "high",
     "ZEN:15m": "low",
     "SAGA:15m": "high",
     "EIGEN:15m": "low",
@@ -413,7 +413,7 @@
     "XRP:1h": "low",
     "CRCLB:1h": "high",
     "XLM:1h": "low",
-    "XPL:15m": "low",
+    "XPL:15m": "high",
     "F:15m": "low",
     "BANK:1h": "high",
     "F:1h": "high",
@@ -918,7 +918,7 @@
     "GMT:1h": "high"
   },
   "sent_messages": {
-    "a081a616beb9cf7c02d1796b0cd69cf98e75c700bcb54f1193541add64da5235": 1791596148,
-    "55f7234efef1447841f24ce3a5d8af7a98a300c7a3ad536bf6ce7c07d953559c": 1791596148
+    "f96f81c600d6d3140e47233b6cfe9952ea8d2a8705532aa8ecd3fcd233413808": 1791597102,
+    "19032c12170257c61dede37e25d5569c10d479a93a43b9641eb2f14ed2c98523": 1791597102
   }
 }
