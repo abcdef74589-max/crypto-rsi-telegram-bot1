@@ -774,7 +774,7 @@
     "EIGEN:1D": "high",
     "ORCA:1D": "high",
     "SKY:1D": "high",
-    "ORCA:15m": "low",
+    "ORCA:15m": "high",
     "HYPE:1h": "low",
     "MAGIC:15m": "low",
     "XVG:15m": "low",
@@ -917,10 +917,13 @@
     "PIXEL:1h": "high",
     "GMT:1h": "high",
     "LUMIA:15m": "high",
-    "SENT:1h": "low"
+    "SENT:1h": "low",
+    "SENT:15m": "low"
   },
   "sent_messages": {
     "3809f6479263c5a0073e18f354ff7b8c949c3fb4fb26529e35ec35a26ac66ef4": 1791622257,
-    "da72a72c5301f27fcb8d3f7c97e14aa4c7cf788b341607130833c84d2f6b13f8": 1791622258
+    "da72a72c5301f27fcb8d3f7c97e14aa4c7cf788b341607130833c84d2f6b13f8": 1791622258,
+    "85759f1f7d835530e1d6297817ed150dbd6a76e31d7536c5a5139a25b982d381": 1791623144,
+    "b7aaa98a2cfa0a95af949704c8d992d55c23710497995a3b04db48a3d2ee8507": 1791623144
   }
 }
