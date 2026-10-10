@@ -844,7 +844,7 @@
     "ENJ:15m": "high",
     "ENJ:1h": "high",
     "KORUB:1h": "low",
-    "牛来:1h": "low",
+    "牛来:1h": "high",
     "SAND:4h": "high",
     "ENJ:4h": "high",
     "牛来:4h": "low",
@@ -922,10 +922,14 @@
     "LUMIA:1h": "high",
     "ARPA:1h": "high",
     "CFX:1h": "high",
-    "CFX:15m": "high"
+    "CFX:15m": "high",
+    "ERA:4h": "high",
+    "CFX:4h": "high"
   },
   "sent_messages": {
     "646caf290e19e3db64d20c74d026798e13ac09d4bc7c8a4d7231cf515e874486": 1791646571,
-    "a096d1486d418a463694c998f04e670ee0ef02453aac94d13eba7f9850781204": 1791646572
+    "a096d1486d418a463694c998f04e670ee0ef02453aac94d13eba7f9850781204": 1791646572,
+    "0864e0c8319b9cd84a98bcf10bc1e64f299f37cd0c13ffe708f8fd8d7f760631": 1791647422,
+    "9776fd4963a2d65e582e169bd8280f614f07bcabd25ed1e896f9a686c984b0bb": 1791647422
   }
 }
