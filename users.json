@@ -223,7 +223,7 @@
     "SOXLB:15m": "low",
     "RENDER:15m": "high",
     "A:15m": "high",
-    "BNB:15m": "low",
+    "BNB:15m": "high",
     "WLD:15m": "high",
     "ADA:15m": "high",
     "LTC:15m": "low",
@@ -274,7 +274,7 @@
     "CFG:1h": "high",
     "UNI:15m": "low",
     "REZ:15m": "high",
-    "AVAX:15m": "low",
+    "AVAX:15m": "high",
     "AAVE:15m": "low",
     "SHIB:15m": "low",
     "DOGE:15m": "high",
@@ -918,7 +918,7 @@
     "GMT:1h": "high"
   },
   "sent_messages": {
-    "0267d6a5ed686aac6c3ff3ba26f970579d9f13a6bdd8bd4577e39ba3c1dc7b5f": 1791606104,
-    "261887ffd838359f771cd687e008bd74f1163570d1c7344c5769e85b26c90be0": 1791606104
+    "126b7d5b6228351761297f76c6fb14f543b4d11f99854308a41f0082bd1bc60d": 1791609710,
+    "33e4c43d7ab8a103b54da7a657ff492eb7698c1cdf36f1fd18fd1d3815f4a9a9": 1791609710
   }
 }
