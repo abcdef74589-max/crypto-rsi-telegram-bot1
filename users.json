@@ -217,7 +217,7 @@
   },
   "states": {
     "SUI:15m": "high",
-    "ONDO:15m": "low",
+    "ONDO:15m": "high",
     "APT:15m": "high",
     "KORUB:15m": "high",
     "SOXLB:15m": "low",
@@ -919,6 +919,8 @@
   },
   "sent_messages": {
     "f96f81c600d6d3140e47233b6cfe9952ea8d2a8705532aa8ecd3fcd233413808": 1791597102,
-    "19032c12170257c61dede37e25d5569c10d479a93a43b9641eb2f14ed2c98523": 1791597102
+    "19032c12170257c61dede37e25d5569c10d479a93a43b9641eb2f14ed2c98523": 1791597102,
+    "d049aeccbf2e624e35701346c6b5ea265af07ac934ae7fa97371d477cdb39aa6": 1791597951,
+    "ea5bccd9a3060b053a656ed608a0e7c6d25429ec25f61487c63e1c3bac800fbb": 1791597952
   }
 }
