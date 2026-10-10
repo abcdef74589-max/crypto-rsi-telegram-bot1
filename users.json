@@ -237,7 +237,7 @@
     "SOL:15m": "low",
     "ARB:15m": "low",
     "ENA:15m": "low",
-    "LINK:15m": "low",
+    "LINK:15m": "high",
     "TAO:15m": "high",
     "TRUMP:15m": "high",
     "PENGU:15m": "high",
@@ -921,9 +921,7 @@
     "SENT:15m": "low"
   },
   "sent_messages": {
-    "3809f6479263c5a0073e18f354ff7b8c949c3fb4fb26529e35ec35a26ac66ef4": 1791622257,
-    "da72a72c5301f27fcb8d3f7c97e14aa4c7cf788b341607130833c84d2f6b13f8": 1791622258,
-    "85759f1f7d835530e1d6297817ed150dbd6a76e31d7536c5a5139a25b982d381": 1791623144,
-    "b7aaa98a2cfa0a95af949704c8d992d55c23710497995a3b04db48a3d2ee8507": 1791623144
+    "465b56223b2c54fe336d762be2525e3a60f3005212bff31cc94533250e7136e2": 1791624993,
+    "c1d501780e1f91ff18323f234409766aef49bb39c728d97b4b19ca02f14a47e6": 1791624993
   }
 }
