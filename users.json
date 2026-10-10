@@ -544,7 +544,7 @@
     "CTSI:15m": "high",
     "GENIUS:1h": "high",
     "CTSI:1h": "high",
-    "SKL:15m": "high",
+    "SKL:15m": "low",
     "C:15m": "high",
     "DASH:1h": "low",
     "GUN:15m": "high",
@@ -776,7 +776,7 @@
     "SKY:1D": "high",
     "ORCA:15m": "low",
     "HYPE:1h": "low",
-    "MAGIC:15m": "high",
+    "MAGIC:15m": "low",
     "XVG:15m": "low",
     "OPN:15m": "low",
     "NMR:15m": "low",
@@ -912,13 +912,14 @@
     "KAIA:1h": "high",
     "INTCB:4h": "low",
     "BAT:15m": "high",
-    "GMT:15m": "high",
+    "GMT:15m": "low",
     "BAT:1h": "high",
     "PIXEL:1h": "high",
-    "GMT:1h": "high"
+    "GMT:1h": "high",
+    "LUMIA:15m": "high"
   },
   "sent_messages": {
-    "41e67bd910279bead4f2d93dff1325d4d9baf70727cac3f13d58bb9278730ba3": 1791613266,
-    "81efcc6e122a18c48a300184116b792756438061b52b95e77f79d5b2a324208c": 1791613266
+    "3ad21cdec3e252db3654eec89afa0b6582bce46518242c815f35973a977d4ce5": 1791619498,
+    "6679b7666d3fab6b1a49aea5b25d4238f81848c1a3539806c432aa81fe5b63f8": 1791619499
   }
 }
