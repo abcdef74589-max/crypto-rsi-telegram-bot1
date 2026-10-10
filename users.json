@@ -602,7 +602,7 @@
     "FORM:1h": "high",
     "INTCB:1h": "low",
     "XRP:4h": "low",
-    "MINA:15m": "low",
+    "MINA:15m": "high",
     "BNSOL:1h": "high",
     "KERNEL:15m": "low",
     "KERNEL:1h": "high",
@@ -918,7 +918,7 @@
     "GMT:1h": "high"
   },
   "sent_messages": {
-    "02dbbe9c118f8149bf13b4d09d2e8d1bc03922fdf61f7ce2d5c787d5e3d8115e": 1791595209,
-    "3230b6d20fcd1fbc4c4cdeb8e12630737863385ec0d108b005d1a042a2020277": 1791595209
+    "a081a616beb9cf7c02d1796b0cd69cf98e75c700bcb54f1193541add64da5235": 1791596148,
+    "55f7234efef1447841f24ce3a5d8af7a98a300c7a3ad536bf6ce7c07d953559c": 1791596148
   }
 }
