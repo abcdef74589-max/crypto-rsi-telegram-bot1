@@ -870,7 +870,7 @@
     "ORCA:1h": "low",
     "RAD:1h": "high",
     "API3:1h": "high",
-    "RAD:15m": "high",
+    "RAD:15m": "low",
     "API3:15m": "high",
     "OGN:15m": "high",
     "DIA:15m": "high",
@@ -923,9 +923,7 @@
     "ARPA:1h": "high"
   },
   "sent_messages": {
-    "465b56223b2c54fe336d762be2525e3a60f3005212bff31cc94533250e7136e2": 1791624993,
-    "c1d501780e1f91ff18323f234409766aef49bb39c728d97b4b19ca02f14a47e6": 1791624993,
-    "a9ede41e411ff937ee70f232b9a5bbf12359a520ae8e3cb7d6284b0a631f6935": 1791625826,
-    "03d146754f740e59bbf7ae35e379d00287ef5ea37bef74ef19803e1fb889b98a": 1791625827
+    "b79b016dcfd1ca5feff6fe734c86c7eb47af0a7d931b4a0bcaed7303eeb13d4c": 1791630326,
+    "9c2c58df35ec15ac6e562eca80b027fc7d92a92ced0a3589ab49b33362de029f": 1791630327
   }
 }
