@@ -272,7 +272,7 @@
     "A:1h": "high",
     "BABY:1h": "high",
     "CFG:1h": "high",
-    "UNI:15m": "low",
+    "UNI:15m": "high",
     "REZ:15m": "high",
     "AVAX:15m": "high",
     "AAVE:15m": "low",
@@ -339,7 +339,7 @@
     "TUT:15m": "low",
     "PAXG:15m": "high",
     "XAUT:15m": "high",
-    "SPCXB:15m": "low",
+    "SPCXB:15m": "high",
     "G:15m": "low",
     "SPYB:15m": "low",
     "ETH:1h": "low",
@@ -923,7 +923,7 @@
     "ARPA:1h": "high"
   },
   "sent_messages": {
-    "72300c2eb6b1431f9eed9b82704cd11698b4668d1974053f0ab274b2a28edb36": 1791636655,
-    "07c01c0f902da4a7bbe9f2c3108c690f709f45eebb4f4e1dca7b016da7ae15a5": 1791636656
+    "76d8e7272a4b88eb268e06c05ccb067a2c892bb16407f70df654fe1860f33a40": 1791639354,
+    "f337dce12a55cc4f67bc2ee5c832d36a315f756c98f0b4b0d6a62430997fb920": 1791639355
   }
 }
