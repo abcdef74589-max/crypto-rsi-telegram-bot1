@@ -924,10 +924,17 @@
     "CFX:1h": "high",
     "CFX:15m": "high",
     "ERA:4h": "high",
-    "CFX:4h": "high"
+    "CFX:4h": "high",
+    "MBL:4h": "high",
+    "ERA:1D": "high",
+    "TIA:1D": "high",
+    "CHIP:1D": "high",
+    "KAIA:1D": "high",
+    "CTSI:1D": "high",
+    "MBL:1D": "high"
   },
   "sent_messages": {
-    "fb75adfbacd0b74a89fe94003b180463eed8f32af5bab8582b6d4c8cf5856326": 1791672681,
-    "142af10e48cbb6e4a88dc7b8882a412d9243ef73e57c5fa73e2b2ce3357f119a": 1791672682
+    "8878937d5338f750aab064842410b10bacb051a209c92b1fa4df798ccd6428e0": 1791676258,
+    "8d0ac32f28d4e3d15761e03ba2dc5d1417bea89169be409b0cf78ba58c886b0a": 1791676258
   }
 }
