@@ -315,14 +315,14 @@
     "ZRO:15m": "high",
     "SKY:15m": "low",
     "SNDKB:15m": "high",
-    "POL:15m": "low",
+    "POL:15m": "high",
     "EURI:15m": "high",
     "QQQB:15m": "low",
     "SEI:15m": "high",
     "DOT:15m": "high",
     "INJ:15m": "high",
     "MUB:15m": "low",
-    "TIA:15m": "low",
+    "TIA:15m": "high",
     "BTC:1h": "low",
     "ZEC:1h": "low",
     "DOGE:1h": "low",
@@ -494,7 +494,7 @@
     "JST:15m": "low",
     "PUMP:15m": "low",
     "XTZ:1h": "high",
-    "MARSCOIN:15m": "low",
+    "MARSCOIN:15m": "high",
     "ESP:1h": "high",
     "XTZ:15m": "high",
     "HEI:15m": "low",
@@ -925,9 +925,7 @@
     "CFX:15m": "high"
   },
   "sent_messages": {
-    "5b07fd7707fa5f7e2325726ede50658392005a9b4f585a7a9f84215523132f90": 1791644755,
-    "38e047c05f6982dfcbc78c085d4a216d907a82564b15dd98c6f9807ad2946947": 1791644756,
-    "2782cf9a31f4bec0dc7967e575f2e7e72dddc95f8fee0877948efdf41b20f72c": 1791645642,
-    "5fd152dc5607305f7788e2a9df7bc539608a767b56f8fd6023378188f7422ec5": 1791645642
+    "646caf290e19e3db64d20c74d026798e13ac09d4bc7c8a4d7231cf515e874486": 1791646571,
+    "a096d1486d418a463694c998f04e670ee0ef02453aac94d13eba7f9850781204": 1791646572
   }
 }
