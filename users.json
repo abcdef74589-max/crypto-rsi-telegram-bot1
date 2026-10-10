@@ -248,7 +248,7 @@
     "UNI:1h": "low",
     "BNB:1h": "low",
     "ARB:1h": "low",
-    "SUI:1h": "low",
+    "SUI:1h": "high",
     "ONDO:1h": "low",
     "WLD:1h": "high",
     "ADA:1h": "high",
@@ -489,7 +489,7 @@
     "SYN:1D": "high",
     "ONE:15m": "high",
     "LSK:15m": "low",
-    "S:15m": "high",
+    "S:15m": "low",
     "ONE:1h": "high",
     "JST:15m": "high",
     "PUMP:15m": "low",
@@ -724,7 +724,7 @@
     "SPK:4h": "high",
     "PYTH:4h": "high",
     "TNSR:4h": "high",
-    "AMP:15m": "high",
+    "AMP:15m": "low",
     "AMP:1h": "high",
     "SPELL:1h": "high",
     "AVNT:1h": "high",
@@ -916,10 +916,11 @@
     "BAT:1h": "high",
     "PIXEL:1h": "high",
     "GMT:1h": "high",
-    "LUMIA:15m": "high"
+    "LUMIA:15m": "high",
+    "SENT:1h": "low"
   },
   "sent_messages": {
-    "3ad21cdec3e252db3654eec89afa0b6582bce46518242c815f35973a977d4ce5": 1791619498,
-    "6679b7666d3fab6b1a49aea5b25d4238f81848c1a3539806c432aa81fe5b63f8": 1791619499
+    "3809f6479263c5a0073e18f354ff7b8c949c3fb4fb26529e35ec35a26ac66ef4": 1791622257,
+    "da72a72c5301f27fcb8d3f7c97e14aa4c7cf788b341607130833c84d2f6b13f8": 1791622258
   }
 }
