@@ -310,7 +310,7 @@
     "PENDLE:15m": "low",
     "牛来:15m": "low",
     "ZAMA:15m": "high",
-    "AERO:15m": "low",
+    "AERO:15m": "high",
     "CRV:15m": "low",
     "ZRO:15m": "high",
     "SKY:15m": "low",
@@ -491,7 +491,7 @@
     "LSK:15m": "low",
     "S:15m": "low",
     "ONE:1h": "high",
-    "JST:15m": "high",
+    "JST:15m": "low",
     "PUMP:15m": "low",
     "XTZ:1h": "high",
     "MARSCOIN:15m": "low",
@@ -691,7 +691,7 @@
     "RARE:1h": "high",
     "JTO:1h": "high",
     "VTHO:1h": "low",
-    "JST:1h": "high",
+    "JST:1h": "low",
     "RARE:4h": "high",
     "JST:4h": "high",
     "SUI:1D": "high",
@@ -923,7 +923,7 @@
     "ARPA:1h": "high"
   },
   "sent_messages": {
-    "b79b016dcfd1ca5feff6fe734c86c7eb47af0a7d931b4a0bcaed7303eeb13d4c": 1791630326,
-    "9c2c58df35ec15ac6e562eca80b027fc7d92a92ced0a3589ab49b33362de029f": 1791630327
+    "72300c2eb6b1431f9eed9b82704cd11698b4668d1974053f0ab274b2a28edb36": 1791636655,
+    "07c01c0f902da4a7bbe9f2c3108c690f709f45eebb4f4e1dca7b016da7ae15a5": 1791636656
   }
 }
