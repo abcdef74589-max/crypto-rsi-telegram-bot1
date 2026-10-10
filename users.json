@@ -243,7 +243,7 @@
     "PENGU:15m": "high",
     "RAY:15m": "high",
     "ETHFI:15m": "high",
-    "NEAR:1h": "low",
+    "NEAR:1h": "high",
     "SOL:1h": "low",
     "UNI:1h": "low",
     "BNB:1h": "low",
@@ -253,7 +253,7 @@
     "WLD:1h": "high",
     "ADA:1h": "high",
     "LINK:1h": "low",
-    "TAO:1h": "low",
+    "TAO:1h": "high",
     "LTC:1h": "low",
     "BCH:1h": "low",
     "DOT:1h": "high",
@@ -918,10 +918,14 @@
     "GMT:1h": "high",
     "LUMIA:15m": "high",
     "SENT:1h": "low",
-    "SENT:15m": "low"
+    "SENT:15m": "low",
+    "LUMIA:1h": "high",
+    "ARPA:1h": "high"
   },
   "sent_messages": {
     "465b56223b2c54fe336d762be2525e3a60f3005212bff31cc94533250e7136e2": 1791624993,
-    "c1d501780e1f91ff18323f234409766aef49bb39c728d97b4b19ca02f14a47e6": 1791624993
+    "c1d501780e1f91ff18323f234409766aef49bb39c728d97b4b19ca02f14a47e6": 1791624993,
+    "a9ede41e411ff937ee70f232b9a5bbf12359a520ae8e3cb7d6284b0a631f6935": 1791625826,
+    "03d146754f740e59bbf7ae35e379d00287ef5ea37bef74ef19803e1fb889b98a": 1791625827
   }
 }
