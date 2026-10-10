@@ -920,10 +920,13 @@
     "SENT:1h": "low",
     "SENT:15m": "low",
     "LUMIA:1h": "high",
-    "ARPA:1h": "high"
+    "ARPA:1h": "high",
+    "CFX:1h": "high"
   },
   "sent_messages": {
     "76d8e7272a4b88eb268e06c05ccb067a2c892bb16407f70df654fe1860f33a40": 1791639354,
-    "f337dce12a55cc4f67bc2ee5c832d36a315f756c98f0b4b0d6a62430997fb920": 1791639355
+    "f337dce12a55cc4f67bc2ee5c832d36a315f756c98f0b4b0d6a62430997fb920": 1791639355,
+    "800047af7f1eaf8e525c896e39253034cd0481063259c6db83ca9d914eb9e3e6": 1791640181,
+    "1462ad1a57c818e31b63cc740661c14f7c3b78d8c3fcf2c948341bcb3eebf0f8": 1791640182
   }
 }
