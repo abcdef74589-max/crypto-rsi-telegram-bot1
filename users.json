@@ -299,7 +299,7 @@
     "THE:15m": "high",
     "HBAR:15m": "low",
     "BNCB:15m": "high",
-    "ETH:15m": "low",
+    "ETH:15m": "high",
     "XRP:15m": "high",
     "CRCLB:15m": "high",
     "XLM:15m": "high",
@@ -314,7 +314,7 @@
     "CRV:15m": "low",
     "ZRO:15m": "high",
     "SKY:15m": "low",
-    "SNDKB:15m": "low",
+    "SNDKB:15m": "high",
     "POL:15m": "low",
     "EURI:15m": "high",
     "QQQB:15m": "low",
@@ -398,7 +398,7 @@
     "PEPE:15m": "high",
     "ZEN:15m": "low",
     "SAGA:15m": "high",
-    "EIGEN:15m": "low",
+    "EIGEN:15m": "high",
     "EIGEN:1h": "high",
     "SKY:1h": "low",
     "INJ:4h": "high",
@@ -513,7 +513,7 @@
     "CELR:15m": "low",
     "CELR:1h": "high",
     "JTO:15m": "low",
-    "ALGO:15m": "low",
+    "ALGO:15m": "high",
     "CELR:4h": "high",
     "SKL:4h": "high",
     "VET:4h": "high",
@@ -744,7 +744,7 @@
     "SPELL:1D": "high",
     "KMNO:1D": "high",
     "KITE:1D": "high",
-    "HYPE:15m": "low",
+    "HYPE:15m": "high",
     "COW:15m": "high",
     "W:15m": "high",
     "W:1h": "high",
@@ -921,12 +921,11 @@
     "SENT:15m": "low",
     "LUMIA:1h": "high",
     "ARPA:1h": "high",
-    "CFX:1h": "high"
+    "CFX:1h": "high",
+    "CFX:15m": "high"
   },
   "sent_messages": {
-    "76d8e7272a4b88eb268e06c05ccb067a2c892bb16407f70df654fe1860f33a40": 1791639354,
-    "f337dce12a55cc4f67bc2ee5c832d36a315f756c98f0b4b0d6a62430997fb920": 1791639355,
-    "800047af7f1eaf8e525c896e39253034cd0481063259c6db83ca9d914eb9e3e6": 1791640181,
-    "1462ad1a57c818e31b63cc740661c14f7c3b78d8c3fcf2c948341bcb3eebf0f8": 1791640182
+    "5b07fd7707fa5f7e2325726ede50658392005a9b4f585a7a9f84215523132f90": 1791644755,
+    "38e047c05f6982dfcbc78c085d4a216d907a82564b15dd98c6f9807ad2946947": 1791644756
   }
 }
