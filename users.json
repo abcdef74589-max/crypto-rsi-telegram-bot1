@@ -224,7 +224,7 @@
     "RENDER:15m": "high",
     "A:15m": "high",
     "BNB:15m": "high",
-    "WLD:15m": "high",
+    "WLD:15m": "low",
     "ADA:15m": "high",
     "LTC:15m": "high",
     "FET:15m": "high",
@@ -310,7 +310,7 @@
     "PENDLE:15m": "low",
     "牛来:15m": "low",
     "ZAMA:15m": "high",
-    "AERO:15m": "high",
+    "AERO:15m": "low",
     "CRV:15m": "low",
     "ZRO:15m": "high",
     "SKY:15m": "low",
@@ -492,7 +492,7 @@
     "S:15m": "high",
     "ONE:1h": "high",
     "JST:15m": "high",
-    "PUMP:15m": "high",
+    "PUMP:15m": "low",
     "XTZ:1h": "high",
     "MARSCOIN:15m": "high",
     "ESP:1h": "high",
@@ -901,7 +901,7 @@
     "HEMI:1h": "high",
     "LAZIO:1D": "high",
     "币安人生:15m": "high",
-    "ERA:15m": "high",
+    "ERA:15m": "low",
     "OGN:1h": "high",
     "ERA:1h": "high",
     "OGN:4h": "high",
@@ -949,7 +949,7 @@
     "IO:15m": "high"
   },
   "sent_messages": {
-    "59bc11fccc43dd0bf2c595707c05315c4abbe0fc97e04ac731bbb80e1f54a075": 1791751841,
-    "ff0098c1c57104cafc14a3f7c58e865a710a2198b596caa8f15b097de30dac0d": 1791751841
+    "49b18ae447a479cb4487bca1ff65a1846fa29612541737fbfa4fe65a00689f42": 1791753604,
+    "8ad8b21552804dfd5d23706a4a329aa84dea4cefd7209d706fcaa9517ea65ab9": 1791753605
   }
 }
