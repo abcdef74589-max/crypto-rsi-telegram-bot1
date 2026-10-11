@@ -585,7 +585,7 @@
     "ICP:4h": "low",
     "KMNO:4h": "high",
     "MITO:1h": "high",
-    "NIL:15m": "low",
+    "NIL:15m": "high",
     "OPG:1h": "high",
     "MINA:1h": "high",
     "SOXLB:4h": "high",
@@ -944,7 +944,7 @@
     "RVN:1h": "low"
   },
   "sent_messages": {
-    "9765ebe4f8a048b13f8600a375e3047436a62c86250832b259dedefa50753d2c": 1791709542,
-    "053fe74548710d150d3a2a3b37b93bdef517f095510de6e7501121447e499c6a": 1791709542
+    "caab4a8c7dbed7ab80cf039342f0228811e184aee7f324a1e2ebeeb8437d12f5": 1791710462,
+    "58f9f347261d7e548ad439b627ec9fa05344bec7b9e39a1d632186739ea36d6a": 1791710462
   }
 }
