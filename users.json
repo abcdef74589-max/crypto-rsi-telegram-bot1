@@ -837,7 +837,7 @@
     "DEXE:15m": "low",
     "SAND:15m": "low",
     "MANA:15m": "high",
-    "SAND:1h": "high",
+    "SAND:1h": "low",
     "MANA:1h": "high",
     "GALA:1h": "high",
     "U:1h": "low",
@@ -939,6 +939,8 @@
   },
   "sent_messages": {
     "8f4ae770a4ec6de8026d8e2f637c139aba95d97e6ae1c0afba5eca239dbb61d3": 1791686157,
-    "43c4d1a0721a80aac73ba9740edcc09189fccc2fab8136ad79c426059b71a13d": 1791686157
+    "43c4d1a0721a80aac73ba9740edcc09189fccc2fab8136ad79c426059b71a13d": 1791686157,
+    "865aeaa00ac088f74c5658ec4365cf359e1c6301157c57eb0d97124739f85429": 1791687014,
+    "8aa7f064d35efbd84b1e28c68f3ea6c7d137a617b5fc0c1ab535d0b683485f80": 1791687014
   }
 }
