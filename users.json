@@ -280,7 +280,7 @@
     "DOGE:15m": "high",
     "TRX:15m": "high",
     "ICP:15m": "high",
-    "BFUSD:15m": "low",
+    "BFUSD:15m": "high",
     "BTC:15m": "high",
     "BCH:15m": "high",
     "MSTRB:15m": "high",
@@ -290,7 +290,7 @@
     "AVAX:1h": "high",
     "AAVE:1h": "low",
     "TRUMP:1h": "high",
-    "CAKE:1h": "low",
+    "CAKE:1h": "high",
     "ETHFI:1h": "low",
     "SHIB:1h": "low",
     "AERO:1h": "high",
@@ -946,10 +946,11 @@
     "CKB:1h": "high",
     "币安人生:1h": "high",
     "IO:1h": "high",
-    "IO:15m": "high"
+    "IO:15m": "high",
+    "CKB:4h": "high"
   },
   "sent_messages": {
-    "a1dcef45799389cbdf4d9772f86f607631e150666f94e062bce794f8b85207da": 1791755464,
-    "2d69f040bf04c60b2b5ebd4c63639099c062d2a68c42da6c386bafc1b1c05f3e": 1791755464
+    "390ae8cace483de557b2d284b763a1700feb8ab30536459478a8ab6caa8902ee": 1791762683,
+    "3b1cf97600be7419177aa1804fd90efa4499295b00d90e4aef02e0c4d06b6069": 1791762683
   }
 }
