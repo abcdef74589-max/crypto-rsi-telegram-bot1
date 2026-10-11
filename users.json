@@ -935,10 +935,11 @@
     "WAL:15m": "high",
     "LA:15m": "high",
     "LA:1h": "high",
-    "NEO:15m": "high"
+    "NEO:15m": "high",
+    "VELODROME:1h": "high"
   },
   "sent_messages": {
-    "fa459454fe28cff23565278ee4457498a8fc603c3c100e4db99dfe1e59f3960c": 1791697003,
-    "62b3f0723cb3a58a420faa053613aa0f2f8346da2e626aeab6e4f5b70630d009": 1791697003
+    "9e203ccf277bf46b74b76c9b2c1cca206452744ab392171b494155c54e5ac13e": 1791701390,
+    "04f368201dafd601f101aee44e875fc99e328d7f1557e3cf8397e1e2d5e5ecb6": 1791701391
   }
 }
