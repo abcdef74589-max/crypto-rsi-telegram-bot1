@@ -918,7 +918,7 @@
     "GMT:1h": "high",
     "LUMIA:15m": "high",
     "SENT:1h": "low",
-    "SENT:15m": "low",
+    "SENT:15m": "high",
     "LUMIA:1h": "high",
     "ARPA:1h": "high",
     "CFX:1h": "high",
@@ -938,7 +938,7 @@
     "NEO:15m": "high"
   },
   "sent_messages": {
-    "3a1ed4cbd1074a9cd8dbf26cb72bb5a15c575769bfab0abdb35e01ddf89167dd": 1791685248,
-    "a7b6c03a8d5f1766c330d829297a81bf3a1330b69f3d19041b634f625afdd0cb": 1791685249
+    "8f4ae770a4ec6de8026d8e2f637c139aba95d97e6ae1c0afba5eca239dbb61d3": 1791686157,
+    "43c4d1a0721a80aac73ba9740edcc09189fccc2fab8136ad79c426059b71a13d": 1791686157
   }
 }
