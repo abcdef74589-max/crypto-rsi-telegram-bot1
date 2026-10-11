@@ -227,7 +227,7 @@
     "WLD:15m": "high",
     "ADA:15m": "low",
     "LTC:15m": "low",
-    "FET:15m": "low",
+    "FET:15m": "high",
     "MORPHO:15m": "high",
     "OP:15m": "high",
     "CHIP:15m": "high",
@@ -274,7 +274,7 @@
     "CFG:1h": "high",
     "UNI:15m": "high",
     "REZ:15m": "high",
-    "AVAX:15m": "low",
+    "AVAX:15m": "high",
     "AAVE:15m": "low",
     "SHIB:15m": "low",
     "DOGE:15m": "low",
@@ -944,9 +944,7 @@
     "RVN:1h": "low"
   },
   "sent_messages": {
-    "caab4a8c7dbed7ab80cf039342f0228811e184aee7f324a1e2ebeeb8437d12f5": 1791710462,
-    "58f9f347261d7e548ad439b627ec9fa05344bec7b9e39a1d632186739ea36d6a": 1791710462,
-    "a6816fdec2160a9b2b933650e4e23688058fc43953e9708d83a56b745b0e9be0": 1791711348,
-    "607f6f403ed81ee173386cb4f99af87f4b73840b8107b22a1b3b43c9a8f88c85": 1791711349
+    "86ca9e9ed5d34328f115e52b28c97994657a1ddf3c7f6e40cf7ee6234d4b53b7": 1791720339,
+    "a0f9e14dfd4907aa1d24dfd7e9e74636ea59759bc1fc29d1bbcb146a2f872ecc": 1791720339
   }
 }
