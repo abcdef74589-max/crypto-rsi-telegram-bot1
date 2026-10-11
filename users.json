@@ -666,7 +666,7 @@
     "INTCB:1D": "high",
     "NOM:15m": "low",
     "BOME:15m": "low",
-    "PLUME:15m": "low",
+    "PLUME:15m": "high",
     "TST:15m": "high",
     "PLUME:1h": "high",
     "XAI:15m": "high",
@@ -942,10 +942,12 @@
     "MANTA:15m": "high",
     "MANTA:1h": "high",
     "RVN:1h": "low",
-    "CKB:15m": "high"
+    "CKB:15m": "high",
+    "CKB:1h": "high",
+    "币安人生:1h": "high"
   },
   "sent_messages": {
-    "5082f0d124821bd7f40180e0d578fe2ebc092a62b7512cf4ec1354e305aa4f50": 1791724849,
-    "fa8fd3bfdd949691290d344b37ac2136fb7622ea7be66757bf7536314507a91a": 1791724849
+    "8537520a43cf8af00d7856ad0126462f8e2a2ffbeb84aa28e24e8f088f404bf1": 1791726631,
+    "a29e26cb763a8525a8b05e24f5bf1469d01ba3bedef7b0eae9f28b0331f2c6a1": 1791726631
   }
 }
