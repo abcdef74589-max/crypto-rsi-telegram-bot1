@@ -649,7 +649,7 @@
     "PAXG:1h": "high",
     "WLFI:15m": "high",
     "APE:15m": "high",
-    "PYTH:15m": "low",
+    "PYTH:15m": "high",
     "ASTER:1h": "low",
     "ACE:1h": "low",
     "FLOKI:1h": "high",
@@ -945,10 +945,11 @@
     "CKB:15m": "high",
     "CKB:1h": "high",
     "币安人生:1h": "high",
-    "IO:1h": "high"
+    "IO:1h": "high",
+    "IO:15m": "high"
   },
   "sent_messages": {
-    "e5b3f69cda1ef683bcd48f5ccb50ef013c14e75997765121d5917b111f7cfc7b": 1791737484,
-    "42c203b65a0bdf8939523dcd01f92013b424d6e9889a00075e614340c26ccee9": 1791737485
+    "0a6c5994eb6803664346b1d194a28a06f71f428a82cb64ef5e2e78bc123d301e": 1791749119,
+    "5b037012ffec2e2a3f7204ee78cacdc617cb1c352268bcd909afe58b583844aa": 1791749119
   }
 }
