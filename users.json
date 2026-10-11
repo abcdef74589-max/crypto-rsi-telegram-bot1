@@ -303,7 +303,7 @@
     "XRP:15m": "high",
     "CRCLB:15m": "high",
     "XLM:15m": "high",
-    "GRAM:15m": "high",
+    "GRAM:15m": "low",
     "WBTC:15m": "high",
     "GOOGLB:15m": "high",
     "NVDAB:15m": "low",
@@ -949,7 +949,7 @@
     "IO:15m": "high"
   },
   "sent_messages": {
-    "49b18ae447a479cb4487bca1ff65a1846fa29612541737fbfa4fe65a00689f42": 1791753604,
-    "8ad8b21552804dfd5d23706a4a329aa84dea4cefd7209d706fcaa9517ea65ab9": 1791753605
+    "a1dcef45799389cbdf4d9772f86f607631e150666f94e062bce794f8b85207da": 1791755464,
+    "2d69f040bf04c60b2b5ebd4c63639099c062d2a68c42da6c386bafc1b1c05f3e": 1791755464
   }
 }
