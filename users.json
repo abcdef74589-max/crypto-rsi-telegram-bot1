@@ -941,10 +941,11 @@
     "VELODROME:4h": "high",
     "MANTA:15m": "high",
     "MANTA:1h": "high",
-    "RVN:1h": "low"
+    "RVN:1h": "low",
+    "CKB:15m": "high"
   },
   "sent_messages": {
-    "9ec371151012deb43b720895d28650ec301b9bca7e71e6b65858f0486639fa9f": 1791723919,
-    "1675464f4c3fa30743fb9746fb6afdaad82ea12a66a428bdce204f9f2afa5b51": 1791723919
+    "5082f0d124821bd7f40180e0d578fe2ebc092a62b7512cf4ec1354e305aa4f50": 1791724849,
+    "fa8fd3bfdd949691290d344b37ac2136fb7622ea7be66757bf7536314507a91a": 1791724849
   }
 }
