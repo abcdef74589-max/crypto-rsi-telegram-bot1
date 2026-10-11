@@ -864,7 +864,7 @@
     "BAT:1D": "high",
     "OPEN:15m": "high",
     "ZKP:4h": "high",
-    "RLC:15m": "low",
+    "RLC:15m": "high",
     "RVN:15m": "high",
     "RLC:1h": "high",
     "ORCA:1h": "low",
@@ -938,6 +938,8 @@
   },
   "sent_messages": {
     "727cfac21856be1c3ab71ee3d37e1a774d19aaeb29653128ae864532b9e47581": 1791683444,
-    "c033a9f55b2d99bf41552870652584ec8eea2de8b575ad81f36baf133df13c80": 1791683444
+    "c033a9f55b2d99bf41552870652584ec8eea2de8b575ad81f36baf133df13c80": 1791683444,
+    "32df7a6bdc1b04c83402357e49d349c7c48e44a2ba16687b4acee31549368c78": 1791684311,
+    "abb53a8d552e6028def0cd403a8d4725681081ab23adff4471be83721ca474d3": 1791684311
   }
 }
