@@ -865,7 +865,7 @@
     "OPEN:15m": "high",
     "ZKP:4h": "high",
     "RLC:15m": "high",
-    "RVN:15m": "high",
+    "RVN:15m": "low",
     "RLC:1h": "high",
     "ORCA:1h": "low",
     "RAD:1h": "high",
@@ -948,6 +948,8 @@
   },
   "sent_messages": {
     "8537520a43cf8af00d7856ad0126462f8e2a2ffbeb84aa28e24e8f088f404bf1": 1791726631,
-    "a29e26cb763a8525a8b05e24f5bf1469d01ba3bedef7b0eae9f28b0331f2c6a1": 1791726631
+    "a29e26cb763a8525a8b05e24f5bf1469d01ba3bedef7b0eae9f28b0331f2c6a1": 1791726631,
+    "985d2957dbe75865b791cec535b6bc700a54b6f0b2966cea4c64e426bde4110c": 1791727526,
+    "2b11ac69fc98a5d59f56ba2ea8aedd0b60d64e85078286b44f47bb2cab7c827d": 1791727526
   }
 }
