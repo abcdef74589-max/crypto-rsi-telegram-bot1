@@ -279,7 +279,7 @@
     "SHIB:15m": "low",
     "DOGE:15m": "low",
     "TRX:15m": "low",
-    "ICP:15m": "low",
+    "ICP:15m": "high",
     "BFUSD:15m": "low",
     "BTC:15m": "high",
     "BCH:15m": "low",
@@ -489,7 +489,7 @@
     "SYN:1D": "high",
     "ONE:15m": "high",
     "LSK:15m": "low",
-    "S:15m": "low",
+    "S:15m": "high",
     "ONE:1h": "high",
     "JST:15m": "high",
     "PUMP:15m": "high",
@@ -944,7 +944,7 @@
     "RVN:1h": "low"
   },
   "sent_messages": {
-    "86ca9e9ed5d34328f115e52b28c97994657a1ddf3c7f6e40cf7ee6234d4b53b7": 1791720339,
-    "a0f9e14dfd4907aa1d24dfd7e9e74636ea59759bc1fc29d1bbcb146a2f872ecc": 1791720339
+    "9ec371151012deb43b720895d28650ec301b9bca7e71e6b65858f0486639fa9f": 1791723919,
+    "1675464f4c3fa30743fb9746fb6afdaad82ea12a66a428bdce204f9f2afa5b51": 1791723919
   }
 }
