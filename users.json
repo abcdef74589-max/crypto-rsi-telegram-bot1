@@ -492,7 +492,7 @@
     "S:15m": "low",
     "ONE:1h": "high",
     "JST:15m": "high",
-    "PUMP:15m": "low",
+    "PUMP:15m": "high",
     "XTZ:1h": "high",
     "MARSCOIN:15m": "high",
     "ESP:1h": "high",
@@ -592,7 +592,7 @@
     "OPG:4h": "high",
     "MINA:4h": "low",
     "PHA:15m": "high",
-    "MUBARAK:15m": "low",
+    "MUBARAK:15m": "high",
     "PHA:1h": "high",
     "MUBARAK:1h": "high",
     "WIF:1h": "high",
@@ -944,7 +944,7 @@
     "RVN:1h": "low"
   },
   "sent_messages": {
-    "4c0324c84a4e6a05aeddda75402b5af2f4cd927f25b36d6b651c64abea9f339e": 1791708630,
-    "e5106c9dc1154e9f4747843f56b9660c7ae59ce3bded503cec60d280ab65bdc3": 1791708631
+    "9765ebe4f8a048b13f8600a375e3047436a62c86250832b259dedefa50753d2c": 1791709542,
+    "053fe74548710d150d3a2a3b37b93bdef517f095510de6e7501121447e499c6a": 1791709542
   }
 }
