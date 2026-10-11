@@ -409,7 +409,7 @@
     "EIGEN:4h": "high",
     "PROM:15m": "high",
     "SNXXB:15m": "low",
-    "XUSD:15m": "low",
+    "XUSD:15m": "high",
     "XRP:1h": "low",
     "CRCLB:1h": "high",
     "XLM:1h": "low",
@@ -939,7 +939,7 @@
     "VELODROME:1h": "high"
   },
   "sent_messages": {
-    "9e203ccf277bf46b74b76c9b2c1cca206452744ab392171b494155c54e5ac13e": 1791701390,
-    "04f368201dafd601f101aee44e875fc99e328d7f1557e3cf8397e1e2d5e5ecb6": 1791701391
+    "7992ead85cc088c4d45a87562e3b7e7642436c4b5b885322f98ccee60cf9b23c": 1791702365,
+    "b74e7f7ddf606c0a9526bc2465107833ea168b6ddfd794c80426890782a898a6": 1791702366
   }
 }
