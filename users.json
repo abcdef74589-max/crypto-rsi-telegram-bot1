@@ -308,7 +308,7 @@
     "GOOGLB:15m": "high",
     "NVDAB:15m": "low",
     "PENDLE:15m": "low",
-    "牛来:15m": "high",
+    "牛来:15m": "low",
     "ZAMA:15m": "high",
     "AERO:15m": "high",
     "CRV:15m": "low",
@@ -319,7 +319,7 @@
     "EURI:15m": "high",
     "QQQB:15m": "low",
     "SEI:15m": "high",
-    "DOT:15m": "high",
+    "DOT:15m": "low",
     "INJ:15m": "high",
     "MUB:15m": "low",
     "TIA:15m": "high",
@@ -938,7 +938,7 @@
     "NEO:15m": "high"
   },
   "sent_messages": {
-    "969545192a93b020a15438a45d8089e930e78b0a18a137281a03bc2116c1fe16": 1791691557,
-    "74c79d652c6d87d595b8d3c9628ec198b89bc3614c3b98f0b06f6187f9c7b0f7": 1791691557
+    "31547b77980bf59317982bcbd1ba52b87bbafa302d8afb7b9bd54fb60eb25108": 1791692477,
+    "54c1ccb0934a70bb87b8f68fec189c13673c4c791e33a9cd69d00a8bb3a870c9": 1791692477
   }
 }
