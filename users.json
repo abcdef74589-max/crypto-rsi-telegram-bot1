@@ -277,7 +277,7 @@
     "AVAX:15m": "low",
     "AAVE:15m": "low",
     "SHIB:15m": "low",
-    "DOGE:15m": "high",
+    "DOGE:15m": "low",
     "TRX:15m": "low",
     "ICP:15m": "low",
     "BFUSD:15m": "low",
@@ -681,7 +681,7 @@
     "QNT:4h": "high",
     "QI:15m": "low",
     "QNT:15m": "low",
-    "AXS:15m": "high",
+    "AXS:15m": "low",
     "ARK:1h": "high",
     "AXS:1h": "high",
     "ARK:15m": "low",
@@ -774,7 +774,7 @@
     "EIGEN:1D": "high",
     "ORCA:1D": "high",
     "SKY:1D": "high",
-    "ORCA:15m": "high",
+    "ORCA:15m": "low",
     "HYPE:1h": "low",
     "MAGIC:15m": "low",
     "XVG:15m": "low",
@@ -938,9 +938,7 @@
     "NEO:15m": "high"
   },
   "sent_messages": {
-    "8f4ae770a4ec6de8026d8e2f637c139aba95d97e6ae1c0afba5eca239dbb61d3": 1791686157,
-    "43c4d1a0721a80aac73ba9740edcc09189fccc2fab8136ad79c426059b71a13d": 1791686157,
-    "865aeaa00ac088f74c5658ec4365cf359e1c6301157c57eb0d97124739f85429": 1791687014,
-    "8aa7f064d35efbd84b1e28c68f3ea6c7d137a617b5fc0c1ab535d0b683485f80": 1791687014
+    "cf1a46616707bb953e1526acfde47ad95160dd271bb8d2c54d7e0cc7a05e4a77": 1791688898,
+    "48b856bc33e4e927c7b01e1040153d787ba21c8e3eca5a68679e40d14cd5606e": 1791688899
   }
 }
