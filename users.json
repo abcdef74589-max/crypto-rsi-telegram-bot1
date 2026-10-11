@@ -234,7 +234,7 @@
     "VIRTUAL:15m": "high",
     "BABY:15m": "high",
     "NEAR:15m": "high",
-    "SOL:15m": "low",
+    "SOL:15m": "high",
     "ARB:15m": "high",
     "ENA:15m": "high",
     "LINK:15m": "high",
@@ -947,7 +947,7 @@
     "币安人生:1h": "high"
   },
   "sent_messages": {
-    "8e3db61726e5c832dc2ff1499a870e00749141aa83d51df33b8da6da68ff8c2f": 1791730232,
-    "cb843945562b775068b863c4cdfe02c58e81c8731c4f74ad8aa30fbacce80dc4": 1791730233
+    "a29da0688344ef610ef11f4695198346f1a0a9a32cd6eb171e1bc245bf41c59e": 1791734839,
+    "4e86fb51216247a03681cf962ac5479d62590f33ff403780f4cf8ab46d6feffc": 1791734839
   }
 }
