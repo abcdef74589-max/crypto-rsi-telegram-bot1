@@ -302,7 +302,7 @@
     "ETH:15m": "high",
     "XRP:15m": "low",
     "CRCLB:15m": "high",
-    "XLM:15m": "low",
+    "XLM:15m": "high",
     "GRAM:15m": "high",
     "WBTC:15m": "high",
     "GOOGLB:15m": "high",
@@ -947,9 +947,7 @@
     "币安人生:1h": "high"
   },
   "sent_messages": {
-    "8537520a43cf8af00d7856ad0126462f8e2a2ffbeb84aa28e24e8f088f404bf1": 1791726631,
-    "a29e26cb763a8525a8b05e24f5bf1469d01ba3bedef7b0eae9f28b0331f2c6a1": 1791726631,
-    "985d2957dbe75865b791cec535b6bc700a54b6f0b2966cea4c64e426bde4110c": 1791727526,
-    "2b11ac69fc98a5d59f56ba2ea8aedd0b60d64e85078286b44f47bb2cab7c827d": 1791727526
+    "8e3db61726e5c832dc2ff1499a870e00749141aa83d51df33b8da6da68ff8c2f": 1791730232,
+    "cb843945562b775068b863c4cdfe02c58e81c8731c4f74ad8aa30fbacce80dc4": 1791730233
   }
 }
