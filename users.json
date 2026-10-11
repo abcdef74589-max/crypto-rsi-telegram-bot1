@@ -255,10 +255,10 @@
     "LINK:1h": "high",
     "TAO:1h": "high",
     "LTC:1h": "low",
-    "BCH:1h": "low",
+    "BCH:1h": "high",
     "DOT:1h": "high",
     "FET:1h": "high",
-    "FIL:1h": "low",
+    "FIL:1h": "high",
     "XPL:1h": "low",
     "PENGU:1h": "low",
     "APT:1h": "high",
@@ -289,7 +289,7 @@
     "PEPE:1h": "high",
     "AVAX:1h": "high",
     "AAVE:1h": "low",
-    "TRUMP:1h": "low",
+    "TRUMP:1h": "high",
     "CAKE:1h": "low",
     "ETHFI:1h": "low",
     "SHIB:1h": "low",
@@ -949,7 +949,7 @@
     "IO:15m": "high"
   },
   "sent_messages": {
-    "0a6c5994eb6803664346b1d194a28a06f71f428a82cb64ef5e2e78bc123d301e": 1791749119,
-    "5b037012ffec2e2a3f7204ee78cacdc617cb1c352268bcd909afe58b583844aa": 1791749119
+    "59bc11fccc43dd0bf2c595707c05315c4abbe0fc97e04ac731bbb80e1f54a075": 1791751841,
+    "ff0098c1c57104cafc14a3f7c58e865a710a2198b596caa8f15b097de30dac0d": 1791751841
   }
 }
