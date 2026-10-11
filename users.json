@@ -931,10 +931,11 @@
     "CHIP:1D": "high",
     "KAIA:1D": "high",
     "CTSI:1D": "high",
-    "MBL:1D": "high"
+    "MBL:1D": "high",
+    "WAL:15m": "high"
   },
   "sent_messages": {
-    "8878937d5338f750aab064842410b10bacb051a209c92b1fa4df798ccd6428e0": 1791676258,
-    "8d0ac32f28d4e3d15761e03ba2dc5d1417bea89169be409b0cf78ba58c886b0a": 1791676258
+    "ede9bcc035263551877ed784f410eb93051f437dbc4505e8902fc92be297f129": 1791678091,
+    "2d7aa3e4bcd3c6cc8a73b1eff39f1c7abab9b3a71779d8c54d11f92b1abb107c": 1791678092
   }
 }
