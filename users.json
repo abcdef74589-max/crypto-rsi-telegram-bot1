@@ -938,10 +938,13 @@
     "NEO:15m": "high",
     "VELODROME:1h": "high",
     "LUMIA:4h": "high",
-    "VELODROME:4h": "high"
+    "VELODROME:4h": "high",
+    "MANTA:15m": "high",
+    "MANTA:1h": "high",
+    "RVN:1h": "low"
   },
   "sent_messages": {
-    "2841efdfa08895d68e0a9b13b2dca52e1d41205170688a47823d605fcc2ce8b9": 1791705065,
-    "f5e48990767c07d8b230d1a5d4ca5c8affefde017825a7154f284c3747e1c344": 1791705066
+    "4c0324c84a4e6a05aeddda75402b5af2f4cd927f25b36d6b651c64abea9f339e": 1791708630,
+    "e5106c9dc1154e9f4747843f56b9660c7ae59ce3bded503cec60d280ab65bdc3": 1791708631
   }
 }
