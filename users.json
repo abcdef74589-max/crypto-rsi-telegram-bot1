@@ -936,10 +936,12 @@
     "LA:15m": "high",
     "LA:1h": "high",
     "NEO:15m": "high",
-    "VELODROME:1h": "high"
+    "VELODROME:1h": "high",
+    "LUMIA:4h": "high",
+    "VELODROME:4h": "high"
   },
   "sent_messages": {
-    "7992ead85cc088c4d45a87562e3b7e7642436c4b5b885322f98ccee60cf9b23c": 1791702365,
-    "b74e7f7ddf606c0a9526bc2465107833ea168b6ddfd794c80426890782a898a6": 1791702366
+    "2841efdfa08895d68e0a9b13b2dca52e1d41205170688a47823d605fcc2ce8b9": 1791705065,
+    "f5e48990767c07d8b230d1a5d4ca5c8affefde017825a7154f284c3747e1c344": 1791705066
   }
 }
