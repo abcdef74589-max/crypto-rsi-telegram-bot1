@@ -387,7 +387,7 @@
     "MUB:4h": "high",
     "TIA:4h": "high",
     "A:4h": "high",
-    "STRK:15m": "high",
+    "STRK:15m": "low",
     "FF:15m": "high",
     "THE:1h": "high",
     "STRK:1h": "high",
@@ -948,10 +948,11 @@
     "IO:1h": "high",
     "IO:15m": "high",
     "CKB:4h": "high",
-    "METIS:1h": "high"
+    "METIS:1h": "high",
+    "CYBER:15m": "high"
   },
   "sent_messages": {
-    "1b5f4f1eab8d36d562f847bda486c75b4df6dce160ba19dda169343558376b76": 1791780675,
-    "d1a5eddd843d94c9ddea21d8589729182ae2bd356f06d8b930000e0d0aa5d240": 1791780675
+    "72b19cfa0c1f87c4d4823c38b0f951c1a5045dd93f39773d49886ec74e43e547": 1791790580,
+    "e288641c1db74d8b18e7533e5ddc746fa26ab8147adf255e058f7fdd35dbd777": 1791790580
   }
 }
