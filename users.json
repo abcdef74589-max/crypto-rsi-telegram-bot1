@@ -294,7 +294,7 @@
     "ETHFI:1h": "low",
     "SHIB:1h": "low",
     "AERO:1h": "high",
-    "MUB:1h": "high",
+    "MUB:1h": "low",
     "CHIP:1h": "high",
     "THE:15m": "high",
     "HBAR:15m": "low",
@@ -532,7 +532,7 @@
     "VET:1D": "high",
     "STX:1D": "high",
     "C:1D": "high",
-    "STX:15m": "low",
+    "STX:15m": "high",
     "STX:1h": "high",
     "LDO:15m": "high",
     "ZIL:15m": "high",
@@ -746,7 +746,7 @@
     "KITE:1D": "high",
     "HYPE:15m": "low",
     "COW:15m": "high",
-    "W:15m": "high",
+    "W:15m": "low",
     "W:1h": "high",
     "GALA:15m": "high",
     "GLMR:15m": "high",
@@ -825,7 +825,7 @@
     "MOVE:1h": "high",
     "ALICE:4h": "high",
     "MOVE:4h": "high",
-    "SKHYB:1h": "high",
+    "SKHYB:1h": "low",
     "GTC:15m": "high",
     "GTC:1h": "high",
     "GTC:4h": "high",
@@ -956,10 +956,11 @@
     "CYBER:1h": "high",
     "RVN:4h": "low",
     "BOME:4h": "low",
-    "SKHYB:4h": "low"
+    "SKHYB:4h": "low",
+    "OSMO:1h": "high"
   },
   "sent_messages": {
-    "933567fc976590e36b1bcedffe5204c695906c7ce18886282095f658dfa70f86": 1791830098,
-    "c70af47b1f653e0d1790fa382abacf6a84bff4f283b486065f1187b9d96e56bb": 1791830098
+    "36d2a82469afd67d03b973746e61dfe4c38eb8dabf7c34d905193d51199ea5f6": 1791838269,
+    "35c725b569f587b568d998e2b710b3630a380bfdf4e95b57c98f6d313066aef8": 1791838269
   }
 }
