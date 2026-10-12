@@ -949,10 +949,11 @@
     "IO:15m": "high",
     "CKB:4h": "high",
     "METIS:1h": "high",
-    "CYBER:15m": "high"
+    "CYBER:15m": "high",
+    "CTK:15m": "low"
   },
   "sent_messages": {
-    "72b19cfa0c1f87c4d4823c38b0f951c1a5045dd93f39773d49886ec74e43e547": 1791790580,
-    "e288641c1db74d8b18e7533e5ddc746fa26ab8147adf255e058f7fdd35dbd777": 1791790580
+    "21494daaf7661922fcb3aefedb5261accdd10f6bbbf02190db077944f70b416b": 1791795996,
+    "c2b5a424b581c3ca8a418d8550416cf5d4f078f401ab5dd8693e6908af38166a": 1791795997
   }
 }
