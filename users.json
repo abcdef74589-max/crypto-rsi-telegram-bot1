@@ -233,7 +233,7 @@
     "CHIP:15m": "high",
     "VIRTUAL:15m": "high",
     "BABY:15m": "high",
-    "NEAR:15m": "high",
+    "NEAR:15m": "low",
     "SOL:15m": "low",
     "ARB:15m": "low",
     "ENA:15m": "low",
@@ -466,7 +466,7 @@
     "BONK:1h": "high",
     "ASTER:15m": "high",
     "ZK:15m": "high",
-    "ZEC:15m": "high",
+    "ZEC:15m": "low",
     "DASH:15m": "low",
     "CAKE:15m": "high",
     "STG:15m": "high",
@@ -942,7 +942,7 @@
     "MANTA:15m": "high",
     "MANTA:1h": "high",
     "RVN:1h": "low",
-    "CKB:15m": "high",
+    "CKB:15m": "low",
     "CKB:1h": "high",
     "币安人生:1h": "high",
     "IO:1h": "high",
@@ -960,7 +960,7 @@
     "OSMO:1h": "high"
   },
   "sent_messages": {
-    "36d2a82469afd67d03b973746e61dfe4c38eb8dabf7c34d905193d51199ea5f6": 1791838269,
-    "35c725b569f587b568d998e2b710b3630a380bfdf4e95b57c98f6d313066aef8": 1791838269
+    "4b959bd2dedbd9aa38cc6024b376c725e750de6a851b8555c45f7d8135d1a7d8": 1791842772,
+    "48a1e6fdce1834762d3ccd1c1788ca1a2385572be19a9a4782bb95ed1b4fad73": 1791842773
   }
 }
