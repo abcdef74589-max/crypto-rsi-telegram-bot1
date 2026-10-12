@@ -229,7 +229,7 @@
     "LTC:15m": "high",
     "FET:15m": "high",
     "MORPHO:15m": "high",
-    "OP:15m": "high",
+    "OP:15m": "low",
     "CHIP:15m": "high",
     "VIRTUAL:15m": "high",
     "BABY:15m": "high",
@@ -314,7 +314,7 @@
     "CRV:15m": "low",
     "ZRO:15m": "high",
     "SKY:15m": "low",
-    "SNDKB:15m": "high",
+    "SNDKB:15m": "low",
     "POL:15m": "high",
     "EURI:15m": "high",
     "QQQB:15m": "low",
@@ -916,7 +916,7 @@
     "BAT:1h": "high",
     "PIXEL:1h": "high",
     "GMT:1h": "high",
-    "LUMIA:15m": "high",
+    "LUMIA:15m": "low",
     "SENT:1h": "low",
     "SENT:15m": "high",
     "LUMIA:1h": "high",
@@ -950,7 +950,7 @@
     "CKB:4h": "high"
   },
   "sent_messages": {
-    "390ae8cace483de557b2d284b763a1700feb8ab30536459478a8ab6caa8902ee": 1791762683,
-    "3b1cf97600be7419177aa1804fd90efa4499295b00d90e4aef02e0c4d06b6069": 1791762683
+    "ee9673cb3da1afe44dd30e3c5fba59b3f35edeaf2738c9f045a6ed4e79681528": 1791768953,
+    "fd203a824b0189351ac5732121b3e492c41eccbdb76f808bfc0fe4c6ffd0ae99": 1791768954
   }
 }
