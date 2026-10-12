@@ -218,7 +218,7 @@
   "states": {
     "SUI:15m": "high",
     "ONDO:15m": "high",
-    "APT:15m": "high",
+    "APT:15m": "low",
     "KORUB:15m": "high",
     "SOXLB:15m": "low",
     "RENDER:15m": "high",
@@ -241,7 +241,7 @@
     "TAO:15m": "high",
     "TRUMP:15m": "high",
     "PENGU:15m": "low",
-    "RAY:15m": "high",
+    "RAY:15m": "low",
     "ETHFI:15m": "high",
     "NEAR:1h": "high",
     "SOL:1h": "high",
@@ -272,7 +272,7 @@
     "A:1h": "high",
     "BABY:1h": "high",
     "CFG:1h": "high",
-    "UNI:15m": "high",
+    "UNI:15m": "low",
     "REZ:15m": "high",
     "AVAX:15m": "high",
     "AAVE:15m": "low",
@@ -337,7 +337,7 @@
     "PENDLE:1h": "low",
     "ZRO:1h": "high",
     "TUT:15m": "low",
-    "PAXG:15m": "high",
+    "PAXG:15m": "low",
     "XAUT:15m": "high",
     "SPCXB:15m": "high",
     "G:15m": "low",
@@ -492,7 +492,7 @@
     "S:15m": "high",
     "ONE:1h": "high",
     "JST:15m": "high",
-    "PUMP:15m": "high",
+    "PUMP:15m": "low",
     "XTZ:1h": "high",
     "MARSCOIN:15m": "high",
     "ESP:1h": "high",
@@ -909,9 +909,9 @@
     "RLUSD:4h": "high",
     "ATOM:1h": "high",
     "KAIA:15m": "low",
-    "KAIA:1h": "high",
+    "KAIA:1h": "low",
     "INTCB:4h": "low",
-    "BAT:15m": "high",
+    "BAT:15m": "low",
     "GMT:15m": "low",
     "BAT:1h": "high",
     "PIXEL:1h": "high",
@@ -950,10 +950,13 @@
     "CKB:4h": "high",
     "METIS:1h": "high",
     "CYBER:15m": "high",
-    "CTK:15m": "low"
+    "CTK:15m": "low",
+    "CTK:1h": "low",
+    "BOME:1h": "low",
+    "CYBER:1h": "high"
   },
   "sent_messages": {
-    "21494daaf7661922fcb3aefedb5261accdd10f6bbbf02190db077944f70b416b": 1791795996,
-    "c2b5a424b581c3ca8a418d8550416cf5d4f078f401ab5dd8693e6908af38166a": 1791795997
+    "35f81f8bffdd3f53d74949665baaa89196469c7e5f806157dd1f51dfad6ebbe4": 1791798592,
+    "24e84ca068237cf7677ae44dfc7551e7103af088759a7aa1cea6c0cc4d2c4cf0": 1791798592
   }
 }
