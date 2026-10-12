@@ -235,7 +235,7 @@
     "BABY:15m": "high",
     "NEAR:15m": "high",
     "SOL:15m": "high",
-    "ARB:15m": "high",
+    "ARB:15m": "low",
     "ENA:15m": "high",
     "LINK:15m": "high",
     "TAO:15m": "high",
@@ -950,7 +950,7 @@
     "CKB:4h": "high"
   },
   "sent_messages": {
-    "ee9673cb3da1afe44dd30e3c5fba59b3f35edeaf2738c9f045a6ed4e79681528": 1791768953,
-    "fd203a824b0189351ac5732121b3e492c41eccbdb76f808bfc0fe4c6ffd0ae99": 1791768954
+    "6a6a1c3b00d445e227130d66569bd9a1db0fb904b1f7342c6e4ddc87fff731bc": 1791776166,
+    "cdba4893d86aaa93e761b255a42048129249630016b31ad03813cf3b640377f6": 1791776166
   }
 }
