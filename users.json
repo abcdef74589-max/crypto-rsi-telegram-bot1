@@ -319,7 +319,7 @@
     "EURI:15m": "high",
     "QQQB:15m": "low",
     "SEI:15m": "high",
-    "DOT:15m": "low",
+    "DOT:15m": "high",
     "INJ:15m": "high",
     "MUB:15m": "low",
     "TIA:15m": "high",
@@ -492,7 +492,7 @@
     "S:15m": "high",
     "ONE:1h": "high",
     "JST:15m": "high",
-    "PUMP:15m": "low",
+    "PUMP:15m": "high",
     "XTZ:1h": "high",
     "MARSCOIN:15m": "high",
     "ESP:1h": "high",
@@ -776,7 +776,7 @@
     "SKY:1D": "high",
     "ORCA:15m": "low",
     "HYPE:1h": "low",
-    "MAGIC:15m": "high",
+    "MAGIC:15m": "low",
     "XVG:15m": "low",
     "OPN:15m": "low",
     "NMR:15m": "low",
@@ -947,10 +947,11 @@
     "币安人生:1h": "high",
     "IO:1h": "high",
     "IO:15m": "high",
-    "CKB:4h": "high"
+    "CKB:4h": "high",
+    "METIS:1h": "high"
   },
   "sent_messages": {
-    "6a6a1c3b00d445e227130d66569bd9a1db0fb904b1f7342c6e4ddc87fff731bc": 1791776166,
-    "cdba4893d86aaa93e761b255a42048129249630016b31ad03813cf3b640377f6": 1791776166
+    "1b5f4f1eab8d36d562f847bda486c75b4df6dce160ba19dda169343558376b76": 1791780675,
+    "d1a5eddd843d94c9ddea21d8589729182ae2bd356f06d8b930000e0d0aa5d240": 1791780675
   }
 }
