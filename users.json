@@ -226,7 +226,7 @@
     "BNB:15m": "high",
     "WLD:15m": "low",
     "ADA:15m": "high",
-    "LTC:15m": "high",
+    "LTC:15m": "low",
     "FET:15m": "high",
     "MORPHO:15m": "high",
     "OP:15m": "low",
@@ -282,7 +282,7 @@
     "ICP:15m": "high",
     "BFUSD:15m": "high",
     "BTC:15m": "high",
-    "BCH:15m": "high",
+    "BCH:15m": "low",
     "MSTRB:15m": "high",
     "ENA:1h": "high",
     "PUMP:1h": "high",
@@ -413,7 +413,7 @@
     "XRP:1h": "low",
     "CRCLB:1h": "high",
     "XLM:1h": "high",
-    "XPL:15m": "high",
+    "XPL:15m": "low",
     "F:15m": "low",
     "BANK:1h": "high",
     "F:1h": "high",
@@ -467,7 +467,7 @@
     "ASTER:15m": "high",
     "ZK:15m": "high",
     "ZEC:15m": "high",
-    "DASH:15m": "high",
+    "DASH:15m": "low",
     "CAKE:15m": "high",
     "STG:15m": "high",
     "SYN:1h": "high",
@@ -900,7 +900,7 @@
     "HEMI:15m": "low",
     "HEMI:1h": "high",
     "LAZIO:1D": "high",
-    "币安人生:15m": "high",
+    "币安人生:15m": "low",
     "ERA:15m": "low",
     "OGN:1h": "high",
     "ERA:1h": "high",
@@ -956,7 +956,7 @@
     "CYBER:1h": "high"
   },
   "sent_messages": {
-    "a210c4dd264dd36a53541d57e6d4dc4475bc74e0f5ffb056fa550a5aa4045e14": 1791806721,
-    "0e0930c567a45dc9467933071d49f41259b331960a54c0fdfa07dd24f290ac02": 1791806721
+    "9469e8afaddc29b46a54da0284618b5917faad025bb6662233cdc6f2903e268d": 1791813941,
+    "285c7e85959a68a24a987499e1a7e34a0adf1cbbfde0f594ef37931232f57aff": 1791813941
   }
 }
