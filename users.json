@@ -279,7 +279,7 @@
     "SHIB:15m": "low",
     "DOGE:15m": "low",
     "TRX:15m": "high",
-    "ICP:15m": "high",
+    "ICP:15m": "low",
     "BFUSD:15m": "high",
     "BTC:15m": "high",
     "BCH:15m": "low",
@@ -318,7 +318,7 @@
     "POL:15m": "high",
     "EURI:15m": "high",
     "QQQB:15m": "low",
-    "SEI:15m": "high",
+    "SEI:15m": "low",
     "DOT:15m": "high",
     "INJ:15m": "high",
     "MUB:15m": "low",
@@ -959,9 +959,9 @@
     "SKHYB:4h": "low"
   },
   "sent_messages": {
-    "5f1363b8ff4346d2c142e70151cc82cd4d22f4691e772ab372fc00f4a58ac6cb": 1791820162,
-    "97fa1483bb31ad5df32e2e518d5992675a035ae0c843ae1f80d60f185ec731fa": 1791820163,
     "a15da8f16b24b6ff56167627e5c062ce5625dee9872733b1649ab64fc65ec957": 1791820312,
-    "82fd307ab6c55b91dc8879c3f8d4bcacd81dbcdbd7b18a87ed007eb619d3954b": 1791820313
+    "82fd307ab6c55b91dc8879c3f8d4bcacd81dbcdbd7b18a87ed007eb619d3954b": 1791820313,
+    "1a3e7ecd5de721c3bd817c50d01c145bc9bebd11360b6260f8b3043f55731ec3": 1791821171,
+    "140051d22fa591f768aa5e35ee8fedbc121e25f267e9a51562b11e83f5e96b0e": 1791821171
   }
 }
