@@ -747,7 +747,7 @@
     "HYPE:15m": "low",
     "COW:15m": "high",
     "W:15m": "low",
-    "W:1h": "high",
+    "W:1h": "low",
     "GALA:15m": "high",
     "GLMR:15m": "high",
     "W:4h": "high",
@@ -798,7 +798,7 @@
     "IOTA:1D": "high",
     "JST:1D": "high",
     "0G:1D": "high",
-    "INTCB:15m": "low",
+    "INTCB:15m": "high",
     "NIGHT:1h": "low",
     "CELO:1h": "high",
     "NIGHT:15m": "high",
@@ -969,9 +969,7 @@
     "OSMO:15m": "low"
   },
   "sent_messages": {
-    "a849ef51c3a0968488dd5b876656c510d3bff3b0c98fed2e146fa6837aadb563": 1791906692,
-    "cad3c08481037aeecc0a41c3acdc96468a014986acf3d56ec592cc674cf9c374": 1791906693,
-    "058341ca93c16bbb7c67e2b0e1b9d45c509d25d5fbaa36fdc173e179b3438253": 1791907539,
-    "719b388313db55fd5e41694276934f1adaccf85ed1761a96bd1b6645438533b3": 1791907539
+    "14c91dd44a4fd186d6feaca14175c7d468b58a41ef025d0e6e0569551f639a8e": 1791910218,
+    "f30c72cc9e01746fd2d93605547fad578387f207371097672c2b81770104328b": 1791910218
   }
 }
