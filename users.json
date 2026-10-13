@@ -242,7 +242,7 @@
     "TRUMP:15m": "low",
     "PENGU:15m": "low",
     "RAY:15m": "low",
-    "ETHFI:15m": "high",
+    "ETHFI:15m": "low",
     "NEAR:1h": "high",
     "SOL:1h": "high",
     "UNI:1h": "low",
@@ -826,7 +826,7 @@
     "ALICE:4h": "high",
     "MOVE:4h": "high",
     "SKHYB:1h": "low",
-    "GTC:15m": "high",
+    "GTC:15m": "low",
     "GTC:1h": "high",
     "GTC:4h": "high",
     "ALICE:1D": "high",
@@ -949,7 +949,7 @@
     "IO:15m": "low",
     "CKB:4h": "high",
     "METIS:1h": "high",
-    "CYBER:15m": "high",
+    "CYBER:15m": "low",
     "CTK:15m": "low",
     "CTK:1h": "low",
     "BOME:1h": "low",
@@ -958,10 +958,12 @@
     "BOME:4h": "low",
     "SKHYB:4h": "low",
     "OSMO:1h": "high",
-    "ALT:15m": "low"
+    "ALT:15m": "low",
+    "RSR:15m": "low",
+    "METIS:15m": "low"
   },
   "sent_messages": {
-    "5066923f62725606f2cedfc794b9b16e6ceccf9d7330f71801fbd6cc56995260": 1791850016,
-    "56d27123a478d7c5a85dd6b373848a39c61821f09ce0b8c71885232386489b7d": 1791850016
+    "7d4ae7f6af8fceca63654e36f3e589261eb99e5e7f55f4ea15b95817e4c01360": 1791853579,
+    "439c6f46a0ecb85381c77fbfd9ca0e53b44167474121fcf06efe7fd4fd813dc1": 1791853580
   }
 }
