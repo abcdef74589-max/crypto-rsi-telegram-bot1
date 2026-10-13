@@ -315,7 +315,7 @@
     "ZRO:15m": "low",
     "SKY:15m": "low",
     "SNDKB:15m": "low",
-    "POL:15m": "high",
+    "POL:15m": "low",
     "EURI:15m": "high",
     "QQQB:15m": "low",
     "SEI:15m": "low",
@@ -331,7 +331,7 @@
     "SPCXB:1h": "low",
     "INJ:1h": "high",
     "GRAM:1h": "low",
-    "RAY:1h": "high",
+    "RAY:1h": "low",
     "WBTC:1h": "high",
     "GOOGLB:1h": "high",
     "PENDLE:1h": "low",
@@ -384,7 +384,7 @@
     "ZAMA:4h": "high",
     "RENDER:4h": "high",
     "SEI:4h": "high",
-    "MUB:4h": "high",
+    "MUB:4h": "low",
     "TIA:4h": "high",
     "A:4h": "high",
     "STRK:15m": "low",
@@ -434,7 +434,7 @@
     "MSTRB:4h": "high",
     "F:4h": "high",
     "SKY:4h": "high",
-    "SNXXB:4h": "high",
+    "SNXXB:4h": "low",
     "VIRTUAL:4h": "low",
     "S:4h": "high",
     "STG:4h": "low",
@@ -678,7 +678,7 @@
     "QI:1h": "high",
     "ARK:4h": "high",
     "QI:4h": "high",
-    "QNT:4h": "high",
+    "QNT:4h": "low",
     "QI:15m": "low",
     "QNT:15m": "low",
     "AXS:15m": "low",
@@ -963,10 +963,12 @@
     "METIS:15m": "low",
     "BLUR:15m": "low",
     "SKL:1h": "high",
-    "BLUR:1h": "low"
+    "BLUR:1h": "low",
+    "BLUR:4h": "low",
+    "KORUB:4h": "low"
   },
   "sent_messages": {
-    "643f527327cfddeea36354a5fbc9d50a4227aef12e60d8f90c87cd1c7e344fdf": 1791887768,
-    "37a304e7b22f6a8d8b801f88e5230d373d2d763bab5d67d88b8ab587ed329d68": 1791887768
+    "f2fc3b951bc9008b03b1e7ed44b814b59da9d674e60bf133cf98bdc5dc1a965f": 1791892240,
+    "e7f00b94ec0e023f18593fb1437200c3791d5005667fa68a2e802505dc30be4d": 1791892240
   }
 }
