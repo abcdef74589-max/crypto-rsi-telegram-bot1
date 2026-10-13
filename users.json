@@ -281,9 +281,9 @@
     "TRX:15m": "low",
     "ICP:15m": "low",
     "BFUSD:15m": "high",
-    "BTC:15m": "low",
+    "BTC:15m": "high",
     "BCH:15m": "low",
-    "MSTRB:15m": "low",
+    "MSTRB:15m": "high",
     "ENA:1h": "high",
     "PUMP:1h": "high",
     "PEPE:1h": "high",
@@ -315,7 +315,7 @@
     "ZRO:15m": "low",
     "SKY:15m": "low",
     "SNDKB:15m": "low",
-    "POL:15m": "low",
+    "POL:15m": "high",
     "EURI:15m": "high",
     "QQQB:15m": "low",
     "SEI:15m": "low",
@@ -337,7 +337,7 @@
     "PENDLE:1h": "low",
     "ZRO:1h": "high",
     "TUT:15m": "low",
-    "PAXG:15m": "low",
+    "PAXG:15m": "high",
     "XAUT:15m": "high",
     "SPCXB:15m": "high",
     "G:15m": "low",
@@ -966,7 +966,7 @@
     "BLUR:1h": "low"
   },
   "sent_messages": {
-    "6953eba173ea74bf090b048471dbffeec58da6f143ac4fe71a1cec57301dcca2": 1791859876,
-    "da4e81096490634a8610543a32b45f5086816f509a47b88acf4d9a2fba32c561": 1791859876
+    "4b887cde4539111a97f9cf928fe91d25f68dbc181ec87a3090cd7946d17384c5": 1791865261,
+    "41e8fbef70d50e44bd5c12325f12f7e97b5b782a8b1fb670970170e4686089d6": 1791865261
   }
 }
