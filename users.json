@@ -908,7 +908,7 @@
     "OGN:1D": "high",
     "RLUSD:4h": "high",
     "ATOM:1h": "high",
-    "KAIA:15m": "low",
+    "KAIA:15m": "high",
     "KAIA:1h": "low",
     "INTCB:4h": "low",
     "BAT:15m": "high",
@@ -966,7 +966,7 @@
     "BLUR:1h": "low"
   },
   "sent_messages": {
-    "6580d19a9b81fb6d23067443a9145ae40e1cd3af8d23534101a78304194f897d": 1791873334,
-    "5a40700e68148029cb4eda32910fa2fbe3fe8d4516411c9e7b489636684d9afe": 1791873335
+    "643f527327cfddeea36354a5fbc9d50a4227aef12e60d8f90c87cd1c7e344fdf": 1791887768,
+    "37a304e7b22f6a8d8b801f88e5230d373d2d763bab5d67d88b8ab587ed329d68": 1791887768
   }
 }
