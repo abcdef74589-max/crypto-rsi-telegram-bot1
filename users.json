@@ -306,7 +306,7 @@
     "GRAM:15m": "low",
     "WBTC:15m": "high",
     "GOOGLB:15m": "high",
-    "NVDAB:15m": "low",
+    "NVDAB:15m": "high",
     "PENDLE:15m": "low",
     "牛来:15m": "high",
     "ZAMA:15m": "high",
@@ -314,7 +314,7 @@
     "CRV:15m": "low",
     "ZRO:15m": "low",
     "SKY:15m": "low",
-    "SNDKB:15m": "low",
+    "SNDKB:15m": "high",
     "POL:15m": "low",
     "EURI:15m": "high",
     "QQQB:15m": "low",
@@ -408,7 +408,7 @@
     "BFUSD:4h": "low",
     "EIGEN:4h": "high",
     "PROM:15m": "high",
-    "SNXXB:15m": "low",
+    "SNXXB:15m": "high",
     "XUSD:15m": "high",
     "XRP:1h": "low",
     "CRCLB:1h": "high",
@@ -464,7 +464,7 @@
     "BONK:15m": "low",
     "SYN:15m": "low",
     "BONK:1h": "high",
-    "ASTER:15m": "low",
+    "ASTER:15m": "high",
     "ZK:15m": "high",
     "ZEC:15m": "low",
     "DASH:15m": "low",
@@ -970,7 +970,7 @@
     "GNS:15m": "high"
   },
   "sent_messages": {
-    "c4125b80225888cf0173f13e3f72e12f63de1eaa3ae94bdf2e5d261494ddd958": 1791918384,
-    "20b5a7d1eb9c96c09efb2c24dbde36838f122f669bc741033ce9a5dcabccb1f3": 1791918385
+    "68c6b44bc6bf39b699782c8c70d0444e9caab95dc1e9c4d98488f6fb3cbe405c": 1791921951,
+    "81cd16b905e7060b06083adbe63681558a002daf5514f5843ddbcfda249dc016": 1791921951
   }
 }
