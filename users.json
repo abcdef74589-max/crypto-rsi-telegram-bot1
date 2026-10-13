@@ -219,7 +219,7 @@
     "SUI:15m": "low",
     "ONDO:15m": "low",
     "APT:15m": "low",
-    "KORUB:15m": "high",
+    "KORUB:15m": "low",
     "SOXLB:15m": "low",
     "RENDER:15m": "high",
     "A:15m": "high",
@@ -256,7 +256,7 @@
     "TAO:1h": "high",
     "LTC:1h": "low",
     "BCH:1h": "high",
-    "DOT:1h": "high",
+    "DOT:1h": "low",
     "FET:1h": "high",
     "FIL:1h": "high",
     "XPL:1h": "low",
@@ -322,7 +322,7 @@
     "DOT:15m": "low",
     "INJ:15m": "low",
     "MUB:15m": "low",
-    "TIA:15m": "low",
+    "TIA:15m": "high",
     "BTC:1h": "high",
     "ZEC:1h": "high",
     "DOGE:1h": "low",
@@ -347,7 +347,7 @@
     "G:1h": "high",
     "ZAMA:1h": "low",
     "SOXLB:1h": "low",
-    "SEI:1h": "high",
+    "SEI:1h": "low",
     "QQQB:1h": "low",
     "TIA:1h": "high",
     "TUT:1h": "high",
@@ -911,7 +911,7 @@
     "KAIA:15m": "low",
     "KAIA:1h": "low",
     "INTCB:4h": "low",
-    "BAT:15m": "low",
+    "BAT:15m": "high",
     "GMT:15m": "low",
     "BAT:1h": "high",
     "PIXEL:1h": "high",
@@ -960,10 +960,13 @@
     "OSMO:1h": "high",
     "ALT:15m": "low",
     "RSR:15m": "low",
-    "METIS:15m": "low"
+    "METIS:15m": "low",
+    "BLUR:15m": "low",
+    "SKL:1h": "high",
+    "BLUR:1h": "low"
   },
   "sent_messages": {
-    "7d4ae7f6af8fceca63654e36f3e589261eb99e5e7f55f4ea15b95817e4c01360": 1791853579,
-    "439c6f46a0ecb85381c77fbfd9ca0e53b44167474121fcf06efe7fd4fd813dc1": 1791853580
+    "6953eba173ea74bf090b048471dbffeec58da6f143ac4fe71a1cec57301dcca2": 1791859876,
+    "da4e81096490634a8610543a32b45f5086816f509a47b88acf4d9a2fba32c561": 1791859876
   }
 }
