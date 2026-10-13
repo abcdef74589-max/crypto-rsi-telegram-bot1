@@ -339,7 +339,7 @@
     "TUT:15m": "low",
     "PAXG:15m": "high",
     "XAUT:15m": "high",
-    "SPCXB:15m": "high",
+    "SPCXB:15m": "low",
     "G:15m": "low",
     "SPYB:15m": "low",
     "ETH:1h": "high",
@@ -465,7 +465,7 @@
     "SYN:15m": "low",
     "BONK:1h": "high",
     "ASTER:15m": "low",
-    "ZK:15m": "low",
+    "ZK:15m": "high",
     "ZEC:15m": "low",
     "DASH:15m": "low",
     "CAKE:15m": "low",
@@ -968,7 +968,7 @@
     "KORUB:4h": "low"
   },
   "sent_messages": {
-    "f2fc3b951bc9008b03b1e7ed44b814b59da9d674e60bf133cf98bdc5dc1a965f": 1791892240,
-    "e7f00b94ec0e023f18593fb1437200c3791d5005667fa68a2e802505dc30be4d": 1791892240
+    "f603d663aa35e57684cef49eb2b9d9f7d95ca45a0dd3139ffdc921b6e545852a": 1791899453,
+    "91c127f32851433907026ce5b21e3b5d4575742560d1ea5c25d9903e0e3034e0": 1791899454
   }
 }
