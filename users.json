@@ -337,7 +337,7 @@
     "PENDLE:1h": "low",
     "ZRO:1h": "high",
     "TUT:15m": "low",
-    "PAXG:15m": "high",
+    "PAXG:15m": "low",
     "XAUT:15m": "low",
     "SPCXB:15m": "low",
     "G:15m": "low",
@@ -969,9 +969,9 @@
     "OSMO:15m": "low"
   },
   "sent_messages": {
-    "b980b6f801b6282f4435cc6c992c80323d792c36faf117fbea98d5be4c38b67b": 1791906583,
-    "d197efafe35599a0933a9bbace3009ed954f818ffe215234a65223ff348da85b": 1791906583,
     "a849ef51c3a0968488dd5b876656c510d3bff3b0c98fed2e146fa6837aadb563": 1791906692,
-    "cad3c08481037aeecc0a41c3acdc96468a014986acf3d56ec592cc674cf9c374": 1791906693
+    "cad3c08481037aeecc0a41c3acdc96468a014986acf3d56ec592cc674cf9c374": 1791906693,
+    "058341ca93c16bbb7c67e2b0e1b9d45c509d25d5fbaa36fdc173e179b3438253": 1791907539,
+    "719b388313db55fd5e41694276934f1adaccf85ed1761a96bd1b6645438533b3": 1791907539
   }
 }
