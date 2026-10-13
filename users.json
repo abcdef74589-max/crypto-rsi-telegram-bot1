@@ -966,10 +966,11 @@
     "BLUR:1h": "low",
     "BLUR:4h": "low",
     "KORUB:4h": "low",
-    "OSMO:15m": "low"
+    "OSMO:15m": "low",
+    "GNS:15m": "high"
   },
   "sent_messages": {
-    "14c91dd44a4fd186d6feaca14175c7d468b58a41ef025d0e6e0569551f639a8e": 1791910218,
-    "f30c72cc9e01746fd2d93605547fad578387f207371097672c2b81770104328b": 1791910218
+    "0cb80a3b39fe0746eb3760527da9e20d88c4aaead512aeb7e84a5b64a64da7e4": 1791916479,
+    "d380b3f33d67b9410e11e0c9bf9ad169300366a895997ffea0e83902be251f72": 1791916480
   }
 }
