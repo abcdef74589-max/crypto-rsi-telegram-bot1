@@ -299,7 +299,7 @@
     "THE:15m": "high",
     "HBAR:15m": "low",
     "BNCB:15m": "high",
-    "ETH:15m": "low",
+    "ETH:15m": "high",
     "XRP:15m": "low",
     "CRCLB:15m": "low",
     "XLM:15m": "low",
@@ -966,7 +966,7 @@
     "BLUR:1h": "low"
   },
   "sent_messages": {
-    "957d1d5f76b4480b604621e42e4807f993e8e897b10f21dfd14dbb455def5491": 1791869693,
-    "c33544e195c6ed898bd3592a942f91d6955b97a5b74e6e72c479eef7064146ac": 1791869694
+    "8da5b6ede8f4e4a87efba79f8c83956d9b73200a172ed654994b4d5ad312a07d": 1791871523,
+    "206182d44b97a60ab61012338d1e6321344b322b7a1b3fd47dea8d2ba2185535": 1791871524
   }
 }
