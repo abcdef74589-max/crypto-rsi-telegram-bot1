@@ -272,7 +272,7 @@
     "A:1h": "high",
     "BABY:1h": "high",
     "CFG:1h": "high",
-    "UNI:15m": "high",
+    "UNI:15m": "low",
     "REZ:15m": "high",
     "AVAX:15m": "low",
     "AAVE:15m": "low",
@@ -798,7 +798,7 @@
     "IOTA:1D": "high",
     "JST:1D": "high",
     "0G:1D": "high",
-    "INTCB:15m": "high",
+    "INTCB:15m": "low",
     "NIGHT:1h": "low",
     "CELO:1h": "high",
     "NIGHT:15m": "high",
@@ -969,10 +969,11 @@
     "OSMO:15m": "low",
     "GNS:15m": "high",
     "BAT:4h": "high",
-    "GNS:4h": "high"
+    "GNS:4h": "high",
+    "AMDB:15m": "low"
   },
   "sent_messages": {
-    "31f7af06ec1db48999f4411dc0c12755f5096bc79f62d535db31961854a92d4b": 1791956170,
-    "1ecd796b511ef58f51ff94405344b7affda550e25047d99e117ea6ecc17faad9": 1791956170
+    "a5982e73e39fd59aa726f06a4a184018681b56b875567d7b356ae857bdc71bb8": 1791957961,
+    "ffd9ca8a3f09b59fbe3f874a314e1d8be5650deb09e7a39990861a63fb3d5249": 1791957961
   }
 }
