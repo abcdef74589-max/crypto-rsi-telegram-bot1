@@ -305,7 +305,7 @@
     "XLM:15m": "low",
     "GRAM:15m": "low",
     "WBTC:15m": "high",
-    "GOOGLB:15m": "high",
+    "GOOGLB:15m": "low",
     "NVDAB:15m": "low",
     "PENDLE:15m": "high",
     "牛来:15m": "low",
@@ -976,7 +976,7 @@
     "RWUSD:1h": "low"
   },
   "sent_messages": {
-    "a3e1dd7024e46185c03ee28bed8bcf602254a5d2b3e5be29d51504cf2aa2a352": 1791996679,
-    "a7aa1fa45fd9640269f68b323073cf2bbf5f3ebbdd4aefc4f21f9591e7c292fd": 1791996679
+    "2da263a4fcdb774570e929ef9ad9fc8f234d9a70275919318ed3070881207e65": 1791998387,
+    "a126c75a14b4db87c342a8116f87b087b1efd708f49cfd9b09132a474d3ebfaf": 1791998388
   }
 }
