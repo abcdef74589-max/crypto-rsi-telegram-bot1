@@ -447,7 +447,7 @@
     "LDO:1h": "low",
     "SAGA:1h": "low",
     "C:1h": "high",
-    "FIL:15m": "low",
+    "FIL:15m": "high",
     "POL:1h": "low",
     "ZEN:1h": "low",
     "XUSD:1h": "low",
@@ -592,7 +592,7 @@
     "OPG:4h": "high",
     "MINA:4h": "low",
     "PHA:15m": "high",
-    "MUBARAK:15m": "high",
+    "MUBARAK:15m": "low",
     "PHA:1h": "high",
     "MUBARAK:1h": "high",
     "WIF:1h": "high",
@@ -972,7 +972,7 @@
     "GNS:4h": "high"
   },
   "sent_messages": {
-    "36e1c4a6e033d7cc90aa0b97fba5999b23dd124962ad2cbc03937df292bbd031": 1791948985,
-    "cc9603c8f4d6880b64cab0da77fe4738a6685e9c9542dfa671f0ac954b9bc709": 1791948985
+    "68a85ca499c81a533d4b3e944cf0f03dc1259e744a97f33ef6cb6a70da832693": 1791952592,
+    "1a88ad46cf8cb46883ae151a641050110ee4330dfef0b2905d450f3a0d0add17": 1791952592
   }
 }
