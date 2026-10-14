@@ -283,7 +283,7 @@
     "BFUSD:15m": "high",
     "BTC:15m": "high",
     "BCH:15m": "high",
-    "MSTRB:15m": "high",
+    "MSTRB:15m": "low",
     "ENA:1h": "high",
     "PUMP:1h": "high",
     "PEPE:1h": "high",
@@ -333,7 +333,7 @@
     "GRAM:1h": "low",
     "RAY:1h": "low",
     "WBTC:1h": "high",
-    "GOOGLB:1h": "high",
+    "GOOGLB:1h": "low",
     "PENDLE:1h": "low",
     "ZRO:1h": "high",
     "TUT:15m": "low",
@@ -392,7 +392,7 @@
     "THE:1h": "high",
     "STRK:1h": "high",
     "AR:15m": "low",
-    "TRX:1h": "low",
+    "TRX:1h": "high",
     "BFUSD:1h": "low",
     "AR:1h": "low",
     "PEPE:15m": "high",
@@ -489,7 +489,7 @@
     "SYN:1D": "high",
     "ONE:15m": "high",
     "LSK:15m": "low",
-    "S:15m": "high",
+    "S:15m": "low",
     "ONE:1h": "high",
     "JST:15m": "high",
     "PUMP:15m": "low",
@@ -911,7 +911,7 @@
     "KAIA:15m": "low",
     "KAIA:1h": "low",
     "INTCB:4h": "low",
-    "BAT:15m": "high",
+    "BAT:15m": "low",
     "GMT:15m": "low",
     "BAT:1h": "high",
     "PIXEL:1h": "high",
@@ -976,7 +976,7 @@
     "RWUSD:1h": "low"
   },
   "sent_messages": {
-    "2da263a4fcdb774570e929ef9ad9fc8f234d9a70275919318ed3070881207e65": 1791998387,
-    "a126c75a14b4db87c342a8116f87b087b1efd708f49cfd9b09132a474d3ebfaf": 1791998388
+    "c882dbfc7526c1113df11a104a9699010e049580b7f5c817fca21d9bd3efc43a": 1792000213,
+    "3de28d4c53064dcfa9eca63b61a8fdda81a44508973b9c33732244ef0db429c6": 1792000214
   }
 }
