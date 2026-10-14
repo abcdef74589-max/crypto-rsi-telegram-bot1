@@ -262,7 +262,7 @@
     "XPL:1h": "low",
     "PENGU:1h": "low",
     "APT:1h": "high",
-    "NVDAB:1h": "low",
+    "NVDAB:1h": "high",
     "MORPHO:1h": "high",
     "RENDER:1h": "high",
     "BNCB:1h": "high",
@@ -972,7 +972,7 @@
     "GNS:4h": "high"
   },
   "sent_messages": {
-    "2f9aa88b94f42ad392fa85f9e80b06feab91e6cb1c17c31bb27d3fd07aeef205": 1791935467,
-    "94e09a357864db5ceeaac47ddae5dd25a568765f75eba1a6185797b9fc46f35f": 1791935468
+    "2fc5a2af7d7a675d7851a86fb7140b9fad55053857642b3cef156ae05980c70f": 1791939058,
+    "9ba1e75639c38bbe9cbac24e11b13242b6171ef37f2982044b28ffb104c54355": 1791939059
   }
 }
