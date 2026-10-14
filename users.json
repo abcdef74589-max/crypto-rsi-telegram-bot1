@@ -278,7 +278,7 @@
     "AAVE:15m": "low",
     "SHIB:15m": "low",
     "DOGE:15m": "low",
-    "TRX:15m": "low",
+    "TRX:15m": "high",
     "ICP:15m": "low",
     "BFUSD:15m": "high",
     "BTC:15m": "high",
@@ -466,7 +466,7 @@
     "BONK:1h": "high",
     "ASTER:15m": "high",
     "ZK:15m": "high",
-    "ZEC:15m": "low",
+    "ZEC:15m": "high",
     "DASH:15m": "low",
     "CAKE:15m": "low",
     "STG:15m": "high",
@@ -972,7 +972,7 @@
     "GNS:4h": "high"
   },
   "sent_messages": {
-    "d6ce8e6a828ae565c6b51b232e50758ed2a32b60f217ca3c74bbad144cadb8e2": 1791940810,
-    "4b1b719bd87450c80ca343c94bc805da69d2dc615afa51f7f0a3df64e4b5e99d": 1791940810
+    "924bfdf9ac90020afa62ce6de359f8640b0c3975a35c3607a7e0d7f7a44bfcbe": 1791942644,
+    "2c90f33cd95dffc116c9bcf517da5811808d971bc0856d7fd5673d4aa55fa6ab": 1791942644
   }
 }
