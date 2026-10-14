@@ -257,7 +257,7 @@
     "LTC:1h": "low",
     "BCH:1h": "high",
     "DOT:1h": "low",
-    "FET:1h": "high",
+    "FET:1h": "low",
     "FIL:1h": "high",
     "XPL:1h": "low",
     "PENGU:1h": "low",
@@ -284,7 +284,7 @@
     "BTC:15m": "high",
     "BCH:15m": "high",
     "MSTRB:15m": "low",
-    "ENA:1h": "high",
+    "ENA:1h": "low",
     "PUMP:1h": "high",
     "PEPE:1h": "high",
     "AVAX:1h": "high",
@@ -324,7 +324,7 @@
     "MUB:15m": "low",
     "TIA:15m": "low",
     "BTC:1h": "high",
-    "ZEC:1h": "high",
+    "ZEC:1h": "low",
     "DOGE:1h": "low",
     "SNDKB:1h": "low",
     "MSTRB:1h": "low",
@@ -342,7 +342,7 @@
     "SPCXB:15m": "low",
     "G:15m": "low",
     "SPYB:15m": "low",
-    "ETH:1h": "high",
+    "ETH:1h": "low",
     "XAUT:1h": "low",
     "G:1h": "high",
     "ZAMA:1h": "low",
@@ -844,7 +844,7 @@
     "ENJ:15m": "high",
     "ENJ:1h": "high",
     "KORUB:1h": "low",
-    "牛来:1h": "high",
+    "牛来:1h": "low",
     "SAND:4h": "high",
     "ENJ:4h": "high",
     "牛来:4h": "low",
@@ -973,10 +973,11 @@
     "AMDB:15m": "low",
     "RWUSD:15m": "low",
     "WAL:1h": "high",
-    "RWUSD:1h": "low"
+    "RWUSD:1h": "low",
+    "TQQQB:1h": "low"
   },
   "sent_messages": {
-    "c882dbfc7526c1113df11a104a9699010e049580b7f5c817fca21d9bd3efc43a": 1792000213,
-    "3de28d4c53064dcfa9eca63b61a8fdda81a44508973b9c33732244ef0db429c6": 1792000214
+    "cd12210a2c40980579104a58d0d972a4becc143947245e40cd43b36095268ca0": 1792011044,
+    "b587fbda22460b6e782360c081a7ad618b444e90e7fe1ccc39252dda99c4e456": 1792011044
   }
 }
