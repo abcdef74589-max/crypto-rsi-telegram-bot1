@@ -411,7 +411,7 @@
     "SNXXB:15m": "low",
     "XUSD:15m": "low",
     "XRP:1h": "low",
-    "CRCLB:1h": "low",
+    "CRCLB:1h": "high",
     "XLM:1h": "high",
     "XPL:15m": "high",
     "F:15m": "low",
@@ -989,7 +989,7 @@
     "SOXSB:4h": "high"
   },
   "sent_messages": {
-    "a253b48e6db5cd82789b088cf1400c07717b8abf30f07f7257c60f265f316846": 1792081303,
-    "092e9f638e7d058981389e4c5605643736b471293d8dcc9e54789a5fe1e75014": 1792081303
+    "286514c9a300bbb7fac7b986ad323f4b2e38cc179f29f64837436848eeaeb598": 1792083067,
+    "2bffc73fc8603ff47cfaa54fdca493baf823e0ede5fb010acc4b443e93ab226a": 1792083068
   }
 }
