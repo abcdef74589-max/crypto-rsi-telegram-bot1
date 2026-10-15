@@ -234,7 +234,7 @@
     "VIRTUAL:15m": "high",
     "BABY:15m": "high",
     "NEAR:15m": "low",
-    "SOL:15m": "low",
+    "SOL:15m": "high",
     "ARB:15m": "low",
     "ENA:15m": "low",
     "LINK:15m": "high",
@@ -989,7 +989,7 @@
     "SOXSB:4h": "high"
   },
   "sent_messages": {
-    "c91341f6b64d90a080d06fbf020548298f8771f791ba1d829fe154ce468910e5": 1792071410,
-    "01dc307fbdebe245ab24f87808b7f55960d034ceb206a66e00addfb1d5b7083b": 1792071410
+    "9c657f732bc37df37e36bac8cd2a7be087da6dedc4ee16103e78346cae4ac8d5": 1792077732,
+    "c69866753dfd609d84609504e16a035d9ced94021c7d04538a71ab596e7c3cda": 1792077733
   }
 }
