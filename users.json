@@ -238,7 +238,7 @@
     "ARB:15m": "low",
     "ENA:15m": "low",
     "LINK:15m": "high",
-    "TAO:15m": "high",
+    "TAO:15m": "low",
     "TRUMP:15m": "low",
     "PENGU:15m": "high",
     "RAY:15m": "low",
@@ -395,7 +395,7 @@
     "TRX:1h": "high",
     "BFUSD:1h": "low",
     "AR:1h": "low",
-    "PEPE:15m": "high",
+    "PEPE:15m": "low",
     "ZEN:15m": "low",
     "SAGA:15m": "high",
     "EIGEN:15m": "low",
@@ -987,7 +987,7 @@
     "SNXXB:1D": "low"
   },
   "sent_messages": {
-    "44a3cefb616d1b75a4aebbb0702141dc2a1a1fbaad059ad728caf7e083a504a6": 1792033562,
-    "e1e0d93c1ebde61b0fb5a2f186f38f0d79e80847016a8d8107a2f6a6f5312166": 1792033562
+    "e2aac0a3eaf10af8dfe363bff8aaa0343ba2a9783b879a9418b4450b3a8d59f6": 1792035324,
+    "518a6c3c36e3d6ed7a1af4d4db61d693b1dfcf0a37632b1df80c41f93d856270": 1792035325
   }
 }
