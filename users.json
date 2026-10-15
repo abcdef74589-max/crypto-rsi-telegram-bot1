@@ -666,7 +666,7 @@
     "INTCB:1D": "high",
     "NOM:15m": "low",
     "BOME:15m": "low",
-    "PLUME:15m": "low",
+    "PLUME:15m": "high",
     "TST:15m": "high",
     "PLUME:1h": "high",
     "XAI:15m": "high",
@@ -994,7 +994,7 @@
     "ANIME:4h": "high"
   },
   "sent_messages": {
-    "f0e369ed70bca54d163a202b4a61acec710c8dee742c039263a8dfc40926682e": 1792093828,
-    "fe21dda4b68dc506c9d1e7b7dc44508df79f966e3d3cbabb7b4d180688cfb1d3": 1792093828
+    "a3fede3d26368a7f897a79befeebfd09502f58eb66ce0e0deab84a399808128b": 1792107296,
+    "1da9c2e8c0b6a79c16cc6553864e18fe03537eee61d760cd1f1594ff0dc7782f": 1792107296
   }
 }
