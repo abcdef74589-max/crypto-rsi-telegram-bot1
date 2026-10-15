@@ -305,7 +305,7 @@
     "XLM:15m": "low",
     "GRAM:15m": "low",
     "WBTC:15m": "high",
-    "GOOGLB:15m": "low",
+    "GOOGLB:15m": "high",
     "NVDAB:15m": "low",
     "PENDLE:15m": "low",
     "牛来:15m": "low",
@@ -963,7 +963,7 @@
     "METIS:15m": "low",
     "BLUR:15m": "high",
     "SKL:1h": "high",
-    "BLUR:1h": "low",
+    "BLUR:1h": "high",
     "BLUR:4h": "low",
     "KORUB:4h": "low",
     "OSMO:15m": "low",
@@ -989,7 +989,7 @@
     "SOXSB:4h": "high"
   },
   "sent_messages": {
-    "93777034e292c64175df1eac7ebe7b56227f9b7d03cb6bcb381554a09dda604b": 1792059675,
-    "55f326a31a10a26f6e48d3b3739c209937f708123039508073183f6c77ad950f": 1792059676
+    "c16ac221b57965dbbb857db705cb7c08119a6d223c14c2492973d92036dca111": 1792065005,
+    "0644259f3c3b4059c46d40b27a1a1df04163d83a1312ced26b3f1edf8f755d3f": 1792065005
   }
 }
