@@ -395,7 +395,7 @@
     "TRX:1h": "high",
     "BFUSD:1h": "low",
     "AR:1h": "low",
-    "PEPE:15m": "low",
+    "PEPE:15m": "high",
     "ZEN:15m": "low",
     "SAGA:15m": "high",
     "EIGEN:15m": "low",
@@ -467,7 +467,7 @@
     "ASTER:15m": "high",
     "ZK:15m": "high",
     "ZEC:15m": "high",
-    "DASH:15m": "low",
+    "DASH:15m": "high",
     "CAKE:15m": "low",
     "STG:15m": "high",
     "SYN:1h": "high",
@@ -986,10 +986,11 @@
     "KORUB:1D": "low",
     "SNXXB:1D": "low",
     "SOXSB:1h": "high",
-    "SOXSB:4h": "high"
+    "SOXSB:4h": "high",
+    "NXPC:15m": "high"
   },
   "sent_messages": {
-    "286514c9a300bbb7fac7b986ad323f4b2e38cc179f29f64837436848eeaeb598": 1792083067,
-    "2bffc73fc8603ff47cfaa54fdca493baf823e0ede5fb010acc4b443e93ab226a": 1792083068
+    "2642e13de36b0e0fa28fa1b44e8c8f31efb62479a6da4d992fbfd6c02b4787d0": 1792084901,
+    "ffa5238b70d652429aadf0a3581dda7bce6e3e3f566f871e11ef2e0af0509194": 1792084901
   }
 }
