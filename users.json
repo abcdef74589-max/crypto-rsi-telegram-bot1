@@ -387,7 +387,7 @@
     "MUB:4h": "low",
     "TIA:4h": "high",
     "A:4h": "high",
-    "STRK:15m": "low",
+    "STRK:15m": "high",
     "FF:15m": "high",
     "THE:1h": "high",
     "STRK:1h": "high",
@@ -989,7 +989,7 @@
     "SOXSB:4h": "high"
   },
   "sent_messages": {
-    "2316ce6fb548deee847d6a0c80448a127ce5d38c9b3255656b694502d80ef838": 1792052398,
-    "b80ed8f88aaeb2119df1da080eac97f8b106498d43efb11996045d9907743652": 1792052398
+    "a30cbfd5919547ad5a221d398e080317dfcbedfcf0308887d3ed8255f8346d98": 1792056007,
+    "9125b20269e4099ec8a640bf8bccec893bab930e2b72b8a855f4ca7ac495e411": 1792056008
   }
 }
