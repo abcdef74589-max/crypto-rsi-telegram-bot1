@@ -307,7 +307,7 @@
     "WBTC:15m": "high",
     "GOOGLB:15m": "low",
     "NVDAB:15m": "low",
-    "PENDLE:15m": "high",
+    "PENDLE:15m": "low",
     "牛来:15m": "low",
     "ZAMA:15m": "low",
     "AERO:15m": "high",
@@ -987,7 +987,7 @@
     "SNXXB:1D": "low"
   },
   "sent_messages": {
-    "d98515d755adfa5f86b9c38177588b9e0a9e2b84bb74b565e1c17d5f8ebf9862": 1792021813,
-    "709c5f78bac79a6f43b9752c3298b9953cdc26ef8bd426444b7c5a5c473290a6": 1792021814
+    "44a3cefb616d1b75a4aebbb0702141dc2a1a1fbaad059ad728caf7e083a504a6": 1792033562,
+    "e1e0d93c1ebde61b0fb5a2f186f38f0d79e80847016a8d8107a2f6a6f5312166": 1792033562
   }
 }
