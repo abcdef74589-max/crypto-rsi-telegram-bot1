@@ -278,7 +278,7 @@
     "AAVE:15m": "high",
     "SHIB:15m": "low",
     "DOGE:15m": "low",
-    "TRX:15m": "low",
+    "TRX:15m": "high",
     "ICP:15m": "high",
     "BFUSD:15m": "high",
     "BTC:15m": "low",
@@ -308,7 +308,7 @@
     "GOOGLB:15m": "high",
     "NVDAB:15m": "low",
     "PENDLE:15m": "high",
-    "牛来:15m": "low",
+    "牛来:15m": "high",
     "ZAMA:15m": "high",
     "AERO:15m": "high",
     "CRV:15m": "high",
@@ -994,7 +994,9 @@
     "ANIME:4h": "high"
   },
   "sent_messages": {
-    "a3fede3d26368a7f897a79befeebfd09502f58eb66ce0e0deab84a399808128b": 1792107296,
-    "1da9c2e8c0b6a79c16cc6553864e18fe03537eee61d760cd1f1594ff0dc7782f": 1792107296
+    "037842be73e1280897bb74fb99da325d26050c53275133ab231998e228d245af": 1792113576,
+    "d4e41871d3076769629af00174e775f6cb47d7a7a2580e0f75edf19fa3ee4cb7": 1792113577,
+    "78578b6c9aa0641e4171ea477b89250a93d5c135cf16fbedb2ca22edb414425f": 1792113684,
+    "1dc86561fee7e1ffeff5558e0466ebdd26b255ecf39cded1d59643482dc82145": 1792113685
   }
 }
