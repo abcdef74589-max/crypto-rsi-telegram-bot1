@@ -932,7 +932,7 @@
     "KAIA:1D": "high",
     "CTSI:1D": "high",
     "MBL:1D": "high",
-    "WAL:15m": "high",
+    "WAL:15m": "low",
     "LA:15m": "high",
     "LA:1h": "high",
     "NEO:15m": "high",
@@ -987,16 +987,14 @@
     "SNXXB:1D": "low",
     "SOXSB:1h": "high",
     "SOXSB:4h": "high",
-    "NXPC:15m": "high",
+    "NXPC:15m": "low",
     "ANIME:15m": "high",
     "ANIME:1h": "high",
     "NXPC:4h": "high",
     "ANIME:4h": "high"
   },
   "sent_messages": {
-    "037842be73e1280897bb74fb99da325d26050c53275133ab231998e228d245af": 1792113576,
-    "d4e41871d3076769629af00174e775f6cb47d7a7a2580e0f75edf19fa3ee4cb7": 1792113577,
-    "78578b6c9aa0641e4171ea477b89250a93d5c135cf16fbedb2ca22edb414425f": 1792113684,
-    "1dc86561fee7e1ffeff5558e0466ebdd26b255ecf39cded1d59643482dc82145": 1792113685
+    "b27910b1569367f86ffc21c86a43893204f84438aa516e0e74fcc6ec8539d5d1": 1792115485,
+    "ff0937e9a5bddb659831845d333e1cc17d0027d810e42e7a40d9467290ecac99": 1792115485
   }
 }
