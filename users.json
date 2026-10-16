@@ -283,7 +283,7 @@
     "BFUSD:15m": "high",
     "BTC:15m": "low",
     "BCH:15m": "high",
-    "MSTRB:15m": "high",
+    "MSTRB:15m": "low",
     "ENA:1h": "low",
     "PUMP:1h": "low",
     "PEPE:1h": "high",
@@ -407,7 +407,7 @@
     "AR:4h": "high",
     "BFUSD:4h": "low",
     "EIGEN:4h": "high",
-    "PROM:15m": "high",
+    "PROM:15m": "low",
     "SNXXB:15m": "low",
     "XUSD:15m": "low",
     "XRP:1h": "low",
@@ -994,7 +994,7 @@
     "ANIME:4h": "high"
   },
   "sent_messages": {
-    "b27910b1569367f86ffc21c86a43893204f84438aa516e0e74fcc6ec8539d5d1": 1792115485,
-    "ff0937e9a5bddb659831845d333e1cc17d0027d810e42e7a40d9467290ecac99": 1792115485
+    "5fc4968ec761d5e716daae59dcfad9f5d840547bd1c46e50f8e8768604c885a0": 1792164940,
+    "34eec777b99ab0f484973d0ef4f0caed1f82866c7e2b30e6bb3cefba7a45d2ad": 1792164941
   }
 }
