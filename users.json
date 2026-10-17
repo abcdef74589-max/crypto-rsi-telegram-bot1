@@ -398,7 +398,7 @@
     "PEPE:15m": "high",
     "ZEN:15m": "low",
     "SAGA:15m": "high",
-    "EIGEN:15m": "low",
+    "EIGEN:15m": "high",
     "EIGEN:1h": "high",
     "SKY:1h": "low",
     "INJ:4h": "high",
@@ -994,7 +994,7 @@
     "ANIME:4h": "high"
   },
   "sent_messages": {
-    "5fc4968ec761d5e716daae59dcfad9f5d840547bd1c46e50f8e8768604c885a0": 1792164940,
-    "34eec777b99ab0f484973d0ef4f0caed1f82866c7e2b30e6bb3cefba7a45d2ad": 1792164941
+    "1266e4d7dc334ce40233ac85d27eee73561cd942620f2f95c1191cf99d8391d3": 1792210867,
+    "a695533b9a6e4acbf32aa108ab58cb7d800ab7faacd85dde0ba71d180bb03a72": 1792210868
   }
 }
