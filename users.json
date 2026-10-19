@@ -337,8 +337,8 @@
     "PENDLE:1h": "low",
     "ZRO:1h": "low",
     "TUT:15m": "low",
-    "PAXG:15m": "high",
-    "XAUT:15m": "high",
+    "PAXG:15m": "low",
+    "XAUT:15m": "low",
     "SPCXB:15m": "low",
     "G:15m": "low",
     "SPYB:15m": "low",
@@ -647,7 +647,7 @@
     "U:15m": "low",
     "PLUME:4h": "high",
     "PAXG:1h": "low",
-    "WLFI:15m": "high",
+    "WLFI:15m": "low",
     "APE:15m": "high",
     "PYTH:15m": "low",
     "ASTER:1h": "low",
@@ -809,7 +809,7 @@
     "MOVR:4h": "high",
     "INIT:15m": "low",
     "COINB:15m": "high",
-    "TSLAB:15m": "low",
+    "TSLAB:15m": "high",
     "HUMA:15m": "high",
     "HUMA:1h": "high",
     "HUMA:4h": "high",
@@ -998,7 +998,7 @@
     "DRAMB:15m": "high"
   },
   "sent_messages": {
-    "34cd20777795067856091e027d8ea31005d72950c33fe0f98cb18984d8c23199": 1792371007,
-    "6c68d389f8fa7094b46582d7d4ab61467461704c6024aceac1d6bc138f089263": 1792371008
+    "f0157025561a4bb81525d6cd304ed34700c3a253fcb08a6afcce7efff0479755": 1792430489,
+    "270f7090fa61358bd3f4bcb019bb1a0077d04ef1356a568b02b791549aa70083": 1792430490
   }
 }
