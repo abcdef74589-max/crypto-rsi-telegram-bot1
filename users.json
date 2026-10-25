@@ -807,7 +807,7 @@
     "MOVR:1h": "high",
     "0G:4h": "high",
     "MOVR:4h": "high",
-    "INIT:15m": "high",
+    "INIT:15m": "low",
     "COINB:15m": "high",
     "TSLAB:15m": "high",
     "HUMA:15m": "high",
@@ -1007,7 +1007,7 @@
     "ZKC:15m": "low"
   },
   "sent_messages": {
-    "9bc2a57acddbbb2916147399deae1a2729b86fb477160623e390ff51c60daf08": 1792953307,
-    "e6d4bda0d4819bf44ac12238ee47b145a3bf3de28225237e834042220f796ce1": 1792953307
+    "cd1bb84fb47fd7f44ae1c86fccfc5c20d4c45ab9950044ea454c349f203a81d8": 1792970392,
+    "438e68c3068bce107bc0033aa89e35e02e597895546af2b2276221e4a7757168": 1792970392
   }
 }
