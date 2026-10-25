@@ -819,7 +819,7 @@
     "PUMP:1D": "high",
     "NIGHT:1D": "high",
     "GLMR:1D": "high",
-    "MEGA:15m": "low",
+    "MEGA:15m": "high",
     "ALICE:1h": "high",
     "MEGA:1h": "high",
     "MOVE:1h": "high",
@@ -1007,7 +1007,7 @@
     "ZKC:15m": "low"
   },
   "sent_messages": {
-    "665839a661f8aa7a386e007a2c9224f4b908f31dd24c43106fd8a93b40bbc9ce": 1792892178,
-    "f2fbe515b910b65a160680b9f29aa3bc3a166dd71896981d0a1accef71e47464": 1792892178
+    "cdc76dfcb69c3039d0fe5741d2d3885af3374137a07c61baafac3f12a3fad205": 1792929880,
+    "6168d9b563d51e9802f56d4118c286e16e510f2884891b5cbf363f9378e10d1b": 1792929881
   }
 }
