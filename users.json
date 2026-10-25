@@ -278,7 +278,7 @@
     "AAVE:15m": "low",
     "SHIB:15m": "low",
     "DOGE:15m": "low",
-    "TRX:15m": "low",
+    "TRX:15m": "high",
     "ICP:15m": "high",
     "BFUSD:15m": "high",
     "BTC:15m": "high",
@@ -339,7 +339,7 @@
     "TUT:15m": "low",
     "PAXG:15m": "low",
     "XAUT:15m": "low",
-    "SPCXB:15m": "low",
+    "SPCXB:15m": "high",
     "G:15m": "low",
     "SPYB:15m": "low",
     "ETH:1h": "low",
@@ -807,7 +807,7 @@
     "MOVR:1h": "high",
     "0G:4h": "high",
     "MOVR:4h": "high",
-    "INIT:15m": "low",
+    "INIT:15m": "high",
     "COINB:15m": "high",
     "TSLAB:15m": "high",
     "HUMA:15m": "high",
@@ -1007,7 +1007,7 @@
     "ZKC:15m": "low"
   },
   "sent_messages": {
-    "cdc76dfcb69c3039d0fe5741d2d3885af3374137a07c61baafac3f12a3fad205": 1792929880,
-    "6168d9b563d51e9802f56d4118c286e16e510f2884891b5cbf363f9378e10d1b": 1792929881
+    "9bc2a57acddbbb2916147399deae1a2729b86fb477160623e390ff51c60daf08": 1792953307,
+    "e6d4bda0d4819bf44ac12238ee47b145a3bf3de28225237e834042220f796ce1": 1792953307
   }
 }
