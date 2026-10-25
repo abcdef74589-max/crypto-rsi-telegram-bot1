@@ -901,7 +901,7 @@
     "HEMI:1h": "high",
     "LAZIO:1D": "high",
     "币安人生:15m": "low",
-    "ERA:15m": "high",
+    "ERA:15m": "low",
     "OGN:1h": "high",
     "ERA:1h": "high",
     "OGN:4h": "high",
@@ -999,10 +999,15 @@
     "BEB:15m": "high",
     "IOST:15m": "low",
     "AI:1h": "low",
-    "VANA:15m": "high"
+    "VANA:15m": "high",
+    "BMT:15m": "low",
+    "TREE:15m": "low",
+    "T:15m": "high",
+    "ZBT:15m": "low",
+    "ZKC:15m": "low"
   },
   "sent_messages": {
-    "373c0f775b18a20f2ab876d91fb59a2d50baeb599343136a14fca677977f06a5": 1792884905,
-    "ff3284acf84aee3d855b964b2ecab1149570924f50cf2ada5860f12c3f349f1c": 1792884905
+    "665839a661f8aa7a386e007a2c9224f4b908f31dd24c43106fd8a93b40bbc9ce": 1792892178,
+    "f2fbe515b910b65a160680b9f29aa3bc3a166dd71896981d0a1accef71e47464": 1792892178
   }
 }
