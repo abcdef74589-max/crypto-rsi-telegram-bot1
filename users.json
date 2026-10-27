@@ -1004,10 +1004,12 @@
     "TREE:15m": "low",
     "T:15m": "high",
     "ZBT:15m": "low",
-    "ZKC:15m": "low"
+    "ZKC:15m": "low",
+    "NBISB:15m": "high",
+    "HAEDAL:15m": "high"
   },
   "sent_messages": {
-    "1ec5f50f4d953ac25fe1f5ffea5b598b8f3f262fa0216f870b3f940530a4c89d": 1793055999,
-    "5d781cdd1479829e86457eab68371debab11ad015a2b5c3cec1bb8aa73a81b5e": 1793055999
+    "3c3d53ac84c58acd17d74918684f2d182213eaa4b8e3a42cda9479f81eab7bdd": 1793108162,
+    "362438cd1b8ad590d17442c2d442116cba86ea93151216812de8520f4ccbb47f": 1793108162
   }
 }
