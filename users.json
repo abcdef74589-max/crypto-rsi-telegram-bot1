@@ -238,10 +238,10 @@
     "ARB:15m": "high",
     "ENA:15m": "high",
     "LINK:15m": "high",
-    "TAO:15m": "low",
+    "TAO:15m": "high",
     "TRUMP:15m": "high",
     "PENGU:15m": "high",
-    "RAY:15m": "low",
+    "RAY:15m": "high",
     "ETHFI:15m": "high",
     "NEAR:1h": "low",
     "SOL:1h": "low",
@@ -275,7 +275,7 @@
     "UNI:15m": "high",
     "REZ:15m": "high",
     "AVAX:15m": "high",
-    "AAVE:15m": "low",
+    "AAVE:15m": "high",
     "SHIB:15m": "low",
     "DOGE:15m": "low",
     "TRX:15m": "low",
@@ -492,7 +492,7 @@
     "S:15m": "low",
     "ONE:1h": "high",
     "JST:15m": "high",
-    "PUMP:15m": "low",
+    "PUMP:15m": "high",
     "XTZ:1h": "high",
     "MARSCOIN:15m": "low",
     "ESP:1h": "high",
@@ -1010,7 +1010,7 @@
     "HOODB:15m": "high"
   },
   "sent_messages": {
-    "7b7631560a4245100d926729745cca2ce242e55bb5c7b9aadd0d6052af10c268": 1793197196,
-    "55fb1e4a988024c40662f891d6d6d69d98c967d42f4f2df35b73d902588dffd8": 1793197196
+    "23660fed629345b57b1834ceb8352ca6050cdb3b2fac26a7254eedd771cbb6d5": 1793216182,
+    "f01e7948d9595d7f3c6975adcfbb875b2bdceee405fef11b01c37c82b7d49e27": 1793216182
   }
 }
