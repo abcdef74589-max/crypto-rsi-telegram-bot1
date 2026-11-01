@@ -306,10 +306,10 @@
     "GRAM:15m": "low",
     "WBTC:15m": "high",
     "GOOGLB:15m": "low",
-    "NVDAB:15m": "low",
+    "NVDAB:15m": "high",
     "PENDLE:15m": "high",
     "牛来:15m": "low",
-    "ZAMA:15m": "low",
+    "ZAMA:15m": "high",
     "AERO:15m": "low",
     "CRV:15m": "high",
     "ZRO:15m": "high",
@@ -413,7 +413,7 @@
     "XRP:1h": "low",
     "CRCLB:1h": "high",
     "XLM:1h": "low",
-    "XPL:15m": "high",
+    "XPL:15m": "low",
     "F:15m": "low",
     "BANK:1h": "high",
     "F:1h": "high",
@@ -508,7 +508,7 @@
     "BANK:15m": "low",
     "EPIC:15m": "low",
     "ALGO:1h": "high",
-    "USD1:15m": "high",
+    "USD1:15m": "low",
     "USD1:1h": "high",
     "CELR:15m": "low",
     "CELR:1h": "high",
@@ -1012,7 +1012,7 @@
     "EDEN:1h": "high"
   },
   "sent_messages": {
-    "29b04be8c64b3df16ed035d23f317e5531d15193c177b7e1fa3fb5f81734bfe0": 1793454612,
-    "65be986f5bd5175a31698fda72a4366a20ea730b2c3b80badb84eff88ffe8766": 1793454613
+    "93212aeb8fa2cd47a0a6bb5fb1ba5b353d82a6a44448b0d8461587d9aa41d901": 1793508693,
+    "23b378a544addd5d4581a59672641a0cb7784171009b2b434c189599101fce6b": 1793508693
   }
 }
