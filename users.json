@@ -440,7 +440,7 @@
     "STG:4h": "low",
     "COTI:15m": "low",
     "RLUSD:15m": "high",
-    "PROVE:15m": "high",
+    "PROVE:15m": "low",
     "AVA:15m": "high",
     "RLUSD:1h": "low",
     "PROVE:1h": "high",
@@ -728,7 +728,7 @@
     "AMP:1h": "high",
     "SPELL:1h": "high",
     "AVNT:1h": "high",
-    "ATOM:15m": "high",
+    "ATOM:15m": "low",
     "DASH:4h": "low",
     "FIL:4h": "high",
     "ACE:4h": "high",
@@ -901,7 +901,7 @@
     "HEMI:1h": "high",
     "LAZIO:1D": "high",
     "币安人生:15m": "low",
-    "ERA:15m": "low",
+    "ERA:15m": "high",
     "OGN:1h": "high",
     "ERA:1h": "high",
     "OGN:4h": "high",
@@ -1012,7 +1012,7 @@
     "EDEN:1h": "high"
   },
   "sent_messages": {
-    "93212aeb8fa2cd47a0a6bb5fb1ba5b353d82a6a44448b0d8461587d9aa41d901": 1793508693,
-    "23b378a544addd5d4581a59672641a0cb7784171009b2b434c189599101fce6b": 1793508693
+    "80f2e538abe4d9405fc3d86e4c8afcc96e112ec20fb9b925aa6e050cd5def304": 1793532943,
+    "a39dd06dc92ea81694e5ddc8fbd48974655b17b026861ea426ebc377e269e6c4": 1793532944
   }
 }
