@@ -568,7 +568,7 @@
     "FTT:15m": "high",
     "LUNA:4h": "high",
     "FTT:4h": "high",
-    "NIL:1h": "high",
+    "NIL:1h": "low",
     "FF:1h": "high",
     "NIL:4h": "high",
     "SAGA:1D": "high",
@@ -585,7 +585,7 @@
     "ICP:4h": "low",
     "KMNO:4h": "high",
     "MITO:1h": "low",
-    "NIL:15m": "high",
+    "NIL:15m": "low",
     "OPG:1h": "high",
     "MINA:1h": "high",
     "SOXLB:4h": "low",
@@ -630,7 +630,7 @@
     "GIGGLE:15m": "high",
     "GIGGLE:1h": "low",
     "TST:1h": "high",
-    "LSK:1h": "high",
+    "LSK:1h": "low",
     "CHR:1h": "high",
     "CHR:15m": "high",
     "SKHYB:15m": "high",
@@ -713,7 +713,7 @@
     "VTHO:15m": "low",
     "RUNE:15m": "high",
     "RARE:15m": "low",
-    "RUNE:1h": "high",
+    "RUNE:1h": "low",
     "2Z:15m": "low",
     "2Z:1h": "low",
     "TNSR:1h": "high",
@@ -872,7 +872,7 @@
     "API3:1h": "high",
     "RAD:15m": "low",
     "API3:15m": "high",
-    "OGN:15m": "low",
+    "OGN:15m": "high",
     "DIA:15m": "high",
     "RLC:4h": "high",
     "RAD:4h": "high",
@@ -1009,10 +1009,11 @@
     "HAEDAL:15m": "high",
     "HOODB:15m": "high",
     "INTWB:1h": "low",
-    "EDEN:1h": "high"
+    "EDEN:1h": "high",
+    "BMT:1h": "low"
   },
   "sent_messages": {
-    "80f2e538abe4d9405fc3d86e4c8afcc96e112ec20fb9b925aa6e050cd5def304": 1793532943,
-    "a39dd06dc92ea81694e5ddc8fbd48974655b17b026861ea426ebc377e269e6c4": 1793532944
+    "2ccc5bae85033aeeb1a380838124db6e37c498b37041932eac914ae080303cf9": 1793602286,
+    "525075b3d695f64a48f538d02138a06aaf56a8fd2d0d53292e4cdb0ee96484b5": 1793602287
   }
 }
