@@ -409,7 +409,7 @@
     "EIGEN:4h": "high",
     "PROM:15m": "high",
     "SNXXB:15m": "low",
-    "XUSD:15m": "high",
+    "XUSD:15m": "low",
     "XRP:1h": "low",
     "CRCLB:1h": "high",
     "XLM:1h": "low",
@@ -468,7 +468,7 @@
     "ZK:15m": "high",
     "ZEC:15m": "high",
     "DASH:15m": "low",
-    "CAKE:15m": "low",
+    "CAKE:15m": "high",
     "STG:15m": "high",
     "SYN:1h": "high",
     "SYN:4h": "high",
@@ -1025,9 +1025,7 @@
     "INTWB:15m": "low"
   },
   "sent_messages": {
-    "321fcdd329f6dd03364647d68f8b2d18225685b77cfef9f2cb23a8be11e74319": 1793790283,
-    "c8fb79ababaa5e2ce0577bd7cfee8e29009bcc15ee600f1fbd8bfe77a4147c4e": 1793790283,
-    "94b6e9a8562a681a607aafe4eb138bcb929f2e79c86a5c09d81fe23b2e80af32": 1793790389,
-    "b812ac249cb006a2ee15eef29b4719e6fb2c27fe09e96e42d0c3e26f1a15b9e6": 1793790390
+    "da8b2cb204ac48050e9d74e8b0bdb092388abe521c96986df01ab479862ae50c": 1793817306,
+    "a4be4e0d8500cdc0a23b9e8bc9f1b51603eb0deab3e3a5125bad5799e977a5cd": 1793817306
   }
 }
