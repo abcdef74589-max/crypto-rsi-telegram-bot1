@@ -329,7 +329,7 @@
     "SNDKB:1h": "low",
     "MSTRB:1h": "low",
     "SPCXB:1h": "low",
-    "INJ:1h": "low",
+    "INJ:1h": "high",
     "GRAM:1h": "low",
     "RAY:1h": "low",
     "WBTC:1h": "high",
@@ -389,7 +389,7 @@
     "A:4h": "high",
     "STRK:15m": "high",
     "FF:15m": "high",
-    "THE:1h": "high",
+    "THE:1h": "low",
     "STRK:1h": "high",
     "AR:15m": "low",
     "TRX:1h": "high",
@@ -637,7 +637,7 @@
     "ETC:1h": "low",
     "CHR:4h": "high",
     "KITE:4h": "high",
-    "TRUMP:4h": "high",
+    "TRUMP:4h": "low",
     "TUT:4h": "high",
     "MET:15m": "low",
     "MET:1h": "high",
@@ -646,7 +646,7 @@
     "APE:4h": "high",
     "U:15m": "low",
     "PLUME:4h": "high",
-    "PAXG:1h": "low",
+    "PAXG:1h": "high",
     "WLFI:15m": "low",
     "APE:15m": "high",
     "PYTH:15m": "low",
@@ -781,8 +781,8 @@
     "OPN:15m": "low",
     "NMR:15m": "low",
     "NMR:1h": "high",
-    "XAUT:4h": "low",
-    "PAXG:4h": "low",
+    "XAUT:4h": "high",
+    "PAXG:4h": "high",
     "NMR:4h": "high",
     "IOTA:4h": "high",
     "TSLAB:1h": "low",
@@ -811,7 +811,7 @@
     "COINB:15m": "high",
     "TSLAB:15m": "low",
     "HUMA:15m": "high",
-    "HUMA:1h": "high",
+    "HUMA:1h": "low",
     "HUMA:4h": "low",
     "TRB:15m": "low",
     "CRCLB:4h": "low",
@@ -1022,10 +1022,14 @@
     "MRVLB:4h": "low",
     "SOXSB:15m": "high",
     "1000CAT:15m": "low",
-    "INTWB:15m": "low"
+    "INTWB:15m": "low",
+    "BABAB:1h": "high",
+    "AAPLB:1h": "high",
+    "BABAB:4h": "high",
+    "THE:4h": "low"
   },
   "sent_messages": {
-    "da8b2cb204ac48050e9d74e8b0bdb092388abe521c96986df01ab479862ae50c": 1793817306,
-    "a4be4e0d8500cdc0a23b9e8bc9f1b51603eb0deab3e3a5125bad5799e977a5cd": 1793817306
+    "c7bfd6326f8f4404b80fb0685e893dc61e42aea71cc619168f846224ed93fc37": 1793879384,
+    "c4b00086c388eaf4ed4d24748b3a5037996465434ae783387a88e3f38eaeb7b8": 1793879385
   }
 }
