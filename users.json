@@ -227,7 +227,7 @@
     "WLD:15m": "high",
     "ADA:15m": "high",
     "LTC:15m": "high",
-    "FET:15m": "high",
+    "FET:15m": "low",
     "MORPHO:15m": "high",
     "OP:15m": "high",
     "CHIP:15m": "high",
@@ -241,7 +241,7 @@
     "TAO:15m": "high",
     "TRUMP:15m": "low",
     "PENGU:15m": "high",
-    "RAY:15m": "high",
+    "RAY:15m": "low",
     "ETHFI:15m": "high",
     "NEAR:1h": "low",
     "SOL:1h": "low",
@@ -315,10 +315,10 @@
     "ZRO:15m": "high",
     "SKY:15m": "low",
     "SNDKB:15m": "low",
-    "POL:15m": "high",
+    "POL:15m": "low",
     "EURI:15m": "high",
     "QQQB:15m": "low",
-    "SEI:15m": "high",
+    "SEI:15m": "low",
     "DOT:15m": "low",
     "INJ:15m": "high",
     "MUB:15m": "low",
@@ -488,7 +488,7 @@
     "PENDLE:1D": "high",
     "SYN:1D": "high",
     "ONE:15m": "high",
-    "LSK:15m": "high",
+    "LSK:15m": "low",
     "S:15m": "low",
     "ONE:1h": "high",
     "JST:15m": "high",
@@ -535,7 +535,7 @@
     "STX:15m": "high",
     "STX:1h": "high",
     "LDO:15m": "high",
-    "ZIL:15m": "high",
+    "ZIL:15m": "low",
     "ALLO:4h": "high",
     "ACE:15m": "high",
     "ZIL:1h": "low",
@@ -1030,7 +1030,7 @@
     "ACT:15m": "high"
   },
   "sent_messages": {
-    "3213e72491b5d0901973328540513f007808cb5682e7bdb350a07bc6c48a2f1d": 1794026115,
-    "9ed1d4415907b897b02b2471ad1074813f6c128483865941e659065f73e73dc7": 1794026116
+    "bee4e9a3e9b07c3041055b2e22250de9362d22f5291e99ebb10713750584746d": 1794050428,
+    "cdb726092a20d2f91e7bbd0b07abb876cc038b3c08a86b2b82e797384cb9a36c": 1794050428
   }
 }
