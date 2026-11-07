@@ -1026,10 +1026,11 @@
     "BABAB:1h": "high",
     "AAPLB:1h": "high",
     "BABAB:4h": "high",
-    "THE:4h": "low"
+    "THE:4h": "low",
+    "ACT:15m": "high"
   },
   "sent_messages": {
-    "be01fa1861b348f03b5e79b87307ee6b945fd97494adf505065d4c905988bd93": 1793905608,
-    "64a5cbafe6d8d6c76e9907f38d2945ec6c3b1232c41b082ba945cbadc305dcb3": 1793905609
+    "3213e72491b5d0901973328540513f007808cb5682e7bdb350a07bc6c48a2f1d": 1794026115,
+    "9ed1d4415907b897b02b2471ad1074813f6c128483865941e659065f73e73dc7": 1794026116
   }
 }
