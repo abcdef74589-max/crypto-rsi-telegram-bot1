@@ -306,7 +306,7 @@
     "GRAM:15m": "low",
     "WBTC:15m": "high",
     "GOOGLB:15m": "high",
-    "NVDAB:15m": "low",
+    "NVDAB:15m": "high",
     "PENDLE:15m": "high",
     "牛来:15m": "low",
     "ZAMA:15m": "high",
@@ -1030,7 +1030,7 @@
     "ACT:15m": "high"
   },
   "sent_messages": {
-    "82d9ea41618ef6e5742ab0d5c066c2e63e6409d875baba11843eaa427fc2c171": 1794083723,
-    "25e57b1389207e80033cb1f9d05e566f5d333b0593b951bc30c92d2a1ff871cc": 1794083723
+    "ad69b75935d3805a8285b5eedcbffb96a2fc2944defdd4d58c6b0ed40c1af51c": 1794132295,
+    "180db09cc6f32b8747cb0bc5a42387838b03ca3892f387a0f9dfe4750f4ec77d": 1794132295
   }
 }
