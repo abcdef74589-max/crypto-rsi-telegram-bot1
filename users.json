@@ -278,7 +278,7 @@
     "AAVE:15m": "high",
     "SHIB:15m": "low",
     "DOGE:15m": "low",
-    "TRX:15m": "high",
+    "TRX:15m": "low",
     "ICP:15m": "high",
     "BFUSD:15m": "high",
     "BTC:15m": "low",
@@ -306,7 +306,7 @@
     "GRAM:15m": "low",
     "WBTC:15m": "high",
     "GOOGLB:15m": "high",
-    "NVDAB:15m": "high",
+    "NVDAB:15m": "low",
     "PENDLE:15m": "high",
     "牛来:15m": "low",
     "ZAMA:15m": "high",
@@ -387,7 +387,7 @@
     "MUB:4h": "low",
     "TIA:4h": "high",
     "A:4h": "high",
-    "STRK:15m": "high",
+    "STRK:15m": "low",
     "FF:15m": "high",
     "THE:1h": "low",
     "STRK:1h": "high",
@@ -464,7 +464,7 @@
     "BONK:15m": "high",
     "SYN:15m": "low",
     "BONK:1h": "high",
-    "ASTER:15m": "high",
+    "ASTER:15m": "low",
     "ZK:15m": "high",
     "ZEC:15m": "high",
     "DASH:15m": "low",
@@ -633,7 +633,7 @@
     "LSK:1h": "low",
     "CHR:1h": "high",
     "CHR:15m": "high",
-    "SKHYB:15m": "high",
+    "SKHYB:15m": "low",
     "ETC:1h": "low",
     "CHR:4h": "high",
     "KITE:4h": "high",
@@ -1027,10 +1027,12 @@
     "AAPLB:1h": "high",
     "BABAB:4h": "high",
     "THE:4h": "low",
-    "ACT:15m": "high"
+    "ACT:15m": "high",
+    "WBETH:15m": "low",
+    "HMSTR:15m": "low"
   },
   "sent_messages": {
-    "ad69b75935d3805a8285b5eedcbffb96a2fc2944defdd4d58c6b0ed40c1af51c": 1794132295,
-    "180db09cc6f32b8747cb0bc5a42387838b03ca3892f387a0f9dfe4750f4ec77d": 1794132295
+    "fbcb8f66ef5b125c0f57688cc996b20a22053f6b07dd5091f1098b2bac84c9ce": 1794182774,
+    "e17f0f753d4b8f06dc03b70e79dafe58e17d6a05f44572ad0ccd344cc1b271b8": 1794182774
   }
 }
