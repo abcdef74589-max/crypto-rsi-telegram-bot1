@@ -324,7 +324,7 @@
     "MUB:15m": "high",
     "TIA:15m": "low",
     "BTC:1h": "low",
-    "ZEC:1h": "high",
+    "ZEC:1h": "low",
     "DOGE:1h": "low",
     "SNDKB:1h": "low",
     "MSTRB:1h": "low",
@@ -351,7 +351,7 @@
     "QQQB:1h": "high",
     "TIA:1h": "low",
     "TUT:1h": "high",
-    "ZEC:4h": "high",
+    "ZEC:4h": "low",
     "NEAR:4h": "high",
     "SOL:4h": "low",
     "UNI:4h": "low",
@@ -877,7 +877,7 @@
     "RLC:4h": "high",
     "RAD:4h": "high",
     "EDU:4h": "high",
-    "PARTI:4h": "high",
+    "PARTI:4h": "low",
     "CHIP:4h": "low",
     "DIA:4h": "high",
     "TRB:1h": "high",
@@ -1015,7 +1015,7 @@
     "HOT:1h": "high",
     "HOT:4h": "high",
     "LITEB:4h": "low",
-    "AMDB:4h": "low",
+    "AMDB:4h": "high",
     "INTWB:4h": "low",
     "AAPLB:4h": "low",
     "INIT:4h": "low",
@@ -1027,13 +1027,13 @@
     "AAPLB:1h": "high",
     "BABAB:4h": "high",
     "THE:4h": "low",
-    "ACT:15m": "high",
+    "ACT:15m": "low",
     "WBETH:15m": "low",
     "HMSTR:15m": "low",
     "BMNRB:15m": "high"
   },
   "sent_messages": {
-    "9e1566d8a0293ef17e593771f445e7fadbe2208219ebf0badcbfb0d292090291": 1794324947,
-    "9e07cfc494ddefe9b80aef7970b76b2c69cfc049d903f303979b7d8c279f1827": 1794324948
+    "634e8971f7df78be277da1361260da4b92ba19d53750de93ea812606f31249f1": 1794383469,
+    "35808c178488d9d45020401dba206a648f984e406bf23dac69a92efde427a923": 1794383469
   }
 }
