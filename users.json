@@ -242,7 +242,7 @@
     "TRUMP:15m": "low",
     "PENGU:15m": "high",
     "RAY:15m": "low",
-    "ETHFI:15m": "high",
+    "ETHFI:15m": "low",
     "NEAR:1h": "low",
     "SOL:1h": "low",
     "UNI:1h": "low",
@@ -1033,7 +1033,7 @@
     "BMNRB:15m": "high"
   },
   "sent_messages": {
-    "634e8971f7df78be277da1361260da4b92ba19d53750de93ea812606f31249f1": 1794383469,
-    "35808c178488d9d45020401dba206a648f984e406bf23dac69a92efde427a923": 1794383469
+    "85b259c7844eefc752f38b055b25f392226f1b18514acf1fee1b30397f90c14c": 1794452774,
+    "46b93eeb65f6ddc6d287e5a5631bbceb5d0bfbf65dc4e479b9fd5d8f1171ad5f": 1794452774
   }
 }
