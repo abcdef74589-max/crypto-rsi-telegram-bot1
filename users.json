@@ -1030,10 +1030,11 @@
     "ACT:15m": "low",
     "WBETH:15m": "low",
     "HMSTR:15m": "low",
-    "BMNRB:15m": "high"
+    "BMNRB:15m": "high",
+    "SOPH:15m": "high"
   },
   "sent_messages": {
-    "85b259c7844eefc752f38b055b25f392226f1b18514acf1fee1b30397f90c14c": 1794452774,
-    "46b93eeb65f6ddc6d287e5a5631bbceb5d0bfbf65dc4e479b9fd5d8f1171ad5f": 1794452774
+    "97e79cc5896e60fba62bfee0d8d0c8130c74f13597b5579eb7e4d0298b6c8fce": 1794569764,
+    "d84c56f4a5f5182855b4a9d8709edfa5eb2207a4e0b0d0abe09fa6fda957c356": 1794569765
   }
 }
