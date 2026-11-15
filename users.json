@@ -399,7 +399,7 @@
     "ZEN:15m": "low",
     "SAGA:15m": "high",
     "EIGEN:15m": "low",
-    "EIGEN:1h": "high",
+    "EIGEN:1h": "low",
     "SKY:1h": "low",
     "INJ:4h": "high",
     "STRK:4h": "high",
@@ -654,7 +654,7 @@
     "ACE:1h": "low",
     "FLOKI:1h": "high",
     "WLFI:1h": "high",
-    "CRV:1h": "high",
+    "CRV:1h": "low",
     "WLFI:4h": "low",
     "NOM:1h": "high",
     "NOM:4h": "high",
@@ -1000,7 +1000,7 @@
     "IOST:15m": "low",
     "AI:1h": "low",
     "VANA:15m": "low",
-    "BMT:15m": "high",
+    "BMT:15m": "low",
     "TREE:15m": "low",
     "T:15m": "high",
     "ZBT:15m": "low",
@@ -1039,7 +1039,7 @@
     "ALT:1h": "low"
   },
   "sent_messages": {
-    "f4ed202eaa99759653b95b59d62cc58f71f2221b7e3325e24660fb2108d1d850": 1794675084,
-    "8b4bfa8525ea506b49bad29c27f07e057090458adac30dea69ed70847f439343": 1794675085
+    "14f8ab5c7badee2498314c7e6d83440e198f8e4e0292f7128520fba54d50bb42": 1794703802,
+    "a3e556f54ac376e9df2769476fa89570f7df164c0b811d9078bc222a520b6139": 1794703802
   }
 }
