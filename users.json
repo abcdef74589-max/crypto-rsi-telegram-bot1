@@ -233,7 +233,7 @@
     "CHIP:15m": "high",
     "VIRTUAL:15m": "low",
     "BABY:15m": "high",
-    "NEAR:15m": "low",
+    "NEAR:15m": "high",
     "SOL:15m": "low",
     "ARB:15m": "low",
     "ENA:15m": "low",
@@ -312,7 +312,7 @@
     "ZAMA:15m": "low",
     "AERO:15m": "low",
     "CRV:15m": "high",
-    "ZRO:15m": "low",
+    "ZRO:15m": "high",
     "SKY:15m": "low",
     "SNDKB:15m": "low",
     "POL:15m": "low",
@@ -320,7 +320,7 @@
     "QQQB:15m": "low",
     "SEI:15m": "low",
     "DOT:15m": "low",
-    "INJ:15m": "low",
+    "INJ:15m": "high",
     "MUB:15m": "low",
     "TIA:15m": "low",
     "BTC:1h": "low",
@@ -345,7 +345,7 @@
     "ETH:1h": "low",
     "XAUT:1h": "low",
     "G:1h": "high",
-    "ZAMA:1h": "low",
+    "ZAMA:1h": "high",
     "SOXLB:1h": "high",
     "SEI:1h": "low",
     "QQQB:1h": "low",
@@ -593,7 +593,7 @@
     "MINA:4h": "low",
     "PHA:15m": "high",
     "MUBARAK:15m": "high",
-    "PHA:1h": "low",
+    "PHA:1h": "high",
     "MUBARAK:1h": "low",
     "WIF:1h": "high",
     "WIF:15m": "low",
@@ -1059,12 +1059,13 @@
     "DODO:1D": "high",
     "BLUR:1D": "low",
     "VIRTUAL:1D": "low",
-    "MARSCOIN:1D": "low"
+    "MARSCOIN:1D": "low",
+    "SHELL:15m": "high",
+    "KITE:15m": "high",
+    "MMT:1h": "high"
   },
   "sent_messages": {
-    "2684b3fe6f87f7c2c31a03cc0490aa50aa541f16ae9452932f611ea293c9e007": 1794786572,
-    "d917a41890f5ab9bbdaefe497a344ef12ba93c3e8e4cf1db6bc1807d1fbd1b28": 1794786573,
-    "6dde1e917c467ce8c697900e66ab533c4f2938cee0534e890e042f3b4805c27f": 1794786718,
-    "b004c66785e84b312dadd3cb686a36684e6bf6ed990f5178f443794b15bd3064": 1794786719
+    "b84aae67e5cabe8f35223716a84654dc7093749a6e8e517af72e6de5446a4a6d": 1794887475,
+    "a4dd386a3ccd26d6334a8b1b46b30c8cb8d533b60e233504cfa4088b74c373e7": 1794887475
   }
 }
