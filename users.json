@@ -239,7 +239,7 @@
     "ENA:15m": "low",
     "LINK:15m": "low",
     "TAO:15m": "low",
-    "TRUMP:15m": "high",
+    "TRUMP:15m": "low",
     "PENGU:15m": "low",
     "RAY:15m": "low",
     "ETHFI:15m": "low",
@@ -320,7 +320,7 @@
     "QQQB:15m": "low",
     "SEI:15m": "low",
     "DOT:15m": "low",
-    "INJ:15m": "high",
+    "INJ:15m": "low",
     "MUB:15m": "low",
     "TIA:15m": "low",
     "BTC:1h": "low",
@@ -339,7 +339,7 @@
     "TUT:15m": "low",
     "PAXG:15m": "low",
     "XAUT:15m": "low",
-    "SPCXB:15m": "high",
+    "SPCXB:15m": "low",
     "G:15m": "low",
     "SPYB:15m": "high",
     "ETH:1h": "low",
@@ -604,7 +604,7 @@
     "XRP:4h": "low",
     "MINA:15m": "high",
     "BNSOL:1h": "high",
-    "KERNEL:15m": "low",
+    "KERNEL:15m": "high",
     "KERNEL:1h": "high",
     "XLM:4h": "low",
     "PHA:4h": "high",
@@ -647,7 +647,7 @@
     "U:15m": "low",
     "PLUME:4h": "high",
     "PAXG:1h": "low",
-    "WLFI:15m": "high",
+    "WLFI:15m": "low",
     "APE:15m": "high",
     "PYTH:15m": "low",
     "ASTER:1h": "low",
@@ -1063,10 +1063,11 @@
     "SHELL:15m": "high",
     "KITE:15m": "high",
     "MMT:1h": "high",
-    "MRVLB:15m": "high"
+    "MRVLB:15m": "high",
+    "ANTB:15m": "low"
   },
   "sent_messages": {
-    "3fd507cb1fab7b02a163febc869968ea9fc3b0c5c42668596d4a6e4fc2e0a738": 1795078254,
-    "141409d0035cbafa10d430457fda190ce870c443cad9a72a2215646a7cbeacc5": 1795078256
+    "bcc3aed366ffcae2815ddc15598c12de48549f8e133181b51a0f69e1170d3ec8": 1795180844,
+    "a96dedd0461859926ee842f0e9dcb956090fcb7439ae928d77d32f4b13128a3a": 1795180844
   }
 }
