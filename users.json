@@ -562,7 +562,7 @@
     "LUNC:15m": "high",
     "LUNA:1h": "high",
     "LUNC:1h": "high",
-    "BERA:15m": "low",
+    "BERA:15m": "high",
     "LUNA:15m": "high",
     "FTT:1h": "high",
     "FTT:15m": "high",
@@ -901,7 +901,7 @@
     "HEMI:1h": "high",
     "LAZIO:1D": "high",
     "币安人生:15m": "low",
-    "ERA:15m": "high",
+    "ERA:15m": "low",
     "OGN:1h": "high",
     "ERA:1h": "high",
     "OGN:4h": "high",
@@ -1067,7 +1067,7 @@
     "ANTB:15m": "low"
   },
   "sent_messages": {
-    "94896d293a4534e359ba7f33ed268a93a00664ee1e1abc172d112d2af6d18bcd": 1795209600,
-    "62b27c44bd6e18056a6b2f410937bc924c6a314307e1c735d708208bf38b8c71": 1795209600
+    "4b6c0a49d59a8d941212fec136aff998674e63b9cc9ecc216ea2ebea7683605c": 1795403176,
+    "e566f0546d1e7c8b6587af5615258dc7e9e59f5f8606c7dc283f3eb05ca4ec2f": 1795403177
   }
 }
