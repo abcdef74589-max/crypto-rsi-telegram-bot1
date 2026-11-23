@@ -1064,10 +1064,11 @@
     "KITE:15m": "high",
     "MMT:1h": "high",
     "MRVLB:15m": "high",
-    "ANTB:15m": "low"
+    "ANTB:15m": "low",
+    "ENSO:15m": "low"
   },
   "sent_messages": {
-    "4b6c0a49d59a8d941212fec136aff998674e63b9cc9ecc216ea2ebea7683605c": 1795403176,
-    "e566f0546d1e7c8b6587af5615258dc7e9e59f5f8606c7dc283f3eb05ca4ec2f": 1795403177
+    "e7fa35624e525f2b5ba98b8e8ea4293a6f51c70679579fc9c7abd1d290fe30f2": 1795436497,
+    "4b9927e7e304d90dccfaec5a52bfd7c7515364a9e3b7497b41d66c542af7bf78": 1795436498
   }
 }
