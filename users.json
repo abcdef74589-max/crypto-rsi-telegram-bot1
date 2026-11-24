@@ -312,7 +312,7 @@
     "ZAMA:15m": "high",
     "AERO:15m": "low",
     "CRV:15m": "high",
-    "ZRO:15m": "high",
+    "ZRO:15m": "low",
     "SKY:15m": "low",
     "SNDKB:15m": "low",
     "POL:15m": "high",
@@ -653,7 +653,7 @@
     "ASTER:1h": "low",
     "ACE:1h": "low",
     "FLOKI:1h": "high",
-    "WLFI:1h": "high",
+    "WLFI:1h": "low",
     "CRV:1h": "low",
     "WLFI:4h": "low",
     "NOM:1h": "high",
@@ -1068,7 +1068,7 @@
     "ENSO:15m": "low"
   },
   "sent_messages": {
-    "e7fa35624e525f2b5ba98b8e8ea4293a6f51c70679579fc9c7abd1d290fe30f2": 1795436497,
-    "4b9927e7e304d90dccfaec5a52bfd7c7515364a9e3b7497b41d66c542af7bf78": 1795436498
+    "5352c84fe0a287cfb0c709852a965f3c2c40a341f5ef96d2eb23235bd60d49e8": 1795510223,
+    "00b9fa5e13750a5662e989a34469e530c3a91847e0f1d3c8bd28c13b33d7fe3c": 1795510224
   }
 }
